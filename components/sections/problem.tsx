@@ -35,7 +35,7 @@ export function Problem() {
                 <XIcon size={14} weight="bold" className="shrink-0 text-danger-500" />
                 {tool.name}
               </span>
-              <span className="text-xs font-semibold text-gray-500">{tool.price}</span>
+              <span className="text-xs font-semibold text-gray-600">{tool.price}</span>
             </li>
           ))}
         </ul>

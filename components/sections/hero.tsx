@@ -98,7 +98,7 @@ export function Hero() {
             className="animate-fade-up mt-10 flex flex-col gap-3"
             style={{ animationDelay: "0.36s" }}
           >
-            <p className="text-xs font-semibold uppercase tracking-wider text-white/45">
+            <p className="text-xs font-semibold uppercase tracking-wider text-white/60">
               Powered by the world&rsquo;s best AI models
             </p>
             <ul className="flex flex-wrap gap-2">
