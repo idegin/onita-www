@@ -1040,7 +1040,8 @@ This predictable cadence improves readability and conversion.
 * Clear focus indicators
 * Semantic HTML landmarks
 * ARIA labels where appropriate
-* Descriptive alt text for all imagery
+* Descriptive alt text for a
+ll imagery
 * Reduced-motion preference support
 * Touch targets of at least 44×44 pixels
 
