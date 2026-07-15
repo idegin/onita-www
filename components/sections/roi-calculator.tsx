@@ -7,9 +7,9 @@ import { SectionHeading } from "@/components/ui/section-heading";
 import { siteConfig } from "@/lib/site-config";
 
 const WORK_HOURS_PER_YEAR = 2080;
-const currency = new Intl.NumberFormat("en-US", {
+const currency = new Intl.NumberFormat("en-NG", {
   style: "currency",
-  currency: "USD",
+  currency: "NGN",
   maximumFractionDigits: 0,
 });
 
@@ -24,13 +24,13 @@ type Field = {
 
 const fields: Field[] = [
   { key: "employees", label: "Team members", min: 1, max: 500, step: 1, format: (v) => `${v}` },
-  { key: "salary", label: "Average annual salary", min: 30000, max: 200000, step: 5000, format: (v) => currency.format(v) },
+  { key: "salary", label: "Average annual salary", min: 600000, max: 20000000, step: 100000, format: (v) => currency.format(v) },
   { key: "hours", label: "Hours saved per person / week", min: 1, max: 30, step: 1, format: (v) => `${v} hrs` },
 ];
 
 export function RoiCalculator() {
   const baseId = useId();
-  const [values, setValues] = useState({ employees: 25, salary: 65000, hours: 8 });
+  const [values, setValues] = useState({ employees: 25, salary: 2400000, hours: 8 });
 
   const annualSavings = useMemo(() => {
     const hourlyRate = values.salary / WORK_HOURS_PER_YEAR;

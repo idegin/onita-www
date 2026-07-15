@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import {
   SparkleIcon,
   ArrowRightIcon,
@@ -11,6 +12,7 @@ import {
   LightningIcon,
 } from "@phosphor-icons/react/dist/ssr";
 import { siteConfig } from "@/lib/site-config";
+import { aiProviders } from "@/lib/brands";
 
 const agents = [
   { label: "Sales Agent", Icon: TrendUpIcon, position: "left-4 top-0 -translate-y-1/2", motion: "animate-float", delay: "0s" },
@@ -102,12 +104,15 @@ export function Hero() {
               Powered by the world&rsquo;s best AI models
             </p>
             <ul className="flex flex-wrap gap-2">
-              {siteConfig.aiModels.map((model) => (
+              {aiProviders.map((model) => (
                 <li
-                  key={model}
-                  className="rounded-pill border border-white/12 bg-white/5 px-3 py-1 text-sm font-medium text-white/75"
+                  key={model.name}
+                  className="inline-flex items-center gap-1.5 rounded-pill border border-white/12 bg-white/5 py-1 pl-1 pr-3 text-sm font-medium text-white/80"
                 >
-                  {model}
+                  <span className="flex h-6 w-6 items-center justify-center rounded-full bg-white p-1">
+                    <Image src={model.logo} alt="" width={16} height={16} className="h-full w-full object-contain" />
+                  </span>
+                  {model.name}
                 </li>
               ))}
             </ul>

@@ -3,15 +3,15 @@ import { Section } from "@/components/ui/section";
 import { SectionHeading } from "@/components/ui/section-heading";
 
 const fragmentedTools = [
-  { name: "Google Workspace", price: "$18" },
-  { name: "Slack", price: "$15" },
-  { name: "ClickUp", price: "$12" },
-  { name: "Notion", price: "$16" },
-  { name: "Typeform", price: "$25" },
-  { name: "HubSpot CRM", price: "$45" },
-  { name: "Zapier", price: "$30" },
-  { name: "Knowledge Base", price: "$20" },
-  { name: "AI tools", price: "$40" },
+  { name: "Google Workspace", price: "₦29k" },
+  { name: "Slack", price: "₦24k" },
+  { name: "ClickUp", price: "₦19k" },
+  { name: "Notion", price: "₦26k" },
+  { name: "Typeform", price: "₦40k" },
+  { name: "HubSpot CRM", price: "₦72k" },
+  { name: "Zapier", price: "₦48k" },
+  { name: "Knowledge Base", price: "₦32k" },
+  { name: "AI tools", price: "₦64k" },
 ];
 
 export function Problem() {
@@ -42,7 +42,7 @@ export function Problem() {
 
         <div className="flex flex-col items-center gap-2 text-center lg:px-2">
           <span className="rounded-pill bg-danger-50 px-3 py-1 text-sm font-bold text-danger-700">
-            $221+/mo per seat
+            ₦354k+/mo per seat
           </span>
           <ArrowDownIcon
             size={28}

@@ -5,11 +5,9 @@ import { AiWorkforce } from "@/components/sections/ai-workforce";
 import { Collaboration } from "@/components/sections/collaboration";
 import { Products } from "@/components/sections/products";
 import { Solutions } from "@/components/sections/solutions";
-import { Industries } from "@/components/sections/industries";
 import { AiStack } from "@/components/sections/ai-stack";
 import { RoiCalculator } from "@/components/sections/roi-calculator";
 import { Testimonials } from "@/components/sections/testimonials";
-import { Security } from "@/components/sections/security";
 import { Faq, faqSchema } from "@/components/sections/faq";
 import { FinalCta } from "@/components/sections/final-cta";
 import { jsonLd } from "@/lib/structured-data";
@@ -50,11 +48,9 @@ export default function Home() {
       <Collaboration />
       <Products />
       <Solutions />
-      <Industries />
       <AiStack />
       <RoiCalculator />
       <Testimonials />
-      <Security />
       <Faq />
       <FinalCta />
     </>
