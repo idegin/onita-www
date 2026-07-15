@@ -52,28 +52,6 @@ export function SiteFooter() {
               </span>
             </address>
 
-            <form className="mt-7" aria-label="Newsletter signup">
-              <label htmlFor="newsletter-email" className="text-xs font-semibold uppercase tracking-wider text-white/50">
-                Get the latest on the AI workforce
-              </label>
-              <div className="mt-2 flex gap-2">
-                <input
-                  id="newsletter-email"
-                  type="email"
-                  required
-                  autoComplete="email"
-                  placeholder="you@company.com"
-                  className="min-w-0 flex-1 rounded-input border border-white/15 bg-white/5 px-4 py-2.5 text-sm text-white placeholder:text-white/40 focus:border-brand-400 focus:outline-none"
-                />
-                <button
-                  type="submit"
-                  aria-label="Subscribe"
-                  className="inline-flex items-center justify-center rounded-input bg-brand-500 px-4 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-brand-600"
-                >
-                  <ArrowRightIcon size={17} weight="bold" />
-                </button>
-              </div>
-            </form>
           </div>
 
           <nav aria-label="Footer" className="grid grid-cols-2 gap-8 sm:grid-cols-3">
