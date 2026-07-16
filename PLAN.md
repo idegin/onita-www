@@ -10,11 +10,11 @@
 
 The primary purpose of the website is **not to explain AI.**
 
-The purpose is to convince visitors that **Onita lets consulting firms, law firms, and agencies operate like enterprises using an AI workforce we build and run for them.**
+The purpose is to convince visitors that **Onita lets any business operate like an enterprise using an AI workforce we build and run for them.**
 
 The website should immediately answer:
 
-> **"How can Onita help my firm deliver more for clients without hiring more people?"**
+> **"How can Onita help my business get more done without hiring more people?"**
 
 Every page should move visitors toward one primary conversion goal.
 
@@ -43,7 +43,7 @@ their AI workforce for them. Never compete with more than these two CTAs.
 
 Supporting Message
 
-> AI employees that work together, automate repetitive work, and help your firm deliver more for clients without hiring more people. We design, build, host, and run them for you.
+> AI employees that work together, automate repetitive work, and help your business get more done without hiring more people. We design, build, host, and run them for you.
 
 ---
 
@@ -53,7 +53,7 @@ Do **NOT** position Onita as another AI chatbot, and do **NOT** position it as a
 
 Position it as
 
-> The AI Workforce Platform — designed, built, and run for your firm.
+> The AI Workforce Platform — designed, built, and run for your business.
 
 It is a **done-for-you / managed** engagement: book a demo, and our team stands up your AI
 workforce end to end. No free tier, no login, nothing for the customer to build themselves.
@@ -120,7 +120,7 @@ Headline
 
 Subheadline
 
-Onita builds consulting firms, law firms, and agencies a workforce of AI agents — trained on how you work, wired into your tools, and run for you. Deliver more for clients without hiring more.
+Onita builds growing businesses a workforce of AI agents — trained on how you work, wired into your tools, and run for you. Get more done without hiring more.
 
 Primary CTA
 
@@ -156,7 +156,7 @@ Live activity
 
 Social proof underneath
 
-Trusted by consulting firms, law firms, and agencies
+Trusted by growing teams and businesses
 
 Available AI models
 
@@ -969,11 +969,11 @@ Every page should include:
 Key keyword clusters:
 
 * AI workforce platform
-* AI agents for consulting firms
-* AI for law firms
-* AI for agencies
+* AI agents for business
+* AI agents for teams
+* AI agents for small businesses
 * managed AI workforce
-* AI agents for professional services
+* AI workforce for growing companies
 * done-for-you AI automation
 * AI work management software
 * business process automation

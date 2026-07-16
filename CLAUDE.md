@@ -2,8 +2,9 @@
 @AGENTS.md
 @PLAN.md
 
-We are targeting **consulting firms, law firms, and agencies** — professional-services teams
-that bill for expertise and want to deliver more for clients without hiring more.
+We are targeting **growing businesses and teams of every kind** — from startups and SMEs to the
+operations, delivery, sales, and marketing teams inside larger organizations — who want to get more
+done without hiring more. Never restrict the positioning to a single industry or vertical.
 
 # Onita Marketing Website
 

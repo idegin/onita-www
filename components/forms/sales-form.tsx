@@ -21,7 +21,7 @@ export function SalesForm() {
         <h2 className="mt-5 font-display text-2xl font-bold text-ink-800">Message sent</h2>
         <p className="mt-3 max-w-md text-base leading-7 text-muted-foreground">
           Thanks for reaching out. A member of our sales team will get back to you within one business
-          day to talk through your firm&apos;s needs.
+          day to talk through your business&apos;s needs.
         </p>
       </div>
     );
@@ -80,7 +80,7 @@ export function SalesForm() {
             name="message"
             required
             rows={5}
-            placeholder="Tell us about your firm and what you're looking to do…"
+            placeholder="Tell us about your business and what you're looking to do…"
           />
         </Field>
       </div>

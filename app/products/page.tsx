@@ -86,7 +86,7 @@ export default function ProductsIndexPage() {
             The Onita platform
           </span>
           <h1 className="mt-6 max-w-3xl font-display text-4xl font-extrabold leading-[1.05] tracking-tight text-white sm:text-5xl lg:text-6xl">
-            One workspace, <span className="text-gradient-ai">every tool</span> your firm runs on
+            One workspace, <span className="text-gradient-ai">every tool</span> your business runs on
           </h1>
           <p className="mt-6 max-w-2xl text-lg leading-8 text-white/70">
             Replace a stack of disconnected apps with products that share the same data — and the same
@@ -140,7 +140,7 @@ export default function ProductsIndexPage() {
           </h2>
           <p className="mt-4 text-lg leading-8 text-muted-foreground">
             Book a demo and we&apos;ll design, build, and run your AI workforce across every product —
-            set up for you, around how your firm operates.
+            set up for you, around how your business operates.
           </p>
           <div className="mt-8 flex flex-col justify-center gap-3 sm:flex-row sm:items-center">
             <Link

@@ -19,7 +19,7 @@ export default function Home() {
       <section aria-label="Trusted by modern firms and agencies" className="border-b border-border bg-surface">
         <div className="mx-auto max-w-content px-4 py-12 sm:px-6 lg:px-10">
           <p className="text-center text-xs font-semibold uppercase tracking-wider text-muted-foreground">
-            Trusted by consulting firms, law firms, and agencies — enterprise-grade from day one
+            Trusted by growing businesses and teams — enterprise-grade from day one
           </p>
           <div className="mt-8">
             <LogoMarquee />

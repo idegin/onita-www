@@ -15,7 +15,7 @@ import { jsonLd, breadcrumbSchema } from "@/lib/structured-data";
 export const metadata: Metadata = {
   title: "Book a Demo — See Your AI Workforce on Your Real Work",
   description:
-    "Book a demo of Onita, the AI Workforce Platform for consulting firms, law firms, and agencies. We design, build, and run your AI agents for you — no setup required.",
+    "Book a demo of Onita, the AI Workforce Platform for growing businesses and teams. We design, build, and run your AI agents for you — no setup required.",
   alternates: { canonical: "/book-demo" },
   openGraph: {
     type: "website",
@@ -29,7 +29,7 @@ export const metadata: Metadata = {
 const steps = [
   {
     title: "We learn how you work",
-    desc: "On the call, tell us how your firm delivers and what eats your team's time. We show Onita on your real use cases.",
+    desc: "On the call, tell us how your business delivers and what eats your team's time. We show Onita on your real use cases.",
     Icon: CompassIcon,
   },
   {
@@ -104,7 +104,7 @@ export default function BookDemoPage() {
               See your AI workforce on <span className="text-gradient-ai">your real work</span>
             </h1>
             <p className="mt-6 text-lg leading-8 text-white/70">
-              This isn&apos;t a generic product tour. Tell us how your firm works and we&apos;ll show
+              This isn&apos;t a generic product tour. Tell us how your business works and we&apos;ll show
               Onita running on your use cases — then design, build, and run the whole thing for you.
             </p>
 

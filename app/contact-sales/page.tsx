@@ -23,7 +23,7 @@ export const metadata: Metadata = {
     url: `${siteConfig.url}/contact-sales`,
     title: "Talk to Sales — Onita AI Workforce Platform",
     description:
-      "Talk to Onita about pricing, security, and rolling out an AI workforce across your firm.",
+      "Talk to Onita about pricing, security, and rolling out an AI workforce across your business.",
   },
 };
 

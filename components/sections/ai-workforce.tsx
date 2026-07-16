@@ -255,7 +255,7 @@ export function AiWorkforce() {
           invert
           eyebrow="AI Workforce"
           title="Create AI team mates that never sleep."
-          description="Purpose-built for consulting firms, law firms, and agencies — each Onita agent is a specialist with its own skills, knowledge, and document access, all designed and run by us so work flows between them without you chasing it."
+          description="Purpose-built for growing businesses and teams — each Onita agent is a specialist with its own skills, knowledge, and document access, all designed and run by us so work flows between them without you chasing it."
         />
 
         <ul className="mt-6 flex flex-wrap justify-center gap-2.5">

@@ -21,7 +21,7 @@ export function DemoForm() {
         <h2 className="mt-5 font-display text-2xl font-bold text-ink-800">Request received</h2>
         <p className="mt-3 max-w-md text-base leading-7 text-muted-foreground">
           Thanks — our team will reach out within one business day to schedule your demo and learn how
-          your firm works. Keep an eye on your inbox.
+          your business works. Keep an eye on your inbox.
         </p>
       </div>
     );

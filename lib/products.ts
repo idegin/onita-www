@@ -86,7 +86,7 @@ export const products: Product[] = [
     shots: [S.a, S.f, S.b],
     metaTitle: "AI Dashboard for Consulting & Law Firms",
     metaDescription:
-      "See every engagement, deadline, and AI agent in one live dashboard. Onita gives professional-services teams a real-time command center for the whole firm.",
+      "See every engagement, deadline, and AI agent in one live dashboard. Onita gives growing teams a real-time command center for the whole firm.",
     eyebrow: "Dashboard",
     headline: "The whole firm, on",
     headlineEmphasis: "one screen",
@@ -119,7 +119,7 @@ export const products: Product[] = [
     faqs: [
       { q: "Where does the dashboard get its data?", a: "From the work happening inside Onita — your spreadsheets, documents, timelines, and the actions your AI agents take — plus any tools you connect. It updates in real time." },
       { q: "Can different teams see different views?", a: "Yes. Build role-based views and widgets so partners, delivery leads, and clients each see what's relevant, governed by permissions." },
-      { q: "Do I have to build it myself?", a: "No. After your demo, our team designs and configures your dashboards around how your firm measures success." },
+      { q: "Do I have to build it myself?", a: "No. After your demo, our team designs and configures your dashboards around how your business measures success." },
     ],
     related: ["spreadsheet", "timeline", "ai-agents"],
   },
@@ -198,7 +198,7 @@ export const products: Product[] = [
     ],
     workforceAngle: {
       title: "First draft, done for you",
-      desc: "Give an agent the brief and it produces a structured first draft grounded in your firm's real knowledge. Your people spend their time on judgment and polish, not on formatting and fetching facts.",
+      desc: "Give an agent the brief and it produces a structured first draft grounded in your business's real knowledge. Your people spend their time on judgment and polish, not on formatting and fetching facts.",
     },
     useCases: [
       { audience: "Consulting", title: "Proposals & reports", desc: "Agents assemble proposals and deliverables from live data and your best past work." },
@@ -211,7 +211,7 @@ export const products: Product[] = [
       "Never chase the latest version again",
     ],
     faqs: [
-      { q: "Will documents sound generic?", a: "No. Agents draft from your templates, tone, and past work, so output reads like your firm — then your experts refine it." },
+      { q: "Will documents sound generic?", a: "No. Agents draft from your templates, tone, and past work, so output reads like your business — then your experts refine it." },
       { q: "Can it review as well as write?", a: "Yes. Agents can summarize, compare versions, and flag risky or missing sections for a human to approve." },
       { q: "Is sensitive content protected?", a: "Documents follow your permissions and audit logging, and your content is never used to train public models." },
     ],
@@ -286,7 +286,7 @@ export const products: Product[] = [
     highlights: ["AI-built presentations", "On-brand templates", "Auto-updated from live data"],
     features: [
       { title: "AI-built decks", desc: "Describe the story and an agent assembles a structured, on-brand deck from your data and content.", Icon: MagicWandIcon },
-      { title: "On-brand templates", desc: "Your fonts, colors, and layouts applied automatically, so every deck looks like your firm made it.", Icon: PaintBrushBroadIcon },
+      { title: "On-brand templates", desc: "Your fonts, colors, and layouts applied automatically, so every deck looks like your business made it.", Icon: PaintBrushBroadIcon },
       { title: "Live-linked charts", desc: "Charts and figures refresh from their source, so a deck is never built on last month's numbers.", Icon: ChartBarIcon },
       { title: "Speaker-ready", desc: "Agents draft talking points and summaries alongside the slides so anyone can present with confidence.", Icon: PresentationChartIcon },
     ],
@@ -420,7 +420,7 @@ export const products: Product[] = [
     headline: "Repeatable work,",
     headlineEmphasis: "on autopilot",
     subhead:
-      "Wire up the routine work your firm repeats every week — trigger, approve, done — without writing a line of code. Agents do the steps; your people approve what matters.",
+      "Wire up the routine work your business repeats every week — trigger, approve, done — without writing a line of code. Agents do the steps; your people approve what matters.",
     definitionTitle: "What are Onita Automations?",
     definition:
       "Onita Automations connect a trigger to a sequence of actions — including work handled by AI agents and human approval steps. When something happens (a form is submitted, a deal moves, a date arrives), the workflow runs itself, looping in a person only where judgment is required.",
@@ -433,7 +433,7 @@ export const products: Product[] = [
     ],
     workforceAngle: {
       title: "Where agents and process meet",
-      desc: "Automations are the wiring that lets your AI workforce run whole processes end to end — with approval gates exactly where your firm needs a human decision. Set it once; it runs every time.",
+      desc: "Automations are the wiring that lets your AI workforce run whole processes end to end — with approval gates exactly where your business needs a human decision. Set it once; it runs every time.",
     },
     useCases: [
       { audience: "Consulting", title: "Onboarding & billing", desc: "Automate engagement setup, status rollups, and invoice prep with approvals built in." },
@@ -467,20 +467,20 @@ export const products: Product[] = [
     headline: "Teammates that",
     headlineEmphasis: "never sleep",
     subhead:
-      "Build AI employees for the roles your firm runs on — research, business development, drafting, review, operations — each with its own memory, knowledge, tools, and permissions. They collaborate to run whole workflows, not just answer questions.",
+      "Build AI employees for the roles your business runs on — research, business development, drafting, review, operations — each with its own memory, knowledge, tools, and permissions. They collaborate to run whole workflows, not just answer questions.",
     definitionTitle: "What is an AI Agent in Onita?",
     definition:
       "An Onita AI Agent is a configured digital worker with a job to do. It has memory of past work, access to the knowledge and tools it needs, and permissions that bound what it can touch. Agents take actions across your workspace and hand work to each other — so entire processes get done, with a human approving what matters.",
     highlights: ["Memory and knowledge", "Tools and permissions", "Collaborate across teams"],
     features: [
-      { title: "Memory & knowledge", desc: "Each agent remembers your firm's context and draws on the documents and data you give it.", Icon: BrainIcon },
+      { title: "Memory & knowledge", desc: "Each agent remembers your business's context and draws on the documents and data you give it.", Icon: BrainIcon },
       { title: "Tools & permissions", desc: "Grant an agent exactly the tools and access it needs — and nothing it doesn't.", Icon: PlugsConnectedIcon },
       { title: "They collaborate", desc: "Agents hand work to one another to run multi-step processes end to end, not one-off replies.", Icon: UsersThreeIcon },
       { title: "Human in the loop", desc: "Approval gates keep a person in control of anything sensitive or client-facing.", Icon: ShieldCheckIcon },
     ],
     workforceAngle: {
       title: "The center of your AI workforce",
-      desc: "Agents are the employees. Every other product — documents, spreadsheets, timelines, automations — is a place they do the work. Design the roles your firm needs and they operate across all of it together.",
+      desc: "Agents are the employees. Every other product — documents, spreadsheets, timelines, automations — is a place they do the work. Design the roles your business needs and they operate across all of it together.",
     },
     useCases: [
       { audience: "Consulting", title: "Research & BD", desc: "An agent researches a market and drafts the proposal while another preps the readout." },
@@ -495,7 +495,7 @@ export const products: Product[] = [
     faqs: [
       { q: "How is an agent different from a chatbot?", a: "A chatbot answers. An agent acts — it takes steps across your tools, collaborates with other agents, and completes real work, looping in a human for approval." },
       { q: "What can an agent access?", a: "Only what you grant it. Each agent has scoped tools, knowledge, and permissions, with every action logged." },
-      { q: "Who builds the agents?", a: "We do. After your demo, our team designs and configures the agents around your firm's roles and workflows, then tunes them as you grow." },
+      { q: "Who builds the agents?", a: "We do. After your demo, our team designs and configures the agents around your business's roles and workflows, then tunes them as you grow." },
     ],
     related: ["automations", "documents", "dashboard"],
   },

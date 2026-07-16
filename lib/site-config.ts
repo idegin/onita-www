@@ -5,7 +5,7 @@ export const siteConfig = {
   tagline: "The AI Workforce Platform",
   slogan: "Your team just got bigger.",
   description:
-    "Onita is the AI Workforce Platform for consulting firms, law firms, and agencies. We design, build, and run a team of AI agents around how your firm works — so you deliver more without hiring more. Book a demo and we set it all up for you.",
+    "Onita is the AI Workforce Platform for growing businesses and teams of every kind. We design, build, and run a team of AI agents around how your business works — so you get more done without hiring more. Book a demo and we set it all up for you.",
   founded: "2024",
 
   url: "https://onitaai.com",

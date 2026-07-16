@@ -5,11 +5,11 @@ import { SectionHeading } from "@/components/ui/section-heading";
 export const faqs = [
   {
     q: "What is an AI Workforce?",
-    a: "An AI Workforce is a team of AI agents that do real work alongside your people — specialists for research, business development, strategy, decks, contract review, campaigns and more. Each agent has its own memory, knowledge, tools and permissions, and they collaborate to run entire workflows end to end, so your firm scales output without adding headcount.",
+    a: "An AI Workforce is a team of AI agents that do real work alongside your people — specialists for research, business development, strategy, decks, contract review, campaigns and more. Each agent has its own memory, knowledge, tools and permissions, and they collaborate to run entire workflows end to end, so your business scales output without adding headcount.",
   },
   {
     q: "Who is Onita built for?",
-    a: "Onita is built for consulting firms, law firms, and agencies — professional-services teams that bill for expertise and want to deliver more for clients without hiring more. We tailor the agents to your practice, whether that's research and decks, contract review and intake, or campaigns and content.",
+    a: "Onita is built for growing businesses and teams — growing teams that bill for expertise and want to deliver more for clients without hiring more. We tailor the agents to your team, whether that's research and decks, contract review and intake, or campaigns and content.",
   },
   {
     q: "How is Onita different from an AI chatbot?",
@@ -54,7 +54,7 @@ export function Faq() {
         id="faq-heading"
         eyebrow="FAQ"
         title="Questions, answered."
-        description="Everything you need to know about putting an AI workforce to work in your firm."
+        description="Everything you need to know about putting an AI workforce to work in your business."
       />
 
       <div className="mt-12 divide-y divide-border border-y border-border">

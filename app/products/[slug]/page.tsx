@@ -221,7 +221,7 @@ export default async function ProductPage({ params }: Params) {
           id="features-heading"
           align="left"
           eyebrow="Capabilities"
-          title={`Everything ${product.name} does for your firm`}
+          title={`Everything ${product.name} does for your business`}
           description={`Built to carry real work — not just another view of it.`}
         />
 
@@ -304,8 +304,8 @@ export default async function ProductPage({ params }: Params) {
         <SectionHeading
           id="usecases-heading"
           eyebrow="Who it's for"
-          title={`${product.name} for consulting, law, and agencies`}
-          description="The same product, tuned to how your practice actually delivers."
+          title={`${product.name} for teams of every kind`}
+          description="The same product, tuned to how your team actually delivers."
         />
 
         <div className="mt-12 grid gap-5 md:grid-cols-3">
@@ -335,7 +335,7 @@ export default async function ProductPage({ params }: Params) {
               What changes
             </span>
             <h2 className="mt-3 font-display text-3xl font-bold tracking-tight text-ink-800 sm:text-4xl">
-              The outcome your firm feels
+              The outcome your business feels
             </h2>
             <ul className="mt-8 space-y-4">
               {product.outcomes.map((o) => (
@@ -424,7 +424,7 @@ export default async function ProductPage({ params }: Params) {
           />
           <div className="relative mx-auto max-w-2xl">
             <h2 className="font-display text-3xl font-bold tracking-tight text-white sm:text-4xl">
-              Put {product.name} to work for your firm
+              Put {product.name} to work for your business
             </h2>
             <p className="mt-4 text-lg leading-8 text-white/75">
               Book a demo and we&apos;ll design, build, and run your AI workforce — {product.name}{" "}
