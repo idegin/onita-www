@@ -252,6 +252,58 @@
   }
 }
 
+@keyframes onita-marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes onita-dash {
+  to {
+    stroke-dashoffset: -24;
+  }
+}
+
+@keyframes onita-node-in {
+  from {
+    opacity: 0;
+    transform: scale(0.92);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes onita-progress {
+  from {
+    transform: scaleX(0);
+  }
+  to {
+    transform: scaleX(1);
+  }
+}
+
+@keyframes onita-travel {
+  0% {
+    offset-distance: 0%;
+    opacity: 0;
+  }
+  12% {
+    opacity: 1;
+  }
+  88% {
+    opacity: 1;
+  }
+  100% {
+    offset-distance: 100%;
+    opacity: 0;
+  }
+}
+
 @utility animate-fade-up {
   opacity: 0;
   animation: onita-fade-up 0.7s var(--ease-out-soft) forwards;
@@ -264,4 +316,18 @@
 }
 @utility animate-pulse-glow {
   animation: onita-pulse-glow 5s ease-in-out infinite;
+}
+@utility animate-marquee {
+  animation: onita-marquee 42s linear infinite;
+}
+@utility animate-dash {
+  animation: onita-dash 1.1s linear infinite;
+}
+@utility animate-node-in {
+  opacity: 0;
+  animation: onita-node-in 0.6s var(--ease-out-soft) forwards;
+}
+@utility animate-progress {
+  transform-origin: left;
+  animation: onita-progress linear forwards;
 }

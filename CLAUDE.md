@@ -2,6 +2,8 @@
 @AGENTS.md
 @PLAN.md
 
+We are targeting Consulting and Law firms as well as agencies.
+
 # Onita Marketing Website
 
 The AI Workforce Platform marketing site. Core message: **"Your team just got bigger."**

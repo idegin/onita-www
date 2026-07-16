@@ -102,16 +102,6 @@ export function SiteHeader() {
           >
             Log in
           </a>
-          <Link
-            href={siteConfig.demoUrl}
-            className={`rounded-button border px-4 py-2 text-sm font-semibold transition-colors ${
-              solid
-                ? "border-border text-ink-800 hover:bg-gray-100"
-                : "border-white/25 text-white hover:bg-white/10"
-            }`}
-          >
-            Book a demo
-          </Link>
           <a
             href={siteConfig.signupUrl}
             className="inline-flex items-center gap-1.5 rounded-button bg-brand-500 px-4 py-2 text-sm font-semibold text-white shadow-soft transition-all hover:bg-brand-600 hover:shadow-hover"

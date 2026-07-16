@@ -1,9 +1,8 @@
 import Link from "next/link";
-import Image from "next/image";
 import { SparkleIcon, ArrowRightIcon, PlayCircleIcon } from "@phosphor-icons/react/dist/ssr";
 import { siteConfig } from "@/lib/site-config";
-import { aiProviders } from "@/lib/brands";
 import { RotatingShot } from "@/components/ui/rotating-shot";
+import { productTools } from "@/components/ui/product-tools";
 
 const PRODUCT_SHOTS = [
   "/screenshots/half-1.png",
@@ -79,15 +78,15 @@ export function Hero() {
             className="animate-fade-up mt-6 font-display text-4xl font-extrabold leading-[1.05] tracking-tight text-white sm:text-5xl lg:text-6xl"
             style={{ animationDelay: "0.12s" }}
           >
-            Your team just got <span className="text-gradient-ai">bigger.</span>
+            Work smarter with <span className="text-gradient-ai">Agents</span>
           </h1>
 
           <p
             className="animate-fade-up mt-6 max-w-lg text-lg leading-8 text-white/70"
             style={{ animationDelay: "0.2s" }}
           >
-            Create AI employees that collaborate with your team, automate repetitive work, and help
-            your business scale without hiring hundreds of people.
+            Onita is the AI-powered work management platform where human and AI team mates plan
+            projects, automate the busywork, and ship more together
           </p>
 
           <div
@@ -111,28 +110,22 @@ export function Hero() {
           </div>
 
           <div
-            className="animate-fade-up mt-10 flex flex-col gap-3"
+            className="animate-fade-up mt-10 flex flex-col gap-3.5"
             style={{ animationDelay: "0.36s" }}
           >
-            <p className="text-xs font-semibold uppercase tracking-wider text-white/60">
-              Powered by the world&rsquo;s best AI models
+            <p className="text-xs font-semibold uppercase tracking-wider text-white/55">
+              One workspace. Every tool your team needs.
             </p>
             <ul className="flex flex-wrap gap-2">
-              {aiProviders.map((model) => (
+              {productTools.map((tool) => (
                 <li
-                  key={model.name}
-                  className="inline-flex items-center gap-1.5 rounded-pill border border-white/12 bg-white/5 py-1 pl-1 pr-3 text-sm font-medium text-white/80"
+                  key={tool.name}
+                  className="group inline-flex items-center gap-2 rounded-pill border border-white/12 bg-white/[0.06] py-1.5 pl-2 pr-3.5 text-sm font-medium text-white/80 backdrop-blur transition-colors hover:border-white/25 hover:bg-white/10 hover:text-white"
                 >
-                  <span className="flex h-6 w-6 items-center justify-center rounded-full bg-white p-1">
-                    <Image
-                      src={model.logo}
-                      alt=""
-                      width={16}
-                      height={16}
-                      className="h-full w-full object-contain"
-                    />
+                  <span className="flex h-7 w-7 items-center justify-center rounded-full bg-white/10 text-brand-200 transition-colors group-hover:bg-white/20 group-hover:text-white">
+                    <tool.Icon className="h-[18px] w-[18px]" aria-hidden="true" />
                   </span>
-                  {model.name}
+                  {tool.name}
                 </li>
               ))}
             </ul>

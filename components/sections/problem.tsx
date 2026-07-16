@@ -1,17 +1,19 @@
-import { ArrowDownIcon, XIcon, CheckIcon, LightningIcon } from "@phosphor-icons/react/dist/ssr";
+import Image from "next/image";
+import { ArrowDownIcon, CheckIcon } from "@phosphor-icons/react/dist/ssr";
 import { Section } from "@/components/ui/section";
 import { SectionHeading } from "@/components/ui/section-heading";
+import { siteConfig } from "@/lib/site-config";
 
 const fragmentedTools = [
-  { name: "Google Workspace", price: "₦29k" },
-  { name: "Slack", price: "₦24k" },
-  { name: "ClickUp", price: "₦19k" },
-  { name: "Notion", price: "₦26k" },
-  { name: "Typeform", price: "₦40k" },
-  { name: "HubSpot CRM", price: "₦72k" },
-  { name: "Zapier", price: "₦48k" },
-  { name: "Knowledge Base", price: "₦32k" },
-  { name: "AI tools", price: "₦64k" },
+  { name: "Google Workspace", price: "₦29k", logo: "/logos/tools/google.svg" },
+  { name: "Slack", price: "₦24k", logo: "/logos/tools/slack.svg" },
+  { name: "ClickUp", price: "₦19k", logo: "/logos/tools/clickup.svg" },
+  { name: "Notion", price: "₦26k", logo: "/logos/tools/notion.svg" },
+  { name: "Typeform", price: "₦40k", logo: "/logos/tools/typeform.svg" },
+  { name: "HubSpot CRM", price: "₦72k", logo: "/logos/tools/hubspot.svg" },
+  { name: "Zapier", price: "₦48k", logo: "/logos/tools/zapier.svg" },
+  { name: "Airtable", price: "₦32k", logo: "/logos/tools/airtable.svg" },
+  { name: "AI tools", price: "₦64k", logo: "/logos/openai.svg" },
 ];
 
 export function Problem() {
@@ -29,13 +31,21 @@ export function Problem() {
           {fragmentedTools.map((tool) => (
             <li
               key={tool.name}
-              className="flex items-center justify-between gap-2 rounded-2xl border border-border bg-surface px-3.5 py-3 opacity-90"
+              className="flex items-center justify-between gap-2 rounded-2xl border border-border bg-surface px-3.5 py-3"
             >
-              <span className="flex items-center gap-2 text-sm font-medium text-gray-700">
-                <XIcon size={14} weight="bold" className="shrink-0 text-danger-500" />
-                {tool.name}
+              <span className="flex min-w-0 items-center gap-2 text-sm font-medium text-gray-700">
+                <Image
+                  src={tool.logo}
+                  alt=""
+                  width={20}
+                  height={20}
+                  className="h-5 w-5 shrink-0 opacity-70 grayscale"
+                />
+                <span className="truncate">{tool.name}</span>
               </span>
-              <span className="text-xs font-semibold text-gray-600">{tool.price}</span>
+              <span className="shrink-0 text-xs font-semibold text-gray-500 line-through">
+                {tool.price}
+              </span>
             </li>
           ))}
         </ul>
@@ -53,12 +63,22 @@ export function Problem() {
         </div>
 
         <div className="rounded-card-lg bg-gradient-hero p-8 text-white shadow-glow">
-          <span className="flex h-11 w-11 items-center justify-center rounded-2xl bg-white/15">
-            <LightningIcon size={22} weight="fill" className="text-white" />
+          <span className="flex h-12 w-12 items-center justify-center rounded-2xl bg-white/15 p-2">
+            <Image
+              src={siteConfig.assets.logo}
+              alt=""
+              width={32}
+              height={32}
+              className="h-full w-full rounded-lg"
+            />
           </span>
           <p className="mt-5 font-display text-xl font-bold leading-snug">
             One platform. One workspace. One AI workforce.
           </p>
+          <div className="mt-5 flex items-baseline gap-2">
+            <span className="font-display text-4xl font-extrabold tracking-tight">₦2,000</span>
+            <span className="text-sm font-medium text-white/70">/mo per seat</span>
+          </div>
           <ul className="mt-5 space-y-2.5 text-sm text-white/80">
             {["Everything connected by default", "AI employees built in", "One predictable bill"].map(
               (item) => (

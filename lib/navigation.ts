@@ -15,7 +15,7 @@ export const primaryNav: NavGroup[] = [
     label: "Products",
     href: "/products",
     items: [
-      { label: "AI Agents", href: "/products/ai-agents", description: "Hire AI employees that work together" },
+      { label: "AI Agents", href: "/products/ai-agents", description: "Create AI team mates that work together" },
       { label: "Database", href: "/products/database", description: "Flexible data for every team" },
       { label: "Documents", href: "/products/documents", description: "Docs your agents can write" },
       { label: "Automations", href: "/products/automations", description: "Trigger, approve, done" },

@@ -149,7 +149,7 @@ Headline
 
 Subheadline
 
-Create AI employees that collaborate with your team, automate repetitive work, and help your business scale without hiring hundreds of people.
+Create AI team mates that collaborate with your team, automate repetitive work, and help your business scale without hiring hundreds of people.
 
 Primary CTA
 
@@ -265,7 +265,7 @@ This becomes the emotional selling point.
 
 Headline
 
-Hire AI employees that never sleep.
+Create AI team mates that never sleep.
 
 Cards
 
