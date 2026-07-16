@@ -9,7 +9,7 @@ export const faqs = [
   },
   {
     q: "Who is Onita built for?",
-    a: "Onita is built for growing businesses and teams — growing teams that bill for expertise and want to deliver more for clients without hiring more. We tailor the agents to your team, whether that's research and decks, contract review and intake, or campaigns and content.",
+    a: "Onita is built for growing businesses and teams of every kind — startups, SMEs, and the operations, sales, marketing, and delivery teams inside larger organizations. Anyone who wants to get more done without hiring more. We tailor the agents to how your team actually works, whether that's research and reports, intake and review, or campaigns and content.",
   },
   {
     q: "How is Onita different from an AI chatbot?",
@@ -33,7 +33,7 @@ export const faqs = [
   },
   {
     q: "How much does Onita cost?",
-    a: "Pricing scales with the size of your workforce and team. Book a demo and we'll put together a plan that fits — one predictable bill instead of ten separate subscriptions, with enterprise options for larger firms.",
+    a: "Pricing scales with the size of your workforce and team. Book a demo and we'll put together a plan that fits — one predictable bill instead of ten separate subscriptions, with enterprise options for larger organizations.",
   },
 ];
 

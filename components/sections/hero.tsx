@@ -85,9 +85,9 @@ export function Hero() {
             className="animate-fade-up mt-6 max-w-lg text-lg leading-8 text-white/70"
             style={{ animationDelay: "0.2s" }}
           >
-            Onita builds growing businesses and teams a workforce of AI agents — trained
-            on how you work, wired into your tools, and run for you. Deliver more for clients without
-            hiring more. Book a demo and we set it all up.
+            Onita builds growing businesses a workforce of AI agents — trained on how you work,
+            wired into your tools, and run for you. Get more done without hiring more.
+            Book a demo and we set it all up.
           </p>
 
           <div

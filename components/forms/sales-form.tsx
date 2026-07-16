@@ -56,7 +56,7 @@ export function SalesForm() {
             name="company"
             autoComplete="organization"
             required
-            placeholder="Your firm"
+            placeholder="Your company"
           />
         </Field>
         <Field id={f("phone")} label="Phone">
@@ -69,7 +69,7 @@ export function SalesForm() {
             </option>
             <option>Pricing &amp; plans</option>
             <option>Enterprise &amp; security</option>
-            <option>Rolling out to my firm</option>
+            <option>Rolling out to my team</option>
             <option>Partnerships</option>
             <option>Something else</option>
           </SelectInput>

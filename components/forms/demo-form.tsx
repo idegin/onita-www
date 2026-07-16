@@ -56,18 +56,19 @@ export function DemoForm() {
             name="company"
             autoComplete="organization"
             required
-            placeholder="Your firm"
+            placeholder="Your company"
           />
         </Field>
-        <Field id={f("firmType")} label="Firm type" required>
-          <SelectInput id={f("firmType")} name="firmType" required defaultValue="">
+        <Field id={f("businessType")} label="Business type" required>
+          <SelectInput id={f("businessType")} name="businessType" required defaultValue="">
             <option value="" disabled>
               Select one…
             </option>
-            <option>Consulting firm</option>
-            <option>Law firm</option>
-            <option>Agency</option>
-            <option>Other professional services</option>
+            <option>Startup</option>
+            <option>Small business</option>
+            <option>Growing SME</option>
+            <option>Enterprise</option>
+            <option>Other</option>
           </SelectInput>
         </Field>
         <Field id={f("size")} label="Team size" className="sm:col-span-2">

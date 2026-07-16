@@ -84,41 +84,41 @@ export const products: Product[] = [
     accent: "brand",
     Icon: SquaresFourIcon,
     shots: [S.a, S.f, S.b],
-    metaTitle: "AI Dashboard for Consulting & Law Firms",
+    metaTitle: "AI Dashboard for Growing Businesses & Teams",
     metaDescription:
-      "See every engagement, deadline, and AI agent in one live dashboard. Onita gives growing teams a real-time command center for the whole firm.",
+      "See every project, deadline, and AI agent in one live dashboard. Onita gives growing teams a real-time command center for the whole business.",
     eyebrow: "Dashboard",
-    headline: "The whole firm, on",
+    headline: "The whole business, on",
     headlineEmphasis: "one screen",
     subhead:
-      "One live command center for every engagement, metric, deadline, and AI agent — so partners and managers see the state of the business at a glance, without chasing status updates.",
+      "One live command center for every project, metric, deadline, and AI agent — so leaders and managers see the state of the business at a glance, without chasing status updates.",
     definitionTitle: "What is the Onita Dashboard?",
     definition:
-      "The Onita Dashboard is a real-time home base that pulls utilization, pipeline, matter and project status, and AI agent activity into one view. Instead of exporting spreadsheets or asking for updates, your leadership sees exactly what's happening — and what needs attention — the moment it changes.",
+      "The Onita Dashboard is a real-time home base that pulls utilization, pipeline, project status, and AI agent activity into one view. Instead of exporting spreadsheets or asking for updates, your leadership sees exactly what's happening — and what needs attention — the moment it changes.",
     highlights: ["Live metrics across every team", "Agent activity in real time", "Custom widgets and saved views"],
     features: [
       { title: "Real-time metrics", desc: "Utilization, pipeline, and delivery health update the instant your data or your agents change something.", Icon: PulseIcon },
       { title: "Agent activity feed", desc: "Watch your AI workforce work — every task an agent picks up, completes, or escalates for approval.", Icon: RobotIcon },
-      { title: "Custom widgets & views", desc: "Build a partner view, a delivery view, and a client view from the same data — no rebuilding required.", Icon: GaugeIcon },
-      { title: "Smart alerts", desc: "Get nudged when a deadline slips, a matter stalls, or a number crosses a threshold you care about.", Icon: BellRingingIcon },
+      { title: "Custom widgets & views", desc: "Build a leadership view, a delivery view, and a client view from the same data — no rebuilding required.", Icon: GaugeIcon },
+      { title: "Smart alerts", desc: "Get nudged when a deadline slips, a project stalls, or a number crosses a threshold you care about.", Icon: BellRingingIcon },
     ],
     workforceAngle: {
       title: "Your agents keep it current",
       desc: "The dashboard isn't a manual report you maintain. Your AI agents update the underlying work as they do it, so the numbers are always live — no weekly rollup, no stale slides.",
     },
     useCases: [
-      { audience: "Consulting", title: "Portfolio at a glance", desc: "Track every active engagement, consultant utilization, and margin in one partner dashboard." },
-      { audience: "Law firms", title: "Matter oversight", desc: "See open matters, upcoming deadlines, and billable progress without pinging associates." },
-      { audience: "Agencies", title: "Account health", desc: "Monitor every client account, campaign, and deliverable so nothing slips between check-ins." },
+      { audience: "Leadership", title: "Portfolio at a glance", desc: "Track every active project, team utilization, and margin in one leadership dashboard." },
+      { audience: "Operations", title: "Delivery oversight", desc: "See open work, upcoming deadlines, and progress without pinging your team for updates." },
+      { audience: "Client teams", title: "Account health", desc: "Monitor every client, campaign, and deliverable so nothing slips between check-ins." },
     ],
     outcomes: [
       "Cut status meetings — the answer is already on screen",
       "Spot slipping work before a client does",
-      "Give every partner the same source of truth",
+      "Give every leader the same source of truth",
     ],
     faqs: [
       { q: "Where does the dashboard get its data?", a: "From the work happening inside Onita — your spreadsheets, documents, timelines, and the actions your AI agents take — plus any tools you connect. It updates in real time." },
-      { q: "Can different teams see different views?", a: "Yes. Build role-based views and widgets so partners, delivery leads, and clients each see what's relevant, governed by permissions." },
+      { q: "Can different teams see different views?", a: "Yes. Build role-based views and widgets so leaders, delivery leads, and clients each see what's relevant, governed by permissions." },
       { q: "Do I have to build it myself?", a: "No. After your demo, our team designs and configures your dashboards around how your business measures success." },
     ],
     related: ["spreadsheet", "timeline", "ai-agents"],
@@ -154,9 +154,9 @@ export const products: Product[] = [
       desc: "Reconciling timesheets, cleaning a data pull, updating a budget tracker — the repetitive spreadsheet work that eats your team's afternoons is exactly what your agents take off their plate.",
     },
     useCases: [
-      { audience: "Consulting", title: "Model & track", desc: "Keep engagement budgets, hours, and margins in agent-maintained sheets that never go stale." },
-      { audience: "Law firms", title: "Matter trackers", desc: "Run intake, conflict, and billing trackers your agents keep reconciled and up to date." },
-      { audience: "Agencies", title: "Campaign numbers", desc: "Pull spend and performance into one sheet your agents refresh and summarize automatically." },
+      { audience: "Finance & ops", title: "Budgets & trackers", desc: "Keep budgets, hours, and margins in agent-maintained sheets that never go stale." },
+      { audience: "Operations", title: "Living records", desc: "Run intake, inventory, and billing trackers your agents keep reconciled and up to date." },
+      { audience: "Marketing", title: "Campaign numbers", desc: "Pull spend and performance into one sheet your agents refresh and summarize automatically." },
     ],
     outcomes: [
       "Reclaim hours lost to manual data entry",
@@ -191,9 +191,9 @@ export const products: Product[] = [
       "Onita Documents are living, collaborative docs where your AI agents do the heavy lifting: drafting from your templates and knowledge, pulling live figures from your data, and revising on request. Your experts edit and approve instead of starting from a blank page.",
     highlights: ["AI-assisted drafting", "Live-linked to your data", "Comments and version history"],
     features: [
-      { title: "AI-assisted drafting", desc: "Agents draft from your templates, past work, and firm knowledge — in your voice, not generic boilerplate.", Icon: PencilSimpleLineIcon },
+      { title: "AI-assisted drafting", desc: "Agents draft from your templates, past work, and business knowledge — in your voice, not generic boilerplate.", Icon: PencilSimpleLineIcon },
       { title: "Live data blocks", desc: "Figures and tables stay connected to their source, so a number never goes out of date mid-document.", Icon: LinkIcon },
-      { title: "Comments & review", desc: "Thread feedback, suggest edits, and route to a partner for sign-off before anything reaches a client.", Icon: ChatsCircleIcon },
+      { title: "Comments & review", desc: "Thread feedback, suggest edits, and route to a teammate for sign-off before anything reaches a client.", Icon: ChatsCircleIcon },
       { title: "Full version history", desc: "Every revision is captured and restorable, with a clear record of who — or which agent — changed what.", Icon: ClockCountdownIcon },
     ],
     workforceAngle: {
@@ -201,9 +201,9 @@ export const products: Product[] = [
       desc: "Give an agent the brief and it produces a structured first draft grounded in your business's real knowledge. Your people spend their time on judgment and polish, not on formatting and fetching facts.",
     },
     useCases: [
-      { audience: "Consulting", title: "Proposals & reports", desc: "Agents assemble proposals and deliverables from live data and your best past work." },
-      { audience: "Law firms", title: "Drafting & review", desc: "Draft memos and first-pass contracts, then have an agent flag risky clauses for a lawyer to review." },
-      { audience: "Agencies", title: "Briefs & recaps", desc: "Turn notes into client-ready briefs, scopes, and campaign recaps in minutes." },
+      { audience: "Sales & BD", title: "Proposals & reports", desc: "Agents assemble proposals and deliverables from live data and your best past work." },
+      { audience: "Operations", title: "Drafting & review", desc: "Draft agreements and memos, then have an agent flag risky clauses for a person to review." },
+      { audience: "Client teams", title: "Briefs & recaps", desc: "Turn notes into client-ready briefs, scopes, and recaps in minutes." },
     ],
     outcomes: [
       "Ship proposals and reports in a fraction of the time",
@@ -248,13 +248,13 @@ export const products: Product[] = [
       desc: "Every form submission becomes work an agent immediately picks up — categorized, enriched, and routed. Intake stops being a bottleneck and becomes the start of an automated pipeline.",
     },
     useCases: [
-      { audience: "Consulting", title: "Engagement intake", desc: "Capture new-engagement details and let an agent scope and route them to the right lead." },
-      { audience: "Law firms", title: "Client intake & conflicts", desc: "Run intake that an agent screens for conflicts and prepares before a lawyer reviews." },
-      { audience: "Agencies", title: "Creative briefs", desc: "Turn brief submissions into structured tickets your agents kick off automatically." },
+      { audience: "Operations", title: "Request intake", desc: "Capture new-project details and let an agent scope and route them to the right owner." },
+      { audience: "Client teams", title: "Client onboarding", desc: "Run intake an agent screens and prepares before a person needs to review it." },
+      { audience: "Marketing", title: "Creative briefs", desc: "Turn brief submissions into structured tickets your agents kick off automatically." },
     ],
     outcomes: [
       "Turn requests into action in seconds, not days",
-      "Standardize intake across the whole firm",
+      "Standardize intake across the whole business",
       "Free your team from manual triage",
     ],
     faqs: [
@@ -295,9 +295,9 @@ export const products: Product[] = [
       desc: "Instead of copying charts into slides at midnight, your agents build the readout from live figures and your last deck. Your team reviews the story instead of wrestling with formatting.",
     },
     useCases: [
-      { audience: "Consulting", title: "Pitches & readouts", desc: "Generate pitch decks and engagement readouts from live project data in your template." },
-      { audience: "Law firms", title: "Client updates", desc: "Turn matter status into clear client-facing updates without manual assembly." },
-      { audience: "Agencies", title: "Campaign reports", desc: "Build performance decks that pull the latest results the moment you need to present." },
+      { audience: "Sales & BD", title: "Pitches & readouts", desc: "Generate pitch decks and project readouts from live project data in your template." },
+      { audience: "Client teams", title: "Client updates", desc: "Turn project status into clear client-facing updates without manual assembly." },
+      { audience: "Marketing", title: "Campaign reports", desc: "Build performance decks that pull the latest results the moment you need to present." },
     ],
     outcomes: [
       "Turn a day of deck-building into minutes",
@@ -342,9 +342,9 @@ export const products: Product[] = [
       desc: "Coordinating calendars, chasing reschedules, and reminding people is exactly the work an agent handles well. Your team stops playing scheduler and the plan stays honest.",
     },
     useCases: [
-      { audience: "Consulting", title: "Delivery planning", desc: "Keep engagement timelines and consultant availability aligned as scope shifts." },
-      { audience: "Law firms", title: "Deadline management", desc: "Track court and filing deadlines that update as matters progress." },
-      { audience: "Agencies", title: "Production schedules", desc: "Coordinate shoots, reviews, and launches across every client in one view." },
+      { audience: "Delivery", title: "Delivery planning", desc: "Keep project timelines and team availability aligned as scope shifts." },
+      { audience: "Operations", title: "Deadline management", desc: "Track critical deadlines that update as work progresses." },
+      { audience: "Production", title: "Production schedules", desc: "Coordinate shoots, reviews, and launches across every client in one view." },
     ],
     outcomes: [
       "Always see a plan that reflects reality",
@@ -366,14 +366,14 @@ export const products: Product[] = [
     accent: "info",
     Icon: ChartLineUpIcon,
     shots: [S.a, S.c, S.e],
-    metaTitle: "AI Project Timeline & Gantt for Firms",
+    metaTitle: "AI Project Timeline & Gantt for Teams",
     metaDescription:
       "See the whole plan in one view — dependencies, milestones, and progress at every stage. Onita's timeline keeps delivery on track automatically.",
     eyebrow: "Timeline",
     headline: "The whole plan,",
     headlineEmphasis: "at a glance",
     subhead:
-      "Every engagement and project in one timeline — dependencies, milestones, and progress at each stage — so you can see what's on track, what's at risk, and what's next without opening ten trackers.",
+      "Every project and workstream in one timeline — dependencies, milestones, and progress at each stage — so you can see what's on track, what's at risk, and what's next without opening ten trackers.",
     definitionTitle: "What is the Onita Timeline?",
     definition:
       "The Onita Timeline is a Gantt-style view of your delivery: tasks, dependencies, and milestones laid out over time and tied to the real work. It shows the critical path and progress automatically, and your agents keep it current as tasks complete.",
@@ -389,9 +389,9 @@ export const products: Product[] = [
       desc: "As your agents and team complete tasks, the timeline updates — progress, dates, and risk all reflect reality. Planning stops being a document you update and becomes a live picture of delivery.",
     },
     useCases: [
-      { audience: "Consulting", title: "Engagement delivery", desc: "Plan phases and workstreams, and see instantly when a slip threatens a milestone." },
-      { audience: "Law firms", title: "Matter roadmaps", desc: "Lay out matter phases and deadlines so the path to resolution is always clear." },
-      { audience: "Agencies", title: "Campaign roadmaps", desc: "Sequence production and launch dependencies across every account in one view." },
+      { audience: "Delivery", title: "Project delivery", desc: "Plan phases and workstreams, and see instantly when a slip threatens a milestone." },
+      { audience: "Operations", title: "Roadmaps", desc: "Lay out project phases and deadlines so the path to done is always clear." },
+      { audience: "Marketing", title: "Campaign roadmaps", desc: "Sequence production and launch dependencies across every account in one view." },
     ],
     outcomes: [
       "See risk early, while you can still act",
@@ -436,9 +436,9 @@ export const products: Product[] = [
       desc: "Automations are the wiring that lets your AI workforce run whole processes end to end — with approval gates exactly where your business needs a human decision. Set it once; it runs every time.",
     },
     useCases: [
-      { audience: "Consulting", title: "Onboarding & billing", desc: "Automate engagement setup, status rollups, and invoice prep with approvals built in." },
-      { audience: "Law firms", title: "Intake to matter", desc: "Turn intake into a conflict check, engagement letter, and opened matter — with lawyer sign-off." },
-      { audience: "Agencies", title: "Brief to delivery", desc: "Route briefs into tasks, drafts, and reviews so production starts itself." },
+      { audience: "Operations", title: "Onboarding & billing", desc: "Automate project setup, status rollups, and invoice prep with approvals built in." },
+      { audience: "Client teams", title: "Intake to delivery", desc: "Turn intake into a check, an agreement, and an opened project — with sign-off." },
+      { audience: "Marketing", title: "Brief to delivery", desc: "Route briefs into tasks, drafts, and reviews so production starts itself." },
     ],
     outcomes: [
       "Eliminate the recurring manual process tax",
@@ -460,7 +460,7 @@ export const products: Product[] = [
     accent: "brand",
     Icon: RobotIcon,
     shots: [S.c, S.a, S.f],
-    metaTitle: "AI Agents for Consulting, Law & Agencies",
+    metaTitle: "AI Agents for Modern Business Teams",
     metaDescription:
       "Build AI teammates that never sleep — each with memory, knowledge, tools, and permissions of their own. Onita agents collaborate to run whole workflows.",
     eyebrow: "AI Agents",
@@ -483,9 +483,9 @@ export const products: Product[] = [
       desc: "Agents are the employees. Every other product — documents, spreadsheets, timelines, automations — is a place they do the work. Design the roles your business needs and they operate across all of it together.",
     },
     useCases: [
-      { audience: "Consulting", title: "Research & BD", desc: "An agent researches a market and drafts the proposal while another preps the readout." },
-      { audience: "Law firms", title: "Review & intake", desc: "An agent runs first-pass contract review and intake screening for a lawyer to approve." },
-      { audience: "Agencies", title: "Content & ops", desc: "Agents draft content, build reports, and keep accounts moving between check-ins." },
+      { audience: "Sales & BD", title: "Research & outreach", desc: "An agent researches a market and drafts the proposal while another preps the readout." },
+      { audience: "Operations", title: "Review & intake", desc: "An agent runs first-pass review and intake screening for a person to approve." },
+      { audience: "Marketing", title: "Content & ops", desc: "Agents draft content, build reports, and keep accounts moving between check-ins." },
     ],
     outcomes: [
       "Add capacity without adding payroll",

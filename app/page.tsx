@@ -16,7 +16,7 @@ export default function Home() {
 
       <Hero />
 
-      <section aria-label="Trusted by modern firms and agencies" className="border-b border-border bg-surface">
+      <section aria-label="Trusted by growing businesses and teams" className="border-b border-border bg-surface">
         <div className="mx-auto max-w-content px-4 py-12 sm:px-6 lg:px-10">
           <p className="text-center text-xs font-semibold uppercase tracking-wider text-muted-foreground">
             Trusted by growing businesses and teams — enterprise-grade from day one

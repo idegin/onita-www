@@ -16,7 +16,7 @@ import { jsonLd, breadcrumbSchema } from "@/lib/structured-data";
 export const metadata: Metadata = {
   title: "Talk to Sales — Onita AI Workforce Platform",
   description:
-    "Talk to the Onita sales team about pricing, security, and rolling out an AI workforce across your consulting firm, law firm, or agency. We build and run it for you.",
+    "Talk to the Onita sales team about pricing, security, and rolling out an AI workforce across your business. We design, build, and run it for you.",
   alternates: { canonical: "/contact-sales" },
   openGraph: {
     type: "website",
@@ -87,10 +87,10 @@ export default function ContactSalesPage() {
           </span>
           <h1 className="mt-6 max-w-2xl font-display text-4xl font-extrabold leading-[1.05] tracking-tight text-white sm:text-5xl">
             Let&apos;s scope the right <span className="text-gradient-ai">AI workforce</span> for your
-            firm
+            business
           </h1>
           <p className="mt-6 max-w-2xl text-lg leading-8 text-white/70">
-            Pricing, security reviews, or a firm-wide rollout — our team will help you plan it. Tell us
+            Pricing, security reviews, or a company-wide rollout — our team will help you plan it. Tell us
             what you need and we&apos;ll take it from there.
           </p>
         </div>

@@ -13,14 +13,14 @@ import { siteConfig } from "@/lib/site-config";
 import { jsonLd, breadcrumbSchema } from "@/lib/structured-data";
 
 export const metadata: Metadata = {
-  title: "Products — One Workspace, Every Tool Your Firm Runs On",
+  title: "Products — One Workspace, Every Tool Your Business Runs On",
   description:
     "Dashboards, documents, spreadsheets, slides, forms, calendars, timelines, automations, and AI agents — one connected workspace, powered by a shared AI workforce.",
   alternates: { canonical: "/products" },
   openGraph: {
     type: "website",
     url: `${siteConfig.url}/products`,
-    title: "Onita Products — One Workspace, Every Tool Your Firm Runs On",
+    title: "Onita Products — One Workspace, Every Tool Your Business Runs On",
     description:
       "Dashboards, documents, spreadsheets, slides, forms, calendars, timelines, automations, and AI agents — one connected workspace.",
   },
