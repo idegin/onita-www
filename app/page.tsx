@@ -1,6 +1,5 @@
 import { Hero } from "@/components/sections/hero";
 import { GetStarted } from "@/components/sections/get-started";
-import { Audience } from "@/components/sections/audience";
 import { AiWorkforce } from "@/components/sections/ai-workforce";
 import { Products } from "@/components/sections/products";
 import { RoiCalculator } from "@/components/sections/roi-calculator";
@@ -28,7 +27,6 @@ export default function Home() {
         </div>
       </section>
 
-      <Audience />
       <AiWorkforce />
       <Products />
       <RoiCalculator />

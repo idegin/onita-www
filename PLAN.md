@@ -37,35 +37,6 @@ their AI workforce for them. Never compete with more than these two CTAs.
 
 ---
 
-# Target Audience
-
-Primary
-
-* Consulting firms
-* Law firms
-* Creative & marketing agencies
-* Professional-services teams that bill for expertise
-
-Secondary
-
-* Enterprise organizations
-* Accounting & advisory firms
-* Architecture & engineering firms
-* Government, NGOs, universities
-
-Decision Makers
-
-* Managing Partner / Partner
-* Founder / Principal
-* CEO
-* COO
-* Practice / Engagement Lead
-* Head of Operations
-* Head of Delivery
-* IT / Security Lead
-
----
-
 # Core Brand Message
 
 > Your team just got bigger.

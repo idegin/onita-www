@@ -68,6 +68,55 @@ export const softwareApplicationSchema = {
   publisher: { "@id": `${siteConfig.url}/#organization` },
 };
 
+export function breadcrumbSchema(items: { name: string; path: string }[]) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: items.map((item, index) => ({
+      "@type": "ListItem",
+      position: index + 1,
+      name: item.name,
+      item: abs(item.path),
+    })),
+  };
+}
+
+export function productSchema(product: {
+  name: string;
+  slug: string;
+  description: string;
+}) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    name: `Onita ${product.name}`,
+    applicationCategory: "BusinessApplication",
+    applicationSubCategory: "AI Workforce Platform",
+    operatingSystem: "Web",
+    description: product.description,
+    url: abs(`/products/${product.slug}`),
+    offers: {
+      "@type": "Offer",
+      availability: "https://schema.org/InStock",
+      url: abs(siteConfig.demoUrl),
+    },
+    publisher: { "@id": `${siteConfig.url}/#organization` },
+    isPartOf: { "@id": `${siteConfig.url}/#website` },
+  };
+}
+
+export function faqPageSchema(faqs: { q: string; a: string }[]) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: faqs.map((item) => ({
+      "@type": "Question",
+      name: item.q,
+      acceptedAnswer: { "@type": "Answer", text: item.a },
+    })),
+  };
+}
+
 export function jsonLd(schema: object) {
   return { __html: JSON.stringify(schema) };
 }

@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { CaretDownIcon, ListIcon, XIcon, CalendarCheckIcon } from "@phosphor-icons/react";
 import { BrandLogo } from "@/components/brand-logo";
 import { primaryNav } from "@/lib/navigation";
@@ -10,6 +11,8 @@ import { siteConfig } from "@/lib/site-config";
 export function SiteHeader() {
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
+  const pathname = usePathname();
+  const overHero = pathname === "/";
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 12);
@@ -25,7 +28,7 @@ export function SiteHeader() {
     };
   }, [mobileOpen]);
 
-  const solid = scrolled || mobileOpen;
+  const solid = scrolled || mobileOpen || !overHero;
 
   return (
     <header
@@ -40,7 +43,7 @@ export function SiteHeader() {
 
         <nav aria-label="Primary" className="hidden lg:flex lg:items-center lg:gap-1">
           {primaryNav.map((group) =>
-            group.items ? (
+            group.items || group.columns ? (
               <div key={group.label} className="group relative">
                 <button
                   type="button"
@@ -58,23 +61,50 @@ export function SiteHeader() {
                     className="transition-transform duration-200 group-hover:rotate-180"
                   />
                 </button>
-                <div className="invisible absolute left-1/2 top-full z-10 w-[min(560px,90vw)] -translate-x-1/2 pt-3 opacity-0 transition-all duration-200 group-focus-within:visible group-focus-within:opacity-100 group-hover:visible group-hover:opacity-100">
-                  <div className="grid grid-cols-2 gap-1 rounded-card border border-border bg-surface p-3 shadow-hover">
-                    {group.items.map((item) => (
-                      <Link
-                        key={item.href}
-                        href={item.href}
-                        className="rounded-2xl p-3 transition-colors hover:bg-brand-50"
-                      >
-                        <span className="block text-sm font-semibold text-ink-800">{item.label}</span>
-                        {item.description && (
-                          <span className="mt-0.5 block text-xs text-muted-foreground">
-                            {item.description}
+                <div
+                  className={`invisible absolute left-1/2 top-full z-10 -translate-x-1/2 pt-3 opacity-0 transition-all duration-200 group-focus-within:visible group-focus-within:opacity-100 group-hover:visible group-hover:opacity-100 ${
+                    group.columns ? "w-[min(620px,92vw)]" : "w-[min(560px,90vw)]"
+                  }`}
+                >
+                  {group.columns ? (
+                    <div className="grid grid-cols-3 gap-4 rounded-card border border-border bg-surface p-5 shadow-hover">
+                      {group.columns.map((column) => (
+                        <div key={column.title}>
+                          <span className="block px-2 text-xs font-semibold uppercase tracking-wider text-muted-foreground">
+                            {column.title}
                           </span>
-                        )}
-                      </Link>
-                    ))}
-                  </div>
+                          <div className="mt-2 flex flex-col">
+                            {column.items.map((item) => (
+                              <Link
+                                key={item.href}
+                                href={item.href}
+                                className="rounded-xl px-2 py-2 text-sm font-semibold text-ink-800 transition-colors hover:bg-brand-50 hover:text-brand-600"
+                              >
+                                {item.label}
+                              </Link>
+                            ))}
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+                  ) : (
+                    <div className="grid grid-cols-2 gap-1 rounded-card border border-border bg-surface p-3 shadow-hover">
+                      {group.items?.map((item) => (
+                        <Link
+                          key={item.href}
+                          href={item.href}
+                          className="rounded-2xl p-3 transition-colors hover:bg-brand-50"
+                        >
+                          <span className="block text-sm font-semibold text-ink-800">{item.label}</span>
+                          {item.description && (
+                            <span className="mt-0.5 block text-xs text-muted-foreground">
+                              {item.description}
+                            </span>
+                          )}
+                        </Link>
+                      ))}
+                    </div>
+                  )}
                 </div>
               </div>
             ) : (
@@ -133,7 +163,7 @@ export function SiteHeader() {
           <nav aria-label="Mobile" className="flex flex-col gap-1">
             {primaryNav.map((group) => (
               <div key={group.label} className="border-b border-border py-1">
-                {group.items ? (
+                {group.items || group.columns ? (
                   <details className="group">
                     <summary className="flex cursor-pointer list-none items-center justify-between rounded-2xl px-3 py-3 text-base font-semibold text-ink-800">
                       {group.label}
@@ -144,7 +174,7 @@ export function SiteHeader() {
                       />
                     </summary>
                     <div className="flex flex-col pb-2">
-                      {group.items.map((item) => (
+                      {group.items?.map((item) => (
                         <Link
                           key={item.href}
                           href={item.href}
@@ -153,6 +183,23 @@ export function SiteHeader() {
                         >
                           {item.label}
                         </Link>
+                      ))}
+                      {group.columns?.map((column) => (
+                        <div key={column.title}>
+                          <span className="block px-6 pb-1 pt-3 text-xs font-semibold uppercase tracking-wider text-muted-foreground">
+                            {column.title}
+                          </span>
+                          {column.items.map((item) => (
+                            <Link
+                              key={item.href}
+                              href={item.href}
+                              onClick={() => setMobileOpen(false)}
+                              className="rounded-xl px-6 py-2.5 text-sm text-gray-700 hover:bg-brand-50"
+                            >
+                              {item.label}
+                            </Link>
+                          ))}
+                        </div>
                       ))}
                     </div>
                   </details>

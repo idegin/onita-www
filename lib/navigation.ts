@@ -4,10 +4,16 @@ export type NavLink = {
   description?: string;
 };
 
+export type NavColumn = {
+  title: string;
+  items: NavLink[];
+};
+
 export type NavGroup = {
   label: string;
   href: string;
   items?: NavLink[];
+  columns?: NavColumn[];
 };
 
 export const primaryNav: NavGroup[] = [
@@ -15,45 +21,66 @@ export const primaryNav: NavGroup[] = [
     label: "Products",
     href: "/products",
     items: [
-      { label: "AI Agents", href: "/products/ai-agents", description: "Create AI team mates that work together" },
-      { label: "Database", href: "/products/database", description: "Flexible data for every team" },
-      { label: "Documents", href: "/products/documents", description: "Docs your agents can write" },
-      { label: "Automations", href: "/products/automations", description: "Trigger, approve, done" },
+      { label: "Dashboard", href: "/products/dashboard", description: "One command center for every metric" },
+      { label: "Spreadsheet", href: "/products/spreadsheet", description: "Sheets your agents can read and update" },
+      { label: "Documents", href: "/products/documents", description: "Living docs your agents write" },
       { label: "Forms", href: "/products/forms", description: "Capture and route requests" },
+      { label: "Slides", href: "/products/slides", description: "Client-ready decks, auto-updated" },
       { label: "Calendar", href: "/products/calendar", description: "Plans that update themselves" },
-      { label: "Kanban", href: "/products/kanban", description: "Boards for every workflow" },
       { label: "Timeline", href: "/products/timeline", description: "See the whole plan at a glance" },
+      { label: "Automations", href: "/products/automations", description: "Trigger, approve, done" },
+      { label: "AI Agents", href: "/products/ai-agents", description: "Teammates that never sleep" },
     ],
   },
   {
-    label: "Solutions",
-    href: "/solutions",
-    items: [
-      { label: "Project Management", href: "/solutions/project-management" },
-      { label: "CRM", href: "/solutions/crm" },
-      { label: "HR", href: "/solutions/hr" },
-      { label: "Sales", href: "/solutions/sales" },
-      { label: "Marketing", href: "/solutions/marketing" },
-      { label: "Operations", href: "/solutions/operations" },
-      { label: "Customer Success", href: "/solutions/customer-success" },
-    ],
-  },
-  {
-    label: "Industries",
-    href: "/industries",
-    items: [
-      { label: "Healthcare", href: "/industries/healthcare" },
-      { label: "Education", href: "/industries/education" },
-      { label: "Construction", href: "/industries/construction" },
-      { label: "Retail", href: "/industries/retail" },
-      { label: "Agencies", href: "/industries/agencies" },
-      { label: "Government", href: "/industries/government" },
-      { label: "Nonprofits", href: "/industries/nonprofits" },
+    label: "Use Cases",
+    href: "/use-cases",
+    columns: [
+      {
+        title: "By firm",
+        items: [
+          { label: "Consulting firms", href: "/industries/consulting-firms" },
+          { label: "Law firms", href: "/industries/law-firms" },
+          { label: "Marketing & creative agencies", href: "/industries/agencies" },
+          { label: "Accounting & audit firms", href: "/industries/accounting-firms" },
+          { label: "Recruitment & HR firms", href: "/industries/recruitment-firms" },
+        ],
+      },
+      {
+        title: "By team",
+        items: [
+          { label: "Client delivery", href: "/solutions/client-delivery" },
+          { label: "Business development", href: "/solutions/business-development" },
+          { label: "Operations & admin", href: "/solutions/operations" },
+          { label: "Finance & billing", href: "/solutions/finance-billing" },
+        ],
+      },
+      {
+        title: "By workflow",
+        items: [
+          { label: "Proposals & pitches", href: "/use-cases/proposals" },
+          { label: "Client onboarding", href: "/use-cases/client-onboarding" },
+          { label: "Research & due diligence", href: "/use-cases/research-due-diligence" },
+          { label: "Reports & deliverables", href: "/use-cases/reports-deliverables" },
+        ],
+      },
     ],
   },
 ];
 
 export const footerNav: { title: string; links: NavLink[] }[] = [
+  {
+    title: "Product",
+    links: [
+      { label: "All products", href: "/products" },
+      { label: "AI Agents", href: "/products/ai-agents" },
+      { label: "Documents", href: "/products/documents" },
+      { label: "Spreadsheet", href: "/products/spreadsheet" },
+      { label: "Automations", href: "/products/automations" },
+      { label: "Book a demo", href: "/book-demo" },
+      { label: "Talk to sales", href: "/contact-sales" },
+    ],
+  },
   {
     title: "Resources",
     links: [
