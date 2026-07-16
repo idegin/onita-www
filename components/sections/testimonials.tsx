@@ -3,30 +3,30 @@ import { Section } from "@/components/ui/section";
 import { SectionHeading } from "@/components/ui/section-heading";
 
 const metrics = [
-  { value: "10x", label: "faster output per team" },
-  { value: "40+", label: "hours saved weekly" },
+  { value: "10x", label: "faster client delivery" },
+  { value: "40+", label: "billable hours reclaimed weekly" },
   { value: "60%", label: "lower tooling spend" },
-  { value: "3 days", label: "to full onboarding" },
+  { value: "2 weeks", label: "from demo to live workforce" },
 ];
 
 const quotes = [
   {
     quote:
-      "We replaced five tools and two contractor roles with Onita agents. Our small team now ships like a company three times our size.",
+      "Onita's team designed and built our research and deck agents around how we actually work. We deliver engagements in half the time, with the same senior team.",
     name: "Amara Okafor",
-    role: "COO, Northwind Logistics",
+    role: "Managing Partner, Meridian Strategy",
   },
   {
     quote:
-      "The Sales and CRM agents run our entire pipeline. I approve proposals from my phone and the follow-ups just happen.",
-    name: "David Chen",
-    role: "Founder, Loop Studio",
+      "Contract review and intake used to swallow our associates' week. The agents draft it, we approve it, and our lawyers are back to the work clients pay for.",
+    name: "David Okonkwo",
+    role: "Partner, Okonkwo & Vale LLP",
   },
   {
     quote:
-      "Onboarding used to take a week of my time. The HR Agent handles it end to end and our new hires love it.",
+      "We took on three new retainers without a single new hire. The campaign and content agents run in parallel and my team just reviews and ships.",
     name: "Priya Nair",
-    role: "Head of People, Cedar Health",
+    role: "Founder, Loop & Co. Agency",
   },
 ];
 
@@ -36,8 +36,8 @@ export function Testimonials() {
       <SectionHeading
         id="testimonials-heading"
         eyebrow="Customers"
-        title="Small teams, enterprise output."
-        description="Growing businesses use Onita to do more without hiring more."
+        title="Lean firms, enterprise output."
+        description="Consulting firms, law firms, and agencies use Onita to deliver more for clients without hiring more."
       />
 
       <dl className="mt-12 grid grid-cols-2 gap-6 rounded-card-lg border border-border bg-surface p-8 lg:grid-cols-4">

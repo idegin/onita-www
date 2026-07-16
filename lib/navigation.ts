@@ -51,9 +51,6 @@ export const primaryNav: NavGroup[] = [
       { label: "Nonprofits", href: "/industries/nonprofits" },
     ],
   },
-  { label: "Enterprise", href: "/enterprise" },
-  { label: "Resources", href: "/resources" },
-  { label: "Pricing", href: "/pricing" },
 ];
 
 export const footerNav: { title: string; links: NavLink[] }[] = [

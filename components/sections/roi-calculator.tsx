@@ -42,8 +42,8 @@ export function RoiCalculator() {
       <SectionHeading
         id="roi-heading"
         eyebrow="ROI calculator"
-        title="See what an AI workforce is worth to you."
-        description="Estimate how much your team saves by automating repetitive work — instead of hiring for it."
+        title="See what an AI workforce saves you."
+        description="Estimate how much you save when AI agents handle the repetitive work — instead of hiring more staff to keep up."
       />
 
       <div className="mt-14 grid gap-6 overflow-hidden rounded-card-lg border border-border bg-surface shadow-hover lg:grid-cols-2">
@@ -89,14 +89,15 @@ export function RoiCalculator() {
             {currency.format(annualSavings)}
           </p>
           <p className="text-sm text-white/70">
-            Based on {values.employees} people saving {values.hours} hours each week. That&rsquo;s time
-            your team reinvests in growth — no extra payroll required.
+            Based on {values.employees} people saving {values.hours} hours each week — work your AI
+            agents handle instead of new hires. That&rsquo;s payroll you don&rsquo;t spend and time
+            your team reinvests in growth.
           </p>
           <a
-            href={siteConfig.signupUrl}
+            href={siteConfig.demoUrl}
             className="inline-flex w-fit items-center gap-2 rounded-button bg-white px-6 py-3.5 text-base font-semibold text-ink-800 shadow-soft transition-all hover:-translate-y-0.5 hover:shadow-hover"
           >
-            Start saving free
+            Book a demo
             <ArrowRightIcon size={18} weight="bold" />
           </a>
         </div>

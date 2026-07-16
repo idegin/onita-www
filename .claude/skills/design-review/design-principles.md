@@ -8,7 +8,7 @@ project's `DESIGN.md`, `PLAN.md`, and Definition of Done. Use as the reference f
 - [ ] **Effortless:** complex AI capability feels simple; "I don't need to understand AI to benefit."
 - [ ] **Users first**, meticulous craft, speed, simplicity, consistency, opinionated defaults.
 - [ ] **Positioning stays "AI Workforce Platform"** — never "AI chatbot / assistant / workspace".
-- [ ] Every section moves the visitor toward the single conversion goal (Start Free).
+- [ ] Every section moves the visitor toward the single conversion goal (Book a Demo).
 
 ## II. Design Tokens (from DESIGN.md — treat as source of truth)
 - [ ] Colors: primary `#765AF3`, dark `#250E5D`, accent gold `#CE3E98` (sparing, never body text),

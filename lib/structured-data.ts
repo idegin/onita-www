@@ -61,9 +61,9 @@ export const softwareApplicationSchema = {
   url: siteConfig.url,
   offers: {
     "@type": "Offer",
-    price: "0",
-    priceCurrency: "USD",
-    description: "Start free. No credit card required.",
+    availability: "https://schema.org/InStock",
+    url: abs(siteConfig.demoUrl),
+    description: "Book a demo and we design, build, and run your AI workforce for you.",
   },
   publisher: { "@id": `${siteConfig.url}/#organization` },
 };

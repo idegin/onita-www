@@ -27,7 +27,7 @@ If a tool needs its schema, load it first with `ToolSearch` (`select:mcp__chrome
 Read the diff/description to understand scope. Ensure the dev server is running. Set desktop viewport 1440×900.
 
 ### Phase 1 — Interaction & user flow
-Execute the primary flow (hero → CTA, nav, forms). Test hover/active/focus/disabled states. Confirm the primary CTA is **Start Free** and secondary is **Book a Demo** (per PLAN.md). Assess perceived performance.
+Execute the primary flow (hero → CTA, nav, forms). Test hover/active/focus/disabled states. Confirm the primary CTA is **Book a Demo** and secondary is **Talk to Sales** (per PLAN.md), and that there is no self-serve "Start Free" / "Log in" / signup CTA anywhere. Assess perceived performance.
 
 ### Phase 2 — Responsiveness (mobile-first)
 Screenshot at 375px (mobile), 768px (tablet), 1024px (laptop), 1440px (desktop), 1920px (ultra-wide). Verify no horizontal scroll, no overlap, touch targets ≥44×44px, and that the nav collapses to a full-screen overlay on small screens.

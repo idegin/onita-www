@@ -2,11 +2,13 @@ import Image from "next/image";
 import type { Icon } from "@phosphor-icons/react";
 import {
   ClipboardTextIcon,
-  ScalesIcon,
+  MagnifyingGlassIcon,
+  CompassIcon,
+  PresentationChartIcon,
   PenNibIcon,
+  PaletteIcon,
   ShieldCheckIcon,
   ReceiptIcon,
-  HeadsetIcon,
   MegaphoneIcon,
   GearSixIcon,
   BooksIcon,
@@ -20,7 +22,6 @@ import {
   FileTextIcon,
   FolderSimpleIcon,
   DatabaseIcon,
-  EnvelopeSimpleIcon,
   ChartLineIcon,
 } from "@phosphor-icons/react/dist/ssr";
 import { Section } from "@/components/ui/section";
@@ -47,102 +48,102 @@ const MODELS: Record<string, Model> = {
 
 const agents: Agent[] = [
   {
-    name: "Intake Agent",
+    name: "Business Development Agent",
     model: MODELS.claude,
     Icon: ClipboardTextIcon,
-    skills: ["Qualify leads", "Draft engagement", "Schedule intake"],
+    skills: ["Qualify leads", "Draft proposals", "Scope engagements"],
     docs: [
-      { name: "Intake_form.pdf", Icon: FilePdfIcon },
+      { name: "Proposal_template.docx", Icon: FileDocIcon },
       { name: "Client_CRM", Icon: DatabaseIcon },
-      { name: "Fee_schedule.xlsx", Icon: FileXlsIcon },
+      { name: "Rate_card.pdf", Icon: FilePdfIcon },
     ],
   },
   {
     name: "Research Agent",
     model: MODELS.gemini,
-    Icon: ScalesIcon,
-    skills: ["Case law", "Statutes", "Citations"],
+    Icon: MagnifyingGlassIcon,
+    skills: ["Market research", "Competitor scan", "Benchmarks"],
     docs: [
-      { name: "Case_law.pdf", Icon: FilePdfIcon },
-      { name: "Precedents.docx", Icon: FileDocIcon },
-      { name: "Statutes_db", Icon: DatabaseIcon },
+      { name: "Market_report.pdf", Icon: FilePdfIcon },
+      { name: "Competitors.xlsx", Icon: FileXlsIcon },
+      { name: "Industry_db", Icon: DatabaseIcon },
     ],
   },
   {
-    name: "Drafting Agent",
+    name: "Strategy Agent",
     model: MODELS.claude,
+    Icon: CompassIcon,
+    skills: ["Frameworks", "Financial models", "Recommendations"],
+    docs: [
+      { name: "Financial_model.xlsx", Icon: FileXlsIcon },
+      { name: "Findings.docx", Icon: FileDocIcon },
+      { name: "Data_room", Icon: FolderSimpleIcon },
+    ],
+  },
+  {
+    name: "Deck Agent",
+    model: MODELS.gpt,
+    Icon: PresentationChartIcon,
+    skills: ["Build decks", "Data viz", "On-brand design"],
+    docs: [
+      { name: "Deck_template", Icon: FolderSimpleIcon },
+      { name: "Brand_kit", Icon: FolderSimpleIcon },
+      { name: "Charts.xlsx", Icon: FileXlsIcon },
+    ],
+  },
+  {
+    name: "Content Agent",
+    model: MODELS.gpt,
     Icon: PenNibIcon,
-    skills: ["Draft", "Redline", "Clause library"],
+    skills: ["Copywriting", "SEO", "Editing"],
     docs: [
-      { name: "NDA_template.docx", Icon: FileDocIcon },
-      { name: "MSA_v3.docx", Icon: FileDocIcon },
-      { name: "Clause_library", Icon: FolderSimpleIcon },
+      { name: "Content_calendar", Icon: FileTextIcon },
+      { name: "Brand_voice.md", Icon: FileTextIcon },
+      { name: "Blog_drafts", Icon: FolderSimpleIcon },
     ],
   },
   {
-    name: "Compliance Agent",
-    model: MODELS.gpt,
-    Icon: ShieldCheckIcon,
-    skills: ["Conflicts check", "KYC", "Audit trail"],
+    name: "Creative Agent",
+    model: MODELS.claude,
+    Icon: PaletteIcon,
+    skills: ["Concepts", "Design briefs", "Assets"],
     docs: [
-      { name: "Conflicts_log", Icon: FolderSimpleIcon },
-      { name: "KYC_records", Icon: DatabaseIcon },
-      { name: "Policy.md", Icon: FileTextIcon },
+      { name: "Creative_brief.docx", Icon: FileDocIcon },
+      { name: "Moodboard", Icon: FolderSimpleIcon },
+      { name: "Asset_library", Icon: FolderSimpleIcon },
     ],
   },
   {
-    name: "Billing Agent",
-    model: MODELS.gpt,
-    Icon: ReceiptIcon,
-    skills: ["Time entries", "Invoicing", "Trust accounting"],
-    docs: [
-      { name: "Timesheets.xlsx", Icon: FileXlsIcon },
-      { name: "Invoices", Icon: FolderSimpleIcon },
-      { name: "Rate_card.pdf", Icon: FilePdfIcon },
-    ],
-  },
-  {
-    name: "Client Success Agent",
-    model: MODELS.gemini,
-    Icon: HeadsetIcon,
-    skills: ["Status updates", "Follow-ups", "NPS"],
-    docs: [
-      { name: "Matter_status", Icon: ChartLineIcon },
-      { name: "Client_CRM", Icon: DatabaseIcon },
-      { name: "Email_threads", Icon: EnvelopeSimpleIcon },
-    ],
-  },
-  {
-    name: "Marketing Agent",
+    name: "Campaign Agent",
     model: MODELS.gpt,
     Icon: MegaphoneIcon,
-    skills: ["Campaigns", "Content", "SEO"],
+    skills: ["Campaigns", "Paid media", "Analytics"],
     docs: [
-      { name: "Brand_kit", Icon: FolderSimpleIcon },
-      { name: "Blog_calendar", Icon: FileTextIcon },
+      { name: "Campaign_plan", Icon: FileTextIcon },
+      { name: "Ad_accounts", Icon: DatabaseIcon },
       { name: "Analytics", Icon: ChartLineIcon },
     ],
   },
   {
-    name: "Operations Agent",
+    name: "Project Manager Agent",
     model: MODELS.deepseek,
     Icon: GearSixIcon,
-    skills: ["Assign work", "Track SLAs", "Reporting"],
+    skills: ["Assign work", "Track timelines", "Reporting"],
     docs: [
       { name: "Project_board", Icon: FolderSimpleIcon },
-      { name: "SLA_tracker", Icon: ChartLineIcon },
+      { name: "Timeline", Icon: ChartLineIcon },
       { name: "Reports.pdf", Icon: FilePdfIcon },
     ],
   },
   {
-    name: "Paralegal Agent",
+    name: "Billing Agent",
     model: MODELS.llama,
-    Icon: BooksIcon,
-    skills: ["File prep", "Discovery", "Court filings"],
+    Icon: ReceiptIcon,
+    skills: ["Time tracking", "Invoicing", "Retainers"],
     docs: [
-      { name: "Court_filings", Icon: FolderSimpleIcon },
-      { name: "Discovery_set", Icon: FolderSimpleIcon },
-      { name: "Templates", Icon: FileDocIcon },
+      { name: "Timesheets.xlsx", Icon: FileXlsIcon },
+      { name: "Invoices", Icon: FolderSimpleIcon },
+      { name: "Retainers.pdf", Icon: FilePdfIcon },
     ],
   },
 ];
@@ -253,8 +254,8 @@ export function AiWorkforce() {
           id="workforce-heading"
           invert
           eyebrow="AI Workforce"
-          title="Create AI teams mates that never sleep."
-          description="Each Onita agent is a specialist with its own skills, knowledge, and document access — all orchestrated from one place, so work flows between them without you chasing it."
+          title="Create AI team mates that never sleep."
+          description="Purpose-built for consulting firms, law firms, and agencies — each Onita agent is a specialist with its own skills, knowledge, and document access, all designed and run by us so work flows between them without you chasing it."
         />
 
         <ul className="mt-6 flex flex-wrap justify-center gap-2.5">

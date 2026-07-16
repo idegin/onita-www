@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react";
 import Link from "next/link";
-import { CaretDownIcon, ListIcon, XIcon, ArrowRightIcon } from "@phosphor-icons/react";
+import { CaretDownIcon, ListIcon, XIcon, CalendarCheckIcon } from "@phosphor-icons/react";
 import { BrandLogo } from "@/components/brand-logo";
 import { primaryNav } from "@/lib/navigation";
 import { siteConfig } from "@/lib/site-config";
@@ -94,21 +94,21 @@ export function SiteHeader() {
         </nav>
 
         <div className="hidden items-center gap-2 lg:flex">
-          <a
-            href={siteConfig.loginUrl}
+          <Link
+            href={siteConfig.salesUrl}
             className={`rounded-button px-3.5 py-2 text-sm font-semibold transition-colors ${
               solid ? "text-gray-700 hover:text-ink-800" : "text-white/85 hover:text-white"
             }`}
           >
-            Log in
-          </a>
-          <a
-            href={siteConfig.signupUrl}
+            Talk to sales
+          </Link>
+          <Link
+            href={siteConfig.demoUrl}
             className="inline-flex items-center gap-1.5 rounded-button bg-brand-500 px-4 py-2 text-sm font-semibold text-white shadow-soft transition-all hover:bg-brand-600 hover:shadow-hover"
           >
-            Start free
-            <ArrowRightIcon size={15} weight="bold" />
-          </a>
+            <CalendarCheckIcon size={15} weight="fill" />
+            Book a demo
+          </Link>
         </div>
 
         <button
@@ -170,26 +170,21 @@ export function SiteHeader() {
           </nav>
 
           <div className="mt-6 flex flex-col gap-3">
-            <a
-              href={siteConfig.signupUrl}
-              className="inline-flex items-center justify-center gap-1.5 rounded-button bg-brand-500 px-4 py-3.5 text-base font-semibold text-white shadow-soft"
-            >
-              Start free
-              <ArrowRightIcon size={17} weight="bold" />
-            </a>
             <Link
               href={siteConfig.demoUrl}
               onClick={() => setMobileOpen(false)}
-              className="inline-flex items-center justify-center rounded-button border border-border px-4 py-3.5 text-base font-semibold text-ink-800"
+              className="inline-flex items-center justify-center gap-1.5 rounded-button bg-brand-500 px-4 py-3.5 text-base font-semibold text-white shadow-soft"
             >
+              <CalendarCheckIcon size={17} weight="fill" />
               Book a demo
             </Link>
-            <a
-              href={siteConfig.loginUrl}
-              className="inline-flex items-center justify-center rounded-button px-4 py-3 text-base font-semibold text-gray-700"
+            <Link
+              href={siteConfig.salesUrl}
+              onClick={() => setMobileOpen(false)}
+              className="inline-flex items-center justify-center rounded-button border border-border px-4 py-3.5 text-base font-semibold text-ink-800"
             >
-              Log in
-            </a>
+              Talk to sales
+            </Link>
           </div>
         </div>
       )}

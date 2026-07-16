@@ -10,11 +10,11 @@
 
 The primary purpose of the website is **not to explain AI.**
 
-The purpose is to convince visitors that **Onita allows small teams to operate like enterprises using AI employees.**
+The purpose is to convince visitors that **Onita lets consulting firms, law firms, and agencies operate like enterprises using an AI workforce we build and run for them.**
 
 The website should immediately answer:
 
-> **"How can Onita help my business grow without hiring more people?"**
+> **"How can Onita help my firm deliver more for clients without hiring more people?"**
 
 Every page should move visitors toward one primary conversion goal.
 
@@ -22,19 +22,18 @@ Every page should move visitors toward one primary conversion goal.
 
 # Primary CTA
 
-Throughout the website, every CTA should eventually lead to:
-
-> **Start Free**
-
-Secondary CTA
+Onita is a **done-for-you / managed** service, not self-serve. Throughout the website, every CTA
+should lead to:
 
 > **Book a Demo**
 
-For Enterprise
+Secondary CTA / For Enterprise
 
 > **Talk to Sales**
 
-Never compete with more than these CTAs.
+There is **no self-serve free signup or login** on the marketing site — no "Start Free", "Log in",
+"Sign up", or "free trial". Prospects book a demo and our team designs, builds, hosts, and runs
+their AI workforce for them. Never compete with more than these two CTAs.
 
 ---
 
@@ -42,30 +41,28 @@ Never compete with more than these CTAs.
 
 Primary
 
-* Small Businesses
-* Growing SMEs
-* Startups
-* Agencies
-* Operations Teams
+* Consulting firms
+* Law firms
+* Creative & marketing agencies
+* Professional-services teams that bill for expertise
 
 Secondary
 
-* Enterprise Organizations
-* Government
-* NGOs
-* Universities
+* Enterprise organizations
+* Accounting & advisory firms
+* Architecture & engineering firms
+* Government, NGOs, universities
 
 Decision Makers
 
+* Managing Partner / Partner
+* Founder / Principal
 * CEO
-* Founder
 * COO
-* Operations Manager
-* HR Manager
-* Marketing Lead
-* Product Manager
-* Sales Manager
-* IT Manager
+* Practice / Engagement Lead
+* Head of Operations
+* Head of Delivery
+* IT / Security Lead
 
 ---
 
@@ -75,17 +72,20 @@ Decision Makers
 
 Supporting Message
 
-> Build AI employees that work together, automate repetitive work, and help your team accomplish more without hiring more people.
+> AI employees that work together, automate repetitive work, and help your firm deliver more for clients without hiring more people. We design, build, host, and run them for you.
 
 ---
 
 # Core Positioning
 
-Do **NOT** position Onita as another AI chatbot.
+Do **NOT** position Onita as another AI chatbot, and do **NOT** position it as a self-serve app.
 
 Position it as
 
-> The AI Workforce Platform.
+> The AI Workforce Platform — designed, built, and run for your firm.
+
+It is a **done-for-you / managed** engagement: book a demo, and our team stands up your AI
+workforce end to end. No free tier, no login, nothing for the customer to build themselves.
 
 Not
 
@@ -135,9 +135,9 @@ Resources
 
 Pricing
 
-Book Demo
+Talk to Sales
 
-Start Free
+Book a Demo
 
 ---
 
@@ -149,15 +149,15 @@ Headline
 
 Subheadline
 
-Create AI team mates that collaborate with your team, automate repetitive work, and help your business scale without hiring hundreds of people.
+Onita builds consulting firms, law firms, and agencies a workforce of AI agents — trained on how you work, wired into your tools, and run for you. Deliver more for clients without hiring more.
 
 Primary CTA
 
-Start Free
+Book a Demo
 
 Secondary CTA
 
-Book a Demo
+Talk to Sales
 
 Right side
 
@@ -185,7 +185,7 @@ Live activity
 
 Social proof underneath
 
-Trusted by growing businesses
+Trusted by consulting firms, law firms, and agencies
 
 Available AI models
 
@@ -529,9 +529,9 @@ Headline
 
 Ready to grow without growing your payroll?
 
-Start Free
+Book a Demo
 
-Book Demo
+Talk to Sales
 
 ---
 
@@ -843,9 +843,9 @@ Pricing
 
 Right
 
-Book Demo
+Talk to Sales
 
-Start Free
+Book a Demo
 
 Sticky
 
@@ -998,15 +998,15 @@ Every page should include:
 Key keyword clusters:
 
 * AI workforce platform
+* AI agents for consulting firms
+* AI for law firms
+* AI for agencies
+* managed AI workforce
+* AI agents for professional services
+* done-for-you AI automation
 * AI work management software
-* AI project management
-* AI automation platform
-* AI business operating system
-* AI agents for business
-* Business process automation
-* SME productivity software
-* AI collaboration platform
-* Enterprise AI agents
+* business process automation
+* enterprise AI agents
 
 ---
 
@@ -1051,8 +1051,8 @@ Every page should guide visitors through a consistent decision journey:
 2. Demonstrate the problem with fragmented tools and growing operational costs.
 3. Introduce Onita as the unified AI Workforce Platform.
 4. Show proof through product capabilities, customer stories, and measurable ROI.
-5. Reduce friction with transparent pricing, security details, FAQs, and implementation guidance.
-6. End with a single, unmistakable action: **Start Free**, with **Book a Demo** as the secondary path.
+5. Reduce friction with the managed model, security details, FAQs, and implementation guidance.
+6. End with a single, unmistakable action: **Book a Demo**, with **Talk to Sales** as the secondary path.
 
 The overarching message should remain consistent across the site:
 

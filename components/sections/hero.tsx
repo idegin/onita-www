@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { SparkleIcon, ArrowRightIcon, PlayCircleIcon } from "@phosphor-icons/react/dist/ssr";
+import { SparkleIcon, CalendarCheckIcon, ChatCircleTextIcon } from "@phosphor-icons/react/dist/ssr";
 import { siteConfig } from "@/lib/site-config";
 import { RotatingShot } from "@/components/ui/rotating-shot";
 import { productTools } from "@/components/ui/product-tools";
@@ -78,34 +78,35 @@ export function Hero() {
             className="animate-fade-up mt-6 font-display text-4xl font-extrabold leading-[1.05] tracking-tight text-white sm:text-5xl lg:text-6xl"
             style={{ animationDelay: "0.12s" }}
           >
-            Work smarter with <span className="text-gradient-ai">Agents</span>
+            Your team just got <span className="text-gradient-ai">bigger</span>
           </h1>
 
           <p
             className="animate-fade-up mt-6 max-w-lg text-lg leading-8 text-white/70"
             style={{ animationDelay: "0.2s" }}
           >
-            Onita is the AI-powered work management platform where human and AI team mates plan
-            projects, automate the busywork, and ship more together
+            Onita builds consulting firms, law firms, and agencies a workforce of AI agents — trained
+            on how you work, wired into your tools, and run for you. Deliver more for clients without
+            hiring more. Book a demo and we set it all up.
           </p>
 
           <div
             className="animate-fade-up mt-9 flex flex-col gap-3 sm:flex-row sm:items-center"
             style={{ animationDelay: "0.28s" }}
           >
-            <a
-              href={siteConfig.signupUrl}
-              className="inline-flex items-center justify-center gap-2 rounded-button bg-white px-6 py-3.5 text-base font-semibold text-ink-800 shadow-soft transition-all hover:-translate-y-0.5 hover:shadow-hover"
-            >
-              Start free
-              <ArrowRightIcon size={18} weight="bold" />
-            </a>
             <Link
               href={siteConfig.demoUrl}
+              className="inline-flex items-center justify-center gap-2 rounded-button bg-white px-6 py-3.5 text-base font-semibold text-ink-800 shadow-soft transition-all hover:-translate-y-0.5 hover:shadow-hover"
+            >
+              <CalendarCheckIcon size={20} weight="fill" />
+              Book a demo
+            </Link>
+            <Link
+              href={siteConfig.salesUrl}
               className="inline-flex items-center justify-center gap-2 rounded-button border border-white/25 px-6 py-3.5 text-base font-semibold text-white transition-colors hover:bg-white/10"
             >
-              <PlayCircleIcon size={20} weight="fill" />
-              Book a demo
+              <ChatCircleTextIcon size={20} weight="fill" />
+              Talk to sales
             </Link>
           </div>
 

@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { ArrowRightIcon, PlayCircleIcon } from "@phosphor-icons/react/dist/ssr";
+import { CalendarCheckIcon, ChatCircleTextIcon } from "@phosphor-icons/react/dist/ssr";
 import { siteConfig } from "@/lib/site-config";
 
 type CtaButtonsProps = {
@@ -19,19 +19,19 @@ export function CtaButtons({ invert = false, align = "start", className = "" }: 
 
   return (
     <div className={`flex flex-col gap-3 sm:flex-row sm:items-center ${alignClass} ${className}`}>
-      <a
-        href={siteConfig.signupUrl}
-        className={`inline-flex items-center justify-center gap-2 rounded-button px-6 py-3.5 text-base font-semibold shadow-soft transition-all hover:-translate-y-0.5 hover:shadow-hover ${primary}`}
-      >
-        Start free
-        <ArrowRightIcon size={18} weight="bold" />
-      </a>
       <Link
         href={siteConfig.demoUrl}
+        className={`inline-flex items-center justify-center gap-2 rounded-button px-6 py-3.5 text-base font-semibold shadow-soft transition-all hover:-translate-y-0.5 hover:shadow-hover ${primary}`}
+      >
+        <CalendarCheckIcon size={20} weight="fill" />
+        Book a demo
+      </Link>
+      <Link
+        href={siteConfig.salesUrl}
         className={`inline-flex items-center justify-center gap-2 rounded-button border px-6 py-3.5 text-base font-semibold transition-colors ${secondary}`}
       >
-        <PlayCircleIcon size={20} weight="fill" />
-        Book a demo
+        <ChatCircleTextIcon size={20} weight="fill" />
+        Talk to sales
       </Link>
     </div>
   );

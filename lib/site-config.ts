@@ -5,13 +5,11 @@ export const siteConfig = {
   tagline: "The AI Workforce Platform",
   slogan: "Your team just got bigger.",
   description:
-    "Onita is the AI Workforce Platform. Build AI employees that collaborate with your team, automate repetitive work, and help your business scale without hiring more people.",
+    "Onita is the AI Workforce Platform for consulting firms, law firms, and agencies. We design, build, and run a team of AI agents around how your firm works — so you deliver more without hiring more. Book a demo and we set it all up for you.",
   founded: "2024",
 
   url: "https://onitaai.com",
   appUrl: "https://app.onitaai.com",
-  loginUrl: "https://app.onitaai.com/login",
-  signupUrl: "https://app.onitaai.com/signup",
   demoUrl: "/book-demo",
   salesUrl: "/contact-sales",
 
@@ -48,11 +46,11 @@ export const siteConfig = {
 
   twitterHandle: "@onitaai",
 
-  aiModels: ["Claude", "GPT", "Gemini", "DeepSeek", "Llama"],
+  aiModels: ["Claude", "GPT", "Gemini", "Llama"],
 
   stats: [
     { value: "10x", label: "faster team output" },
-    { value: "9", label: "AI employees, ready to hire" },
+    { value: "97+", label: "domain expert agents" },
     { value: "40+", label: "hours saved per week" },
   ],
 } as const;

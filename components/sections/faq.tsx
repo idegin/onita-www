@@ -5,27 +5,35 @@ import { SectionHeading } from "@/components/ui/section-heading";
 export const faqs = [
   {
     q: "What is an AI Workforce?",
-    a: "An AI Workforce is a team of AI employees — specialized agents for sales, support, HR, finance and more — that work alongside your people. Each agent has its own memory, knowledge, tools and permissions, and they collaborate to run entire workflows end to end.",
+    a: "An AI Workforce is a team of AI agents that do real work alongside your people — specialists for research, business development, strategy, decks, contract review, campaigns and more. Each agent has its own memory, knowledge, tools and permissions, and they collaborate to run entire workflows end to end, so your firm scales output without adding headcount.",
+  },
+  {
+    q: "Who is Onita built for?",
+    a: "Onita is built for consulting firms, law firms, and agencies — professional-services teams that bill for expertise and want to deliver more for clients without hiring more. We tailor the agents to your practice, whether that's research and decks, contract review and intake, or campaigns and content.",
   },
   {
     q: "How is Onita different from an AI chatbot?",
-    a: "A chatbot answers questions. Onita agents do the work: they take actions across your database, documents, boards and connected apps, hand tasks to each other, and loop in a human for approval when needed.",
+    a: "A chatbot answers questions. Onita agents do the work: they take actions across your documents, data, and connected apps, hand tasks to each other, and loop in a human for approval before anything client-facing goes out.",
   },
   {
-    q: "Do I need technical skills to set up AI employees?",
-    a: "No. You hire an Onita agent the same way you'd brief a new teammate — describe the role, connect your tools and knowledge, and set permissions. No code required.",
+    q: "Do we have to build and run it ourselves?",
+    a: "No — Onita is fully managed. After a demo, our team designs your AI workforce, builds the agents around your workflows, connects your tools and documents, and hosts everything for you. Then we onboard your team and stay on to tune it as you grow. You get a working workforce, not a blank canvas.",
+  },
+  {
+    q: "How do we get started?",
+    a: "Book a demo. We'll show Onita running on your real use cases, then design and build your workspace, connect your tools, and take your team live — typically within a couple of weeks. There's no free trial to set up and nothing to build yourself.",
   },
   {
     q: "Which AI models does Onita use?",
-    a: "Onita works with the world's best models, including Claude, GPT, Gemini and DeepSeek. You choose the right model for each task, and can change it at any time.",
+    a: "Onita works with the world's best models, including Claude, GPT, Gemini and Llama. We choose the right model for each agent and task, and can change it at any time as new models ship.",
   },
   {
     q: "Is my data secure?",
-    a: "Yes. Onita is SOC 2 Type II audited with end-to-end encryption, role-based access control, audit logs, automated backups, and SSO. Your data is never used to train public models.",
+    a: "Yes. Onita is SOC 2 Type II audited with end-to-end encryption, role-based access control, audit logs, automated backups, and SSO — with human approval on sensitive actions. We host your workspace in isolation, and your data is never used to train public models. We're happy to sign NDAs and DPAs.",
   },
   {
     q: "How much does Onita cost?",
-    a: "You can start free, no credit card required. Paid plans scale with your team, and enterprise pricing is available for larger organizations — one predictable bill instead of ten separate subscriptions.",
+    a: "Pricing scales with the size of your workforce and team. Book a demo and we'll put together a plan that fits — one predictable bill instead of ten separate subscriptions, with enterprise options for larger firms.",
   },
 ];
 
@@ -46,7 +54,7 @@ export function Faq() {
         id="faq-heading"
         eyebrow="FAQ"
         title="Questions, answered."
-        description="Everything you need to know about building an AI workforce with Onita."
+        description="Everything you need to know about putting an AI workforce to work in your firm."
       />
 
       <div className="mt-12 divide-y divide-border border-y border-border">

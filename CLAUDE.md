@@ -2,15 +2,19 @@
 @AGENTS.md
 @PLAN.md
 
-We are targeting Consulting and Law firms as well as agencies.
+We are targeting **consulting firms, law firms, and agencies** — professional-services teams
+that bill for expertise and want to deliver more for clients without hiring more.
 
 # Onita Marketing Website
 
 The AI Workforce Platform marketing site. Core message: **"Your team just got bigger."**
-Positioning is always **AI Workforce Platform** — never "AI chatbot / assistant / workspace".
-Every page drives one conversion goal: **Start Free** (secondary: **Book a Demo**;
-enterprise: **Talk to Sales**). Full architecture and copy direction live in `PLAN.md`;
-the complete visual language lives in `DESIGN.md`.
+Positioning is always **AI Workforce Platform**, sold as a **done-for-you / managed** service —
+never "AI chatbot / assistant / workspace". Onita is not self-serve: prospects **book a demo**
+and our team **designs, builds, hosts, and runs** their AI workforce for them.
+Every page drives one conversion goal: **Book a Demo** (secondary / enterprise: **Talk to Sales**).
+There is **no self-serve free signup or login** on the marketing site — do not add "Start Free",
+"Log in", "Sign up", "free trial", or `app.onitaai.com` signup/login CTAs anywhere.
+Full architecture and copy direction live in `PLAN.md`; the complete visual language lives in `DESIGN.md`.
 
 # Tech Stack
 - **Next.js 16.2** (App Router, `app/`), **React 19**, **TypeScript**, **Tailwind CSS v4**.
@@ -47,9 +51,10 @@ generated Tailwind utilities — never raw hex or magic numbers.
   `site-footer.tsx`, `brand-logo.tsx`, and `components/sections/*` for page sections (e.g. `hero.tsx`).
   Build each section as its own component. Prefer server components; add `"use client"` only for
   interactivity. Use SSR icon imports (`@phosphor-icons/react/dist/ssr`) in server components.
-- `lib/` — **single source of truth for data**. `site-config.ts` holds brand, URLs (`loginUrl`,
-  `signupUrl` → `app.onitaai.com`), contact, address, socials, AI models. `navigation.ts` holds
-  primary + footer nav. `structured-data.ts` builds JSON-LD. Never hard-code these in components.
+- `lib/` — **single source of truth for data**. `site-config.ts` holds brand, conversion URLs
+  (`demoUrl` → `/book-demo`, `salesUrl` → `/contact-sales`), contact, address, socials, AI models.
+  `navigation.ts` holds primary + footer nav. `structured-data.ts` builds JSON-LD. Never hard-code
+  these in components, and never reintroduce login/signup CTAs.
 - Assets: `public/brand/` (source logo), `public/icons/` (favicons), `public/og/` (social images).
 
 # Rules

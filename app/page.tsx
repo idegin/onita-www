@@ -1,9 +1,7 @@
 import { Hero } from "@/components/sections/hero";
-import { Problem } from "@/components/sections/problem";
-import { Solution } from "@/components/sections/solution";
+import { GetStarted } from "@/components/sections/get-started";
 import { Audience } from "@/components/sections/audience";
 import { AiWorkforce } from "@/components/sections/ai-workforce";
-import { Collaboration } from "@/components/sections/collaboration";
 import { Products } from "@/components/sections/products";
 import { RoiCalculator } from "@/components/sections/roi-calculator";
 import { Testimonials } from "@/components/sections/testimonials";
@@ -19,10 +17,10 @@ export default function Home() {
 
       <Hero />
 
-      <section aria-label="Trusted by growing businesses" className="border-b border-border bg-surface">
+      <section aria-label="Trusted by modern firms and agencies" className="border-b border-border bg-surface">
         <div className="mx-auto max-w-content px-4 py-12 sm:px-6 lg:px-10">
           <p className="text-center text-xs font-semibold uppercase tracking-wider text-muted-foreground">
-            Trusted by growing businesses — enterprise-grade from day one
+            Trusted by consulting firms, law firms, and agencies — enterprise-grade from day one
           </p>
           <div className="mt-8">
             <LogoMarquee />
@@ -30,14 +28,12 @@ export default function Home() {
         </div>
       </section>
 
-      <Problem />
-      <Solution />
       <Audience />
       <AiWorkforce />
-      <Collaboration />
       <Products />
       <RoiCalculator />
       <Testimonials />
+      <GetStarted />
       <Faq />
       <FinalCta />
     </>

@@ -19,10 +19,10 @@ export function FinalCta() {
           Ready to grow without growing your payroll?
         </h2>
         <p className="mt-5 text-lg text-white/75">
-          Build your first AI employee in minutes. {siteConfig.slogan}
+          Tell us what you need and we&rsquo;ll design, build, and host your AI agents. {siteConfig.slogan}
         </p>
         <CtaButtons invert align="center" className="mt-9" />
-        <p className="mt-5 text-sm text-white/55">Start free · No credit card required</p>
+        <p className="mt-5 text-sm text-white/55">Book a demo · We set it up and host it for you</p>
       </div>
     </section>
   );
