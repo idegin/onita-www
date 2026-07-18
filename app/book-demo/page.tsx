@@ -46,6 +46,7 @@ const steps = [
 
 const assurances = [
   "No setup work on your side — we build it for you",
+  "Run on Onita Cloud, or a private instance where you own your data",
   "Typically live within a couple of weeks",
   "SOC 2 Type II, encryption, and human approval on sensitive actions",
 ];

@@ -1,4 +1,5 @@
 import type { Icon } from "@phosphor-icons/react";
+import type { OgIconName } from "@/lib/og-icons";
 import {
   SquaresFourIcon,
   TableIcon,
@@ -48,6 +49,7 @@ export type Product = {
   category: string;
   accent: Accent;
   Icon: Icon;
+  ogIcon: OgIconName;
   shots: string[];
   metaTitle: string;
   metaDescription: string;
@@ -82,6 +84,7 @@ export const products: Product[] = [
     tab: "Dashboard",
     category: "Command center",
     accent: "brand",
+    ogIcon: "SquaresFour",
     Icon: SquaresFourIcon,
     shots: [S.a, S.f, S.b],
     metaTitle: "AI Dashboard for Growing Businesses & Teams",
@@ -129,6 +132,7 @@ export const products: Product[] = [
     tab: "Spreadsheet",
     category: "Structured data",
     accent: "success",
+    ogIcon: "Table",
     Icon: TableIcon,
     shots: [S.b, S.a, S.d],
     metaTitle: "AI Spreadsheet Your Agents Can Read & Update",
@@ -176,6 +180,7 @@ export const products: Product[] = [
     tab: "Documents",
     category: "Living documents",
     accent: "info",
+    ogIcon: "FileText",
     Icon: FileTextIcon,
     shots: [S.c, S.e, S.a],
     metaTitle: "AI Documents That Draft & Update Themselves",
@@ -223,6 +228,7 @@ export const products: Product[] = [
     tab: "Forms",
     category: "Intake & capture",
     accent: "accent",
+    ogIcon: "ListChecks",
     Icon: ListChecksIcon,
     shots: [S.d, S.b, S.f],
     metaTitle: "AI Forms & Intake That Route Into Workflows",
@@ -270,6 +276,7 @@ export const products: Product[] = [
     tab: "Slides",
     category: "Presentations",
     accent: "warning",
+    ogIcon: "PresentationChart",
     Icon: PresentationChartIcon,
     shots: [S.e, S.c, S.a],
     metaTitle: "AI Slides & Decks Built From Your Live Data",
@@ -317,6 +324,7 @@ export const products: Product[] = [
     tab: "Calendar",
     category: "Scheduling",
     accent: "brand",
+    ogIcon: "CalendarDots",
     Icon: CalendarDotsIcon,
     shots: [S.f, S.d, S.b],
     metaTitle: "AI Calendar That Reschedules Itself",
@@ -364,6 +372,7 @@ export const products: Product[] = [
     tab: "Timeline",
     category: "Planning",
     accent: "info",
+    ogIcon: "ChartLineUp",
     Icon: ChartLineUpIcon,
     shots: [S.a, S.c, S.e],
     metaTitle: "AI Project Timeline & Gantt for Teams",
@@ -411,6 +420,7 @@ export const products: Product[] = [
     tab: "Automations",
     category: "Workflow automation",
     accent: "accent",
+    ogIcon: "Lightning",
     Icon: LightningIcon,
     shots: [S.b, S.f, S.d],
     metaTitle: "AI Workflow Automation — Trigger, Approve, Done",
@@ -458,6 +468,7 @@ export const products: Product[] = [
     tab: "AI Agents",
     category: "AI workforce",
     accent: "brand",
+    ogIcon: "Robot",
     Icon: RobotIcon,
     shots: [S.c, S.a, S.f],
     metaTitle: "AI Agents for Modern Business Teams",

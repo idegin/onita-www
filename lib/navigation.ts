@@ -33,6 +33,39 @@ export const primaryNav: NavGroup[] = [
     ],
   },
   {
+    label: "Solutions",
+    href: "/solutions",
+    columns: [
+      {
+        title: "Operations & delivery",
+        items: [
+          { label: "Project Management", href: "/solutions/project-management" },
+          { label: "Product Development", href: "/solutions/product-development" },
+          { label: "Operations", href: "/solutions/operations" },
+          { label: "IT & Support", href: "/solutions/it" },
+        ],
+      },
+      {
+        title: "Sales & marketing",
+        items: [
+          { label: "Sales", href: "/solutions/sales" },
+          { label: "CRM", href: "/solutions/crm" },
+          { label: "Marketing", href: "/solutions/marketing" },
+          { label: "Customer Success", href: "/solutions/customer-success" },
+        ],
+      },
+      {
+        title: "People & finance",
+        items: [
+          { label: "HR & Recruiting", href: "/solutions/hr" },
+          { label: "Accounting & Finance", href: "/solutions/accounting" },
+          { label: "Task Management", href: "/solutions/task-management" },
+          { label: "Knowledge Base", href: "/solutions/knowledge-base" },
+        ],
+      },
+    ],
+  },
+  {
     label: "Use Cases",
     href: "/use-cases",
     columns: [
@@ -74,23 +107,25 @@ export const footerNav: { title: string; links: NavLink[] }[] = [
     links: [
       { label: "All products", href: "/products" },
       { label: "AI Agents", href: "/products/ai-agents" },
+      { label: "Dashboard", href: "/products/dashboard" },
       { label: "Documents", href: "/products/documents" },
       { label: "Spreadsheet", href: "/products/spreadsheet" },
+      { label: "Slides", href: "/products/slides" },
       { label: "Automations", href: "/products/automations" },
-      { label: "Book a demo", href: "/book-demo" },
-      { label: "Talk to sales", href: "/contact-sales" },
+      { label: "Timeline", href: "/products/timeline" },
     ],
   },
   {
-    title: "Resources",
+    title: "Solutions",
     links: [
-      { label: "Blog", href: "/blog" },
-      { label: "Templates", href: "/templates" },
-      { label: "Guides", href: "/guides" },
-      { label: "Documentation", href: "/docs" },
-      { label: "API", href: "/docs/api" },
-      { label: "Help Center", href: "/help" },
-      { label: "Community", href: "/community" },
+      { label: "All solutions", href: "/solutions" },
+      { label: "Project Management", href: "/solutions/project-management" },
+      { label: "Sales", href: "/solutions/sales" },
+      { label: "CRM", href: "/solutions/crm" },
+      { label: "Marketing", href: "/solutions/marketing" },
+      { label: "Operations", href: "/solutions/operations" },
+      { label: "HR & Recruiting", href: "/solutions/hr" },
+      { label: "Accounting & Finance", href: "/solutions/accounting" },
     ],
   },
   {
@@ -100,8 +135,8 @@ export const footerNav: { title: string; links: NavLink[] }[] = [
       { label: "Customers", href: "/customers" },
       { label: "Careers", href: "/careers" },
       { label: "Contact", href: "/contact" },
-      { label: "Press", href: "/press" },
-      { label: "Partners", href: "/partners" },
+      { label: "Book a demo", href: "/book-demo" },
+      { label: "Talk to sales", href: "/contact-sales" },
     ],
   },
   {

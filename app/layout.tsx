@@ -59,14 +59,6 @@ export const metadata: Metadata = {
     title: `${siteConfig.name} — ${siteConfig.tagline}`,
     description: siteConfig.description,
     locale: "en_US",
-    images: [
-      {
-        url: siteConfig.assets.ogImage,
-        width: 1200,
-        height: 630,
-        alt: `${siteConfig.name} — ${siteConfig.tagline}`,
-      },
-    ],
   },
   twitter: {
     card: "summary_large_image",
@@ -74,7 +66,6 @@ export const metadata: Metadata = {
     creator: siteConfig.twitterHandle,
     title: `${siteConfig.name} — ${siteConfig.tagline}`,
     description: siteConfig.description,
-    images: [siteConfig.assets.twitterImage],
   },
   icons: {
     icon: [

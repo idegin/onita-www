@@ -71,7 +71,7 @@ export function DemoForm() {
             <option>Other</option>
           </SelectInput>
         </Field>
-        <Field id={f("size")} label="Team size" className="sm:col-span-2">
+        <Field id={f("size")} label="Team size">
           <SelectInput id={f("size")} name="size" defaultValue="">
             <option value="" disabled>
               Select a range…
@@ -80,6 +80,25 @@ export function DemoForm() {
             <option>11–50</option>
             <option>51–200</option>
             <option>200+</option>
+          </SelectInput>
+        </Field>
+        <Field
+          id={f("hosting")}
+          label="How would you like to run Onita?"
+          hint="Not sure yet? We'll help you pick on the call."
+        >
+          <SelectInput
+            id={f("hosting")}
+            name="hosting"
+            aria-describedby={`${f("hosting")}-hint`}
+            defaultValue=""
+          >
+            <option value="" disabled>
+              Select one…
+            </option>
+            <option value="cloud">Onita Cloud — hosted and run by Onita</option>
+            <option value="private">Onita Private — dedicated instance, I own my data</option>
+            <option value="unsure">Not sure yet — help me decide</option>
           </SelectInput>
         </Field>
         <Field

@@ -105,6 +105,28 @@ export function productSchema(product: {
   };
 }
 
+export function serviceSchema(service: {
+  name: string;
+  slug: string;
+  description: string;
+}) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    name: `Onita for ${service.name}`,
+    serviceType: service.name,
+    description: service.description,
+    provider: { "@id": `${siteConfig.url}/#organization` },
+    areaServed: "Worldwide",
+    url: abs(`/solutions/${service.slug}`),
+    offers: {
+      "@type": "Offer",
+      availability: "https://schema.org/InStock",
+      url: abs(siteConfig.demoUrl),
+    },
+  };
+}
+
 export function faqPageSchema(faqs: { q: string; a: string }[]) {
   return {
     "@context": "https://schema.org",

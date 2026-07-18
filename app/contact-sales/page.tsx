@@ -90,8 +90,9 @@ export default function ContactSalesPage() {
             business
           </h1>
           <p className="mt-6 max-w-2xl text-lg leading-8 text-white/70">
-            Pricing, security reviews, or a company-wide rollout — our team will help you plan it. Tell us
-            what you need and we&apos;ll take it from there.
+            Pricing, security reviews, or a company-wide rollout — our team will help you plan it. Ask us
+            about Onita Private, a dedicated instance where your data stays in your own environment and you
+            own and control it. Tell us what you need and we&apos;ll take it from there.
           </p>
         </div>
       </section>

@@ -1,5 +1,5 @@
 import { Hero } from "@/components/sections/hero";
-import { GetStarted } from "@/components/sections/get-started";
+import { GetOnita } from "@/components/sections/get-onita";
 import { AiWorkforce } from "@/components/sections/ai-workforce";
 import { Products } from "@/components/sections/products";
 import { RoiCalculator } from "@/components/sections/roi-calculator";
@@ -31,7 +31,7 @@ export default function Home() {
       <Products />
       <RoiCalculator />
       <Testimonials />
-      <GetStarted />
+      <GetOnita />
       <Faq />
       <FinalCta />
     </>
