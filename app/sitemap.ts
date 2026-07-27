@@ -2,6 +2,7 @@ import type { MetadataRoute } from "next";
 import { siteConfig } from "@/lib/site-config";
 import { products } from "@/lib/products";
 import { solutions } from "@/lib/solutions";
+import { teamMembers } from "@/lib/team";
 import { legalDocs } from "@/lib/legal";
 
 export default function sitemap(): MetadataRoute.Sitemap {
@@ -12,6 +13,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: base, lastModified: now, changeFrequency: "weekly", priority: 1 },
     { url: `${base}/products`, lastModified: now, changeFrequency: "weekly", priority: 0.9 },
     { url: `${base}/solutions`, lastModified: now, changeFrequency: "weekly", priority: 0.9 },
+    { url: `${base}/team`, lastModified: now, changeFrequency: "monthly", priority: 0.6 },
     { url: `${base}/book-demo`, lastModified: now, changeFrequency: "monthly", priority: 0.9 },
     { url: `${base}/contact-sales`, lastModified: now, changeFrequency: "monthly", priority: 0.7 },
   ];
@@ -30,6 +32,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.8,
   }));
 
+  const teamRoutes: MetadataRoute.Sitemap = teamMembers.map((m) => ({
+    url: `${base}/team/${m.slug}`,
+    lastModified: now,
+    changeFrequency: "monthly",
+    priority: 0.5,
+  }));
+
   const legalRoutes: MetadataRoute.Sitemap = legalDocs.map((d) => ({
     url: `${base}/legal/${d.slug}`,
     lastModified: now,
@@ -37,5 +46,5 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.3,
   }));
 
-  return [...staticRoutes, ...productRoutes, ...solutionRoutes, ...legalRoutes];
+  return [...staticRoutes, ...productRoutes, ...solutionRoutes, ...teamRoutes, ...legalRoutes];
 }
