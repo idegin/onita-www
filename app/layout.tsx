@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Plus_Jakarta_Sans, Inter, JetBrains_Mono } from "next/font/google";
+import { GoogleAnalytics } from "@next/third-parties/google";
 import "./globals.css";
 import { SiteHeader } from "@/components/site-header";
 import { SiteFooter } from "@/components/site-footer";
@@ -112,6 +113,7 @@ export default function RootLayout({
         <main id="main">{children}</main>
         <SiteFooter />
       </body>
+      <GoogleAnalytics gaId={siteConfig.analytics.gaId} />
     </html>
   );
 }

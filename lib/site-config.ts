@@ -13,6 +13,10 @@ export const siteConfig = {
   demoUrl: "/book-demo",
   salesUrl: "/contact-sales",
 
+  analytics: {
+    gaId: "G-ESWJDHETCZ",
+  },
+
   assets: {
     logo: "/brand/logo.png",
     ogImage: "/og/og-image.png",

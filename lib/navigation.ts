@@ -65,40 +65,6 @@ export const primaryNav: NavGroup[] = [
       },
     ],
   },
-  {
-    label: "Use Cases",
-    href: "/use-cases",
-    columns: [
-      {
-        title: "By firm",
-        items: [
-          { label: "Consulting firms", href: "/industries/consulting-firms" },
-          { label: "Law firms", href: "/industries/law-firms" },
-          { label: "Marketing & creative agencies", href: "/industries/agencies" },
-          { label: "Accounting & audit firms", href: "/industries/accounting-firms" },
-          { label: "Recruitment & HR firms", href: "/industries/recruitment-firms" },
-        ],
-      },
-      {
-        title: "By team",
-        items: [
-          { label: "Client delivery", href: "/solutions/client-delivery" },
-          { label: "Business development", href: "/solutions/business-development" },
-          { label: "Operations & admin", href: "/solutions/operations" },
-          { label: "Finance & billing", href: "/solutions/finance-billing" },
-        ],
-      },
-      {
-        title: "By workflow",
-        items: [
-          { label: "Proposals & pitches", href: "/use-cases/proposals" },
-          { label: "Client onboarding", href: "/use-cases/client-onboarding" },
-          { label: "Research & due diligence", href: "/use-cases/research-due-diligence" },
-          { label: "Reports & deliverables", href: "/use-cases/reports-deliverables" },
-        ],
-      },
-    ],
-  },
 ];
 
 export const footerNav: { title: string; links: NavLink[] }[] = [
@@ -131,12 +97,11 @@ export const footerNav: { title: string; links: NavLink[] }[] = [
   {
     title: "Company",
     links: [
-      { label: "About", href: "/about" },
-      { label: "Customers", href: "/customers" },
-      { label: "Careers", href: "/careers" },
-      { label: "Contact", href: "/contact" },
+      { label: "Team", href: "/team" },
       { label: "Book a demo", href: "/book-demo" },
       { label: "Talk to sales", href: "/contact-sales" },
+      { label: "All products", href: "/products" },
+      { label: "All solutions", href: "/solutions" },
     ],
   },
   {

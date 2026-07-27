@@ -127,6 +127,28 @@ export function serviceSchema(service: {
   };
 }
 
+export function personSchema(person: {
+  name: string;
+  slug: string;
+  role: string;
+  description: string;
+  sameAs: string[];
+  image?: string;
+}) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "@id": `${siteConfig.url}/team/${person.slug}/#person`,
+    name: person.name,
+    jobTitle: person.role,
+    description: person.description,
+    url: abs(`/team/${person.slug}`),
+    ...(person.image ? { image: abs(person.image) } : {}),
+    worksFor: { "@id": `${siteConfig.url}/#organization` },
+    sameAs: person.sameAs,
+  };
+}
+
 export function faqPageSchema(faqs: { q: string; a: string }[]) {
   return {
     "@context": "https://schema.org",
