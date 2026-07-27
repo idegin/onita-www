@@ -96,7 +96,7 @@ export default async function TeamMemberPage({ params }: Params) {
       <section className="relative overflow-hidden bg-ink-950 pt-32 pb-20 lg:pb-28">
         <div
           aria-hidden="true"
-          className={`animate-pulse-glow pointer-events-none absolute -left-40 -top-24 h-[36rem] w-[36rem] rounded-full bg-gradient-to-br ${a.gradient} opacity-25 blur-3xl`}
+          className={`animate-pulse-glow pointer-events-none absolute -right-40 -top-24 h-[36rem] w-[36rem] rounded-full bg-gradient-to-br ${a.gradient} opacity-25 blur-3xl`}
         />
         <div className="relative mx-auto grid max-w-content items-center gap-14 px-4 sm:px-6 lg:grid-cols-[0.85fr_1.15fr] lg:px-10">
           <div className="order-2 lg:order-1">
