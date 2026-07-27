@@ -79,9 +79,9 @@ export const teamMembers: TeamMember[] = [
       },
     ],
     highlights: [
-      { value: "2024", label: "founded Onita" },
-      { value: "AI-first", label: "workforce platform" },
-      { value: "Done-for-you", label: "managed delivery" },
+      // { value: "2026", label: "founded Onita" },
+      // { value: "AI-first", label: "workforce platform" },
+      // { value: "Done-for-you", label: "managed delivery" },
     ],
     socials: [
       {
