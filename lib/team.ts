@@ -43,6 +43,7 @@ export const teamMembers: TeamMember[] = [
     group: "Leadership",
     accent: "brand",
     ogIcon: "UsersThree",
+    image: "/team/ifeora-emeka.png",
     location: "Lagos, Nigeria",
     tagline: "Building the AI workforce so growing teams get more done without hiring more.",
     metaTitle: "Ifeora Emeka — Founder & CEO of Onita",
