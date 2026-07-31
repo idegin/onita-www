@@ -100,6 +100,7 @@ export const footerNav: { title: string; links: NavLink[] }[] = [
       { label: "Team", href: "/team" },
       { label: "Book a demo", href: "/book-demo" },
       { label: "Talk to sales", href: "/contact-sales" },
+      { label: "Partner portal", href: "/reseller" },
       { label: "All products", href: "/products" },
       { label: "All solutions", href: "/solutions" },
     ],

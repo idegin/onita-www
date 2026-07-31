@@ -28,6 +28,24 @@ Full architecture and copy direction live in `PLAN.md`; the complete visual lang
 - **AGENTS.md is mandatory:** this Next.js has breaking changes vs. training data. Read the relevant
   guide in `node_modules/next/dist/docs/` before writing framework code, and heed deprecation notices.
 
+# Partner / Reseller portal (`/reseller`)
+The ONE authenticated surface on this marketing site (footer → "Partner portal"). It is a **thin BFF
+client of the main Onita app — it has NO database or auth library of its own**. It calls the main
+app's central `/reseller/*` API server-to-server via `lib/reseller/central.ts`, presenting
+`RESELLER_SERVICE_SECRET` in `x-reseller-key`, and stores only an httpOnly `onita_reseller` cookie.
+- **Env (`.env.local`, see `.env.example`):** `ONITA_API_URL` (main app API base, incl. `/api`) +
+  `RESELLER_SERVICE_SECRET` (must match the main app's).
+- **BFF:** `app/api/reseller/[...path]/route.ts` proxies GET/POST to the central API (segment-allowlisted
+  against traversal); it sets the cookie on `auth/verify-code` (stripping the token from the body) and
+  clears it on `auth/logout`. Never expose the token to client JS.
+- **Auth:** passwordless emailed one-time code (email → code → session), same as the main Ops plane;
+  the main app strictly rate-limits login (1-hour lockout). Only invited partner accounts can sign in.
+- **Pages:** `app/reseller/login` (public), `app/reseller` (auth-gated via `getReseller()`, redirects
+  to login). Both are full-screen overlays (`fixed inset-0`) so the marketing header/footer don't show.
+- **UI:** `components/reseller/*` — `login-form`, `portal-shell`, `home` (overview + commission-over-time
+  + orgs), `partners` (portal-admins only). Resellers see only their own data; admins see all partners.
+- Partner accounts + commission %/cap/discount are managed by the Onita team in the main app's `/admin`.
+
 # Design Tokens
 `app/globals.css` is the single source of truth; all values trace back to `DESIGN.md`. Use the
 generated Tailwind utilities — never raw hex or magic numbers.
