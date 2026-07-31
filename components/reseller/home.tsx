@@ -12,8 +12,9 @@ import {
 import type { Reseller, ResellerEarnings } from "@/lib/reseller/types";
 import { fmtUsd, fmtUsdCompact, fmtMonth, portalFetch } from "./lib";
 import { PartnersPanel } from "./partners";
+import { PayoutsPanel } from "./payouts";
 
-type Tab = "overview" | "partners";
+type Tab = "overview" | "payouts" | "partners";
 
 const STATUS_TONE: Record<string, string> = {
   active: "bg-success-500/15 text-success-500 border-success-500/20",
@@ -45,20 +46,21 @@ export function ResellerHome({ reseller }: { reseller: Reseller }) {
             Track the organizations you’ve referred and the commission you’ve earned.
           </p>
         </div>
-        {isAdmin && (
-          <div
-            role="tablist"
-            aria-label="Portal sections"
-            className="inline-flex self-start rounded-pill border border-white/10 bg-white/[0.03] p-1"
-          >
-            <TabButton active={tab === "overview"} onClick={() => setTab("overview")}>My earnings</TabButton>
-            <TabButton active={tab === "partners"} onClick={() => setTab("partners")}>Partners</TabButton>
-          </div>
-        )}
+        <div
+          role="tablist"
+          aria-label="Portal sections"
+          className="inline-flex self-start rounded-pill border border-white/10 bg-white/[0.03] p-1"
+        >
+          <TabButton active={tab === "overview"} onClick={() => setTab("overview")}>My earnings</TabButton>
+          <TabButton active={tab === "payouts"} onClick={() => setTab("payouts")}>Payouts</TabButton>
+          {isAdmin && <TabButton active={tab === "partners"} onClick={() => setTab("partners")}>Partners</TabButton>}
+        </div>
       </div>
 
       {tab === "partners" && isAdmin ? (
         <PartnersPanel />
+      ) : tab === "payouts" ? (
+        <PayoutsPanel />
       ) : error ? (
         <ErrorCard />
       ) : !data ? (
