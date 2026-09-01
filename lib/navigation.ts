@@ -25,7 +25,7 @@ export const primaryNav: NavGroup[] = [
         title: "Project Management",
         items: [
           { label: "AI Project Manager", href: "/products/project-manager", description: "Plan and manage projects automatically" },
-          { label: "AI Workflows", href: "/products/workflows", description: "Automate repeatable projects and SOPs" },
+          { label: "AI Automations", href: "/products/workflows", description: "Automate repeatable projects and SOPs" },
         ],
       },
       {
@@ -34,6 +34,7 @@ export const primaryNav: NavGroup[] = [
           { label: "AI Task Manager", href: "/products/task-manager", description: "Organize and prioritize your tasks" },
           { label: "AI Calendar", href: "/products/calendar", description: "Auto-plan your day with smart scheduling" },
           { label: "AI Meeting Assistant", href: "/products/meeting-assistant", description: "Simplify meeting scheduling and booking links" },
+          { label: "AI Email", href: "/products/email", description: "A smart inbox wired into your work" },
         ],
       },
       {
@@ -42,7 +43,8 @@ export const primaryNav: NavGroup[] = [
           { label: "AI Chat", href: "/products/chat", description: "The fastest way to go from question to done" },
           { label: "AI Meeting Notetaker", href: "/products/notetaker", description: "Auto-capture meeting notes and summaries" },
           { label: "AI Dashboards", href: "/products/dashboards", description: "Track project progress in one view" },
-          { label: "AI Docs Assistant", href: "/products/docs-assistant", description: "Help writing and organizing docs faster" },
+          { label: "AI Database", href: "/products/database", description: "Spreadsheets and tables your AI can run" },
+          { label: "AI Notes", href: "/products/docs-assistant", description: "Write and organize docs faster" },
         ],
       },
       {
@@ -90,9 +92,11 @@ export const footerNav: { title: string; links: NavLink[] }[] = [
       { label: "AI Task Manager", href: "/products/task-manager" },
       { label: "AI Calendar", href: "/products/calendar" },
       { label: "AI Meeting Notetaker", href: "/products/notetaker" },
-      { label: "AI Docs Assistant", href: "/products/docs-assistant" },
+      { label: "AI Notes", href: "/products/docs-assistant" },
+      { label: "AI Database", href: "/products/database" },
+      { label: "AI Email", href: "/products/email" },
       { label: "AI Dashboards", href: "/products/dashboards" },
-      { label: "AI Workflows", href: "/products/workflows" },
+      { label: "AI Automations", href: "/products/workflows" },
       { label: "Integrations", href: "/integrations" },
     ],
   },

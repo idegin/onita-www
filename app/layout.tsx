@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
 import { Plus_Jakarta_Sans, Inter, JetBrains_Mono } from "next/font/google";
-import Script from "next/script";
 import "./globals.css";
 import { SiteHeader } from "@/components/site-header";
 import { SiteFooter } from "@/components/site-footer";
+import { CookieConsent } from "@/components/cookie-consent";
 import { siteConfig } from "@/lib/site-config";
 import {
   organizationSchema,
@@ -102,18 +102,6 @@ export default function RootLayout({
           type="application/ld+json"
           dangerouslySetInnerHTML={jsonLd(softwareApplicationSchema)}
         />
-        <Script
-          src={`https://www.googletagmanager.com/gtag/js?id=${siteConfig.analytics.gaId}`}
-          strategy="afterInteractive"
-        />
-        <Script id="google-analytics" strategy="afterInteractive">
-          {`
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', '${siteConfig.analytics.gaId}');
-          `}
-        </Script>
       </head>
       <body className="min-h-full bg-background text-foreground">
         <a
@@ -125,6 +113,7 @@ export default function RootLayout({
         <SiteHeader />
         <main id="main">{children}</main>
         <SiteFooter />
+        <CookieConsent />
       </body>
     </html>
   );

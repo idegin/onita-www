@@ -15,14 +15,14 @@ import { jsonLd, breadcrumbSchema } from "@/lib/structured-data";
 export const metadata: Metadata = {
   title: "Products — Every AI Productivity Tool in One Platform",
   description:
-    "AI Project Manager, Gantt Chart, Workflows, Task Manager, Calendar, Meeting Assistant, Chat, Notetaker, Dashboards, and Docs — every AI-powered productivity tool in one connected platform.",
+    "AI Project Manager, Automations, Task Manager, Calendar, Meeting Assistant, Email, Chat, Notetaker, Dashboards, Database, and Notes — every AI-powered productivity tool in one connected platform.",
   alternates: { canonical: "/products" },
   openGraph: {
     type: "website",
     url: `${siteConfig.url}/products`,
     title: "Onita Products — Every AI Productivity Tool in One Platform",
     description:
-      "AI Project Manager, Task Manager, Calendar, Notetaker, Docs, Dashboards, Workflows and more — one connected platform for the AI era.",
+      "AI Project Manager, Task Manager, Calendar, Notetaker, Email, Dashboards, Database, Automations and more — one connected platform for the AI era.",
   },
 };
 

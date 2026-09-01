@@ -9,6 +9,7 @@ import {
   ArrowRightIcon,
 } from "@phosphor-icons/react/dist/ssr";
 import { BrandLogo } from "@/components/brand-logo";
+import { ManageCookiesButton } from "@/components/manage-cookies-button";
 import { footerNav } from "@/lib/navigation";
 import { siteConfig } from "@/lib/site-config";
 
@@ -70,9 +71,12 @@ export function SiteFooter() {
         </div>
 
         <div className="flex flex-col-reverse items-start justify-between gap-6 py-8 sm:flex-row sm:items-center">
-          <p className="text-sm text-white/50">
-            © {year} {siteConfig.legalName}. All rights reserved.
-          </p>
+          <div className="flex flex-col gap-1.5 sm:flex-row sm:items-center sm:gap-4">
+            <p className="text-sm text-white/50">
+              © {year} {siteConfig.legalName}. All rights reserved.
+            </p>
+            <ManageCookiesButton />
+          </div>
           <ul className="flex items-center gap-2">
             {socialLinks.map(({ label, href, Icon }) => (
               <li key={label}>

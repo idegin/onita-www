@@ -13,6 +13,8 @@ import {
   FileTextIcon,
   PresentationChartIcon,
   ListChecksIcon,
+  TableIcon,
+  EnvelopeSimpleIcon,
   SparkleIcon,
   MagicWandIcon,
   ArrowsClockwiseIcon,
@@ -84,6 +86,8 @@ const S = {
   dash1: "/screenshots/dashboard/1.png",
   dash2: "/screenshots/dashboard/2.png",
   slides1: "/screenshots/slides/1.png",
+  email1: "/screenshots/email/1.png",
+  email2: "/screenshots/email/2.png",
 };
 
 export const products: Product[] = [
@@ -137,17 +141,17 @@ export const products: Product[] = [
   },
   {
     slug: "workflows",
-    name: "AI Workflows",
-    tab: "AI Workflows",
+    name: "AI Automations",
+    tab: "AI Automations",
     category: "Workflow automation",
     accent: "warning",
     ogIcon: "Lightning",
     Icon: LightningIcon,
     shots: [S.b, S.d],
-    metaTitle: "AI Workflows — Turn SOPs Into Automations in Seconds",
+    metaTitle: "AI Automations — Turn SOPs Into Workflows in Seconds",
     metaDescription:
       "Onita's AI Workflows turns your SOP docs into working automations with triggers, approvals, and auto-assigned tasks — so repeatable projects run the same way every time.",
-    eyebrow: "AI Workflows",
+    eyebrow: "AI Automations",
     headline: "Automate repeatable projects",
     headlineEmphasis: "and SOPs",
     subhead:
@@ -473,24 +477,24 @@ export const products: Product[] = [
   },
   {
     slug: "docs-assistant",
-    name: "AI Docs Assistant",
-    tab: "AI Docs Assistant",
-    category: "Documents",
+    name: "AI Notes",
+    tab: "AI Notes",
+    category: "Docs & notes",
     accent: "info",
     ogIcon: "FileText",
     Icon: FileTextIcon,
     shots: [S.docs1, S.docs2, S.docs3],
-    metaTitle: "AI Docs Assistant — Write & Organize Docs Faster With AI",
+    metaTitle: "AI Notes — Write & Organize Docs Faster With AI",
     metaDescription:
       "Onita's AI Docs Assistant drafts and proofreads in seconds, turns notes into tasks and projects, and keeps every doc organized and searchable in one place.",
-    eyebrow: "AI Docs Assistant",
+    eyebrow: "AI Notes",
     headline: "Help writing and organizing",
     headlineEmphasis: "docs faster",
     subhead:
       "Write in seconds, not hours. Onita drafts and proofreads for you, turns messy notes into clean tasks and projects, and keeps notes, wikis, and processes organized and searchable in one place.",
-    definitionTitle: "What is the AI Docs Assistant?",
+    definitionTitle: "What is AI Notes?",
     definition:
-      "The AI Docs Assistant is Onita's document editor with AI built in. It drafts and proofreads content, transforms words in your docs into organized tasks and projects, and gives you one home for notes, wikis, and processes. Because Onita knows all your work, it can create, edit, summarize, and search across everything — no lengthy prompts required.",
+      "AI Notes is Onita's document editor with AI built in. It drafts and proofreads content, transforms words in your docs into organized tasks and projects, and gives you one home for notes, wikis, and processes. Because Onita knows all your work, it can create, edit, summarize, and search across everything — no lengthy prompts required.",
     highlights: ["Draft and proofread in seconds", "Notes become tasks and projects", "One organized, searchable home"],
     features: [
       { title: "AI drafting & proofreading", desc: "Turn a prompt or an outline into a polished draft, and tighten your writing as you go.", Icon: PencilSimpleLineIcon },
@@ -615,6 +619,102 @@ export const products: Product[] = [
     ],
     related: ["workflows", "task-manager", "project-manager"],
   },
+  {
+    slug: "database",
+    name: "AI Database",
+    tab: "AI Database",
+    category: "Databases & spreadsheets",
+    accent: "info",
+    ogIcon: "Table",
+    Icon: TableIcon,
+    shots: [S.a, S.b],
+    metaTitle: "AI Database — Spreadsheets & Tables Your AI Can Run",
+    metaDescription:
+      "Onita's AI Database gives you tables with grid, Kanban, Gantt, and calendar views — linked records, computed fields, and form submissions your AI can read and update.",
+    eyebrow: "AI Database",
+    headline: "Your data in tables",
+    headlineEmphasis: "your AI can run",
+    subhead:
+      "Store anything in flexible tables — then see it as a grid, board, timeline, or calendar. Onita's AI reads and updates your records, links data across tables, and turns rows into action.",
+    definitionTitle: "What is AI Database?",
+    definition:
+      "AI Database is Onita's spreadsheet-meets-database. Every table works as a grid, Kanban board, Gantt timeline, or calendar over the same data, with linked records, computed fields, and form submissions flowing in. Your AI can query it, update it, and act on it — so your data isn't just stored, it's working.",
+    highlights: ["Grid, board, timeline, and calendar views", "Linked records and computed fields", "Readable and writable by AI"],
+    features: [
+      { title: "Every view over one dataset", desc: "See the same records as a grid, Kanban board, Gantt timeline, or calendar — no exporting or rebuilding.", Icon: TableIcon },
+      { title: "Linked records", desc: "Connect tables so your projects, clients, and tasks reference each other and stay in sync.", Icon: TreeStructureIcon },
+      { title: "AI-powered fields", desc: "Let AI fill, classify, and summarize columns automatically as new rows arrive.", Icon: SparkleIcon },
+      { title: "Forms feed your tables", desc: "Form submissions land straight in the right table and kick off the work that follows.", Icon: ListChecksIcon },
+    ],
+    workforceAngle: {
+      title: "Data that does something",
+      desc: "Because your AI can read and write your tables, records don't just sit there — they trigger tasks, update statuses, and feed dashboards automatically.",
+    },
+    useCases: [
+      { audience: "Operations", title: "One source of truth", desc: "Track projects, clients, and assets in linked tables the whole team trusts." },
+      { audience: "Teams", title: "Work your way", desc: "Grid for data entry, Kanban for flow, Gantt for planning — over the same records." },
+      { audience: "Leadership", title: "Live rollups", desc: "Computed fields and dashboards summarize your data as it changes." },
+    ],
+    outcomes: [
+      "Replace scattered spreadsheets with one live database",
+      "See the same data as a grid, board, timeline, or calendar",
+      "Let AI keep your records current",
+    ],
+    faqs: [
+      { q: "Is this a spreadsheet or a database?", a: "Both. AI Database gives you the familiarity of a spreadsheet with the power of a relational database — linked records, computed fields, and multiple views over one dataset." },
+      { q: "Can AI update my tables?", a: "Yes. Your AI can read, query, and write records — filling fields, updating statuses, and creating rows as work happens." },
+      { q: "Who sets it up?", a: "Our team does, after your demo — with the tables, views, and links your business runs on." },
+    ],
+    related: ["dashboards", "forms", "project-manager"],
+  },
+  {
+    slug: "email",
+    name: "AI Email",
+    tab: "AI Email",
+    category: "Email",
+    accent: "accent",
+    ogIcon: "ChatCircleText",
+    Icon: EnvelopeSimpleIcon,
+    shots: [S.email1, S.email2],
+    metaTitle: "AI Email — A Smart Inbox Wired Into Your Work",
+    metaDescription:
+      "Onita's AI Email unifies Gmail, Outlook, and Zoho, drafts and triages your messages, and turns emails into tasks — so your inbox works with the rest of your workspace.",
+    eyebrow: "AI Email",
+    headline: "An inbox that",
+    headlineEmphasis: "works for you",
+    subhead:
+      "Bring Gmail, Outlook, and Zoho into one place. Onita drafts replies, triages what matters, and turns emails into tasks and records — so your inbox stops being a to-do list you dread.",
+    definitionTitle: "What is AI Email?",
+    definition:
+      "AI Email is Onita's connected inbox. It unifies your Gmail, Outlook, and Zoho mail, uses AI to draft and prioritize messages, and links email to the rest of your workspace — turning a message into a task, a record, or a triggered workflow without leaving your inbox.",
+    highlights: ["Unified Gmail, Outlook & Zoho inbox", "AI drafts, replies, and triage", "Emails become tasks and records"],
+    features: [
+      { title: "One unified inbox", desc: "Connect Gmail, Outlook, and Zoho and work from a single, organized inbox.", Icon: EnvelopeSimpleIcon },
+      { title: "AI drafting & replies", desc: "Draft responses in your voice and clear routine mail in a click.", Icon: SparkleIcon },
+      { title: "Smart triage", desc: "AI surfaces what needs you and quiets what doesn't, so nothing important slips.", Icon: FunnelIcon },
+      { title: "Email into action", desc: "Turn a message into a task, a record, or a workflow — wired into the rest of Onita.", Icon: ArrowsClockwiseIcon },
+    ],
+    workforceAngle: {
+      title: "Your inbox, handled",
+      desc: "AI Email doesn't just show your mail — it drafts, sorts, and connects it to your work, so email becomes an input to getting things done instead of a chore.",
+    },
+    useCases: [
+      { audience: "Individuals", title: "Inbox zero, for real", desc: "AI triages and drafts so you clear mail in minutes, not hours." },
+      { audience: "Sales & client teams", title: "Nothing slips", desc: "Client emails become tracked tasks and follow-ups automatically." },
+      { audience: "Operations", title: "Email that triggers work", desc: "Turn inbound mail into records and workflows without copy-paste." },
+    ],
+    outcomes: [
+      "Work Gmail, Outlook, and Zoho from one inbox",
+      "Let AI draft and triage your mail",
+      "Turn emails into tasks and records automatically",
+    ],
+    faqs: [
+      { q: "Which email providers does it support?", a: "Gmail, Outlook, and Zoho Mail — unified into one inbox inside Onita." },
+      { q: "Can it draft replies in my voice?", a: "Yes. AI Email drafts responses in your tone and can clear routine messages in a click, always under your review." },
+      { q: "Who sets it up?", a: "Our team connects your mailboxes and configures triage and routing after your demo." },
+    ],
+    related: ["meeting-assistant", "task-manager", "notetaker"],
+  },
 ];
 
 export const menuProductSlugs = [
@@ -623,9 +723,11 @@ export const menuProductSlugs = [
   "task-manager",
   "calendar",
   "meeting-assistant",
+  "email",
   "chat",
   "notetaker",
   "dashboards",
+  "database",
   "docs-assistant",
 ] as const;
 

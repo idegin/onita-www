@@ -7,15 +7,10 @@ import {
   ChatCircleTextIcon,
   GoogleLogoIcon,
   MicrosoftOutlookLogoIcon,
-  MicrosoftTeamsLogoIcon,
-  SlackLogoIcon,
-  WhatsappLogoIcon,
-  VideoCameraIcon,
   EnvelopeSimpleIcon,
-  AddressBookIcon,
-  TrendUpIcon,
   CloudArrowUpIcon,
-  LightningIcon,
+  FolderSimpleIcon,
+  CreditCardIcon,
 } from "@phosphor-icons/react/dist/ssr";
 import { Section } from "@/components/ui/section";
 import { SectionHeading } from "@/components/ui/section-heading";
@@ -25,43 +20,47 @@ import { jsonLd, breadcrumbSchema } from "@/lib/structured-data";
 export const metadata: Metadata = {
   title: "Integrations — Connect Onita to the Tools You Use",
   description:
-    "Onita connects to Google, Microsoft, Slack, Zoom, WhatsApp, HubSpot, Salesforce, and hundreds more — so your data flows between the tools you already use and your AI products.",
+    "Onita connects to Gmail, Outlook, Zoho, Google Drive, OneDrive, Google & Outlook Calendar, Zoho Booking, Paystack, and Flutterwave — so your data flows between the tools you already use and your AI products.",
   alternates: { canonical: "/integrations" },
   openGraph: {
     type: "website",
     url: `${siteConfig.url}/integrations`,
     title: "Onita Integrations — Connect Your Favorite Tools",
     description:
-      "Pass data between Onita and the tools you already use — Google, Microsoft, Slack, Zoom, WhatsApp, HubSpot, Salesforce, and hundreds more.",
+      "Pass data between Onita and the tools you already use — Gmail, Outlook, Zoho, Drive, OneDrive, calendars, Zoho Booking, Paystack, and Flutterwave.",
   },
 };
 
 const groups = [
   {
-    title: "Productivity & email",
+    title: "Email",
     items: [
-      { name: "Google Workspace", Icon: GoogleLogoIcon },
-      { name: "Microsoft 365", Icon: MicrosoftOutlookLogoIcon },
-      { name: "Gmail", Icon: EnvelopeSimpleIcon },
+      { name: "Gmail", Icon: GoogleLogoIcon },
       { name: "Outlook", Icon: MicrosoftOutlookLogoIcon },
+      { name: "Zoho Mail", Icon: EnvelopeSimpleIcon },
     ],
   },
   {
-    title: "Communication & meetings",
+    title: "Storage & files",
     items: [
-      { name: "Slack", Icon: SlackLogoIcon },
-      { name: "Microsoft Teams", Icon: MicrosoftTeamsLogoIcon },
-      { name: "Zoom", Icon: VideoCameraIcon },
-      { name: "WhatsApp", Icon: WhatsappLogoIcon },
+      { name: "Google Drive", Icon: GoogleLogoIcon },
+      { name: "OneDrive", Icon: CloudArrowUpIcon },
+      { name: "Zoho Drive", Icon: FolderSimpleIcon },
     ],
   },
   {
-    title: "Sales & CRM",
+    title: "Calendar & scheduling",
     items: [
-      { name: "HubSpot", Icon: AddressBookIcon },
-      { name: "Salesforce", Icon: CloudArrowUpIcon },
-      { name: "Pipedrive", Icon: TrendUpIcon },
-      { name: "Zapier", Icon: LightningIcon },
+      { name: "Google Calendar", Icon: GoogleLogoIcon },
+      { name: "Outlook Calendar", Icon: MicrosoftOutlookLogoIcon },
+      { name: "Zoho Booking", Icon: CalendarCheckIcon },
+    ],
+  },
+  {
+    title: "Payments",
+    items: [
+      { name: "Paystack", Icon: CreditCardIcon },
+      { name: "Flutterwave", Icon: CreditCardIcon },
     ],
   },
 ];
@@ -118,8 +117,8 @@ export default function IntegrationsPage() {
           </h1>
           <p className="mt-6 max-w-2xl text-lg leading-8 text-white/70">
             Onita passes data between your favorite tools and your AI products — so your projects,
-            tasks, meetings, and docs stay in sync everywhere. Connect Google, Microsoft, Slack, Zoom,
-            WhatsApp, HubSpot, Salesforce, and hundreds more.
+            tasks, meetings, and docs stay in sync everywhere. Connect Gmail, Outlook, Zoho, Google
+            Drive, OneDrive, your calendars, Zoho Booking, Paystack, and Flutterwave.
           </p>
         </div>
       </section>

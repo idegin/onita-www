@@ -38,13 +38,13 @@ export const siteConfig = {
   },
 
   socials: {
-    linkedin: "https://www.linkedin.com/company/onitaai",
-    x: "https://x.com/onitaai",
-    youtube: "https://www.youtube.com/@onitaai",
-    github: "https://github.com/onitaai",
+    linkedin: "https://www.linkedin.com/company/onitaapp",
+    x: "https://x.com/onitaapp",
+    youtube: "https://www.youtube.com/@onitaapp",
+    github: "https://github.com/onitaapp",
   },
 
-  twitterHandle: "@onitaai",
+  twitterHandle: "@onitaapp",
 
   aiModels: ["Claude", "GPT", "Gemini", "Llama"],
 
