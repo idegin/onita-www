@@ -1,15 +1,15 @@
 export const siteConfig = {
   name: "Onita AI",
   shortName: "Onita",
-  legalName: "Onita AI, Inc.",
-  tagline: "The AI Workforce Platform",
-  slogan: "Your team just got bigger.",
+  legalName: "iDegin Technologies Ltd",
+  tagline: "The #1 Rated Productivity Platform for the AI Era",
+  slogan: "Double your productivity with AI.",
   description:
-    "Onita is the AI Workforce Platform for growing businesses and teams of every kind. We design, build, and run a team of AI agents around how your business works — so you get more done without hiring more. Book a demo and we set it all up for you.",
+    "Onita is the #1 rated AI productivity platform for the AI era, built for individuals and teams of all sizes. It combines AI-powered products — Project Manager, Task Manager, Calendar, Meeting Notetaker, Docs, Dashboards, Workflows, and more — that handle the busywork so you get twice as much done. Book a demo and our team sets it all up for you.",
   founded: "2024",
 
-  url: "https://onitaai.com",
-  appUrl: "https://app.onitaai.com",
+  url: "https://www.onitaapp.com",
+  appUrl: "https://app.onitaapp.com",
   demoUrl: "/book-demo",
   salesUrl: "/contact-sales",
 
@@ -24,21 +24,17 @@ export const siteConfig = {
   },
 
   contact: {
-    generalEmail: "hello@onitaai.com",
-    salesEmail: "sales@onitaai.com",
-    supportEmail: "support@onitaai.com",
-    phone: "+1 (415) 555-0142",
-    phoneHref: "tel:+14155550142",
+    generalEmail: "hello@onitaapp.com",
+    salesEmail: "sales@onitaapp.com",
+    supportEmail: "support@onitaapp.com",
+    legalEmail: "legal@onitaapp.com",
   },
 
   address: {
-    street: "548 Market Street, Suite 3210",
-    city: "San Francisco",
-    region: "CA",
-    postalCode: "94104",
-    country: "United States",
-    countryCode: "US",
-    full: "548 Market Street, Suite 3210, San Francisco, CA 94104, United States",
+    city: "Lagos",
+    country: "Nigeria",
+    countryCode: "NG",
+    full: "Lagos, Nigeria",
   },
 
   socials: {
@@ -53,8 +49,8 @@ export const siteConfig = {
   aiModels: ["Claude", "GPT", "Gemini", "Llama"],
 
   stats: [
-    { value: "10x", label: "faster team output" },
-    { value: "97+", label: "domain expert agents" },
+    { value: "2x", label: "more productive" },
+    { value: "8+", label: "AI products in one place" },
     { value: "40+", label: "hours saved per week" },
   ],
 } as const;

@@ -48,7 +48,7 @@ const MODELS: Record<string, Model> = {
 
 const agents: Agent[] = [
   {
-    name: "Business Development Agent",
+    name: "Sales Assistant",
     model: MODELS.claude,
     Icon: ClipboardTextIcon,
     skills: ["Qualify leads", "Draft proposals", "Scope engagements"],
@@ -59,7 +59,7 @@ const agents: Agent[] = [
     ],
   },
   {
-    name: "Research Agent",
+    name: "Search Assistant",
     model: MODELS.gemini,
     Icon: MagnifyingGlassIcon,
     skills: ["Market research", "Competitor scan", "Benchmarks"],
@@ -70,7 +70,7 @@ const agents: Agent[] = [
     ],
   },
   {
-    name: "Strategy Agent",
+    name: "Project Manager",
     model: MODELS.claude,
     Icon: CompassIcon,
     skills: ["Frameworks", "Financial models", "Recommendations"],
@@ -81,7 +81,7 @@ const agents: Agent[] = [
     ],
   },
   {
-    name: "Deck Agent",
+    name: "Slides Assistant",
     model: MODELS.gpt,
     Icon: PresentationChartIcon,
     skills: ["Build decks", "Data viz", "On-brand design"],
@@ -92,7 +92,7 @@ const agents: Agent[] = [
     ],
   },
   {
-    name: "Content Agent",
+    name: "Docs Assistant",
     model: MODELS.gpt,
     Icon: PenNibIcon,
     skills: ["Copywriting", "SEO", "Editing"],
@@ -103,7 +103,7 @@ const agents: Agent[] = [
     ],
   },
   {
-    name: "Creative Agent",
+    name: "Design Assistant",
     model: MODELS.claude,
     Icon: PaletteIcon,
     skills: ["Concepts", "Design briefs", "Assets"],
@@ -114,7 +114,7 @@ const agents: Agent[] = [
     ],
   },
   {
-    name: "Campaign Agent",
+    name: "Marketing Assistant",
     model: MODELS.gpt,
     Icon: MegaphoneIcon,
     skills: ["Campaigns", "Paid media", "Analytics"],
@@ -125,7 +125,7 @@ const agents: Agent[] = [
     ],
   },
   {
-    name: "Project Manager Agent",
+    name: "Task Planner",
     model: MODELS.deepseek,
     Icon: GearSixIcon,
     skills: ["Assign work", "Track timelines", "Reporting"],
@@ -136,7 +136,7 @@ const agents: Agent[] = [
     ],
   },
   {
-    name: "Billing Agent",
+    name: "Finance Assistant",
     model: MODELS.llama,
     Icon: ReceiptIcon,
     skills: ["Time tracking", "Invoicing", "Retainers"],
@@ -253,9 +253,9 @@ export function AiWorkforce() {
         <SectionHeading
           id="workforce-heading"
           invert
-          eyebrow="AI Workforce"
-          title="Create AI team mates that never sleep."
-          description="Purpose-built for growing businesses and teams — each Onita agent is a specialist with its own skills, knowledge, and document access, all designed and run by us so work flows between them without you chasing it."
+          eyebrow="AI Assistants"
+          title="Meet the AI assistants that do your busywork."
+          description="Built for individuals and teams of all sizes — each Onita assistant is a specialist with its own skills, knowledge, and document access, so the repetitive work gets handled while you focus on what matters."
         />
 
         <ul className="mt-6 flex flex-wrap justify-center gap-2.5">
@@ -294,13 +294,13 @@ export function AiWorkforce() {
               </span>
             </div>
             <p className="relative mt-4 text-sm leading-6 text-white/70">
-              Onita assigns the work, shares context between agents, and enforces every permission —
-              controlling your entire AI workforce from one command center.
+              Onita assigns the work, shares context between your AI assistants, and enforces every
+              permission — coordinating all of them from one place.
             </p>
             <div className="relative mt-4 flex flex-wrap items-center justify-center gap-x-4 gap-y-2 text-xs font-semibold text-white/60">
               <span className="inline-flex items-center gap-1.5">
                 <LightningIcon size={13} weight="fill" className="text-brand-300" aria-hidden="true" />
-                {agents.length} agents active
+                {agents.length} AI assistants active
               </span>
               <span className="inline-flex items-center gap-1.5">
                 <BrainIcon size={13} weight="fill" className="text-brand-300" aria-hidden="true" />

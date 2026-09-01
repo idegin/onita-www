@@ -10,7 +10,7 @@
 
 This document defines the complete visual language, interaction model, motion system, and UI standards for the Onita marketing website. It is intended for both UI/UX designers and frontend engineers to ensure a consistent, modern, high-converting SaaS experience.
 
-The overall experience should communicate that Onita is not simply another productivity application—it is an **AI Workforce Platform** built for ambitious organizations. Every design decision should reinforce intelligence, speed, trust, collaboration, and scale.
+The overall experience should communicate that Onita is not simply another productivity application—it is **the #1 rated AI productivity platform for the AI era**, built for individuals and teams of all sizes. Every design decision should reinforce intelligence, speed, trust, collaboration, and scale.
 
 ---
 

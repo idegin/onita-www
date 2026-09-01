@@ -13,6 +13,6 @@ export default function Image() {
     theme: "gradient",
     layout: "centered",
     accent: "brand",
-    footer: "onitaai.com/book-demo",
+    footer: "onitaapp.com/book-demo",
   });
 }

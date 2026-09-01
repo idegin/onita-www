@@ -3,126 +3,24 @@
 import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import type { Icon } from "@phosphor-icons/react";
-import {
-  SquaresFourIcon,
-  TableIcon,
-  FileTextIcon,
-  ListChecksIcon,
-  PresentationChartIcon,
-  CalendarDotsIcon,
-  ChartLineUpIcon,
-  LightningIcon,
-  RobotIcon,
-  ArrowRightIcon,
-  CheckIcon,
-} from "@phosphor-icons/react/dist/ssr";
+import { ArrowRightIcon, CheckIcon } from "@phosphor-icons/react/dist/ssr";
 import { Section } from "@/components/ui/section";
 import { SectionHeading } from "@/components/ui/section-heading";
+import { menuProductSlugs, productMap } from "@/lib/products";
 
-type Product = {
-  name: string;
-  tab: string;
-  desc: string;
-  points: string[];
-  href: string;
-  Icon: Icon;
-  shot: string;
-  alt: string;
-};
-
-const products: Product[] = [
-  {
-    name: "Dashboard",
-    tab: "Dashboard",
-    desc: "One command center for every metric, task, and agent — see the whole business at a glance.",
-    points: ["Live metrics across every team", "Agent activity in real time", "Custom widgets and views"],
-    href: "/products/dashboard",
-    Icon: SquaresFourIcon,
-    shot: "/screenshots/half-1.png",
-    alt: "Onita dashboard showing live metrics, tasks, and AI agent activity",
-  },
-  {
-    name: "Spreadsheet",
-    tab: "Spreadsheet",
-    desc: "Powerful spreadsheets your whole team — and your AI workforce — can read, calculate, and update.",
-    points: ["Formulas, filters, and pivots", "Live-linked to your data", "Readable and writable by agents"],
-    href: "/products/spreadsheet",
-    Icon: TableIcon,
-    shot: "/screenshots/half-2.png",
-    alt: "Onita spreadsheet with formulas, filters, and pivot views",
-  },
-  {
-    name: "Documents",
-    tab: "Documents",
-    desc: "Living docs your agents draft, edit, and keep in sync with the data behind them.",
-    points: ["AI-assisted drafting", "Live-linked to your data", "Comments and version history"],
-    href: "/products/documents",
-    Icon: FileTextIcon,
-    shot: "/screenshots/half-3.png",
-    alt: "Onita document editor with AI-assisted drafting",
-  },
-  {
-    name: "Forms",
-    tab: "Forms",
-    desc: "Capture requests and route them straight into workflows your agents can act on.",
-    points: ["No-code form builder", "Conditional logic", "Routes straight into workflows"],
-    href: "/products/forms",
-    Icon: ListChecksIcon,
-    shot: "/screenshots/half-4.png",
-    alt: "Onita form builder capturing and routing requests",
-  },
-  {
-    name: "Slides",
-    tab: "Slides",
-    desc: "Client-ready decks your agents build and update from the data behind them.",
-    points: ["AI-built presentations", "On-brand templates", "Auto-updated from live data"],
-    href: "/products/slides",
-    Icon: PresentationChartIcon,
-    shot: "/screenshots/half-5.png",
-    alt: "Onita slide deck editor with on-brand presentation templates",
-  },
-  {
-    name: "Calendar",
-    tab: "Calendar",
-    desc: "Plans that update themselves as tasks shift, deadlines move, and agents reschedule.",
-    points: ["Self-updating schedules", "Deadline and task sync", "Team and resource views"],
-    href: "/products/calendar",
-    Icon: CalendarDotsIcon,
-    shot: "/screenshots/half-6.png",
-    alt: "Onita calendar with self-updating schedules and events",
-  },
-  {
-    name: "Timeline",
-    tab: "Timeline",
-    desc: "The whole plan in one view — dependencies, milestones, and progress at every stage.",
-    points: ["Dependencies and milestones", "Critical path at a glance", "Progress tracking"],
-    href: "/products/timeline",
-    Icon: ChartLineUpIcon,
-    shot: "/screenshots/half-1.png",
-    alt: "Onita timeline view of milestones and dependencies",
-  },
-  {
-    name: "Automations",
-    tab: "Automations",
-    desc: "Trigger, approve, done. Wire up repeatable work without writing a single line of code.",
-    points: ["Trigger, approve, done", "No code required", "Human-in-the-loop steps"],
-    href: "/products/automations",
-    Icon: LightningIcon,
-    shot: "/screenshots/half-2.png",
-    alt: "Onita automation builder connecting triggers, approvals, and actions",
-  },
-  {
-    name: "AI Agents",
-    tab: "AI Agents",
-    desc: "Build teammates that never sleep — each with memory, knowledge, tools, and permissions of their own.",
-    points: ["Memory and knowledge", "Tools and permissions", "Collaborate across teams"],
-    href: "/products/ai-agents",
-    Icon: RobotIcon,
-    shot: "/screenshots/half-3.png",
-    alt: "Onita AI agent configuration with memory, knowledge, and tools",
-  },
-];
+const products = menuProductSlugs.map((slug) => {
+  const p = productMap[slug]!;
+  return {
+    name: p.name,
+    tab: p.tab,
+    desc: p.subhead,
+    points: p.highlights,
+    href: `/products/${p.slug}`,
+    Icon: p.Icon,
+    shot: p.shots[0],
+    alt: `The Onita ${p.name} interface`,
+  };
+});
 
 const INTERVAL = 5000;
 
@@ -179,8 +77,8 @@ export function Products() {
       <SectionHeading
         id="products-heading"
         eyebrow="Products"
-        title="One workspace, every tool your team runs on."
-        description="Replace a stack of disconnected apps with products that share the same data — and the same AI workforce."
+        title="Every AI product, in one platform."
+        description="Replace a stack of disconnected apps with AI-powered products that share the same data — and do the busywork with you."
       />
 
       <div
@@ -246,7 +144,7 @@ export function Products() {
                 {current.name}
               </span>
               <span className="ml-auto hidden items-center gap-1.5 rounded-pill bg-brand-50 px-2.5 py-1 text-xs font-semibold text-brand-600 sm:inline-flex">
-                onitaai.com/{current.name.toLowerCase().replace(/\s+/g, "-")}
+                onitaapp.com/{current.name.toLowerCase().replace(/\s+/g, "-")}
               </span>
             </div>
 

@@ -18,16 +18,16 @@ import { siteConfig } from "@/lib/site-config";
 import { jsonLd, breadcrumbSchema, personSchema } from "@/lib/structured-data";
 
 export const metadata: Metadata = {
-  title: "Team — The People Building Your AI Workforce",
+  title: "Team — The People Building Onita",
   description:
-    "Meet the team behind Onita, the AI Workforce Platform. We design, build, host, and run AI agents for growing businesses and teams so they get more done without hiring more.",
+    "Meet the team behind Onita, the AI Productivity Platform. We set up and run AI products for individuals and teams of all sizes so they get more done with AI.",
   alternates: { canonical: "/team" },
   openGraph: {
     type: "website",
     url: `${siteConfig.url}/team`,
-    title: "The team behind Onita — the AI Workforce Platform",
+    title: "The team behind Onita — the AI Productivity Platform",
     description:
-      "Meet the people who design, build, and run AI workforces for growing businesses and teams.",
+      "Meet the people who set up and run AI productivity platforms for individuals and teams of all sizes.",
   },
 };
 
@@ -99,12 +99,12 @@ export default function TeamIndexPage() {
             The team
           </span>
           <h1 className="mt-6 max-w-3xl font-display text-4xl font-extrabold leading-[1.05] tracking-tight text-white sm:text-5xl lg:text-6xl">
-            The people building your <span className="text-gradient-ai">AI workforce</span>
+            The people building your <span className="text-gradient-ai">AI productivity platform</span>
           </h1>
           <p className="mt-6 max-w-2xl text-lg leading-8 text-white/70">
-            Onita is a done-for-you platform, which means real people stand behind every AI workforce we
-            ship. We design the agents, wire them into your tools, and run them for you — so your team gets
-            more done without hiring more.
+            Onita is a fully managed platform, which means real people stand behind every workspace we
+            ship. We configure the AI products, wire them into your tools, and run them for you — so your
+            team gets more done with AI.
           </p>
         </div>
       </section>
@@ -196,11 +196,11 @@ export default function TeamIndexPage() {
       <Section tone="gradient" ariaLabel="Work with the Onita team">
         <div className="mx-auto max-w-2xl text-center">
           <h2 className="font-display text-3xl font-bold tracking-tight text-white sm:text-4xl">
-            Let&apos;s build your AI workforce together
+            Let&apos;s build your AI productivity platform together
           </h2>
           <p className="mt-4 text-lg leading-8 text-white/75">
-            Book a demo and our team will map your biggest time sinks to the AI agents that clear them — then
-            design, build, and run the whole thing for you.
+            Book a demo and our team will map your biggest time sinks to the AI products that clear them — then
+            set up and run the whole thing for you.
           </p>
           <div className="mt-8 flex flex-col justify-center gap-3 sm:flex-row sm:items-center">
             <Link

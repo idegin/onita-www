@@ -287,10 +287,10 @@ export default async function TeamMemberPage({ params }: Params) {
           <div className="relative grid items-center gap-8 lg:grid-cols-[1.4fr_1fr]">
             <div>
               <h2 className="font-display text-3xl font-bold tracking-tight text-white sm:text-4xl">
-                Build your AI workforce with our team
+                Set up your AI productivity platform with our team
               </h2>
               <p className="mt-4 max-w-xl text-lg leading-8 text-white/70">
-                Book a demo and the people behind Onita will design, build, and run a team of AI agents
+                Book a demo and the people behind Onita will set up and run your AI products
                 around how your business already works.
               </p>
             </div>

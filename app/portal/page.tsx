@@ -77,7 +77,7 @@ export default function PortalPage() {
                 type="email"
                 autoComplete="username"
                 required
-                placeholder="you@onitaai.com"
+                placeholder="you@onitaapp.com"
                 className="w-full rounded-input border border-white/15 bg-white/[0.03] py-3 pl-11 pr-4 text-sm text-white placeholder:text-white/35 focus:border-brand-400 focus:outline-none focus:ring-2 focus:ring-brand-400/40"
               />
             </div>

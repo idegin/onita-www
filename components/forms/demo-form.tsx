@@ -103,7 +103,7 @@ export function DemoForm() {
         </Field>
         <Field
           id={f("goal")}
-          label="What would you like your AI workforce to do?"
+          label="What would you like Onita to do for you?"
           hint="A sentence or two is plenty — e.g. proposals, contract review, campaign reporting."
           className="sm:col-span-2"
         >

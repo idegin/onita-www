@@ -1,7 +1,7 @@
 import type { MetadataRoute } from "next";
 import { siteConfig } from "@/lib/site-config";
 import { products } from "@/lib/products";
-import { solutions } from "@/lib/solutions";
+import { useCases } from "@/lib/use-cases";
 import { teamMembers } from "@/lib/team";
 import { legalDocs } from "@/lib/legal";
 
@@ -12,7 +12,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const staticRoutes: MetadataRoute.Sitemap = [
     { url: base, lastModified: now, changeFrequency: "weekly", priority: 1 },
     { url: `${base}/products`, lastModified: now, changeFrequency: "weekly", priority: 0.9 },
-    { url: `${base}/solutions`, lastModified: now, changeFrequency: "weekly", priority: 0.9 },
+    { url: `${base}/use-cases`, lastModified: now, changeFrequency: "weekly", priority: 0.9 },
+    { url: `${base}/integrations`, lastModified: now, changeFrequency: "monthly", priority: 0.7 },
     { url: `${base}/team`, lastModified: now, changeFrequency: "monthly", priority: 0.6 },
     { url: `${base}/book-demo`, lastModified: now, changeFrequency: "monthly", priority: 0.9 },
     { url: `${base}/contact-sales`, lastModified: now, changeFrequency: "monthly", priority: 0.7 },
@@ -25,8 +26,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.8,
   }));
 
-  const solutionRoutes: MetadataRoute.Sitemap = solutions.map((s) => ({
-    url: `${base}/solutions/${s.slug}`,
+  const useCaseRoutes: MetadataRoute.Sitemap = useCases.map((s) => ({
+    url: `${base}/use-cases/${s.slug}`,
     lastModified: now,
     changeFrequency: "monthly",
     priority: 0.8,
@@ -46,5 +47,5 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.3,
   }));
 
-  return [...staticRoutes, ...productRoutes, ...solutionRoutes, ...teamRoutes, ...legalRoutes];
+  return [...staticRoutes, ...productRoutes, ...useCaseRoutes, ...teamRoutes, ...legalRoutes];
 }

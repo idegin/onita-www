@@ -13,16 +13,16 @@ import { siteConfig } from "@/lib/site-config";
 import { jsonLd, breadcrumbSchema } from "@/lib/structured-data";
 
 export const metadata: Metadata = {
-  title: "Products — One Workspace, Every Tool Your Business Runs On",
+  title: "Products — Every AI Productivity Tool in One Platform",
   description:
-    "Dashboards, documents, spreadsheets, slides, forms, calendars, timelines, automations, and AI agents — one connected workspace, powered by a shared AI workforce.",
+    "AI Project Manager, Gantt Chart, Workflows, Task Manager, Calendar, Meeting Assistant, Chat, Notetaker, Dashboards, and Docs — every AI-powered productivity tool in one connected platform.",
   alternates: { canonical: "/products" },
   openGraph: {
     type: "website",
     url: `${siteConfig.url}/products`,
-    title: "Onita Products — One Workspace, Every Tool Your Business Runs On",
+    title: "Onita Products — Every AI Productivity Tool in One Platform",
     description:
-      "Dashboards, documents, spreadsheets, slides, forms, calendars, timelines, automations, and AI agents — one connected workspace.",
+      "AI Project Manager, Task Manager, Calendar, Notetaker, Docs, Dashboards, Workflows and more — one connected platform for the AI era.",
   },
 };
 
@@ -89,8 +89,8 @@ export default function ProductsIndexPage() {
             One workspace, <span className="text-gradient-ai">every tool</span> your business runs on
           </h1>
           <p className="mt-6 max-w-2xl text-lg leading-8 text-white/70">
-            Replace a stack of disconnected apps with products that share the same data — and the same
-            AI workforce. Explore what your team gets from day one.
+            Replace a stack of disconnected apps with AI-powered products that share the same data —
+            and do the busywork with you. Explore what your team gets from day one.
           </p>
         </div>
       </section>
@@ -139,8 +139,8 @@ export default function ProductsIndexPage() {
             See the whole platform on your real work
           </h2>
           <p className="mt-4 text-lg leading-8 text-muted-foreground">
-            Book a demo and we&apos;ll design, build, and run your AI workforce across every product —
-            set up for you, around how your business operates.
+            Book a demo and we&apos;ll set up Onita across every product — configured for you, around
+            how your business operates.
           </p>
           <div className="mt-8 flex flex-col justify-center gap-3 sm:flex-row sm:items-center">
             <Link

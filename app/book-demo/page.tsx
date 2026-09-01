@@ -13,16 +13,16 @@ import { siteConfig } from "@/lib/site-config";
 import { jsonLd, breadcrumbSchema } from "@/lib/structured-data";
 
 export const metadata: Metadata = {
-  title: "Book a Demo — See Your AI Workforce on Your Real Work",
+  title: "Book a Demo — See Onita AI on Your Real Work",
   description:
-    "Book a demo of Onita, the AI Workforce Platform for growing businesses and teams. We design, build, and run your AI agents for you — no setup required.",
+    "Book a demo of Onita, the AI Productivity Platform for individuals and teams of all sizes. We set up and run your AI products for you — no setup required.",
   alternates: { canonical: "/book-demo" },
   openGraph: {
     type: "website",
     url: `${siteConfig.url}/book-demo`,
-    title: "Book a Demo of Onita — The AI Workforce Platform",
+    title: "Book a Demo of Onita — The AI Productivity Platform",
     description:
-      "See Onita running on your real use cases. We design, build, and run your AI workforce for you.",
+      "See Onita running on your real use cases. We set up and run your AI productivity platform for you.",
   },
 };
 
@@ -34,7 +34,7 @@ const steps = [
   },
   {
     title: "We design & build it",
-    desc: "Our team maps your workflows and builds the AI agents, connections, and workspace around how you operate.",
+    desc: "Our team maps your workflows and builds the AI products, connections, and workspace around how you operate.",
     Icon: CloudCheckIcon,
   },
   {
@@ -102,11 +102,11 @@ export default function BookDemoPage() {
             </span>
 
             <h1 className="mt-6 font-display text-4xl font-extrabold leading-[1.05] tracking-tight text-white sm:text-5xl">
-              See your AI workforce on <span className="text-gradient-ai">your real work</span>
+              See your AI productivity platform on <span className="text-gradient-ai">your real work</span>
             </h1>
             <p className="mt-6 text-lg leading-8 text-white/70">
               This isn&apos;t a generic product tour. Tell us how your business works and we&apos;ll show
-              Onita running on your use cases — then design, build, and run the whole thing for you.
+              Onita running on your use cases — then set up and run the whole thing for you.
             </p>
 
             <ol className="mt-10 space-y-5">

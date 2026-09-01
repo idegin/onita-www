@@ -45,26 +45,26 @@ export const teamMembers: TeamMember[] = [
     ogIcon: "UsersThree",
     image: "/team/ifeora-emeka.png",
     location: "Lagos, Nigeria",
-    tagline: "Building the AI workforce so growing teams get more done without hiring more.",
+    tagline: "Building the AI productivity platform so teams of all sizes get more done with AI.",
     metaTitle: "Ifeora Emeka — Founder & CEO of Onita",
     metaDescription:
-      "Meet Ifeora Emeka, Founder & CEO of Onita — the AI Workforce Platform. He leads the team that designs, builds, and runs AI agents for growing businesses and teams.",
+      "Meet Ifeora Emeka, Founder & CEO of Onita — the AI Productivity Platform. He leads the team that sets up and runs Onita for individuals and teams of all sizes.",
     summary:
-      "Ifeora Emeka is the Founder and CEO of Onita. He started the company on a simple belief: growing businesses shouldn't have to choose between ambition and headcount. Today he leads the team that designs, builds, hosts, and runs AI workforces for companies of every kind.",
+      "Ifeora Emeka is the Founder and CEO of Onita. He started the company on a simple belief: individuals and teams shouldn't have to choose between ambition and the hours in a day. Today he leads the team that sets up and runs Onita for people and companies of every size.",
     bio: [
-      "Ifeora founded Onita to close the gap between what small teams are asked to deliver and the number of people they can actually hire. He watched capable teams drown in repetitive work spread across ten disconnected tools — and became convinced the answer wasn't another app, but a workforce of AI agents that could carry the busywork and let people do the work only people can do.",
-      "As CEO he sets the product direction, keeps the company honest about being a done-for-you service rather than a self-serve tool, and works closely with early customers to design the agents around how each business actually operates.",
+      "Ifeora founded Onita to close the gap between what small teams are asked to deliver and the number of people they can actually hire. He watched capable teams drown in repetitive work spread across ten disconnected tools — and became convinced the answer wasn't another app, but a suite of AI products that could carry the busywork and let people do the work only people can do.",
+      "As CEO he sets the product direction, keeps the company honest about being a fully managed service rather than a self-serve tool, and works closely with early customers to configure the AI products around how each business actually operates.",
       "Before Onita he spent years building software and shipping products across web and applied AI, developing the conviction that the most valuable technology is the kind that feels effortless to the people using it.",
     ],
     focus: [
       {
         title: "Product & vision",
-        desc: "Sets where Onita is headed and guards the core idea — an AI workforce we design, build, and run for you.",
+        desc: "Sets where Onita is headed and guards the core idea — an AI productivity platform we set up and run for you.",
         Icon: CompassIcon,
       },
       {
         title: "Applied AI",
-        desc: "Shapes how agents are trained on a business, wired into its tools, and kept reliable in production.",
+        desc: "Shapes how the AI is trained on a business, wired into its tools, and kept reliable in production.",
         Icon: CpuIcon,
       },
       {

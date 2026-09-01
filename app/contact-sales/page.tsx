@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import {
   EnvelopeSimpleIcon,
-  PhoneIcon,
   MapPinIcon,
   CalendarCheckIcon,
   CaretRightIcon,
@@ -14,16 +13,16 @@ import { siteConfig } from "@/lib/site-config";
 import { jsonLd, breadcrumbSchema } from "@/lib/structured-data";
 
 export const metadata: Metadata = {
-  title: "Talk to Sales — Onita AI Workforce Platform",
+  title: "Talk to Sales — Onita AI Productivity Platform",
   description:
-    "Talk to the Onita sales team about pricing, security, and rolling out an AI workforce across your business. We design, build, and run it for you.",
+    "Talk to the Onita sales team about pricing, security, and rolling out an AI productivity platform across your business. We set up and run it for you.",
   alternates: { canonical: "/contact-sales" },
   openGraph: {
     type: "website",
     url: `${siteConfig.url}/contact-sales`,
-    title: "Talk to Sales — Onita AI Workforce Platform",
+    title: "Talk to Sales — Onita AI Productivity Platform",
     description:
-      "Talk to Onita about pricing, security, and rolling out an AI workforce across your business.",
+      "Talk to Onita about pricing, security, and rolling out an AI productivity platform across your business.",
   },
 };
 
@@ -33,12 +32,6 @@ const channels = [
     value: siteConfig.contact.salesEmail,
     href: `mailto:${siteConfig.contact.salesEmail}`,
     Icon: EnvelopeSimpleIcon,
-  },
-  {
-    label: "Call us",
-    value: siteConfig.contact.phone,
-    href: siteConfig.contact.phoneHref,
-    Icon: PhoneIcon,
   },
   {
     label: "Head office",
@@ -86,7 +79,7 @@ export default function ContactSalesPage() {
             Talk to sales
           </span>
           <h1 className="mt-6 max-w-2xl font-display text-4xl font-extrabold leading-[1.05] tracking-tight text-white sm:text-5xl">
-            Let&apos;s scope the right <span className="text-gradient-ai">AI workforce</span> for your
+            Let&apos;s scope the right <span className="text-gradient-ai">AI productivity platform</span> for your
             business
           </h1>
           <p className="mt-6 max-w-2xl text-lg leading-8 text-white/70">

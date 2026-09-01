@@ -42,8 +42,8 @@ export function RoiCalculator() {
       <SectionHeading
         id="roi-heading"
         eyebrow="ROI calculator"
-        title="See what an AI workforce saves you."
-        description="Estimate how much you save when AI agents handle the repetitive work — instead of hiring more staff to keep up."
+        title="See how much time Onita gives back."
+        description="Estimate how many hours you reclaim when Onita's AI handles the repetitive work — and what that time is worth."
       />
 
       <div className="mt-14 grid gap-6 overflow-hidden rounded-card-lg border border-border bg-surface shadow-hover lg:grid-cols-2">
@@ -89,9 +89,8 @@ export function RoiCalculator() {
             {currency.format(annualSavings)}
           </p>
           <p className="text-sm text-white/70">
-            Based on {values.employees} people saving {values.hours} hours each week — work your AI
-            agents handle instead of new hires. That&rsquo;s payroll you don&rsquo;t spend and time
-            your team reinvests in growth.
+            Based on {values.employees} people saving {values.hours} hours each week — busywork Onita&rsquo;s
+            AI handles for you. That&rsquo;s time your team reinvests in higher-value work and growth.
           </p>
           <a
             href={siteConfig.demoUrl}

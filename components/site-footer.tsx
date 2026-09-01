@@ -5,7 +5,6 @@ import {
   YoutubeLogoIcon,
   GithubLogoIcon,
   EnvelopeSimpleIcon,
-  PhoneIcon,
   MapPinIcon,
   ArrowRightIcon,
 } from "@phosphor-icons/react/dist/ssr";
@@ -38,13 +37,6 @@ export function SiteFooter() {
               >
                 <EnvelopeSimpleIcon size={17} weight="bold" className="text-brand-300" />
                 {siteConfig.contact.generalEmail}
-              </a>
-              <a
-                href={siteConfig.contact.phoneHref}
-                className="inline-flex items-center gap-2.5 hover:text-white"
-              >
-                <PhoneIcon size={17} weight="bold" className="text-brand-300" />
-                {siteConfig.contact.phone}
               </a>
               <span className="inline-flex items-start gap-2.5">
                 <MapPinIcon size={17} weight="bold" className="mt-0.5 shrink-0 text-brand-300" />

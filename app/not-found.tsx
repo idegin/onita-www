@@ -14,21 +14,21 @@ import { siteConfig } from "@/lib/site-config";
 export const metadata: Metadata = {
   title: "Page not found",
   description:
-    "The page you're looking for isn't here. Explore Onita's AI workforce products and solutions, or book a demo.",
+    "The page you're looking for isn't here. Explore Onita's AI productivity products and use cases, or book a demo.",
   robots: { index: false, follow: true },
 };
 
 const destinations = [
   {
     label: "Explore products",
-    desc: "Dashboards, docs, automations, and AI agents.",
+    desc: "AI Task Manager, Docs, Calendar, Notetaker, and more.",
     href: "/products",
     Icon: SquaresFourIcon,
   },
   {
-    label: "Browse solutions",
-    desc: "AI workforce for every team and workflow.",
-    href: "/solutions",
+    label: "Browse use cases",
+    desc: "How Onita works for your business and team.",
+    href: "/use-cases",
     Icon: StackIcon,
   },
   {
@@ -76,7 +76,7 @@ export default function NotFound() {
           We couldn&apos;t find that page
         </h1>
         <p className="mx-auto mt-4 max-w-md text-lg leading-8 text-white/70">
-          The page may have moved or never existed. Your AI workforce is still hard at
+          The page may have moved or never existed. Onita&apos;s AI is still hard at
           work — let&apos;s get you back to it.
         </p>
 

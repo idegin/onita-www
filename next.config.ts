@@ -19,6 +19,18 @@ const nextConfig: NextConfig = {
       { source: "/portal/:path*", headers: noIndexHeaders },
     ];
   },
+  async redirects() {
+    return [
+      { source: "/products/dashboard", destination: "/products/dashboards", permanent: true },
+      { source: "/products/documents", destination: "/products/docs-assistant", permanent: true },
+      { source: "/products/timeline", destination: "/products/project-manager", permanent: true },
+      { source: "/products/automations", destination: "/products/workflows", permanent: true },
+      { source: "/products/spreadsheet", destination: "/products", permanent: true },
+      { source: "/products/ai-agents", destination: "/products", permanent: true },
+      { source: "/solutions", destination: "/use-cases", permanent: true },
+      { source: "/solutions/:slug*", destination: "/use-cases", permanent: true },
+    ];
+  },
 };
 
 export default nextConfig;

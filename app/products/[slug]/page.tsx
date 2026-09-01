@@ -176,7 +176,7 @@ export default async function ProductPage({ params }: Params) {
           <BrowserMockup
             shots={product.shots}
             alt={`The Onita ${product.name} interface`}
-            label={`${product.name} — onitaai.com`}
+            label={`${product.name} — onitaapp.com`}
             priority
             sizes="(max-width: 1024px) 100vw, 46vw"
             className="lg:rotate-1"
@@ -270,7 +270,7 @@ export default async function ProductPage({ params }: Params) {
           <div>
             <span className="inline-flex items-center gap-2 rounded-pill border border-white/20 bg-white/10 px-3.5 py-1.5 text-xs font-semibold uppercase tracking-wider text-white/85">
               <SparkleIcon size={14} weight="fill" aria-hidden="true" className="text-accent-300" />
-              AI Workforce
+              AI does it for you
             </span>
             <h2
               id="workforce-heading"
@@ -282,16 +282,16 @@ export default async function ProductPage({ params }: Params) {
               {product.workforceAngle.desc}
             </p>
             <Link
-              href="/products/ai-agents"
+              href="/products"
               className="mt-8 inline-flex items-center gap-1.5 font-display text-base font-semibold text-white transition-colors hover:text-brand-200"
             >
-              Meet the AI agents
+              See everything Onita does
               <ArrowRightIcon size={18} weight="bold" aria-hidden="true" />
             </Link>
           </div>
           <BrowserMockup
             shots={product.shots}
-            alt={`Onita AI agents working in ${product.name}`}
+            alt={`Onita AI at work in ${product.name}`}
             label={`${product.name} — live`}
             sizes="(max-width: 1024px) 100vw, 46vw"
             className="lg:-rotate-1"
@@ -354,7 +354,7 @@ export default async function ProductPage({ params }: Params) {
           <div>
             <h2 className="font-display text-xl font-bold text-ink-800">Works with</h2>
             <p className="mt-2 text-sm text-muted-foreground">
-              Every Onita product shares the same data and the same AI workforce.
+              Every Onita product shares the same data and works with the rest of your AI products.
             </p>
             <ul className="mt-6 space-y-3">
               {related.map((r) => (
@@ -427,8 +427,8 @@ export default async function ProductPage({ params }: Params) {
               Put {product.name} to work for your business
             </h2>
             <p className="mt-4 text-lg leading-8 text-white/75">
-              Book a demo and we&apos;ll design, build, and run your AI workforce — {product.name}{" "}
-              included — around how your team actually operates.
+              Book a demo and we&apos;ll set up Onita — {product.name}{" "}
+              included — around how your team actually works.
             </p>
             <div className="mt-8 flex flex-col justify-center gap-3 sm:flex-row sm:items-center">
               <Link

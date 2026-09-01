@@ -14,7 +14,7 @@ The purpose is to convince visitors that **Onita lets any business operate like 
 
 The website should immediately answer:
 
-> **"How can Onita help my business get more done without hiring more people?"**
+> **"How can Onita help me and my team use AI to get twice as much done?"**
 
 Every page should move visitors toward one primary conversion goal.
 
@@ -39,42 +39,38 @@ their AI workforce for them. Never compete with more than these two CTAs.
 
 # Core Brand Message
 
-> Your team just got bigger.
+> Get an unfair advantage by using AI to double your productivity.
 
 Supporting Message
 
-> AI employees that work together, automate repetitive work, and help your business get more done without hiring more people. We design, build, host, and run them for you.
+> The #1 Rated Productivity Platform for the AI Era. AI-powered products — Project Manager, Task Manager, Calendar, Meeting Notetaker, Docs, Dashboards, Workflows and more — plus AI assistants that handle the busywork for you. We set it all up and run it for you.
 
 ---
 
 # Core Positioning
 
-Do **NOT** position Onita as another AI chatbot, and do **NOT** position it as a self-serve app.
+Do **NOT** position Onita as a self-serve app the customer builds themselves.
 
 Position it as
 
-> The AI Workforce Platform — designed, built, and run for your business.
+> The #1 Rated AI Productivity Platform for the AI Era — set up and run for your business.
 
-It is a **done-for-you / managed** engagement: book a demo, and our team stands up your AI
-workforce end to end. No free tier, no login, nothing for the customer to build themselves.
+It is a **done-for-you / managed** engagement: book a demo, and our team stands up your Onita
+workspace end to end. No free tier, no login, nothing for the customer to build themselves.
 
-Not
+It is
 
-> AI Assistant
-
-Not
-
-> AI Chatbot
+> An AI productivity platform: a suite of AI products + AI assistants
 
 Not
 
-> AI Workspace
+> A single AI chatbot
 
-Instead
+Not
 
-> AI Workforce
+> A blank self-serve workspace to configure yourself
 
-This positioning is unique and immediately memorable.
+Built for **individuals and teams of all sizes**, this positioning is unique and immediately memorable.
 
 ---
 

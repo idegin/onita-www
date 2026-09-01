@@ -2,19 +2,23 @@
 @AGENTS.md
 @PLAN.md
 
-We are targeting **growing businesses and teams of every kind** — from startups and SMEs to the
-operations, delivery, sales, and marketing teams inside larger organizations — who want to get more
-done without hiring more. Never restrict the positioning to a single industry or vertical.
+We are targeting **individuals and teams of all sizes** — from solo professionals and startups to the
+operations, delivery, sales, and marketing teams inside larger organizations — who want to use AI to
+get more done. Never restrict the positioning to a single industry or vertical.
 
 # Onita Marketing Website
 
-The AI Workforce Platform marketing site. Core message: **"Your team just got bigger."**
-Positioning is always **AI Workforce Platform**, sold as a **done-for-you / managed** service —
-never "AI chatbot / assistant / workspace". Onita is not self-serve: prospects **book a demo**
-and our team **designs, builds, hosts, and runs** their AI workforce for them.
+The AI productivity platform marketing site. Tagline: **"The #1 Rated Productivity Platform for the
+AI Era."** Core message: **"Get an unfair advantage by using AI to double your productivity."**
+Positioning is always an **AI productivity platform** — a suite of AI-powered products (AI Project
+Manager, AI Task Manager, AI Calendar, AI Meeting Assistant, AI Chat, AI Meeting Notetaker, AI
+Dashboards, AI Docs Assistant, AI Workflows, plus AI Slides and AI Forms) and AI assistants that
+handle the busywork. It is still sold as a **done-for-you / managed** service: Onita is not
+self-serve — prospects **book a demo** and our team **sets up and runs** it for them.
 Every page drives one conversion goal: **Book a Demo** (secondary / enterprise: **Talk to Sales**).
 There is **no self-serve free signup or login** on the marketing site — do not add "Start Free",
-"Log in", "Sign up", "free trial", or `app.onitaai.com` signup/login CTAs anywhere.
+"Log in", "Sign up", "free trial", or `app.onitaapp.com` signup/login CTAs anywhere.
+Product pages live under `/products/*`; industry & team pages live under `/use-cases/*`.
 Full architecture and copy direction live in `PLAN.md`; the complete visual language lives in `DESIGN.md`.
 
 # Tech Stack

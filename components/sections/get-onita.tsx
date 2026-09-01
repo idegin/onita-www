@@ -29,7 +29,7 @@ const options: Option[] = [
     badge: "Fastest to launch",
     name: "Run it online with us",
     tagline: "Onita Cloud",
-    desc: "Use Onita online. We design, build, and run your AI workforce on our secure cloud — nothing to install and no infrastructure to manage. Your team just logs in and works.",
+    desc: "Use Onita online. We set up and run your AI productivity platform on our secure cloud — nothing to install and no infrastructure to manage. Your team just logs in and works.",
     points: [
       "Up and running fast — no servers or setup on your side",
       "Fully hosted, monitored, and updated by our team",
@@ -61,8 +61,8 @@ export function GetOnita() {
       <SectionHeading
         id="get-onita-heading"
         eyebrow="Getting Onita"
-        title="Two ways to get your AI workforce."
-        description="However you choose to run it, our team designs, builds, and manages the whole thing for you. Pick the setup that fits how your business handles its data."
+        title="Two ways to run Onita."
+        description="However you choose to run it, our team sets up and manages the whole thing for you. Pick the setup that fits how your business handles its data."
       />
 
       <div className="mt-14 grid gap-6 lg:grid-cols-2">

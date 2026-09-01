@@ -1,6 +1,6 @@
 import { siteConfig } from "@/lib/site-config";
 import { products } from "@/lib/products";
-import { solutions } from "@/lib/solutions";
+import { useCases } from "@/lib/use-cases";
 import { teamMembers } from "@/lib/team";
 import { legalDocs } from "@/lib/legal";
 
@@ -22,15 +22,16 @@ export function GET() {
     "",
     `> ${siteConfig.tagline} — ${siteConfig.slogan} ${siteConfig.description}`,
     "",
-    `${siteConfig.name} is a done-for-you, managed AI Workforce Platform for growing businesses and teams of every kind. Prospects book a demo and our team designs, builds, hosts, and runs a team of AI agents around how each business works. There is no self-serve signup or login — every page drives one goal: Book a Demo (secondary: Talk to Sales).`,
+    `${siteConfig.name} is ${siteConfig.tagline} — an AI productivity platform built for individuals and teams of all sizes. Onita bundles AI-powered products (AI Project Manager, AI Task Manager, AI Calendar, AI Meeting Assistant, AI Chat, AI Meeting Notetaker, AI Dashboards, AI Docs Assistant, AI Workflows, AI Slides, AI Forms) that use AI to double productivity by handling the busywork. Onita is a managed engagement: prospects book a demo and our team sets everything up for them. There is no self-serve signup or login — every page drives one goal: Book a Demo (secondary: Talk to Sales).`,
     "",
     section("Core pages", [
       link("Home", "/", `${siteConfig.slogan} Overview of the ${siteConfig.tagline}.`),
-      link("Products", "/products", "One workspace and every tool your business runs on, powered by AI agents."),
-      link("Solutions", "/solutions", "AI workforce solutions for every team — from delivery to sales, people, and finance."),
-      link("Team", "/team", "The people who design, build, and run AI workforces for growing businesses."),
-      link("Book a demo", siteConfig.demoUrl, "Book a demo and we design, build, and run your AI workforce for you."),
-      link("Talk to sales", siteConfig.salesUrl, "Talk to sales about an enterprise AI workforce engagement."),
+      link("Products", "/products", "Every AI-powered productivity tool in one platform."),
+      link("Use cases", "/use-cases", "How Onita works for service businesses and functional teams — from IT providers and agencies to sales, startups, and executive teams."),
+      link("Integrations", "/integrations", "Connect Onita to the tools you already use."),
+      link("Team", "/team", "The people who build and run Onita for our customers."),
+      link("Book a demo", siteConfig.demoUrl, "Book a demo and we set up your AI productivity platform for you."),
+      link("Talk to sales", siteConfig.salesUrl, "Talk to sales about an enterprise Onita engagement."),
     ]),
     "",
     section(
@@ -39,8 +40,8 @@ export function GET() {
     ),
     "",
     section(
-      "Solutions",
-      solutions.map((s) => link(`Onita for ${s.name}`, `/solutions/${s.slug}`, s.metaDescription))
+      "Use cases",
+      useCases.map((s) => link(`Onita for ${s.name}`, `/use-cases/${s.slug}`, s.metaDescription))
     ),
     "",
     section(

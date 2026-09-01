@@ -6,7 +6,6 @@ import {
   CaretRightIcon,
   CheckIcon,
   XIcon,
-  RobotIcon,
   CalendarCheckIcon,
   ChatCircleTextIcon,
   SparkleIcon,
@@ -15,7 +14,7 @@ import {
 } from "@phosphor-icons/react/dist/ssr";
 import { Section } from "@/components/ui/section";
 import { GlassMockup } from "@/components/ui/glass-mockup";
-import { solutions, getSolution } from "@/lib/solutions";
+import { useCases, getUseCase } from "@/lib/use-cases";
 import { accentClasses } from "@/lib/products";
 import { siteConfig } from "@/lib/site-config";
 import {
@@ -37,16 +36,16 @@ const shots = [
 ];
 
 export function generateStaticParams() {
-  return solutions.map((s) => ({ slug: s.slug }));
+  return useCases.map((s) => ({ slug: s.slug }));
 }
 
 export const dynamicParams = false;
 
 export async function generateMetadata({ params }: Params): Promise<Metadata> {
   const { slug } = await params;
-  const solution = getSolution(slug);
+  const solution = getUseCase(slug);
   if (!solution) return {};
-  const path = `/solutions/${solution.slug}`;
+  const path = `/use-cases/${solution.slug}`;
   return {
     title: solution.metaTitle,
     description: solution.metaDescription,
@@ -67,14 +66,14 @@ export async function generateMetadata({ params }: Params): Promise<Metadata> {
 
 export default async function SolutionPage({ params }: Params) {
   const { slug } = await params;
-  const solution = getSolution(slug);
+  const solution = getUseCase(slug);
   if (!solution) notFound();
 
   const a = accentClasses[solution.accent];
-  const idx = solutions.findIndex((s) => s.slug === slug);
+  const idx = useCases.findIndex((s) => s.slug === slug);
   const shot = shots[idx % shots.length];
   const related = solution.related
-    .map((s) => getSolution(s))
+    .map((s) => getUseCase(s))
     .filter((s): s is NonNullable<typeof s> => Boolean(s));
 
   return (
@@ -94,8 +93,8 @@ export default async function SolutionPage({ params }: Params) {
         dangerouslySetInnerHTML={jsonLd(
           breadcrumbSchema([
             { name: "Home", path: "/" },
-            { name: "Solutions", path: "/solutions" },
-            { name: solution.name, path: `/solutions/${solution.slug}` },
+            { name: "Use Cases", path: "/use-cases" },
+            { name: solution.name, path: `/use-cases/${solution.slug}` },
           ])
         )}
       />
@@ -120,8 +119,8 @@ export default async function SolutionPage({ params }: Params) {
                 </li>
                 <CaretRightIcon size={13} weight="bold" aria-hidden="true" />
                 <li>
-                  <Link href="/solutions" className="transition-colors hover:text-white">
-                    Solutions
+                  <Link href="/use-cases" className="transition-colors hover:text-white">
+                    Use Cases
                   </Link>
                 </li>
                 <CaretRightIcon size={13} weight="bold" aria-hidden="true" />
@@ -163,12 +162,12 @@ export default async function SolutionPage({ params }: Params) {
           </div>
 
           <aside
-            aria-label={`AI agents powering ${solution.name}`}
+            aria-label={`Onita AI products powering ${solution.name}`}
             className="rounded-card-lg border border-white/10 bg-white/[0.04] p-6 shadow-hover backdrop-blur-xl"
           >
             <div className="flex items-center justify-between">
               <span className="text-xs font-semibold uppercase tracking-wider text-white/55">
-                Your {solution.name} team
+                Powered by Onita AI
               </span>
               <span className="inline-flex items-center gap-1.5 rounded-pill bg-success-500/15 px-2.5 py-1 text-xs font-semibold text-success-500">
                 <span className="h-1.5 w-1.5 rounded-full bg-success-500" aria-hidden="true" />
@@ -182,7 +181,7 @@ export default async function SolutionPage({ params }: Params) {
                   className="flex items-center gap-3.5 rounded-card border border-white/10 bg-white/[0.03] px-4 py-3.5"
                 >
                   <span className={`flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-gradient-to-br ${a.gradient} text-white`}>
-                    <RobotIcon size={20} weight="fill" aria-hidden="true" />
+                    <SparkleIcon size={20} weight="fill" aria-hidden="true" />
                   </span>
                   <span className="font-display text-sm font-semibold text-white">{agent}</span>
                   <SparkleIcon size={16} weight="fill" aria-hidden="true" className="ml-auto text-accent-300" />
@@ -190,7 +189,7 @@ export default async function SolutionPage({ params }: Params) {
               ))}
             </ul>
             <p className="mt-5 text-xs leading-5 text-white/50">
-              Designed, built, and run by Onita — around how your business works.
+              Set up and run by Onita — around how your business works.
             </p>
           </aside>
         </div>
@@ -211,7 +210,7 @@ export default async function SolutionPage({ params }: Params) {
               key={agent}
               className={`inline-flex items-center gap-2 rounded-pill border border-border ${a.softBg} px-3.5 py-1.5 text-sm font-medium text-ink-800`}
             >
-              <RobotIcon size={14} weight="fill" aria-hidden="true" className={a.text} />
+              <SparkleIcon size={14} weight="fill" aria-hidden="true" className={a.text} />
               {agent}
             </li>
           ))}
@@ -338,12 +337,12 @@ export default async function SolutionPage({ params }: Params) {
 
           <GlassMockup
             src={shot}
-            alt={`Onita running the ${solution.name} workflow with AI agents`}
+            alt={`Onita running the ${solution.name} workflow`}
             sizes="(max-width: 1024px) 100vw, 46vw"
             chip={
               <span className="flex items-center gap-2 text-sm font-semibold text-white">
-                <RobotIcon size={18} weight="fill" aria-hidden="true" className="text-accent-300" />
-                {solution.agents.length} agents at work
+                <SparkleIcon size={18} weight="fill" aria-hidden="true" className="text-accent-300" />
+                {solution.agents.length} AI products at work
               </span>
             }
             className="lg:rotate-1"
@@ -415,7 +414,7 @@ export default async function SolutionPage({ params }: Params) {
 
       <Section tone="light" labelledBy="solution-related-heading">
         <h2 id="solution-related-heading" className="font-display text-2xl font-bold text-ink-800 sm:text-3xl">
-          Explore related solutions
+          Explore related use cases
         </h2>
         <ul className="mt-8 grid gap-5 sm:grid-cols-3">
           {related.map((r) => {
@@ -423,7 +422,7 @@ export default async function SolutionPage({ params }: Params) {
             return (
               <li key={r.slug}>
                 <Link
-                  href={`/solutions/${r.slug}`}
+                  href={`/use-cases/${r.slug}`}
                   className="group flex h-full flex-col rounded-card-lg border border-border bg-surface p-6 shadow-soft transition-all hover:-translate-y-1 hover:border-brand-200 hover:shadow-hover"
                 >
                   <span className={`inline-flex h-11 w-11 items-center justify-center rounded-2xl ${ra.softBg} ${ra.text}`}>
@@ -480,11 +479,11 @@ export default async function SolutionPage({ params }: Params) {
           <div className="relative grid items-center gap-8 lg:grid-cols-[1.4fr_1fr]">
             <div>
               <h2 className="font-display text-3xl font-bold tracking-tight text-white sm:text-4xl">
-                Put an AI {solution.name.toLowerCase()} team to work
+                Bring Onita AI to your {solution.name.toLowerCase()}
               </h2>
               <p className="mt-4 max-w-xl text-lg leading-8 text-white/70">
-                Book a demo and we&apos;ll design, build, and run the agents for {solution.name.toLowerCase()} around
-                how your business already operates.
+                Book a demo and we&apos;ll set Onita up for {solution.name.toLowerCase()} around how your team
+                already works — so you get more done from day one.
               </p>
             </div>
             <div className="flex flex-col gap-3 sm:flex-row lg:flex-col">

@@ -244,7 +244,7 @@ export function createOgImage({
             color: t.muted,
           }}
         >
-          <div style={{ display: "flex", fontWeight: 600 }}>onitaai.com</div>
+          <div style={{ display: "flex", fontWeight: 600 }}>onitaapp.com</div>
           <div style={{ display: "flex" }}>{footer}</div>
         </div>
       </div>

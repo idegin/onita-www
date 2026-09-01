@@ -78,16 +78,17 @@ export function Hero() {
             className="animate-fade-up mt-6 font-display text-4xl font-extrabold leading-[1.05] tracking-tight text-white sm:text-5xl lg:text-6xl"
             style={{ animationDelay: "0.12s" }}
           >
-            Your team just got <span className="text-gradient-ai">bigger</span>
+            Get an unfair advantage by using AI to{" "}
+            <span className="text-gradient-ai">double your productivity</span>
           </h1>
 
           <p
             className="animate-fade-up mt-6 max-w-lg text-lg leading-8 text-white/70"
             style={{ animationDelay: "0.2s" }}
           >
-            Onita builds growing businesses a workforce of AI agents — trained on how you work,
-            wired into your tools, and run for you. Get more done without hiring more.
-            Book a demo and we set it all up.
+            Onita is the AI productivity platform for individuals and teams of all sizes. The tools you need —
+            all in one place, handling the busywork so you get twice as much done. Book a demo and we
+            set it all up for you.
           </p>
 
           <div
@@ -115,7 +116,7 @@ export function Hero() {
             style={{ animationDelay: "0.36s" }}
           >
             <p className="text-xs font-semibold uppercase tracking-wider text-white/55">
-              One workspace. Every tool your team needs.
+              Every AI product, in one platform.
             </p>
             <ul className="flex flex-wrap gap-2">
               {productTools.map((tool) => (
@@ -136,7 +137,7 @@ export function Hero() {
         <div className="lg:h-full">
           <RotatingShot
             shots={PRODUCT_SHOTS}
-            alt="The Onita workspace dashboard, where AI employees run reports, charts, and tasks alongside your team."
+            alt="The Onita workspace, where AI runs projects, tasks, docs, and reports for you."
             priority
             sizes="100vw"
             className="relative overflow-hidden rounded-card border border-white/12 shadow-hover lg:hidden"

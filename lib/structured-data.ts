@@ -13,13 +13,9 @@ export const organizationSchema = {
   description: siteConfig.description,
   foundingDate: siteConfig.founded,
   email: siteConfig.contact.generalEmail,
-  telephone: siteConfig.contact.phone,
   address: {
     "@type": "PostalAddress",
-    streetAddress: siteConfig.address.street,
     addressLocality: siteConfig.address.city,
-    addressRegion: siteConfig.address.region,
-    postalCode: siteConfig.address.postalCode,
     addressCountry: siteConfig.address.countryCode,
   },
   contactPoint: [
@@ -27,7 +23,6 @@ export const organizationSchema = {
       "@type": "ContactPoint",
       contactType: "sales",
       email: siteConfig.contact.salesEmail,
-      telephone: siteConfig.contact.phone,
       availableLanguage: ["English"],
     },
     {
@@ -63,7 +58,7 @@ export const softwareApplicationSchema = {
     "@type": "Offer",
     availability: "https://schema.org/InStock",
     url: abs(siteConfig.demoUrl),
-    description: "Book a demo and we design, build, and run your AI workforce for you.",
+    description: "Book a demo and we set up your AI productivity platform for you.",
   },
   publisher: { "@id": `${siteConfig.url}/#organization` },
 };
@@ -91,7 +86,7 @@ export function productSchema(product: {
     "@type": "SoftwareApplication",
     name: `Onita ${product.name}`,
     applicationCategory: "BusinessApplication",
-    applicationSubCategory: "AI Workforce Platform",
+    applicationSubCategory: "AI Productivity Platform",
     operatingSystem: "Web",
     description: product.description,
     url: abs(`/products/${product.slug}`),
@@ -118,7 +113,7 @@ export function serviceSchema(service: {
     description: service.description,
     provider: { "@id": `${siteConfig.url}/#organization` },
     areaServed: "Worldwide",
-    url: abs(`/solutions/${service.slug}`),
+    url: abs(`/use-cases/${service.slug}`),
     offers: {
       "@type": "Offer",
       availability: "https://schema.org/InStock",

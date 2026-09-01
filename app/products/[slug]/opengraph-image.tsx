@@ -3,7 +3,7 @@ import { createOgImage, OG_SIZE, OG_CONTENT_TYPE } from "@/lib/og";
 
 export const size = OG_SIZE;
 export const contentType = OG_CONTENT_TYPE;
-export const alt = "Onita product — the AI Workforce Platform";
+export const alt = "Onita product — the AI Productivity Platform";
 
 export function generateStaticParams() {
   return products.map((p) => ({ slug: p.slug }));

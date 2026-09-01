@@ -8,37 +8,37 @@ import {
   StackIcon,
 } from "@phosphor-icons/react/dist/ssr";
 import { Section } from "@/components/ui/section";
-import { solutions, solutionGroups } from "@/lib/solutions";
+import { useCases, useCaseGroups } from "@/lib/use-cases";
 import { accentClasses } from "@/lib/products";
 import { siteConfig } from "@/lib/site-config";
 import { jsonLd, breadcrumbSchema } from "@/lib/structured-data";
 
 export const metadata: Metadata = {
-  title: "Solutions — AI Agents for Every Team in Your Business",
+  title: "Use Cases — Onita AI for Every Business & Team",
   description:
-    "AI workforce solutions for project management, sales, marketing, operations, HR, finance, IT, and more. Onita designs, builds, and runs the agents each team needs.",
-  alternates: { canonical: "/solutions" },
+    "See how Onita's AI productivity platform works for IT service providers, agencies, law firms, consultancies, construction, real estate, startups, sales, and executive teams.",
+  alternates: { canonical: "/use-cases" },
   openGraph: {
     type: "website",
-    url: `${siteConfig.url}/solutions`,
-    title: "Onita Solutions — AI Agents for Every Team in Your Business",
+    url: `${siteConfig.url}/use-cases`,
+    title: "Onita Use Cases — AI Productivity for Every Business & Team",
     description:
-      "AI workforce solutions for project management, sales, marketing, operations, HR, finance, IT, and more — designed, built, and run for you.",
+      "AI productivity for service businesses and functional teams — from IT providers and agencies to sales, startups, and executive teams.",
   },
 };
 
 const itemListSchema = {
   "@context": "https://schema.org",
   "@type": "ItemList",
-  itemListElement: solutions.map((s, i) => ({
+  itemListElement: useCases.map((s, i) => ({
     "@type": "ListItem",
     position: i + 1,
     name: `Onita for ${s.name}`,
-    url: `${siteConfig.url}/solutions/${s.slug}`,
+    url: `${siteConfig.url}/use-cases/${s.slug}`,
   })),
 };
 
-export default function SolutionsIndexPage() {
+export default function UseCasesIndexPage() {
   return (
     <>
       <script
@@ -46,7 +46,7 @@ export default function SolutionsIndexPage() {
         dangerouslySetInnerHTML={jsonLd(
           breadcrumbSchema([
             { name: "Home", path: "/" },
-            { name: "Solutions", path: "/solutions" },
+            { name: "Use Cases", path: "/use-cases" },
           ])
         )}
       />
@@ -78,27 +78,26 @@ export default function SolutionsIndexPage() {
               </li>
               <CaretRightIcon size={13} weight="bold" aria-hidden="true" />
               <li className="font-medium text-white/90" aria-current="page">
-                Solutions
+                Use Cases
               </li>
             </ol>
           </nav>
           <span className="inline-flex items-center gap-2 rounded-pill border border-white/15 bg-white/5 px-3.5 py-1.5 text-xs font-semibold uppercase tracking-wider text-white/80 backdrop-blur">
             <StackIcon size={14} weight="fill" aria-hidden="true" className="text-accent-400" />
-            Solutions by team
+            Use cases by industry &amp; team
           </span>
           <h1 className="mt-6 max-w-3xl font-display text-4xl font-extrabold leading-[1.05] tracking-tight text-white sm:text-5xl lg:text-6xl">
-            An AI workforce for <span className="text-gradient-ai">every team</span> you run
+            AI productivity for <span className="text-gradient-ai">every business</span> and team
           </h1>
           <p className="mt-6 max-w-2xl text-lg leading-8 text-white/70">
-            Whatever your team does — deliver projects, win customers, run operations, support people — Onita
-            designs, builds, and runs the AI agents that carry the repetitive work, so you get more done
-            without hiring more.
+            However you work — running a service business or leading a functional team — Onita&apos;s AI
+            products carry the busywork so you get twice as much done. Find your use case and see how.
           </p>
         </div>
       </section>
 
-      {/* Grouped solution lists */}
-      {solutionGroups.map((group, gi) => (
+      {/* Grouped use-case lists */}
+      {useCaseGroups.map((group, gi) => (
         <Section
           key={group}
           tone={gi % 2 === 0 ? "light" : "muted"}
@@ -112,19 +111,19 @@ export default function SolutionsIndexPage() {
               {group}
             </h2>
             <span className="text-sm text-muted-foreground">
-              {solutions.filter((s) => s.group === group).length} solutions
+              {useCases.filter((s) => s.group === group).length} use cases
             </span>
           </div>
 
           <ul className="mt-8 grid gap-5 sm:grid-cols-2 lg:grid-cols-2">
-            {solutions
+            {useCases
               .filter((s) => s.group === group)
               .map((s) => {
                 const a = accentClasses[s.accent];
                 return (
                   <li key={s.slug}>
                     <Link
-                      href={`/solutions/${s.slug}`}
+                      href={`/use-cases/${s.slug}`}
                       className="group flex h-full items-start gap-5 rounded-card-lg border border-border bg-surface p-6 shadow-soft transition-all hover:-translate-y-1 hover:border-brand-200 hover:shadow-hover sm:p-7"
                     >
                       <span
@@ -153,14 +152,14 @@ export default function SolutionsIndexPage() {
       ))}
 
       {/* CTA */}
-      <Section tone="gradient" ariaLabel="Get started with an Onita solution">
+      <Section tone="gradient" ariaLabel="Get started with Onita">
         <div className="mx-auto max-w-2xl text-center">
           <h2 className="font-display text-3xl font-bold tracking-tight text-white sm:text-4xl">
             Not sure where to start?
           </h2>
           <p className="mt-4 text-lg leading-8 text-white/75">
-            Book a demo and we&apos;ll map your team&apos;s biggest time sinks to the AI agents that clear
-            them — then build and run the whole thing for you.
+            Book a demo and we&apos;ll map your team&apos;s biggest time sinks to the AI products that clear
+            them — then set the whole thing up for you.
           </p>
           <div className="mt-8 flex flex-col justify-center gap-3 sm:flex-row sm:items-center">
             <Link

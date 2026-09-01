@@ -37,7 +37,7 @@ export function Testimonials() {
         id="testimonials-heading"
         eyebrow="Customers"
         title="Lean teams, enterprise output."
-        description="Growing businesses and teams of every kind use Onita to get more done without hiring more."
+        description="Individuals and teams of all sizes use Onita to get twice as much done."
       />
 
       <dl className="mt-12 grid grid-cols-2 gap-6 rounded-card-lg border border-border bg-surface p-8 lg:grid-cols-4">

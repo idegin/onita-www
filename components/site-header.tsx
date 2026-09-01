@@ -3,10 +3,39 @@
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { CaretDownIcon, ListIcon, XIcon, CalendarCheckIcon } from "@phosphor-icons/react";
+import { CaretDownIcon, ListIcon, XIcon, CalendarCheckIcon, PlugsConnectedIcon } from "@phosphor-icons/react";
+import type { Icon } from "@phosphor-icons/react";
 import { BrandLogo } from "@/components/brand-logo";
 import { primaryNav } from "@/lib/navigation";
+import { productMap } from "@/lib/products";
+import { useCaseMap } from "@/lib/use-cases";
 import { siteConfig } from "@/lib/site-config";
+
+function iconForHref(href: string): Icon {
+  if (href.startsWith("/products/")) {
+    const product = productMap[href.replace("/products/", "")];
+    if (product) return product.Icon;
+  }
+  if (href.startsWith("/use-cases/")) {
+    const useCase = useCaseMap[href.replace("/use-cases/", "")];
+    if (useCase) return useCase.Icon;
+  }
+  return PlugsConnectedIcon;
+}
+
+const columnGrid: Record<number, string> = {
+  1: "grid-cols-1",
+  2: "grid-cols-2",
+  3: "grid-cols-3",
+  4: "grid-cols-4",
+};
+
+const columnWidth: Record<number, string> = {
+  1: "w-[min(340px,88vw)]",
+  2: "w-[min(600px,92vw)]",
+  3: "w-[min(720px,94vw)]",
+  4: "w-[min(1040px,96vw)]",
+};
 
 export function SiteHeader() {
   const [scrolled, setScrolled] = useState(false);
@@ -63,26 +92,45 @@ export function SiteHeader() {
                 </button>
                 <div
                   className={`invisible absolute left-1/2 top-full z-10 -translate-x-1/2 pt-3 opacity-0 transition-all duration-200 group-focus-within:visible group-focus-within:opacity-100 group-hover:visible group-hover:opacity-100 ${
-                    group.columns ? "w-[min(620px,92vw)]" : "w-[min(560px,90vw)]"
+                    group.columns ? columnWidth[group.columns.length] ?? "w-[min(720px,94vw)]" : "w-[min(560px,90vw)]"
                   }`}
                 >
                   {group.columns ? (
-                    <div className="grid grid-cols-3 gap-4 rounded-card border border-border bg-surface p-5 shadow-hover">
+                    <div
+                      className={`grid gap-x-6 gap-y-1 rounded-card border border-border bg-surface p-6 shadow-hover ${
+                        columnGrid[group.columns.length] ?? "grid-cols-3"
+                      }`}
+                    >
                       {group.columns.map((column) => (
                         <div key={column.title}>
-                          <span className="block px-2 text-xs font-semibold uppercase tracking-wider text-muted-foreground">
+                          <span className="block px-2 pb-1 text-xs font-semibold uppercase tracking-wider text-muted-foreground">
                             {column.title}
                           </span>
-                          <div className="mt-2 flex flex-col">
-                            {column.items.map((item) => (
-                              <Link
-                                key={item.href}
-                                href={item.href}
-                                className="rounded-xl px-2 py-2 text-sm font-semibold text-ink-800 transition-colors hover:bg-brand-50 hover:text-brand-600"
-                              >
-                                {item.label}
-                              </Link>
-                            ))}
+                          <div className="flex flex-col">
+                            {column.items.map((item) => {
+                              const ItemIcon = iconForHref(item.href);
+                              return (
+                                <Link
+                                  key={item.href}
+                                  href={item.href}
+                                  className="group/item flex items-start gap-3 rounded-xl p-2 transition-colors hover:bg-brand-50"
+                                >
+                                  <span className="mt-0.5 inline-flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-brand-50 text-brand-600 transition-colors group-hover/item:bg-brand-100">
+                                    <ItemIcon size={17} weight="fill" aria-hidden="true" />
+                                  </span>
+                                  <span className="min-w-0">
+                                    <span className="block text-sm font-semibold text-ink-800 transition-colors group-hover/item:text-brand-600">
+                                      {item.label}
+                                    </span>
+                                    {item.description && (
+                                      <span className="mt-0.5 block text-xs leading-4 text-muted-foreground">
+                                        {item.description}
+                                      </span>
+                                    )}
+                                  </span>
+                                </Link>
+                              );
+                            })}
                           </div>
                         </div>
                       ))}
