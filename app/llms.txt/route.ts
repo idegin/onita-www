@@ -22,7 +22,7 @@ export function GET() {
     "",
     `> ${siteConfig.tagline} — ${siteConfig.slogan} ${siteConfig.description}`,
     "",
-    `${siteConfig.name} is ${siteConfig.tagline} — an AI productivity platform built for individuals and teams of all sizes. Onita bundles AI-powered products (AI Project Manager, AI Task Manager, AI Calendar, AI Meeting Assistant, AI Chat, AI Meeting Notetaker, AI Dashboards, AI Docs Assistant, AI Workflows, AI Slides, AI Forms) that use AI to double productivity by handling the busywork. Onita is a managed engagement: prospects book a demo and our team sets everything up for them. There is no self-serve signup or login — every page drives one goal: Book a Demo (secondary: Talk to Sales).`,
+    `${siteConfig.name} is ${siteConfig.tagline} — an AI productivity platform built for individuals and teams of all sizes. Onita bundles AI-powered products (AI Project Manager, AI Task Manager, AI Calendar, AI Meeting Assistant, AI Chat, AI Meeting Notetaker, AI Dashboards, AI Notes, AI Automations, AI Slides, AI Forms) that use AI to double productivity by handling the busywork. Onita is a managed engagement: prospects book a demo and our team sets everything up for them. There is no self-serve signup or login — every page drives one goal: Book a Demo (secondary: Talk to Sales).`,
     "",
     section("Core pages", [
       link("Home", "/", `${siteConfig.slogan} Overview of the ${siteConfig.tagline}.`),

@@ -101,9 +101,9 @@ export type ProductTool = {
 export const productTools: ProductTool[] = [
   { name: "AI Projects", Icon: BoardIcon },
   { name: "AI Calendar", Icon: CalendarIcon },
-  { name: "AI Docs", Icon: DocsIcon },
+  { name: "AI Notes", Icon: DocsIcon },
   { name: "AI Dashboards", Icon: SheetIcon },
-  { name: "AI Workflows", Icon: AutomationIcon },
+  { name: "AI Automations", Icon: AutomationIcon },
   { name: "AI Forms", Icon: FormIcon },
   { name: "AI Slides", Icon: SlidesIcon },
   { name: "AI Chat", Icon: AiIcon },

@@ -79,7 +79,7 @@ export const useCases: Solution[] = [
       { old: "Tickets and projects split across a PSA, a spreadsheet, and Slack", onita: "One workspace where AI routes work and keeps every client in sync" },
       { old: "Engineers write up client calls from memory hours later", onita: "AI Meeting Notetaker captures calls and turns them into tasks instantly" },
       { old: "Utilization and SLA status only visible at month-end", onita: "AI Dashboards surface SLA risk and capacity in real time" },
-      { old: "Runbooks and change docs go stale in a wiki nobody reads", onita: "AI Docs Assistant drafts and updates documentation as work happens" },
+      { old: "Runbooks and change docs go stale in a wiki nobody reads", onita: "AI Notes drafts and updates documentation as work happens" },
     ],
     pillars: [
       { title: "Never miss an SLA", desc: "AI triages incoming requests, sets priority, and flags anything about to breach before it does.", Icon: GaugeIcon },
@@ -92,7 +92,7 @@ export const useCases: Solution[] = [
         { agent: "AI Task Manager", action: "Captures the incoming request and sets priority against the SLA" },
         { agent: "AI Project Manager", action: "Slots the work into the right engineer's queue by capacity" },
         { agent: "AI Meeting Notetaker", action: "Records the client call and extracts every action item" },
-        { agent: "AI Docs Assistant", action: "Updates the runbook and change record automatically" },
+        { agent: "AI Notes", action: "Updates the runbook and change record automatically" },
         { agent: "AI Dashboards", action: "Reports SLA status and utilization back to the account lead" },
       ],
     },
@@ -117,7 +117,7 @@ export const useCases: Solution[] = [
     faqs: [
       { q: "Does Onita replace our PSA or ticketing tool?", a: "Onita becomes the single place your team works — triaging requests, running projects, and reporting on SLAs — so most providers consolidate the scattered tools around their PSA into one AI-powered workspace." },
       { q: "How does the AI know how to prioritize our tickets?", a: "Onita learns your SLAs, client tiers, and escalation rules, then applies them automatically to every incoming request so priority is consistent across your whole team." },
-      { q: "Can it keep client documentation current?", a: "Yes. The AI Docs Assistant drafts and updates runbooks, change records, and client notes from the actual work and calls, so documentation stays accurate without manual write-ups." },
+      { q: "Can it keep client documentation current?", a: "Yes. The AI Notes drafts and updates runbooks, change records, and client notes from the actual work and calls, so documentation stays accurate without manual write-ups." },
       { q: "How do we get started?", a: "Book a demo and Onita's team sets everything up for you — your queues, SLA rules, dashboards, and client workspaces are configured and ready before your engineers log in." },
     ],
     related: ["consulting-businesses", "startups", "executive-teams"],
@@ -142,8 +142,8 @@ export const useCases: Solution[] = [
     comparison: [
       { old: "Every account managed in a different tool and spreadsheet", onita: "One workspace where AI keeps every client campaign moving" },
       { old: "Status meetings just to find out what's late", onita: "AI Dashboards show campaign status without a single check-in call" },
-      { old: "Creative briefs lost in email threads", onita: "AI Workflows turn approved briefs into production tasks instantly" },
-      { old: "Monthly client reports built by hand from five platforms", onita: "AI Docs Assistant drafts branded client reports on demand" },
+      { old: "Creative briefs lost in email threads", onita: "AI Automations turn approved briefs into production tasks instantly" },
+      { old: "Monthly client reports built by hand from five platforms", onita: "AI Notes drafts branded client reports on demand" },
     ],
     pillars: [
       { title: "More campaigns, same team", desc: "AI plans timelines and assigns production so your team ships more without burning out.", Icon: RocketLaunchIcon },
@@ -153,11 +153,11 @@ export const useCases: Solution[] = [
     workflow: {
       title: "From brief to campaign to client report",
       steps: [
-        { agent: "AI Docs Assistant", action: "Turns the discovery call into a structured campaign brief" },
+        { agent: "AI Notes", action: "Turns the discovery call into a structured campaign brief" },
         { agent: "AI Project Manager", action: "Builds the production timeline and assigns each deliverable" },
         { agent: "AI Task Manager", action: "Keeps writers, designers, and media buyers moving in sync" },
         { agent: "AI Dashboards", action: "Tracks spend, status, and results across every client" },
-        { agent: "AI Docs Assistant", action: "Drafts the monthly client report ready to send" },
+        { agent: "AI Notes", action: "Drafts the monthly client report ready to send" },
       ],
     },
     features: [
@@ -166,7 +166,7 @@ export const useCases: Solution[] = [
       { title: "Client-ready reporting", desc: "Branded status updates and monthly reports drafted from your live campaign data.", Icon: FileTextIcon },
       { title: "Cross-account visibility", desc: "See every client's health, deadlines, and profitability in one dashboard.", Icon: ChartLineUpIcon },
     ],
-    agents: ["AI Project Manager", "AI Docs Assistant", "AI Dashboards"],
+    agents: ["AI Project Manager", "AI Notes", "AI Dashboards"],
     metrics: [
       { value: "2x", label: "campaigns shipped per month" },
       { value: "70%", label: "less time on status reporting" },
@@ -180,7 +180,7 @@ export const useCases: Solution[] = [
     },
     faqs: [
       { q: "Can Onita handle multiple clients at once?", a: "Yes. Each client gets their own organized workspace while your leadership sees every account's status, deadlines, and profitability in one place." },
-      { q: "How does the reporting work?", a: "The AI Docs Assistant pulls from your live campaign data to draft branded, client-ready status updates and monthly reports, so you review and send instead of building from scratch." },
+      { q: "How does the reporting work?", a: "The AI Notes pulls from your live campaign data to draft branded, client-ready status updates and monthly reports, so you review and send instead of building from scratch." },
       { q: "Does it work for both creative and media teams?", a: "Onita keeps writers, designers, media buyers, and account managers on the same plan, so briefs flow straight into assigned production work for every discipline." },
       { q: "How do we roll it out?", a: "Book a demo and Onita's team sets everything up for you — your client workspaces, campaign templates, report formats, and dashboards are configured before your team starts." },
     ],
@@ -205,7 +205,7 @@ export const useCases: Solution[] = [
       "Onita is an AI-era productivity platform that helps design agencies manage creative projects, approval rounds, and client feedback in one place with AI handling coordination.",
     comparison: [
       { old: "Feedback scattered across email, calls, and comment threads", onita: "AI Meeting Notetaker turns every review into clear revision tasks" },
-      { old: "Approvals stall and nobody knows who's blocking", onita: "AI Workflows chase sign-off and flag stuck approvals automatically" },
+      { old: "Approvals stall and nobody knows who's blocking", onita: "AI Automations chase sign-off and flag stuck approvals automatically" },
       { old: "Designers pulled into status updates all day", onita: "AI Dashboards show project status without interrupting the studio" },
       { old: "Scope creep discovered only when the project runs over", onita: "AI flags out-of-scope requests the moment they land" },
     ],
@@ -220,7 +220,7 @@ export const useCases: Solution[] = [
         { agent: "AI Project Manager", action: "Builds the project timeline with review and delivery milestones" },
         { agent: "AI Task Manager", action: "Assigns each concept and revision to the right designer" },
         { agent: "AI Meeting Notetaker", action: "Captures the client review and turns notes into revision tasks" },
-        { agent: "AI Workflows", action: "Chases approval and flags anything stuck or out of scope" },
+        { agent: "AI Automations", action: "Chases approval and flags anything stuck or out of scope" },
         { agent: "AI Dashboards", action: "Shows studio-wide status without a single status meeting" },
       ],
     },
@@ -270,7 +270,7 @@ export const useCases: Solution[] = [
     comparison: [
       { old: "New client intake handled ad hoc over email and phone", onita: "AI Forms and Workflows structure intake and route it instantly" },
       { old: "Attorneys write up client calls from memory", onita: "AI Meeting Notetaker captures every call into an accurate record" },
-      { old: "First drafts and letters written from a blank page", onita: "AI Docs Assistant drafts documents from your templates and matter" },
+      { old: "First drafts and letters written from a blank page", onita: "AI Notes drafts documents from your templates and matter" },
       { old: "Deadlines tracked in scattered calendars and reminders", onita: "AI Calendar keeps every filing and follow-up in view" },
     ],
     pillars: [
@@ -282,9 +282,9 @@ export const useCases: Solution[] = [
       title: "From new inquiry to managed matter",
       steps: [
         { agent: "AI Forms", action: "Captures the new client inquiry and required details" },
-        { agent: "AI Workflows", action: "Runs conflict-check and intake routing to the right attorney" },
+        { agent: "AI Automations", action: "Runs conflict-check and intake routing to the right attorney" },
         { agent: "AI Meeting Notetaker", action: "Records the client consultation into an accurate record" },
-        { agent: "AI Docs Assistant", action: "Drafts the engagement letter and first documents from your templates" },
+        { agent: "AI Notes", action: "Drafts the engagement letter and first documents from your templates" },
         { agent: "AI Calendar", action: "Locks in every deadline, filing, and follow-up" },
       ],
     },
@@ -294,7 +294,7 @@ export const useCases: Solution[] = [
       { title: "Assisted drafting", desc: "Engagement letters and first drafts generated from your own templates and matter details.", Icon: FileTextIcon },
       { title: "Deadline management", desc: "Filings, statutes, and follow-ups tracked in one calendar the whole firm trusts.", Icon: CalendarCheckIcon },
     ],
-    agents: ["AI Meeting Notetaker", "AI Docs Assistant", "AI Workflows"],
+    agents: ["AI Meeting Notetaker", "AI Notes", "AI Automations"],
     metrics: [
       { value: "8 hrs", label: "of admin saved per attorney weekly" },
       { value: "2x", label: "faster client intake" },
@@ -308,8 +308,8 @@ export const useCases: Solution[] = [
     },
     faqs: [
       { q: "Is client information kept secure and confidential?", a: "Yes. Onita is built for confidential work with role-based permissions and access controls, so sensitive matters and client records stay restricted to the right people." },
-      { q: "Does the AI replace attorney judgment on drafts?", a: "No. The AI Docs Assistant produces first drafts from your templates and matter details to save time, but every document stays under attorney review and control." },
-      { q: "How does it handle intake?", a: "AI Forms capture new inquiries, then AI Workflows run conflict checks and route each matter to the right attorney, so intake is consistent instead of ad hoc." },
+      { q: "Does the AI replace attorney judgment on drafts?", a: "No. The AI Notes produces first drafts from your templates and matter details to save time, but every document stays under attorney review and control." },
+      { q: "How does it handle intake?", a: "AI Forms capture new inquiries, then AI Automations run conflict checks and route each matter to the right attorney, so intake is consistent instead of ad hoc." },
       { q: "How do we get started?", a: "Book a demo and Onita's team sets everything up for you — your intake forms, document templates, matter workflows, and deadline calendars are configured before your firm starts." },
     ],
     related: ["consulting-businesses", "real-estate-management", "executive-teams"],
@@ -347,7 +347,7 @@ export const useCases: Solution[] = [
       steps: [
         { agent: "AI Project Manager", action: "Builds the engagement plan from your delivery playbook" },
         { agent: "AI Meeting Notetaker", action: "Captures client workshops into structured findings" },
-        { agent: "AI Docs Assistant", action: "Drafts the analysis and written deliverables" },
+        { agent: "AI Notes", action: "Drafts the analysis and written deliverables" },
         { agent: "AI Slides", action: "Turns findings into a client-ready presentation" },
         { agent: "AI Dashboards", action: "Tracks utilization and engagement health for the partners" },
       ],
@@ -399,7 +399,7 @@ export const useCases: Solution[] = [
       { old: "Schedules on whiteboards and out-of-date spreadsheets", onita: "AI Project Manager keeps live schedules across every job site" },
       { old: "Site updates trapped in texts and phone calls", onita: "AI Meeting Notetaker turns site walks and calls into logged tasks" },
       { old: "Delays discovered only when a deadline is already blown", onita: "AI Dashboards flag schedule and budget risk early" },
-      { old: "RFIs and change orders drafted from scratch", onita: "AI Docs Assistant drafts change orders and reports fast" },
+      { old: "RFIs and change orders drafted from scratch", onita: "AI Notes drafts change orders and reports fast" },
     ],
     pillars: [
       { title: "On-time delivery", desc: "AI maintains live project schedules and flags slippage before it costs you the deadline.", Icon: GaugeIcon },
@@ -412,7 +412,7 @@ export const useCases: Solution[] = [
         { agent: "AI Meeting Notetaker", action: "Captures the site walk and turns issues into tasks" },
         { agent: "AI Project Manager", action: "Updates the live schedule and reflags dependencies" },
         { agent: "AI Task Manager", action: "Assigns work to the right crew and subcontractors" },
-        { agent: "AI Docs Assistant", action: "Drafts the change order and daily site report" },
+        { agent: "AI Notes", action: "Drafts the change order and daily site report" },
         { agent: "AI Dashboards", action: "Reports schedule and budget status to the owner" },
       ],
     },
@@ -437,7 +437,7 @@ export const useCases: Solution[] = [
     faqs: [
       { q: "Can Onita handle multiple job sites at once?", a: "Yes. Each project has its own live schedule and crew plan while your leadership sees schedule and budget risk across every site in one dashboard." },
       { q: "How does it capture what happens on site?", a: "The AI Meeting Notetaker turns site walks and phone calls into logged tasks and daily reports, so field updates reach the office without end-of-day paperwork." },
-      { q: "Does it help with change orders and RFIs?", a: "The AI Docs Assistant drafts change orders, RFIs, and site reports from your templates and project details, so documentation keeps pace with the work." },
+      { q: "Does it help with change orders and RFIs?", a: "The AI Notes drafts change orders, RFIs, and site reports from your templates and project details, so documentation keeps pace with the work." },
       { q: "How do we get set up?", a: "Book a demo and Onita's team sets everything up for you — your project schedules, crew assignments, report templates, and dashboards are configured before your team starts." },
     ],
     related: ["real-estate-management", "it-service-providers", "executive-teams"],
@@ -461,7 +461,7 @@ export const useCases: Solution[] = [
       "Onita is an AI-era productivity platform that helps real estate and property managers handle tenant requests, vendor coordination, and owner reporting in one place with AI.",
     comparison: [
       { old: "Tenant requests scattered across email, text, and calls", onita: "AI Forms and Task Manager capture and triage every request" },
-      { old: "Vendor coordination handled by memory and follow-up calls", onita: "AI Workflows dispatch vendors and chase completion" },
+      { old: "Vendor coordination handled by memory and follow-up calls", onita: "AI Automations dispatch vendors and chase completion" },
       { old: "Owners chasing you for updates on their properties", onita: "AI Dashboards give owners live status without the phone tag" },
       { old: "Leases, notices, and renewals tracked manually", onita: "AI Calendar keeps every renewal and deadline in view" },
     ],
@@ -475,7 +475,7 @@ export const useCases: Solution[] = [
       steps: [
         { agent: "AI Forms", action: "Captures the tenant request with all the details needed" },
         { agent: "AI Task Manager", action: "Triages urgency and assigns the right owner" },
-        { agent: "AI Workflows", action: "Dispatches the vendor and chases completion" },
+        { agent: "AI Automations", action: "Dispatches the vendor and chases completion" },
         { agent: "AI Calendar", action: "Tracks the renewal, inspection, or follow-up date" },
         { agent: "AI Dashboards", action: "Reports property status and spend to the owner" },
       ],
@@ -486,7 +486,7 @@ export const useCases: Solution[] = [
       { title: "Owner reporting", desc: "Live property status, spend, and occupancy shared with owners without manual updates.", Icon: ChartLineUpIcon },
       { title: "Lease and renewal tracking", desc: "Renewals, notices, and inspections tracked in one calendar the whole team trusts.", Icon: CalendarCheckIcon },
     ],
-    agents: ["AI Task Manager", "AI Workflows", "AI Dashboards"],
+    agents: ["AI Task Manager", "AI Automations", "AI Dashboards"],
     metrics: [
       { value: "2x", label: "units managed per person" },
       { value: "50%", label: "faster request resolution" },
@@ -500,7 +500,7 @@ export const useCases: Solution[] = [
     },
     faqs: [
       { q: "Can Onita manage requests across a large portfolio?", a: "Yes. Every property and unit stays organized, and requests are triaged and assigned automatically so nothing falls through the cracks no matter how many doors you manage." },
-      { q: "How does vendor coordination work?", a: "AI Workflows dispatch the right vendor for each request and chase completion, so repairs and maintenance don't stall on a forgotten follow-up call." },
+      { q: "How does vendor coordination work?", a: "AI Automations dispatch the right vendor for each request and chase completion, so repairs and maintenance don't stall on a forgotten follow-up call." },
       { q: "Can owners see how their properties are doing?", a: "AI Dashboards give owners live status, spend, and occupancy, so they stay informed without calling your team for updates." },
       { q: "How do we get started?", a: "Book a demo and Onita's team sets everything up for you — your request forms, vendor workflows, renewal calendars, and owner dashboards are configured before your team starts." },
     ],
@@ -527,7 +527,7 @@ export const useCases: Solution[] = [
       { old: "Five tools stitched together as the team grows", onita: "One AI-powered workspace that scales with you" },
       { old: "Founders doing project and ops admin at midnight", onita: "AI Project Manager and Task Manager run the day-to-day" },
       { old: "Standups and syncs just to know what's happening", onita: "AI Dashboards give the whole team live status" },
-      { old: "Docs, updates, and reports written by hand", onita: "AI Docs Assistant drafts investor updates and specs fast" },
+      { old: "Docs, updates, and reports written by hand", onita: "AI Notes drafts investor updates and specs fast" },
     ],
     pillars: [
       { title: "Do more with less", desc: "AI multiplies a small team's output so you compete without a big headcount.", Icon: RocketLaunchIcon },
@@ -540,7 +540,7 @@ export const useCases: Solution[] = [
         { agent: "AI Project Manager", action: "Turns the roadmap into a plan with owners and dates" },
         { agent: "AI Task Manager", action: "Keeps the whole team moving without daily standups" },
         { agent: "AI Meeting Notetaker", action: "Captures customer and team calls into action" },
-        { agent: "AI Docs Assistant", action: "Drafts the specs, docs, and investor update" },
+        { agent: "AI Notes", action: "Drafts the specs, docs, and investor update" },
         { agent: "AI Dashboards", action: "Shows traction and progress to the founders" },
       ],
     },
@@ -550,7 +550,7 @@ export const useCases: Solution[] = [
       { title: "Investor-ready updates", desc: "Investor updates and internal docs drafted from your live progress and metrics.", Icon: FileTextIcon },
       { title: "One scalable workspace", desc: "Product, ops, and GTM in one place that grows with you — no re-platforming later.", Icon: ChartLineUpIcon },
     ],
-    agents: ["AI Project Manager", "AI Docs Assistant", "AI Dashboards"],
+    agents: ["AI Project Manager", "AI Notes", "AI Dashboards"],
     metrics: [
       { value: "3x", label: "output per team member" },
       { value: "50%", label: "less time in status meetings" },
@@ -565,7 +565,7 @@ export const useCases: Solution[] = [
     faqs: [
       { q: "Is Onita too much for a small team?", a: "No — it's built to make small teams punch above their weight. The AI runs the coordination and drafting so a lean team does the work of a much bigger one, without adding tools or headcount." },
       { q: "Will it scale as we grow?", a: "Yes. Onita is one workspace for product, ops, and go-to-market that grows with you, so you avoid stitching together new tools every time the team expands." },
-      { q: "Can it help with investor updates?", a: "The AI Docs Assistant drafts investor updates and internal docs from your live progress and metrics, so founders spend minutes reviewing instead of hours writing." },
+      { q: "Can it help with investor updates?", a: "The AI Notes drafts investor updates and internal docs from your live progress and metrics, so founders spend minutes reviewing instead of hours writing." },
       { q: "How do we get started?", a: "Book a demo and Onita's team sets everything up for you — your roadmap, workflows, docs, and dashboards are configured to fit how your startup works before you dive in." },
     ],
     related: ["sales-teams", "consulting-businesses", "marketing-agencies"],
@@ -589,9 +589,9 @@ export const useCases: Solution[] = [
       "Onita is an AI-era productivity platform that helps sales teams capture calls, automate follow-up, and forecast the pipeline in one place with AI handling the admin.",
     comparison: [
       { old: "Reps updating records instead of selling", onita: "AI Meeting Notetaker logs every call automatically" },
-      { old: "Follow-ups forgotten and deals gone cold", onita: "AI Workflows draft and schedule every follow-up" },
+      { old: "Follow-ups forgotten and deals gone cold", onita: "AI Automations draft and schedule every follow-up" },
       { old: "Pipeline reviews built from stale, hand-typed data", onita: "AI Dashboards keep the pipeline and forecast live" },
-      { old: "Proposals and recaps written from scratch", onita: "AI Docs Assistant drafts recaps and proposals instantly" },
+      { old: "Proposals and recaps written from scratch", onita: "AI Notes drafts recaps and proposals instantly" },
     ],
     pillars: [
       { title: "More selling time", desc: "AI handles call logging and follow-up so reps stay in front of prospects.", Icon: TrendUpIcon },
@@ -602,8 +602,8 @@ export const useCases: Solution[] = [
       title: "From discovery call to closed deal",
       steps: [
         { agent: "AI Meeting Notetaker", action: "Captures the sales call and logs it to the deal" },
-        { agent: "AI Docs Assistant", action: "Drafts the recap and follow-up email" },
-        { agent: "AI Workflows", action: "Schedules next steps so the deal keeps moving" },
+        { agent: "AI Notes", action: "Drafts the recap and follow-up email" },
+        { agent: "AI Automations", action: "Schedules next steps so the deal keeps moving" },
         { agent: "AI Task Manager", action: "Keeps the rep on top of every open opportunity" },
         { agent: "AI Dashboards", action: "Updates the pipeline and forecast for the manager" },
       ],
@@ -614,7 +614,7 @@ export const useCases: Solution[] = [
       { title: "Live pipeline and forecast", desc: "The pipeline stays current automatically, so managers forecast on real data.", Icon: ChartLineUpIcon },
       { title: "Proposal drafting", desc: "Proposals and recaps generated from the conversation, ready for the rep to send.", Icon: FileTextIcon },
     ],
-    agents: ["AI Meeting Notetaker", "AI Workflows", "AI Dashboards"],
+    agents: ["AI Meeting Notetaker", "AI Automations", "AI Dashboards"],
     metrics: [
       { value: "2x", label: "more selling time per rep" },
       { value: "35%", label: "more follow-ups completed" },
@@ -669,7 +669,7 @@ export const useCases: Solution[] = [
         { agent: "AI Task Manager", action: "Turns decisions into priorities with clear owners" },
         { agent: "AI Dashboards", action: "Surfaces company-wide status and the metrics that matter" },
         { agent: "AI Slides", action: "Drafts the board and all-hands materials" },
-        { agent: "AI Docs Assistant", action: "Writes the update and circulates it to the team" },
+        { agent: "AI Notes", action: "Writes the update and circulates it to the team" },
       ],
     },
     features: [
@@ -693,7 +693,7 @@ export const useCases: Solution[] = [
     faqs: [
       { q: "How does Onita help our leadership meetings?", a: "The AI Meeting Notetaker captures every decision and turns it into an owned action the AI tracks to completion, so what you agree in the room actually gets executed." },
       { q: "Can we see the whole business in one place?", a: "Yes. AI Dashboards pull status and metrics from every function into one executive view that stays current, so you stop chasing individual teams for updates." },
-      { q: "Does it help with board prep?", a: "AI Slides and the AI Docs Assistant draft board decks and all-hands updates from your live data, turning days of assembly into a quick review and refine." },
+      { q: "Does it help with board prep?", a: "AI Slides and the AI Notes draft board decks and all-hands updates from your live data, turning days of assembly into a quick review and refine." },
       { q: "How do we get started?", a: "Book a demo and Onita's team sets everything up for you — your leadership workflows, company dashboards, and board templates are configured to fit how your team runs before you begin." },
     ],
     related: ["startups", "sales-teams", "consulting-businesses"],

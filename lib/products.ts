@@ -150,15 +150,15 @@ export const products: Product[] = [
     shots: [S.b, S.d],
     metaTitle: "AI Automations — Turn SOPs Into Workflows in Seconds",
     metaDescription:
-      "Onita's AI Workflows turns your SOP docs into working automations with triggers, approvals, and auto-assigned tasks — so repeatable projects run the same way every time.",
+      "Onita's AI Automations turns your SOP docs into working automations with triggers, approvals, and auto-assigned tasks — so repeatable projects run the same way every time.",
     eyebrow: "AI Automations",
     headline: "Automate repeatable projects",
     headlineEmphasis: "and SOPs",
     subhead:
       "Turn the processes living in docs and people's heads into automation. Point Onita at an SOP and it builds a step-by-step workflow — then turns it into a project with tasks auto-assigned to the right people.",
-    definitionTitle: "What is AI Workflows?",
+    definitionTitle: "What is AI Automations?",
     definition:
-      "AI Workflows is Onita's automation builder. Write or drop in an SOP and Onita converts it into a repeatable workflow with the right triggers, steps, approvals, and assignments. Your team follows a simple, prioritized task list instead of memorizing a complicated process — and the busywork runs itself.",
+      "AI Automations is Onita's automation builder. Write or drop in an SOP and Onita converts it into a repeatable workflow with the right triggers, steps, approvals, and assignments. Your team follows a simple, prioritized task list instead of memorizing a complicated process — and the busywork runs itself.",
     highlights: ["SOP to workflow in seconds", "Auto-assigned tasks", "Human approvals where needed"],
     features: [
       { title: "SOP to automation", desc: "Turn a written process — or an AI-drafted one — into a live, step-by-step workflow automatically.", Icon: MagicWandIcon },
@@ -168,7 +168,7 @@ export const products: Product[] = [
     ],
     workforceAngle: {
       title: "Your processes, running on their own",
-      desc: "AI Workflows captures how your best people work and makes it repeatable. The routine runs automatically, and your team steps in only for the decisions that need a human.",
+      desc: "AI Automations captures how your best people work and makes it repeatable. The routine runs automatically, and your team steps in only for the decisions that need a human.",
     },
     useCases: [
       { audience: "Operations", title: "Standardize everything", desc: "Turn tribal knowledge and SOPs into automations that run the same way every time." },
@@ -486,7 +486,7 @@ export const products: Product[] = [
     shots: [S.docs1, S.docs2, S.docs3],
     metaTitle: "AI Notes — Write & Organize Docs Faster With AI",
     metaDescription:
-      "Onita's AI Docs Assistant drafts and proofreads in seconds, turns notes into tasks and projects, and keeps every doc organized and searchable in one place.",
+      "Onita's AI Notes drafts and proofreads in seconds, turns notes into tasks and projects, and keeps every doc organized and searchable in one place.",
     eyebrow: "AI Notes",
     headline: "Help writing and organizing",
     headlineEmphasis: "docs faster",
