@@ -60,8 +60,9 @@ export function SiteHeader() {
   const solid = scrolled || mobileOpen || !overHero;
 
   return (
-    <header
-      className={`fixed inset-x-0 top-0 z-50 transition-colors duration-300 ${
+    <>
+      <header
+        className={`fixed inset-x-0 top-0 z-50 transition-colors duration-300 ${
         solid
           ? "border-b border-border bg-surface/85 backdrop-blur-xl"
           : "border-b border-transparent bg-transparent"
@@ -202,6 +203,7 @@ export function SiteHeader() {
           {mobileOpen ? <XIcon size={24} weight="bold" /> : <ListIcon size={24} weight="bold" />}
         </button>
       </div>
+      </header>
 
       {mobileOpen && (
         <div
@@ -283,6 +285,6 @@ export function SiteHeader() {
           </div>
         </div>
       )}
-    </header>
+    </>
   );
 }
