@@ -208,7 +208,7 @@ export function SiteHeader() {
       {mobileOpen && (
         <div
           id="mobile-menu"
-          className="fixed inset-x-0 top-16 bottom-0 z-40 overflow-y-auto bg-surface px-4 pb-10 pt-4 lg:hidden"
+          className="fixed inset-x-0 top-16 bottom-0 z-[70] overflow-y-auto bg-surface px-4 pb-10 pt-4 lg:hidden"
         >
           <nav aria-label="Mobile" className="flex flex-col gap-1">
             {primaryNav.map((group) => (
@@ -229,13 +229,13 @@ export function SiteHeader() {
                           key={item.href}
                           href={item.href}
                           onClick={() => setMobileOpen(false)}
-                          className="rounded-xl px-6 py-2.5 text-sm text-gray-700 hover:bg-brand-50"
+                          className="block rounded-xl px-6 py-2.5 text-sm text-gray-700 hover:bg-brand-50"
                         >
                           {item.label}
                         </Link>
                       ))}
                       {group.columns?.map((column) => (
-                        <div key={column.title}>
+                        <div key={column.title} className="flex flex-col">
                           <span className="block px-6 pb-1 pt-3 text-xs font-semibold uppercase tracking-wider text-muted-foreground">
                             {column.title}
                           </span>
@@ -244,7 +244,7 @@ export function SiteHeader() {
                               key={item.href}
                               href={item.href}
                               onClick={() => setMobileOpen(false)}
-                              className="rounded-xl px-6 py-2.5 text-sm text-gray-700 hover:bg-brand-50"
+                              className="block rounded-xl px-6 py-2.5 text-sm text-gray-700 hover:bg-brand-50"
                             >
                               {item.label}
                             </Link>
