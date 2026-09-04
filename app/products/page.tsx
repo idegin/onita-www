@@ -13,16 +13,16 @@ import { siteConfig } from "@/lib/site-config";
 import { jsonLd, breadcrumbSchema } from "@/lib/structured-data";
 
 export const metadata: Metadata = {
-  title: "Products — Every AI Productivity Tool in One Platform",
+  title: "Products — Every Tool Your Team Needs, in One Workspace",
   description:
-    "AI Project Manager, Automations, Task Manager, Calendar, Meeting Assistant, Email, Chat, Notetaker, Dashboards, Database, and Notes — every AI-powered productivity tool in one connected platform.",
+    "Spreadsheet, AI Agents, Docs, Slides, Form Builder, Dashboards, Flow, Email, Calendar, AI Meeting Notetaker, Bookings, and Approvals — every tool your team needs, plus AI that can use all of them for you.",
   alternates: { canonical: "/products" },
   openGraph: {
     type: "website",
     url: `${siteConfig.url}/products`,
-    title: "Onita Products — Every AI Productivity Tool in One Platform",
+    title: "Onita Products — Every Tool Your Team Needs, in One Workspace",
     description:
-      "AI Project Manager, Task Manager, Calendar, Notetaker, Email, Dashboards, Database, Automations and more — one connected platform for the AI era.",
+      "Spreadsheet, AI Agents, Docs, Slides, Forms, Dashboards, Flow, Email, Calendar, Notetaker, Bookings, and Approvals — one connected workspace with AI teammates that do the work.",
   },
 };
 

@@ -57,7 +57,7 @@ const options: Option[] = [
 
 export function GetOnita() {
   return (
-    <Section id="get-onita" tone="muted" labelledBy="get-onita-heading">
+    <Section id="get-onita" tone="light" labelledBy="get-onita-heading">
       <SectionHeading
         id="get-onita-heading"
         eyebrow="Getting Onita"

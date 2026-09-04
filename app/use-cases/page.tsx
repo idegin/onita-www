@@ -14,16 +14,16 @@ import { siteConfig } from "@/lib/site-config";
 import { jsonLd, breadcrumbSchema } from "@/lib/structured-data";
 
 export const metadata: Metadata = {
-  title: "Use Cases — Onita AI for Every Business & Team",
+  title: "Solutions — Onita for Every Team, Company & Use Case",
   description:
-    "See how Onita's AI productivity platform works for IT service providers, agencies, law firms, consultancies, construction, real estate, startups, sales, and executive teams.",
+    "See how Onita works for sales, marketing, operations, recruiting, and more — for startups, small businesses, non-profits, and enterprises — and for follow-ups, content, inventory, and customer success.",
   alternates: { canonical: "/use-cases" },
   openGraph: {
     type: "website",
     url: `${siteConfig.url}/use-cases`,
-    title: "Onita Use Cases — AI Productivity for Every Business & Team",
+    title: "Onita Solutions — AI Teammates for Every Team & Company",
     description:
-      "AI productivity for service businesses and functional teams — from IT providers and agencies to sales, startups, and executive teams.",
+      "AI teammates for every team, company type, and use case — from sales and marketing to startups, enterprises, follow-ups, and customer success.",
   },
 };
 
@@ -78,20 +78,20 @@ export default function UseCasesIndexPage() {
               </li>
               <CaretRightIcon size={13} weight="bold" aria-hidden="true" />
               <li className="font-medium text-white/90" aria-current="page">
-                Use Cases
+                Solutions
               </li>
             </ol>
           </nav>
           <span className="inline-flex items-center gap-2 rounded-pill border border-white/15 bg-white/5 px-3.5 py-1.5 text-xs font-semibold uppercase tracking-wider text-white/80 backdrop-blur">
             <StackIcon size={14} weight="fill" aria-hidden="true" className="text-accent-400" />
-            Use cases by industry &amp; team
+            Solutions by team, company &amp; use case
           </span>
           <h1 className="mt-6 max-w-3xl font-display text-4xl font-extrabold leading-[1.05] tracking-tight text-white sm:text-5xl lg:text-6xl">
-            AI productivity for <span className="text-gradient-ai">every business</span> and team
+            AI teammates for <span className="text-gradient-ai">every team</span> and company
           </h1>
           <p className="mt-6 max-w-2xl text-lg leading-8 text-white/70">
-            However you work — running a service business or leading a functional team — Onita&apos;s AI
-            products carry the busywork so you get twice as much done. Find your use case and see how.
+            However you work — whatever your team, company size, or job to be done — Onita gives you AI
+            teammates that carry the busywork so you get twice as much done. Find your fit and see how.
           </p>
         </div>
       </section>
@@ -111,7 +111,7 @@ export default function UseCasesIndexPage() {
               {group}
             </h2>
             <span className="text-sm text-muted-foreground">
-              {useCases.filter((s) => s.group === group).length} use cases
+              {useCases.filter((s) => s.group === group).length} solutions
             </span>
           </div>
 

@@ -2,29 +2,22 @@ import { QuotesIcon, StarIcon } from "@phosphor-icons/react/dist/ssr";
 import { Section } from "@/components/ui/section";
 import { SectionHeading } from "@/components/ui/section-heading";
 
-const metrics = [
-  { value: "10x", label: "faster team output" },
-  { value: "40+", label: "hours reclaimed weekly" },
-  { value: "60%", label: "lower tooling spend" },
-  { value: "2 weeks", label: "from demo to live workforce" },
-];
-
 const quotes = [
   {
     quote:
-      "Onita's team designed and built agents around how we actually work. We deliver projects in half the time, with the same core team.",
+      "Onita's team set up AI teammates around how we actually work. We deliver projects in half the time, with the same core team.",
     name: "Amara Okafor",
     role: "COO, Northwind Group",
   },
   {
     quote:
-      "Reporting and intake used to swallow our team's week. The agents draft it, we approve it, and everyone's back to the work that actually moves the business.",
+      "Reporting and intake used to swallow our team's week. The AI drafts it, we approve it, and everyone's back to the work that actually moves the business.",
     name: "David Okonkwo",
     role: "Operations Lead, Vale & Co.",
   },
   {
     quote:
-      "We took on three new clients without a single new hire. The content and campaign agents run in parallel and my team just reviews and ships.",
+      "We took on three new clients without a single new hire. The content and follow-up teammates run in parallel and my team just reviews and ships.",
     name: "Priya Nair",
     role: "Founder, Loop & Co.",
   },
@@ -40,18 +33,7 @@ export function Testimonials() {
         description="Individuals and teams of all sizes use Onita to get twice as much done."
       />
 
-      <dl className="mt-12 grid grid-cols-2 gap-6 rounded-card-lg border border-border bg-surface p-8 lg:grid-cols-4">
-        {metrics.map((m) => (
-          <div key={m.label} className="text-center">
-            <dt className="font-display text-3xl font-extrabold text-brand-600 lg:text-4xl">
-              {m.value}
-            </dt>
-            <dd className="mt-1 text-sm text-muted-foreground">{m.label}</dd>
-          </div>
-        ))}
-      </dl>
-
-      <ul className="mt-6 grid gap-4 lg:grid-cols-3">
+      <ul className="mt-14 grid gap-4 lg:grid-cols-3">
         {quotes.map((q) => (
           <li key={q.name}>
             <figure className="flex h-full flex-col rounded-card border border-border bg-surface p-6 shadow-soft">

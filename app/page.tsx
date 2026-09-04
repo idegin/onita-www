@@ -1,8 +1,12 @@
 import { Hero } from "@/components/sections/hero";
+import { YourTeam } from "@/components/sections/your-team";
 import { GetOnita } from "@/components/sections/get-onita";
 import { AiWorkforce } from "@/components/sections/ai-workforce";
 import { Products } from "@/components/sections/products";
-import { RoiCalculator } from "@/components/sections/roi-calculator";
+import { FullControl } from "@/components/sections/full-control";
+import { IntegrationsBand } from "@/components/sections/integrations-band";
+import { Stats } from "@/components/sections/stats";
+import { Workflow } from "@/components/sections/workflow";
 import { Testimonials } from "@/components/sections/testimonials";
 import { Faq, faqSchema } from "@/components/sections/faq";
 import { FinalCta } from "@/components/sections/final-cta";
@@ -27,9 +31,13 @@ export default function Home() {
         </div>
       </section>
 
+      <YourTeam />
       <AiWorkforce />
       <Products />
-      <RoiCalculator />
+      <FullControl />
+      <IntegrationsBand />
+      <Stats />
+      <Workflow />
       <Testimonials />
       <GetOnita />
       <Faq />

@@ -253,9 +253,9 @@ export function AiWorkforce() {
         <SectionHeading
           id="workforce-heading"
           invert
-          eyebrow="AI Assistants"
-          title="Meet the AI assistants that do your busywork."
-          description="Built for individuals and teams of all sizes — each Onita assistant is a specialist with its own skills, knowledge, and document access, so the repetitive work gets handled while you focus on what matters."
+          eyebrow="AI Agents"
+          title="AI that works the way your team works."
+          description="Set up an AI teammate for the jobs you do every day. Each one is a specialist with its own skills, knowledge, and access — and when a job's too big for one, Onita brings in another and they hand off, just like a real team."
         />
 
         <ul className="mt-6 flex flex-wrap justify-center gap-2.5">
@@ -294,13 +294,13 @@ export function AiWorkforce() {
               </span>
             </div>
             <p className="relative mt-4 text-sm leading-6 text-white/70">
-              Onita assigns the work, shares context between your AI assistants, and enforces every
+              Onita assigns the work, shares context between your AI teammates, and enforces every
               permission — coordinating all of them from one place.
             </p>
             <div className="relative mt-4 flex flex-wrap items-center justify-center gap-x-4 gap-y-2 text-xs font-semibold text-white/60">
               <span className="inline-flex items-center gap-1.5">
                 <LightningIcon size={13} weight="fill" className="text-brand-300" aria-hidden="true" />
-                {agents.length} AI assistants active
+                {agents.length} AI teammates active
               </span>
               <span className="inline-flex items-center gap-1.5">
                 <BrainIcon size={13} weight="fill" className="text-brand-300" aria-hidden="true" />

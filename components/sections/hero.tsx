@@ -78,17 +78,17 @@ export function Hero() {
             className="animate-fade-up mt-6 font-display text-4xl font-extrabold leading-[1.05] tracking-tight text-white sm:text-5xl lg:text-6xl"
             style={{ animationDelay: "0.12s" }}
           >
-            Get an unfair advantage by using AI to{" "}
-            <span className="text-gradient-ai">double your productivity</span>
+            Hire AI teammates that{" "}
+            <span className="text-gradient-ai">actually do the work</span>
           </h1>
 
           <p
             className="animate-fade-up mt-6 max-w-lg text-lg leading-8 text-white/70"
             style={{ animationDelay: "0.2s" }}
           >
-            Onita is the AI productivity platform for individuals and teams of all sizes. The tools you need —
-            all in one place, handling the busywork so you get twice as much done. Book a demo and we
-            set it all up for you.
+            Onita is the all-in-one workspace — spreadsheets, docs, email, calendar and more — with AI
+            teammates that chase leads, sort your inbox, take meeting notes, and follow up for you. You
+            stay in control; they do the busywork. Book a demo and we set it all up for you.
           </p>
 
           <div
@@ -116,7 +116,7 @@ export function Hero() {
             style={{ animationDelay: "0.36s" }}
           >
             <p className="text-xs font-semibold uppercase tracking-wider text-white/55">
-              Every AI product, in one platform.
+              Everything your team needs, in one workspace.
             </p>
             <ul className="flex flex-wrap gap-2">
               {productTools.map((tool) => (
@@ -137,7 +137,7 @@ export function Hero() {
         <div className="lg:h-full">
           <RotatingShot
             shots={PRODUCT_SHOTS}
-            alt="The Onita workspace, where AI runs projects, tasks, docs, and reports for you."
+            alt="The Onita workspace, where AI teammates run your files, email, calendar, and reports for you."
             priority
             sizes="100vw"
             className="relative overflow-hidden rounded-card border border-white/12 shadow-hover lg:hidden"

@@ -93,18 +93,59 @@ function AiIcon(props: IconProps) {
   );
 }
 
+function EmailIcon(props: IconProps) {
+  return (
+    <svg {...base} {...props}>
+      <rect x="3.5" y="5.5" width="17" height="13" rx="3" />
+      <path d="M4.5 7.5l7.5 5.5 7.5-5.5" />
+    </svg>
+  );
+}
+
+function NoteIcon(props: IconProps) {
+  return (
+    <svg {...base} {...props}>
+      <rect x="4.5" y="3.5" width="15" height="17" rx="3" />
+      <path d="M8 8h8M8 12h8M8 16h5" />
+    </svg>
+  );
+}
+
+function BookingIcon(props: IconProps) {
+  return (
+    <svg {...base} {...props}>
+      <rect x="4" y="5" width="16" height="15" rx="3" />
+      <path d="M4 9.5h16M8.5 3v4M15.5 3v4" />
+      <path d="M9.5 14.5l1.8 1.8 3.2-3.4" />
+    </svg>
+  );
+}
+
+function ShieldIcon(props: IconProps) {
+  return (
+    <svg {...base} {...props}>
+      <path d="M12 3.5l7 2.5v5.5c0 4.4-3 7.4-7 8.5-4-1.1-7-4.1-7-8.5V6z" />
+      <path d="M9 12l2 2 4-4" />
+    </svg>
+  );
+}
+
 export type ProductTool = {
   name: string;
   Icon: (props: IconProps) => React.JSX.Element;
 };
 
 export const productTools: ProductTool[] = [
-  { name: "AI Projects", Icon: BoardIcon },
-  { name: "AI Calendar", Icon: CalendarIcon },
-  { name: "AI Notes", Icon: DocsIcon },
-  { name: "AI Dashboards", Icon: SheetIcon },
-  { name: "AI Automations", Icon: AutomationIcon },
-  { name: "AI Forms", Icon: FormIcon },
-  { name: "AI Slides", Icon: SlidesIcon },
-  { name: "AI Chat", Icon: AiIcon },
+  { name: "Spreadsheet", Icon: SheetIcon },
+  { name: "AI Agents", Icon: AiIcon },
+  { name: "Docs", Icon: DocsIcon },
+  { name: "Slides", Icon: SlidesIcon },
+  { name: "Form Builder", Icon: FormIcon },
+  { name: "Dashboards", Icon: BoardIcon },
+  { name: "Flow", Icon: AutomationIcon },
+  { name: "Email", Icon: EmailIcon },
+  { name: "Calendar", Icon: CalendarIcon },
+  { name: "AI Meeting Notetaker", Icon: NoteIcon },
+  { name: "Bookings", Icon: BookingIcon },
+  { name: "Approvals", Icon: ShieldIcon },
 ];

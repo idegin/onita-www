@@ -16,10 +16,11 @@ export function FinalCta() {
           id="final-cta-heading"
           className="font-display text-3xl font-extrabold leading-tight tracking-tight sm:text-4xl lg:text-5xl"
         >
-          Ready to double your productivity?
+          Your team, plus a team of AI workers.
         </h2>
         <p className="mt-5 text-lg text-white/75">
-          Tell us how you work and we&rsquo;ll set up your AI productivity platform. {siteConfig.slogan}
+          Tell us how you work and we&rsquo;ll set up your AI teammates for you. Stop juggling tools,
+          stop doing the busywork. {siteConfig.slogan}
         </p>
         <CtaButtons invert align="center" className="mt-9" />
         <p className="mt-5 text-sm text-white/55">Book a demo · We set it up and host it for you</p>

@@ -77,8 +77,8 @@ export function Products() {
       <SectionHeading
         id="products-heading"
         eyebrow="Products"
-        title="Every AI product, in one platform."
-        description="Replace a stack of disconnected apps with AI-powered products that share the same data — and do the busywork with you."
+        title="Everything your team needs, in one workspace."
+        description="Replace a stack of disconnected apps with products that share the same data — and AI teammates that can use every one of them for you."
       />
 
       <div

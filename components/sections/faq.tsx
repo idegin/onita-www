@@ -5,35 +5,35 @@ import { SectionHeading } from "@/components/ui/section-heading";
 export const faqs = [
   {
     q: "What is Onita?",
-    a: "Onita is an AI productivity platform for individuals and teams of all sizes. It bundles AI-powered products — Project Manager, Task Manager, Calendar, Meeting Notetaker, Docs, Dashboards, Workflows and more — into one place, and uses AI to handle the busywork so you get twice as much done. It's the productivity platform for the AI era.",
+    a: "Onita is the all-in-one workspace where your team and AI teammates get work done side by side. It brings your spreadsheets, docs, slides, forms, dashboards, email, calendar, and scheduling into one place — and adds AI teammates that do real work, like chasing leads, sorting your inbox, taking meeting notes, and following up for you.",
   },
   {
-    q: "Who is Onita built for?",
-    a: "Onita is built for individuals and teams of all sizes — from solo professionals and startups to the operations, sales, marketing, and delivery teams inside larger organizations. Anyone who wants to use AI to get more done. We tailor Onita to how you actually work, whether that's projects and tasks, meetings and docs, or reporting and workflows.",
+    q: "Do I need any tech skills to use Onita?",
+    a: "No. If you can describe a job to a new hire, you can set up an AI teammate — in plain English, no code and no complicated setup. And because it's a done-for-you service, our team configures everything around how you work before your people log in.",
   },
   {
-    q: "How is Onita different from an AI chatbot?",
-    a: "A chatbot answers questions. Onita's AI does the work: it takes actions across your projects, tasks, documents, and connected apps, turns meetings into action items, and loops in a human for approval before anything important goes out.",
+    q: "Is it safe to let AI do real work?",
+    a: "Yes — that's the whole point of Onita. Anything that can't be undone — sending, spending, publishing, deleting — waits for your one-tap approval, and you can undo anything. Your AI never sends a message with your name on it or spends money unless you say yes.",
   },
   {
-    q: "Do we have to set it up ourselves?",
-    a: "No — Onita is fully managed. After a demo, our team sets up your workspace, configures the AI products around how you work, connects your tools and documents, and gets everything running for you. Then we onboard your team and stay on to tune it as you grow. You get a working platform, not a blank canvas.",
+    q: "Will Onita replace the tools we already use?",
+    a: "No. Onita connects to the tools you already run on — Gmail, Google Drive, OneDrive, Calendar, Google Docs, Meet, and Zoom — so your AI teammates work right where your business already lives.",
   },
   {
-    q: "How do we get started?",
-    a: "Book a demo. We'll show Onita running on your real use cases, then design and build your workspace, connect your tools, and take your team live — typically within a couple of weeks. There's no free trial to set up and nothing to build yourself.",
+    q: "How is Onita different from ChatGPT or other AI tools?",
+    a: "Chatbots talk. Onita's AI teammates do — across your real files, email, and calendar — and they hand off to each other like a real team. Plus everything lives in one workspace with your actual work, not in a separate tab.",
   },
   {
     q: "Which AI models does Onita use?",
-    a: "Onita works with the world's best models, including Claude, GPT, Gemini and Llama. We choose the right model for each product and task, and can change it at any time as new models ship.",
+    a: "Onita works with the world's best models, including Claude, GPT, Gemini and Llama. We choose the right model for each job and can change it at any time as new models ship.",
   },
   {
-    q: "Is my data secure?",
-    a: "Yes. Onita is SOC 2 Type II audited with end-to-end encryption, role-based access control, audit logs, automated backups, and SSO — with human approval on sensitive actions. We host your workspace in isolation, and your data is never used to train public models. We're happy to sign NDAs and DPAs.",
+    q: "Is my data secure and private?",
+    a: "Yes. Your data is used only for what you asked, seen only by the right people, and truly deleted when you remove it — with role-based access, audit logs, and human approval on sensitive actions. We're compliant with Nigeria's NDPR and Europe's GDPR, and happy to sign NDAs and DPAs.",
   },
   {
-    q: "How much does Onita cost?",
-    a: "Pricing scales with the size of your team. Book a demo and we'll put together a plan that fits — one predictable bill instead of ten separate subscriptions, with enterprise options for larger organizations.",
+    q: "How do we get started?",
+    a: "Book a demo. We'll show Onita running on your real work, then set up your workspace, connect your tools, build your first AI teammates, and take your team live — typically within a couple of weeks. There's nothing to build yourself.",
   },
 ];
 
@@ -54,7 +54,7 @@ export function Faq() {
         id="faq-heading"
         eyebrow="FAQ"
         title="Questions, answered."
-        description="Everything you need to know about using Onita to double your productivity."
+        description="Everything you need to know about putting AI teammates to work in Onita."
       />
 
       <div className="mt-12 divide-y divide-border border-y border-border">

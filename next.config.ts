@@ -22,13 +22,14 @@ const nextConfig: NextConfig = {
   async redirects() {
     return [
       { source: "/products/dashboard", destination: "/products/dashboards", permanent: true },
-      { source: "/products/documents", destination: "/products/docs-assistant", permanent: true },
-      { source: "/products/timeline", destination: "/products/project-manager", permanent: true },
-      { source: "/products/automations", destination: "/products/workflows", permanent: true },
-      { source: "/products/spreadsheet", destination: "/products", permanent: true },
-      { source: "/products/ai-agents", destination: "/products", permanent: true },
+      { source: "/products/documents", destination: "/products/docs", permanent: true },
+      { source: "/products/docs-assistant", destination: "/products/docs", permanent: true },
+      { source: "/products/timeline", destination: "/products/spreadsheet", permanent: true },
+      { source: "/products/database", destination: "/products/spreadsheet", permanent: true },
+      { source: "/products/automations", destination: "/products/flow", permanent: true },
+      { source: "/products/workflows", destination: "/products/flow", permanent: true },
       { source: "/solutions", destination: "/use-cases", permanent: true },
-      { source: "/solutions/:slug*", destination: "/use-cases", permanent: true },
+      { source: "/solutions/:slug*", destination: "/use-cases/:slug*", permanent: true },
     ];
   },
 };
