@@ -254,7 +254,7 @@ export function AiWorkforce() {
           id="workforce-heading"
           invert
           eyebrow="AI Agents"
-          title="AI that works the way your team works."
+          title="Your team just got bigger."
           description="Set up an AI teammate for the jobs you do every day. Each one is a specialist with its own skills, knowledge, and access — and when a job's too big for one, Onita brings in another and they hand off, just like a real team."
         />
 

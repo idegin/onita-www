@@ -57,7 +57,7 @@ export const primaryNav: NavGroup[] = [
     ],
   },
   {
-    label: "Solutions",
+    label: "Use cases",
     href: "/use-cases",
     columns: [
       {
@@ -115,9 +115,9 @@ export const footerNav: { title: string; links: NavLink[] }[] = [
     ],
   },
   {
-    title: "Solutions",
+    title: "Use cases",
     links: [
-      { label: "All solutions", href: "/use-cases" },
+      { label: "All use cases", href: "/use-cases" },
       { label: "Sales", href: "/use-cases/sales" },
       { label: "Marketing", href: "/use-cases/marketing" },
       { label: "Operations", href: "/use-cases/operations" },

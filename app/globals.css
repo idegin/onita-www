@@ -331,3 +331,26 @@
   transform-origin: left;
   animation: onita-progress linear forwards;
 }
+@utility animate-travel {
+  animation: onita-travel 2.6s var(--ease-out-soft) infinite;
+}
+
+@keyframes onita-flow {
+  to {
+    stroke-dashoffset: -1;
+  }
+}
+@utility animate-flow {
+  animation: onita-flow 1.8s linear infinite;
+}
+
+.onita-grid {
+  background-color: var(--color-gray-50);
+  background-image: radial-gradient(var(--color-gray-300) 1px, transparent 1px);
+  background-size: 22px 22px;
+  background-position: -11px -11px;
+}
+.dark .onita-grid {
+  background-color: var(--color-gray-900);
+  background-image: radial-gradient(var(--color-gray-800) 1px, transparent 1px);
+}

@@ -73,7 +73,12 @@ export function Products() {
   const current = products[active];
 
   return (
-    <Section id="products" tone="muted" labelledBy="products-heading">
+    <Section
+      id="products"
+      tone="muted"
+      labelledBy="products-heading"
+      className="lg:flex lg:min-h-screen lg:flex-col lg:justify-center"
+    >
       <SectionHeading
         id="products-heading"
         eyebrow="Products"

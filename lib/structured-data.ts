@@ -2,6 +2,31 @@ import { siteConfig } from "@/lib/site-config";
 
 const abs = (path: string) => `${siteConfig.url}${path}`;
 
+const onitaKnowsAbout = [
+  "AI work management",
+  "AI project management",
+  "Task tracking",
+  "Human resources and hiring",
+  "Lead generation and cold outreach",
+  "Sales and marketing",
+  "Business process automation",
+  "AI agents for business",
+  "Managed AI workforce",
+];
+
+const onitaFeatureList = [
+  "AI project management & task tracking",
+  "Docs, spreadsheets, slides & forms",
+  "Dashboards & reporting",
+  "Email, calendar & scheduling",
+  "AI meeting notetaker",
+  "AI workflow automation",
+  "AI teammates for HR & hiring",
+  "AI teammates for lead generation & cold outreach",
+  "AI teammates for sales & marketing",
+  "Integrations with Gmail, Outlook, Google Workspace, Zoho, WhatsApp, Zoom, Microsoft Teams, Paystack & Flutterwave",
+];
+
 export const organizationSchema = {
   "@context": "https://schema.org",
   "@type": "Organization",
@@ -11,7 +36,10 @@ export const organizationSchema = {
   url: siteConfig.url,
   logo: abs(siteConfig.assets.logo),
   description: siteConfig.description,
+  slogan: siteConfig.tagline,
   foundingDate: siteConfig.founded,
+  knowsAbout: onitaKnowsAbout,
+  areaServed: ["Nigeria", "Worldwide"],
   email: siteConfig.contact.generalEmail,
   address: {
     "@type": "PostalAddress",
@@ -51,14 +79,21 @@ export const softwareApplicationSchema = {
   "@type": "SoftwareApplication",
   name: siteConfig.name,
   applicationCategory: "BusinessApplication",
+  applicationSubCategory: "AI Work Management Platform",
   operatingSystem: "Web",
   description: siteConfig.description,
   url: siteConfig.url,
+  keywords: onitaKnowsAbout.join(", "),
+  featureList: onitaFeatureList,
+  audience: {
+    "@type": "BusinessAudience",
+    name: "Individuals, teams, and businesses of all sizes",
+  },
   offers: {
     "@type": "Offer",
     availability: "https://schema.org/InStock",
     url: abs(siteConfig.demoUrl),
-    description: "Book a demo and we set up your AI productivity platform for you.",
+    description: "Book a demo and we set up and run your AI work management platform for you.",
   },
   publisher: { "@id": `${siteConfig.url}/#organization` },
 };
@@ -141,6 +176,20 @@ export function personSchema(person: {
     ...(person.image ? { image: abs(person.image) } : {}),
     worksFor: { "@id": `${siteConfig.url}/#organization` },
     sameAs: person.sameAs,
+  };
+}
+
+export function itemListSchema(name: string, items: { name: string; path: string }[]) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    name,
+    itemListElement: items.map((item, index) => ({
+      "@type": "ListItem",
+      position: index + 1,
+      name: item.name,
+      url: abs(item.path),
+    })),
   };
 }
 

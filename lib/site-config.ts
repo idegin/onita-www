@@ -2,10 +2,12 @@ export const siteConfig = {
   name: "Onita AI",
   shortName: "Onita",
   legalName: "iDegin Technologies Ltd",
-  tagline: "The all-in-one workspace with an AI workforce",
+  tagline: "The all-in-one AI work management platform",
   slogan: "Your team, plus a team of AI workers.",
   description:
-    "Onita is the all-in-one workspace where your team and AI teammates get work done side by side. It brings spreadsheets, docs, slides, forms, dashboards, email, calendar, scheduling, and automated workflows into one place — and adds AI teammates you set up in minutes that chase leads, sort your inbox, take meeting notes, and follow up for you. You stay in control: anything that can't be undone waits for your one-tap approval. Book a demo and our team sets it all up for you.",
+    "Onita is the all-in-one AI work management platform where your team and AI teammates get work done side by side. Project management, task tracking, docs, spreadsheets, slides, forms, dashboards, email, calendar, scheduling, and automated workflows all live in one workspace — and AI teammates run the busywork for you across project management, HR and hiring, lead generation and cold outreach, and sales and marketing. Onita connects to the tools you already use — Gmail, Outlook, Google Workspace, Zoho, WhatsApp, Zoom, Microsoft Teams, Paystack and more — and works right where your business already lives. It's done-for-you: book a demo and our team sets it up and runs it for you, on your budget.",
+  metaDescription:
+    "Onita is the all-in-one AI work management platform — project management, HR, lead generation, sales & marketing and more, run for you by AI teammates. Book a demo.",
   founded: "2024",
 
   url: "https://www.onitaapp.com",

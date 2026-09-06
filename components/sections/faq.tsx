@@ -5,7 +5,15 @@ import { SectionHeading } from "@/components/ui/section-heading";
 export const faqs = [
   {
     q: "What is Onita?",
-    a: "Onita is the all-in-one workspace where your team and AI teammates get work done side by side. It brings your spreadsheets, docs, slides, forms, dashboards, email, calendar, and scheduling into one place — and adds AI teammates that do real work, like chasing leads, sorting your inbox, taking meeting notes, and following up for you.",
+    a: "Onita is an all-in-one AI work management platform where your team and AI teammates get work done side by side. It brings project management, task tracking, docs, spreadsheets, slides, forms, dashboards, email, calendar, and scheduling into one workspace — and adds AI teammates that do real work, like running projects, screening candidates, chasing leads, and following up for you.",
+  },
+  {
+    q: "What can I use Onita for?",
+    a: "Teams use Onita to run the work they'd normally spread across many tools: project management and task tracking, human resources and hiring, lead generation and cold outreach, and sales and marketing — plus operations, customer success, follow-ups, inventory, and more. You pick the jobs, and Onita's AI teammates handle the busywork while your people make the decisions.",
+  },
+  {
+    q: "Can Onita handle project management and task tracking?",
+    a: "Yes. Onita builds your boards and timelines, assigns tasks, chases status updates, and flags whatever is slipping — so projects ship on time without the manual admin. It works as a full AI work management platform, not just a to-do list, and keeps every project, task, and deadline in one place.",
   },
   {
     q: "Do I need any tech skills to use Onita?",
@@ -16,12 +24,16 @@ export const faqs = [
     a: "Yes — that's the whole point of Onita. Anything that can't be undone — sending, spending, publishing, deleting — waits for your one-tap approval, and you can undo anything. Your AI never sends a message with your name on it or spends money unless you say yes.",
   },
   {
-    q: "Will Onita replace the tools we already use?",
-    a: "No. Onita connects to the tools you already run on — Gmail, Google Drive, OneDrive, Calendar, Google Docs, Meet, and Zoom — so your AI teammates work right where your business already lives.",
+    q: "Which tools does Onita integrate with?",
+    a: "Onita connects to the tools you already run on — Gmail, Outlook, and Zoho Mail; Google Drive, OneDrive, Google Docs, Sheets, and Slides; Google and Outlook Calendar; Zoom, Google Meet, and Microsoft Teams; WhatsApp, Instagram, YouTube, Facebook, TikTok, LinkedIn, and Telegram; and Paystack and Flutterwave for payments. Your AI teammates work right where your business already lives and send updates back out to those tools in real time.",
+  },
+  {
+    q: "How much does Onita cost, and is it affordable?",
+    a: "Onita is priced around your budget, not overseas per-seat pricing. Tell us what you can afford and we design a plan that fits — a full AI workforce for a fraction of the cost of new hires or a stack of foreign subscriptions. Book a demo and we'll put together pricing for how your business actually runs.",
   },
   {
     q: "How is Onita different from ChatGPT or other AI tools?",
-    a: "Chatbots talk. Onita's AI teammates do — across your real files, email, and calendar — and they hand off to each other like a real team. Plus everything lives in one workspace with your actual work, not in a separate tab.",
+    a: "Chatbots talk. Onita's AI teammates do — across your real projects, files, email, and calendar — and they hand off to each other like a real team. Plus everything lives in one work management workspace with your actual work, not in a separate tab.",
   },
   {
     q: "Which AI models does Onita use?",
@@ -29,7 +41,11 @@ export const faqs = [
   },
   {
     q: "Is my data secure and private?",
-    a: "Yes. Your data is used only for what you asked, seen only by the right people, and truly deleted when you remove it — with role-based access, audit logs, and human approval on sensitive actions. We're compliant with Nigeria's NDPR and Europe's GDPR, and happy to sign NDAs and DPAs.",
+    a: "Yes. Your data is used only for what you asked, seen only by the right people, and truly deleted when you remove it — with role-based access, audit logs, and human approval on sensitive actions. You can also run a private instance hosted just for your business. We're compliant with Nigeria's NDPR and Europe's GDPR, and happy to sign NDAs and DPAs.",
+  },
+  {
+    q: "What if we need a feature Onita doesn't have yet?",
+    a: "We build it and ship it to you. Onita is a managed, done-for-you service, so your feedback shapes the roadmap — if your business needs something specific, our team builds it into your workspace rather than making you work around it.",
   },
   {
     q: "How do we get started?",

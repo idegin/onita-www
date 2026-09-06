@@ -14,16 +14,16 @@ import { siteConfig } from "@/lib/site-config";
 import { jsonLd, breadcrumbSchema } from "@/lib/structured-data";
 
 export const metadata: Metadata = {
-  title: "Solutions — Onita for Every Team, Company & Use Case",
+  title: "Use Cases — What People Use Onita For",
   description:
-    "See how Onita works for sales, marketing, operations, recruiting, and more — for startups, small businesses, non-profits, and enterprises — and for follow-ups, content, inventory, and customer success.",
+    "See what people use Onita for: project management & task tracking, HR & hiring, lead generation & cold outreach, and sales & marketing — plus operations, recruiting, customer success, follow-ups, and more, for teams and businesses of every size.",
   alternates: { canonical: "/use-cases" },
   openGraph: {
     type: "website",
     url: `${siteConfig.url}/use-cases`,
-    title: "Onita Solutions — AI Teammates for Every Team & Company",
+    title: "Onita Use Cases — AI Work Management for Every Team",
     description:
-      "AI teammates for every team, company type, and use case — from sales and marketing to startups, enterprises, follow-ups, and customer success.",
+      "What people use Onita for — project management, HR & hiring, lead generation & cold outreach, sales & marketing, operations, customer success, and more.",
   },
 };
 
@@ -78,20 +78,21 @@ export default function UseCasesIndexPage() {
               </li>
               <CaretRightIcon size={13} weight="bold" aria-hidden="true" />
               <li className="font-medium text-white/90" aria-current="page">
-                Solutions
+                Use cases
               </li>
             </ol>
           </nav>
           <span className="inline-flex items-center gap-2 rounded-pill border border-white/15 bg-white/5 px-3.5 py-1.5 text-xs font-semibold uppercase tracking-wider text-white/80 backdrop-blur">
             <StackIcon size={14} weight="fill" aria-hidden="true" className="text-accent-400" />
-            Solutions by team, company &amp; use case
+            Use cases by team, company &amp; job
           </span>
           <h1 className="mt-6 max-w-3xl font-display text-4xl font-extrabold leading-[1.05] tracking-tight text-white sm:text-5xl lg:text-6xl">
-            AI teammates for <span className="text-gradient-ai">every team</span> and company
+            What people use <span className="text-gradient-ai">Onita</span> for
           </h1>
           <p className="mt-6 max-w-2xl text-lg leading-8 text-white/70">
-            However you work — whatever your team, company size, or job to be done — Onita gives you AI
-            teammates that carry the busywork so you get twice as much done. Find your fit and see how.
+            From project management and task tracking to HR and hiring, lead generation and cold
+            outreach, and sales and marketing — whatever your team, company size, or job to be done,
+            Onita gives you AI teammates that carry the busywork so you get twice as much done.
           </p>
         </div>
       </section>

@@ -1,69 +1,30 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 import {
   CaretRightIcon,
   PlugsConnectedIcon,
   CalendarCheckIcon,
   ChatCircleTextIcon,
-  GoogleLogoIcon,
-  MicrosoftOutlookLogoIcon,
-  EnvelopeSimpleIcon,
-  CloudArrowUpIcon,
-  FolderSimpleIcon,
-  CreditCardIcon,
 } from "@phosphor-icons/react/dist/ssr";
 import { Section } from "@/components/ui/section";
-import { SectionHeading } from "@/components/ui/section-heading";
 import { siteConfig } from "@/lib/site-config";
 import { jsonLd, breadcrumbSchema } from "@/lib/structured-data";
+import { integrationsByCategory } from "@/lib/brands";
 
 export const metadata: Metadata = {
   title: "Integrations — Connect Onita to the Tools You Use",
   description:
-    "Onita connects to Gmail, Outlook, Zoho, Google Drive, OneDrive, Google & Outlook Calendar, Zoho Booking, Paystack, and Flutterwave — so your data flows between the tools you already use and your AI products.",
+    "Onita connects to Gmail, Outlook, Google Workspace, Zoho, WhatsApp, Instagram, YouTube, Zoom, Paystack, and Flutterwave — streaming your data into your AI products in real time.",
   alternates: { canonical: "/integrations" },
   openGraph: {
     type: "website",
     url: `${siteConfig.url}/integrations`,
     title: "Onita Integrations — Connect Your Favorite Tools",
     description:
-      "Pass data between Onita and the tools you already use — Gmail, Outlook, Zoho, Drive, OneDrive, calendars, Zoho Booking, Paystack, and Flutterwave.",
+      "Connect Gmail, Outlook, Google Docs, Sheets & Slides, Zoho, WhatsApp, Instagram, YouTube, Zoom, Paystack, and Flutterwave to your Onita AI teammates.",
   },
 };
-
-const groups = [
-  {
-    title: "Email",
-    items: [
-      { name: "Gmail", Icon: GoogleLogoIcon },
-      { name: "Outlook", Icon: MicrosoftOutlookLogoIcon },
-      { name: "Zoho Mail", Icon: EnvelopeSimpleIcon },
-    ],
-  },
-  {
-    title: "Storage & files",
-    items: [
-      { name: "Google Drive", Icon: GoogleLogoIcon },
-      { name: "OneDrive", Icon: CloudArrowUpIcon },
-      { name: "Zoho Drive", Icon: FolderSimpleIcon },
-    ],
-  },
-  {
-    title: "Calendar & scheduling",
-    items: [
-      { name: "Google Calendar", Icon: GoogleLogoIcon },
-      { name: "Outlook Calendar", Icon: MicrosoftOutlookLogoIcon },
-      { name: "Zoho Booking", Icon: CalendarCheckIcon },
-    ],
-  },
-  {
-    title: "Payments",
-    items: [
-      { name: "Paystack", Icon: CreditCardIcon },
-      { name: "Flutterwave", Icon: CreditCardIcon },
-    ],
-  },
-];
 
 export default function IntegrationsPage() {
   return (
@@ -117,8 +78,9 @@ export default function IntegrationsPage() {
           </h1>
           <p className="mt-6 max-w-2xl text-lg leading-8 text-white/70">
             Onita passes data between your favorite tools and your AI products — so your projects,
-            tasks, meetings, and docs stay in sync everywhere. Connect Gmail, Outlook, Zoho, Google
-            Drive, OneDrive, your calendars, Zoho Booking, Paystack, and Flutterwave.
+            tasks, meetings, and docs stay in sync everywhere. Connect email, Google Docs, Sheets &
+            Slides, Drive & OneDrive, your calendars, Zoom & Meet, WhatsApp, Instagram, YouTube and
+            more social, plus Paystack and Flutterwave.
           </p>
         </div>
       </section>
@@ -126,19 +88,25 @@ export default function IntegrationsPage() {
       {/* Integration groups */}
       <Section tone="light" ariaLabel="Onita integrations">
         <div className="space-y-14">
-          {groups.map((group) => (
-            <div key={group.title}>
+          {integrationsByCategory.map((group) => (
+            <div key={group.category}>
               <h2 className="font-display text-2xl font-bold tracking-tight text-ink-800 sm:text-3xl">
-                {group.title}
+                {group.category}
               </h2>
               <ul className="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-                {group.items.map(({ name, Icon }) => (
-                  <li key={name}>
+                {group.items.map((item) => (
+                  <li key={item.name}>
                     <div className="flex h-full items-center gap-4 rounded-card border border-border bg-surface p-5 shadow-soft transition-all hover:-translate-y-0.5 hover:border-brand-200 hover:shadow-hover">
-                      <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-brand-50 text-brand-600">
-                        <Icon size={26} weight="fill" aria-hidden="true" />
+                      <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl border border-border bg-white p-2">
+                        <Image
+                          src={item.logo}
+                          alt=""
+                          width={32}
+                          height={32}
+                          className="h-full w-full object-contain"
+                        />
                       </span>
-                      <span className="font-display text-base font-bold text-ink-800">{name}</span>
+                      <span className="font-display text-base font-bold text-ink-800">{item.name}</span>
                     </div>
                   </li>
                 ))}

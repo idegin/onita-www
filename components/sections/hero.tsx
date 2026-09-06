@@ -66,14 +66,6 @@ export function Hero() {
 
       <div className="relative mx-auto grid max-w-content items-center gap-12 px-4 sm:px-6 lg:grid-cols-2 lg:px-10">
         <div className="max-w-xl">
-          <span
-            className="animate-fade-up inline-flex items-center gap-2 rounded-pill border border-white/15 bg-white/5 px-3.5 py-1.5 text-xs font-semibold uppercase tracking-wider text-white/80 backdrop-blur"
-            style={{ animationDelay: "0.05s" }}
-          >
-            <SparkleIcon size={14} weight="fill" className="text-accent-400" />
-            {siteConfig.tagline}
-          </span>
-
           <h1
             className="animate-fade-up mt-6 font-display text-4xl font-extrabold leading-[1.05] tracking-tight text-white sm:text-5xl lg:text-6xl"
             style={{ animationDelay: "0.12s" }}
@@ -111,7 +103,7 @@ export function Hero() {
             </Link>
           </div>
 
-          <div
+          {/* <div
             className="animate-fade-up mt-10 flex flex-col gap-3.5"
             style={{ animationDelay: "0.36s" }}
           >
@@ -131,7 +123,7 @@ export function Hero() {
                 </li>
               ))}
             </ul>
-          </div>
+          </div> */}
         </div>
 
         <div className="lg:h-full">

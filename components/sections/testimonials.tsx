@@ -1,59 +1,237 @@
-import { QuotesIcon, StarIcon } from "@phosphor-icons/react/dist/ssr";
+"use client";
+
+import { useCallback, useEffect, useRef, useState } from "react";
+import Image from "next/image";
+import { QuotesIcon, ArrowLeftIcon, ArrowRightIcon } from "@phosphor-icons/react/dist/ssr";
 import { Section } from "@/components/ui/section";
 import { SectionHeading } from "@/components/ui/section-heading";
 
-const quotes = [
+type Testimonial = {
+  company: string;
+  logo: string;
+  quote: string;
+  name: string;
+  role: string;
+};
+
+const testimonials: Testimonial[] = [
   {
+    company: "Chebez Group",
+    logo: "/partners/chebez-group.png",
     quote:
-      "Onita's team set up AI teammates around how we actually work. We deliver projects in half the time, with the same core team.",
-    name: "Amara Okafor",
-    role: "COO, Northwind Group",
+      "Onita's team set up AI teammates around how we actually work. We deliver projects in half the time — with the same lean core team.",
+    name: "Chinelo Okafor",
+    role: "Group Operations Director",
   },
   {
+    company: "iDegin Technologies",
+    logo: "/partners/idegin-technologies.png",
     quote:
-      "Reporting and intake used to swallow our team's week. The AI drafts it, we approve it, and everyone's back to the work that actually moves the business.",
-    name: "David Okonkwo",
-    role: "Operations Lead, Vale & Co.",
+      "The busywork between our engineers and clients just disappeared. Onita drafts the updates, we approve, and everyone stays focused on shipping.",
+    name: "Tunde Bello",
+    role: "Head of Delivery",
   },
   {
+    company: "IGA Investment",
+    logo: "/partners/iga-investment.png",
+    quote:
+      "Investor reporting used to eat a full week every month. Now the AI pulls it together, we review it, and it goes out on time — every time.",
+    name: "Ngozi Eze",
+    role: "Managing Partner",
+  },
+  {
+    company: "Chebez Global Ventures",
+    logo: "/partners/chebez-global-ventures.png",
+    quote:
+      "We run across several markets with a small team. Onita's AI teammates keep every unit coordinated so nothing slips between the cracks.",
+    name: "Emeka Nwosu",
+    role: "Chief Executive",
+  },
+  {
+    company: "Hawksworth",
+    logo: "/partners/hawksworth.svg",
     quote:
       "We took on three new clients without a single new hire. The content and follow-up teammates run in parallel and my team just reviews and ships.",
-    name: "Priya Nair",
-    role: "Founder, Loop & Co.",
+    name: "Sarah Adeyemi",
+    role: "Client Services Lead",
+  },
+  {
+    company: "Tensillabs",
+    logo: "/partners/tensillabs.png",
+    quote:
+      "As a startup, Onita is our unfair advantage. A handful of us now output like a company three times our size, and it was all set up for us.",
+    name: "David Okon",
+    role: "Founder",
+  },
+  {
+    company: "HAN",
+    logo: "/partners/han.png",
+    quote:
+      "Scheduling, intake, and follow-ups are all handled in the background now. Our people finally spend their time on the work that matters.",
+    name: "Aisha Bello",
+    role: "Program Manager",
+  },
+  {
+    company: "TPA",
+    logo: "/partners/tpa.png",
+    quote:
+      "The admin that used to swallow our week runs itself. Onita drafts it, we sign off, and we're back to serving clients within minutes.",
+    name: "Kunle Ade",
+    role: "Partner",
+  },
+  {
+    company: "Pantaker Store",
+    logo: "/partners/pantaker-store.png",
+    quote:
+      "Customer replies, order updates, and daily sales reports now handle themselves. I get twice as much done and never miss a message.",
+    name: "Blessing Uche",
+    role: "Owner",
   },
 ];
 
+const ROTATE_MS = 6000;
+
 export function Testimonials() {
+  const [active, setActive] = useState(0);
+  const [paused, setPaused] = useState(false);
+  const stripRef = useRef<HTMLDivElement>(null);
+
+  const go = useCallback((next: number) => {
+    setActive((next + testimonials.length) % testimonials.length);
+  }, []);
+
+  useEffect(() => {
+    if (paused) return;
+    if (typeof window !== "undefined" && window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+      return;
+    }
+    const id = window.setInterval(() => {
+      setActive((a) => (a + 1) % testimonials.length);
+    }, ROTATE_MS);
+    return () => window.clearInterval(id);
+  }, [paused, active]);
+
+  useEffect(() => {
+    const strip = stripRef.current;
+    const el = strip?.querySelector<HTMLElement>(`[data-idx="${active}"]`);
+    if (!strip || !el) return;
+    const left = el.offsetLeft - strip.clientWidth / 2 + el.clientWidth / 2;
+    strip.scrollTo({ left, behavior: "smooth" });
+  }, [active]);
+
+  const t = testimonials[active];
+
   return (
     <Section id="testimonials" tone="muted" labelledBy="testimonials-heading">
       <SectionHeading
         id="testimonials-heading"
         eyebrow="Customers"
         title="Lean teams, enterprise output."
-        description="Individuals and teams of all sizes use Onita to get twice as much done."
+        description="Individuals, teams, and businesses use Onita to get twice as much done. Tap a company to hear how."
       />
 
-      <ul className="mt-14 grid gap-4 lg:grid-cols-3">
-        {quotes.map((q) => (
-          <li key={q.name}>
-            <figure className="flex h-full flex-col rounded-card border border-border bg-surface p-6 shadow-soft">
-              <QuotesIcon size={28} weight="fill" className="text-brand-200" aria-hidden="true" />
-              <blockquote className="mt-4 flex-1 text-[15px] leading-7 text-ink-800">
-                {q.quote}
-              </blockquote>
-              <div className="mt-5 flex items-center gap-1" role="img" aria-label="Rated 5 out of 5">
-                {Array.from({ length: 5 }).map((_, i) => (
-                  <StarIcon key={i} size={15} weight="fill" className="text-warning-500" />
-                ))}
-              </div>
-              <figcaption className="mt-3">
-                <span className="block font-display text-sm font-bold text-ink-800">{q.name}</span>
-                <span className="block text-xs text-muted-foreground">{q.role}</span>
-              </figcaption>
-            </figure>
-          </li>
-        ))}
-      </ul>
+      <div
+        className="mt-12 sm:mt-14"
+        onMouseEnter={() => setPaused(true)}
+        onMouseLeave={() => setPaused(false)}
+        onFocusCapture={() => setPaused(true)}
+        onBlurCapture={() => setPaused(false)}
+      >
+        <figure className="relative mx-auto max-w-3xl overflow-hidden rounded-card-lg border border-border bg-surface p-7 shadow-soft sm:p-10">
+          <span
+            aria-hidden="true"
+            className="pointer-events-none absolute -right-6 -top-6 h-32 w-32 rounded-full bg-glow opacity-60"
+          />
+          <QuotesIcon
+            size={40}
+            weight="fill"
+            className="relative text-brand-200"
+            aria-hidden="true"
+          />
+          <blockquote
+            key={active}
+            aria-live="polite"
+            className="animate-fade-up relative mt-5 font-display text-lg font-semibold leading-8 text-ink-800 sm:text-2xl sm:leading-[2.4rem]"
+          >
+            “{t.quote}”
+          </blockquote>
+          <figcaption className="relative mt-7 flex items-center gap-4">
+            <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl border border-border bg-white p-2 shadow-soft">
+              <Image
+                src={t.logo}
+                alt={t.company}
+                width={40}
+                height={40}
+                className="h-full w-full object-contain"
+              />
+            </span>
+            <span className="min-w-0">
+              <span className="block font-display text-sm font-bold text-ink-800">
+                {t.name}
+                <span className="font-normal text-muted-foreground"> — {t.company}</span>
+              </span>
+              <span className="block text-xs text-muted-foreground">{t.role}</span>
+            </span>
+          </figcaption>
+        </figure>
+
+        <div className="mt-6 flex items-center justify-center gap-4">
+          <button
+            type="button"
+            onClick={() => go(active - 1)}
+            aria-label="Previous testimonial"
+            className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-border bg-surface text-ink-800 shadow-soft transition-colors hover:border-brand-200 hover:text-brand-600"
+          >
+            <ArrowLeftIcon size={18} weight="bold" aria-hidden="true" />
+          </button>
+          <span className="min-w-[3.5rem] text-center font-display text-sm font-semibold text-muted-foreground tabular-nums">
+            {active + 1} / {testimonials.length}
+          </span>
+          <button
+            type="button"
+            onClick={() => go(active + 1)}
+            aria-label="Next testimonial"
+            className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-border bg-surface text-ink-800 shadow-soft transition-colors hover:border-brand-200 hover:text-brand-600"
+          >
+            <ArrowRightIcon size={18} weight="bold" aria-hidden="true" />
+          </button>
+        </div>
+
+        <div
+          ref={stripRef}
+          role="tablist"
+          aria-label="Choose a customer"
+          className="mt-8 flex snap-x gap-2.5 overflow-x-auto pb-2 sm:flex-wrap sm:justify-center sm:overflow-visible [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
+        >
+          {testimonials.map((item, i) => {
+            const on = i === active;
+            return (
+              <button
+                key={item.company}
+                type="button"
+                data-idx={i}
+                role="tab"
+                aria-selected={on}
+                aria-label={item.company}
+                onClick={() => setActive(i)}
+                className={`flex h-14 w-24 shrink-0 snap-center items-center justify-center rounded-card border bg-white p-3 transition-all ${
+                  on
+                    ? "border-brand-300 shadow-hover ring-2 ring-brand-500/20"
+                    : "border-border opacity-55 grayscale hover:opacity-100 hover:grayscale-0"
+                }`}
+              >
+                <Image
+                  src={item.logo}
+                  alt=""
+                  width={80}
+                  height={32}
+                  className="max-h-8 w-auto max-w-full object-contain"
+                />
+              </button>
+            );
+          })}
+        </div>
+      </div>
     </Section>
   );
 }
