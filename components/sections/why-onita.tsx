@@ -44,8 +44,8 @@ const reasons: Reason[] = [
   },
   {
     Icon: MapPinIcon,
-    title: "Built for the Nigerian market",
-    body: "From Paystack and Flutterwave to WhatsApp-first customers, Onita fits how your market moves — wiring the world's best AI models into workflows made for doing business here.",
+    title: "Fits how you already do business",
+    body: "Paystack, Flutterwave, WhatsApp-first customers, the tools you already run — Onita wires the world's best AI models into workflows that match how your business actually operates.",
   },
 ];
 

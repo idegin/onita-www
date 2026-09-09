@@ -58,7 +58,7 @@ export function GET() {
       "- Done for you: we connect your tools, train your AI teammates, and keep everything running — no technical team required.",
       "- 24/7 support: real people in your timezone who work alongside your team.",
       "- We build what you need: if Onita is missing a feature, we build it and ship it to you.",
-      "- Built for the Nigerian market: Paystack, Flutterwave, and WhatsApp-first customers, wired into the world's best AI models.",
+      "- Fits how you already do business: Paystack, Flutterwave, WhatsApp-first customers, and the tools you already run, wired into the world's best AI models.",
     ]),
     "",
     section("Ways to run Onita", [

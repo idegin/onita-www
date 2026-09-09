@@ -1,6 +1,6 @@
 "use client";
 
-import { useCallback, useEffect, useRef, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 import Image from "next/image";
 import { QuotesIcon, ArrowLeftIcon, ArrowRightIcon } from "@phosphor-icons/react/dist/ssr";
 import { Section } from "@/components/ui/section";
@@ -94,7 +94,6 @@ const ROTATE_MS = 6000;
 export function Testimonials() {
   const [active, setActive] = useState(0);
   const [paused, setPaused] = useState(false);
-  const stripRef = useRef<HTMLDivElement>(null);
 
   const go = useCallback((next: number) => {
     setActive((next + testimonials.length) % testimonials.length);
@@ -111,14 +110,6 @@ export function Testimonials() {
     return () => window.clearInterval(id);
   }, [paused, active]);
 
-  useEffect(() => {
-    const strip = stripRef.current;
-    const el = strip?.querySelector<HTMLElement>(`[data-idx="${active}"]`);
-    if (!strip || !el) return;
-    const left = el.offsetLeft - strip.clientWidth / 2 + el.clientWidth / 2;
-    strip.scrollTo({ left, behavior: "smooth" });
-  }, [active]);
-
   const t = testimonials[active];
 
   return (
@@ -127,7 +118,7 @@ export function Testimonials() {
         id="testimonials-heading"
         eyebrow="Customers"
         title="Lean teams, enterprise output."
-        description="Individuals, teams, and businesses use Onita to get twice as much done. Tap a company to hear how."
+        description="Individuals, teams, and businesses use Onita to get twice as much done. Here's how."
       />
 
       <div
@@ -195,41 +186,6 @@ export function Testimonials() {
           >
             <ArrowRightIcon size={18} weight="bold" aria-hidden="true" />
           </button>
-        </div>
-
-        <div
-          ref={stripRef}
-          role="tablist"
-          aria-label="Choose a customer"
-          className="mt-8 flex snap-x gap-2.5 overflow-x-auto pb-2 sm:flex-wrap sm:justify-center sm:overflow-visible [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
-        >
-          {testimonials.map((item, i) => {
-            const on = i === active;
-            return (
-              <button
-                key={item.company}
-                type="button"
-                data-idx={i}
-                role="tab"
-                aria-selected={on}
-                aria-label={item.company}
-                onClick={() => setActive(i)}
-                className={`flex h-14 w-24 shrink-0 snap-center items-center justify-center rounded-card border bg-white p-3 transition-all ${
-                  on
-                    ? "border-brand-300 shadow-hover ring-2 ring-brand-500/20"
-                    : "border-border opacity-55 grayscale hover:opacity-100 hover:grayscale-0"
-                }`}
-              >
-                <Image
-                  src={item.logo}
-                  alt=""
-                  width={80}
-                  height={32}
-                  className="max-h-8 w-auto max-w-full object-contain"
-                />
-              </button>
-            );
-          })}
         </div>
       </div>
     </Section>

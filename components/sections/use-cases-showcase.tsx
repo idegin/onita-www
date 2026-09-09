@@ -84,7 +84,7 @@ export function UseCasesShowcase() {
             id="use-cases-heading"
             className="mt-3 font-display text-3xl font-bold tracking-tight text-ink-800 sm:text-4xl lg:text-[2.6rem] lg:leading-[1.1]"
           >
-            What teams hand to Onita every day
+            How teams use Onita every day
           </h2>
           <p className="mt-5 text-lg leading-8 text-muted-foreground">
             From projects and hiring to outreach and revenue, Onita does the work alongside your
