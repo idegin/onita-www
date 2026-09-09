@@ -75,9 +75,23 @@ const useCases: UseCase[] = [
 export function UseCasesShowcase() {
   return (
     <section id="use-cases" aria-labelledby="use-cases-heading" className="bg-surface">
-      <h2 id="use-cases-heading" className="sr-only">
-        What people use Onita for
-      </h2>
+      <div className="px-6 pt-24 pb-12 sm:px-10 lg:px-16 lg:pt-32 lg:pb-16">
+        <div className="mx-auto max-w-2xl text-center">
+          <span className="text-xs font-semibold uppercase tracking-wider text-brand-600">
+            Use cases
+          </span>
+          <h2
+            id="use-cases-heading"
+            className="mt-3 font-display text-3xl font-bold tracking-tight text-ink-800 sm:text-4xl lg:text-[2.6rem] lg:leading-[1.1]"
+          >
+            What teams hand to Onita every day
+          </h2>
+          <p className="mt-5 text-lg leading-8 text-muted-foreground">
+            From projects and hiring to outreach and revenue, Onita does the work alongside your
+            team — set up and run for you. Here&apos;s where it earns its keep.
+          </p>
+        </div>
+      </div>
 
       {useCases.map((uc, i) => {
         const light = uc.text === "light";

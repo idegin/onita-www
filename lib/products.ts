@@ -669,18 +669,27 @@ export const products: Product[] = [
 ];
 
 export const menuProductSlugs = [
+  "notetaker",
+  "bookings",
   "spreadsheet",
   "ai-agents",
+  "forms",
   "slides",
   "docs",
-  "forms",
   "dashboards",
   "flow",
   "email",
   "calendar",
+] as const;
+
+export const homeProductSlugs = [
   "notetaker",
+  "slides",
+  "forms",
   "bookings",
-  "approvals",
+  "spreadsheet",
+  "flow",
+  "email",
 ] as const;
 
 export const productMap: Record<string, Product> = Object.fromEntries(

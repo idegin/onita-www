@@ -39,7 +39,7 @@ const NODES: NodeDef[] = [
   },
   {
     id: "agent",
-    kind: "AI teammate",
+    kind: "Sales Agent",
     title: "Drafts a reply",
     desc: "Summarizes, files, responds",
     Icon: RobotIcon,

@@ -6,9 +6,9 @@ import Link from "next/link";
 import { ArrowRightIcon, CheckIcon } from "@phosphor-icons/react/dist/ssr";
 import { Section } from "@/components/ui/section";
 import { SectionHeading } from "@/components/ui/section-heading";
-import { menuProductSlugs, productMap } from "@/lib/products";
+import { homeProductSlugs, productMap } from "@/lib/products";
 
-const products = menuProductSlugs.map((slug) => {
+const products = homeProductSlugs.map((slug) => {
   const p = productMap[slug]!;
   return {
     name: p.name,
@@ -135,9 +135,9 @@ export function Products() {
           id="product-panel"
           role="tabpanel"
           aria-labelledby={`product-tab-${active}`}
-          className="mt-6 grid items-center gap-8 lg:grid-cols-2 lg:gap-12"
+          className="mt-6 grid items-center gap-8 lg:grid-cols-5 lg:gap-14"
         >
-          <div className="overflow-hidden rounded-card-lg border border-border bg-surface shadow-soft">
+          <div className="overflow-hidden rounded-card-lg border border-border bg-surface shadow-hover lg:col-span-3">
             <div className="flex items-center gap-2 border-b border-border bg-surface-muted px-4 py-3">
               <span className="flex gap-1.5" aria-hidden="true">
                 <span className="h-3 w-3 rounded-full bg-danger-500/70" />
@@ -160,7 +160,7 @@ export function Products() {
                   src={product.shot}
                   alt={index === active ? product.alt : ""}
                   fill
-                  sizes="(max-width: 1024px) 100vw, 50vw"
+                  sizes="(max-width: 1024px) 100vw, 60vw"
                   className={`object-cover transition-opacity duration-700 ease-out ${
                     index === active ? "opacity-100" : "opacity-0"
                   }`}
@@ -169,7 +169,7 @@ export function Products() {
             </div>
           </div>
 
-          <div>
+          <div className="lg:col-span-2">
             <span className="inline-flex h-12 w-12 items-center justify-center rounded-2xl bg-brand-500 text-white shadow-soft">
               <current.Icon size={24} weight="fill" aria-hidden="true" />
             </span>
