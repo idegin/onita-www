@@ -27,6 +27,7 @@ import {
 import { Section } from "@/components/ui/section";
 import { SectionHeading } from "@/components/ui/section-heading";
 import { siteConfig } from "@/lib/site-config";
+import { agentAvatars, type AgentAvatarKey } from "@/lib/agent-avatars";
 
 type Doc = { name: string; Icon: Icon };
 type Model = { name: string; logo: string };
@@ -34,6 +35,7 @@ type Agent = {
   name: string;
   model: Model;
   Icon: Icon;
+  avatar: AgentAvatarKey;
   skills: string[];
   docs: Doc[];
 };
@@ -50,6 +52,7 @@ const agents: Agent[] = [
   {
     name: "Sales Assistant",
     model: MODELS.claude,
+    avatar: "corporate-woman",
     Icon: ClipboardTextIcon,
     skills: ["Qualify leads", "Draft proposals", "Scope engagements"],
     docs: [
@@ -61,6 +64,7 @@ const agents: Agent[] = [
   {
     name: "Search Assistant",
     model: MODELS.gemini,
+    avatar: "afro-glasses-woman",
     Icon: MagnifyingGlassIcon,
     skills: ["Market research", "Competitor scan", "Benchmarks"],
     docs: [
@@ -72,6 +76,7 @@ const agents: Agent[] = [
   {
     name: "Project Manager",
     model: MODELS.claude,
+    avatar: "senior-man",
     Icon: CompassIcon,
     skills: ["Frameworks", "Financial models", "Recommendations"],
     docs: [
@@ -83,6 +88,7 @@ const agents: Agent[] = [
   {
     name: "Slides Assistant",
     model: MODELS.gpt,
+    avatar: "gele-woman",
     Icon: PresentationChartIcon,
     skills: ["Build decks", "Data viz", "On-brand design"],
     docs: [
@@ -94,6 +100,7 @@ const agents: Agent[] = [
   {
     name: "Docs Assistant",
     model: MODELS.gpt,
+    avatar: "sunglasses-man",
     Icon: PenNibIcon,
     skills: ["Copywriting", "SEO", "Editing"],
     docs: [
@@ -105,6 +112,7 @@ const agents: Agent[] = [
   {
     name: "Design Assistant",
     model: MODELS.claude,
+    avatar: "locs-man",
     Icon: PaletteIcon,
     skills: ["Concepts", "Design briefs", "Assets"],
     docs: [
@@ -116,6 +124,7 @@ const agents: Agent[] = [
   {
     name: "Marketing Assistant",
     model: MODELS.gpt,
+    avatar: "braids-woman",
     Icon: MegaphoneIcon,
     skills: ["Campaigns", "Paid media", "Analytics"],
     docs: [
@@ -127,6 +136,7 @@ const agents: Agent[] = [
   {
     name: "Task Planner",
     model: MODELS.deepseek,
+    avatar: "cap-man",
     Icon: GearSixIcon,
     skills: ["Assign work", "Track timelines", "Reporting"],
     docs: [
@@ -138,6 +148,7 @@ const agents: Agent[] = [
   {
     name: "Finance Assistant",
     model: MODELS.llama,
+    avatar: "bearded-man",
     Icon: ReceiptIcon,
     skills: ["Time tracking", "Invoicing", "Retainers"],
     docs: [
@@ -174,9 +185,17 @@ function AgentCard({ agent, hidden = false }: { agent: Agent; hidden?: boolean }
 
       <article className="rounded-card border border-white/10 bg-white/[0.04] p-5 transition-colors hover:border-white/20 hover:bg-white/[0.07]">
         <header className="flex items-center gap-3">
-          <span className="relative flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-gradient-ai text-white shadow-glow">
-            <agent.Icon size={24} weight="fill" aria-hidden="true" />
-            <span className="absolute -bottom-0.5 -right-0.5 h-3.5 w-3.5 rounded-full border-2 border-ink-950 bg-success-500" />
+          <span className="relative h-12 w-12 shrink-0">
+            <span className="relative block h-full w-full overflow-hidden rounded-2xl ring-1 ring-white/15 shadow-glow">
+              <Image
+                src={agentAvatars[agent.avatar]}
+                alt=""
+                fill
+                sizes="48px"
+                className="object-cover"
+              />
+            </span>
+            <span className="absolute -bottom-0.5 -right-0.5 h-3.5 w-3.5 rounded-full border-2 border-ink-950 bg-success-500" aria-hidden="true" />
           </span>
           <div className="min-w-0">
             <h3 className="truncate font-display text-base font-bold text-white">{agent.name}</h3>
