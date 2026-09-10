@@ -33,7 +33,7 @@ const useCases: UseCase[] = [
     desc: "Hand Onita the plan. It builds the boards, assigns the tasks, chases the updates, and flags whatever's slipping — so projects ship on time without the manual admin.",
     tasks: ["Boards & timelines", "Auto status updates", "Deadline nudges"],
     image: "/use-cases/project-management.jpg",
-    alt: "A team planning work on a project board covered in sticky notes",
+    alt: "Three colleagues collaborating around a project board with To Do, Doing and Done columns",
     bg: "#280f60",
     text: "light",
   },
@@ -44,7 +44,7 @@ const useCases: UseCase[] = [
     desc: "From open role to signed offer, Onita screens applicants, schedules interviews, answers candidate questions, and preps onboarding — your team just makes the calls that matter.",
     tasks: ["CV screening", "Interview scheduling", "Onboarding packs"],
     image: "/use-cases/human-resources.jpg",
-    alt: "Colleagues shaking hands across a table during a hiring interview",
+    alt: "Two colleagues shaking hands across a desk beside candidate CVs and an interview calendar",
     bg: "#d641a9",
     text: "light",
   },
@@ -55,7 +55,7 @@ const useCases: UseCase[] = [
     desc: "Onita researches ideal-fit accounts, writes personalized cold outreach, and follows up on autopilot — filling your pipeline with real conversations while your team sleeps.",
     tasks: ["Lead research", "Personalized outreach", "Auto follow-ups"],
     image: "/use-cases/lead-generation.jpg",
-    alt: "A go-to-market team reviewing pipeline growth on a laptop",
+    alt: "A specialist at a laptop with a magnet drawing in leads and a rising sales pipeline funnel",
     bg: "#f4886b",
     text: "dark",
   },
@@ -66,7 +66,7 @@ const useCases: UseCase[] = [
     desc: "Onita drafts the campaigns, spins up the content, nurtures every deal, and reports on what's working — turning attention into revenue with a fraction of the effort.",
     tasks: ["Campaigns & content", "Proposal drafting", "Pipeline nurture"],
     image: "/use-cases/sales-marketing.jpg",
-    alt: "A marketer analyzing campaign performance charts on a screen",
+    alt: "Two marketers presenting a growth dashboard beside a megaphone and a rising revenue counter",
     bg: "#46a4f1",
     text: "dark",
   },
@@ -176,19 +176,16 @@ export function UseCasesShowcase() {
             </div>
 
             <div
-              className={`relative min-h-[16rem] lg:min-h-0 ${imageLeft ? "lg:order-1" : ""}`}
+              className={`relative min-h-[20rem] sm:min-h-[24rem] lg:min-h-0 ${
+                imageLeft ? "lg:order-1" : ""
+              }`}
             >
               <Image
                 src={uc.image}
                 alt={uc.alt}
                 fill
                 sizes="(max-width: 1024px) 100vw, 50vw"
-                className="object-cover"
-              />
-              <span
-                aria-hidden="true"
-                className="absolute inset-0 mix-blend-multiply opacity-25"
-                style={{ backgroundColor: uc.bg }}
+                className="object-contain object-center"
               />
             </div>
           </article>
