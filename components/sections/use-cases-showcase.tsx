@@ -34,7 +34,7 @@ const useCases: UseCase[] = [
     tasks: ["Boards & timelines", "Auto status updates", "Deadline nudges"],
     image: "/use-cases/project-management.jpg",
     alt: "Three colleagues collaborating around a project board with To Do, Doing and Done columns",
-    bg: "#280f60",
+    bg: "#160d40",
     text: "light",
   },
   {
@@ -45,7 +45,7 @@ const useCases: UseCase[] = [
     tasks: ["CV screening", "Interview scheduling", "Onboarding packs"],
     image: "/use-cases/human-resources.jpg",
     alt: "Two colleagues shaking hands across a desk beside candidate CVs and an interview calendar",
-    bg: "#d641a9",
+    bg: "#9c2c78",
     text: "light",
   },
   {
@@ -56,7 +56,7 @@ const useCases: UseCase[] = [
     tasks: ["Lead research", "Personalized outreach", "Auto follow-ups"],
     image: "/use-cases/lead-generation.jpg",
     alt: "A specialist at a laptop with a magnet drawing in leads and a rising sales pipeline funnel",
-    bg: "#f4886b",
+    bg: "#f07a5c",
     text: "dark",
   },
   {
@@ -67,7 +67,7 @@ const useCases: UseCase[] = [
     tasks: ["Campaigns & content", "Proposal drafting", "Pipeline nurture"],
     image: "/use-cases/sales-marketing.jpg",
     alt: "Two marketers presenting a growth dashboard beside a megaphone and a rising revenue counter",
-    bg: "#46a4f1",
+    bg: "#4ea5e9",
     text: "dark",
   },
 ];
@@ -180,12 +180,10 @@ export function UseCasesShowcase() {
                 imageLeft ? "lg:order-1" : ""
               }`}
             >
-              <Image
+              <img
                 src={uc.image}
                 alt={uc.alt}
-                fill
-                sizes="(max-width: 1024px) 100vw, 50vw"
-                className="object-contain object-center"
+                className="h-full w-full object-contain object-center"
               />
             </div>
           </article>

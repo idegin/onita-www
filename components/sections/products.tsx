@@ -17,8 +17,8 @@ const products = homeProductSlugs.map((slug) => {
     points: p.highlights,
     href: `/products/${p.slug}`,
     Icon: p.Icon,
-    shot: p.shots[0],
-    alt: `The Onita ${p.name} interface`,
+    illustration: `/products/${p.slug}.png`,
+    alt: `A 3D illustration of Onita ${p.name} in action`,
   };
 });
 
@@ -95,7 +95,7 @@ export function Products() {
         <div
           role="tablist"
           aria-label="Onita products"
-          className="mt-12 flex gap-2 overflow-x-auto pb-2 [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
+          className="mt-10 grid grid-cols-2 gap-2.5 sm:grid-cols-4 lg:grid-cols-7"
         >
           {products.map((product, index) => {
             const isActive = index === active;
@@ -113,19 +113,27 @@ export function Products() {
                 tabIndex={isActive ? 0 : -1}
                 onClick={() => select(index)}
                 onKeyDown={(e) => onTabKeyDown(e, index)}
-                className={`inline-flex shrink-0 items-center gap-2 whitespace-nowrap rounded-pill border px-3.5 py-2 font-display text-sm font-semibold transition-colors ${
+                className={`group flex flex-col items-center justify-start gap-2.5 rounded-card border px-2 py-4 text-center transition-all ${
                   isActive
                     ? "border-transparent bg-brand-500 text-white shadow-soft"
-                    : "border-border bg-surface text-foreground hover:border-brand-200 hover:text-brand-600"
+                    : "border-border bg-surface text-foreground hover:border-brand-200 hover:bg-brand-50/60"
                 }`}
               >
-                <product.Icon
-                  size={16}
-                  weight="fill"
-                  aria-hidden="true"
-                  className={isActive ? "text-white" : "text-brand-500"}
-                />
-                {product.tab}
+                <span
+                  className={`flex h-10 w-10 items-center justify-center rounded-xl transition-colors ${
+                    isActive ? "bg-white/15" : "bg-brand-50 group-hover:bg-white"
+                  }`}
+                >
+                  <product.Icon
+                    size={22}
+                    weight="fill"
+                    aria-hidden="true"
+                    className={isActive ? "text-white" : "text-brand-500"}
+                  />
+                </span>
+                <span className="font-display text-xs font-semibold leading-tight sm:text-sm">
+                  {product.tab}
+                </span>
               </button>
             );
           })}
@@ -137,31 +145,24 @@ export function Products() {
           aria-labelledby={`product-tab-${active}`}
           className="mt-6 grid items-center gap-8 lg:grid-cols-5 lg:gap-14"
         >
-          <div className="overflow-hidden rounded-card-lg border border-border bg-surface shadow-hover lg:col-span-3">
-            <div className="flex items-center gap-2 border-b border-border bg-surface-muted px-4 py-3">
-              <span className="flex gap-1.5" aria-hidden="true">
-                <span className="h-3 w-3 rounded-full bg-danger-500/70" />
-                <span className="h-3 w-3 rounded-full bg-warning-500/70" />
-                <span className="h-3 w-3 rounded-full bg-success-500/70" />
-              </span>
-              <span className="ml-2 inline-flex items-center gap-2 font-display text-sm font-semibold text-ink-800">
-                <current.Icon size={16} weight="fill" aria-hidden="true" className="text-brand-600" />
-                {current.name}
-              </span>
-              <span className="ml-auto hidden items-center gap-1.5 rounded-pill bg-brand-50 px-2.5 py-1 text-xs font-semibold text-brand-600 sm:inline-flex">
-                onitaapp.com/{current.name.toLowerCase().replace(/\s+/g, "-")}
-              </span>
-            </div>
-
-            <div className="relative aspect-[1329/959] bg-surface-muted">
+          <div className="relative overflow-hidden rounded-card-lg border border-border bg-gradient-to-br from-brand-50 via-surface to-surface shadow-hover lg:col-span-3">
+            <span
+              aria-hidden="true"
+              className="pointer-events-none absolute -left-12 -top-12 h-64 w-64 rounded-full bg-glow opacity-70"
+            />
+            <span
+              aria-hidden="true"
+              className="pointer-events-none absolute -bottom-16 -right-10 h-64 w-64 rounded-full bg-glow opacity-50"
+            />
+            <div className="relative aspect-[3/2]">
               {products.map((product, index) => (
                 <Image
                   key={product.name}
-                  src={product.shot}
+                  src={product.illustration}
                   alt={index === active ? product.alt : ""}
                   fill
                   sizes="(max-width: 1024px) 100vw, 60vw"
-                  className={`object-cover transition-opacity duration-700 ease-out ${
+                  className={`object-contain object-center transition-opacity duration-700 ease-out ${
                     index === active ? "opacity-100" : "opacity-0"
                   }`}
                 />
