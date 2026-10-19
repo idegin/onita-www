@@ -85,7 +85,7 @@ export function DemoForm() {
         <Field
           id={f("hosting")}
           label="How would you like to run Onita?"
-          hint="Not sure yet? We'll help you pick on the call."
+          hint=""
         >
           <SelectInput
             id={f("hosting")}
