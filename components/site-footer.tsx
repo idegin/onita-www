@@ -6,7 +6,6 @@ import {
   GithubLogoIcon,
   EnvelopeSimpleIcon,
   MapPinIcon,
-  ArrowRightIcon,
 } from "@phosphor-icons/react/dist/ssr";
 import { BrandLogo } from "@/components/brand-logo";
 import { ManageCookiesButton } from "@/components/manage-cookies-button";
@@ -21,7 +20,7 @@ const socialLinks = [
 ];
 
 export function SiteFooter() {
-  const year = 2026;
+  const year = new Date().getFullYear();
 
   return (
     <footer className="bg-ink-950 text-white/70">
@@ -29,7 +28,7 @@ export function SiteFooter() {
         <div className="grid gap-12 border-b border-white/10 py-16 lg:grid-cols-[1.4fr_2.6fr]">
           <div className="max-w-sm">
             <BrandLogo tone="light" />
-            <p className="mt-5 text-sm leading-6 text-white/60">{siteConfig.description}</p>
+            <p className="mt-5 text-sm leading-6 text-white/60">Less manual work, faster follow-ups and a clearer view of your business—with AI teammates configured around the way your team works.</p>
 
             <address className="mt-6 flex flex-col gap-2.5 text-sm not-italic text-white/60">
               <a

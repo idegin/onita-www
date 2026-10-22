@@ -2,12 +2,12 @@ export const siteConfig = {
   name: "Onita AI",
   shortName: "Onita",
   legalName: "iDegin Technologies Ltd",
-  tagline: "The all-in-one AI work management platform",
-  slogan: "Your team, plus a team of AI workers.",
+  tagline: "The AI Productivity Platform for Growing Businesses",
+  slogan: "Less busywork. More business.",
   description:
-    "Onita is the all-in-one AI work management platform where your team and AI teammates get work done side by side. Project management, task tracking, docs, spreadsheets, slides, forms, dashboards, email, calendar, scheduling, and automated workflows all live in one workspace — and AI teammates run the busywork for you across project management, HR and hiring, lead generation and cold outreach, and sales and marketing. Onita connects to the tools you already use — Gmail, Outlook, Google Workspace, Zoho, WhatsApp, Zoom, Microsoft Teams, Paystack and more — and works right where your business already lives. It's done-for-you: book a demo and our team sets it up and runs it for you, on your budget.",
+    "Onita AI helps growing businesses automate daily operations, follow up with customers, coordinate work and stay on top of their business with AI teammates — set up and run for you. Individuals and teams of all sizes.",
   metaDescription:
-    "Onita is the all-in-one AI work management platform — project management, HR, lead generation, sales & marketing and more, run for you by AI teammates. Book a demo.",
+    "Automate daily operations, follow up with customers and coordinate work with AI teammates. For growing businesses of all sizes — we set it all up and run it for you.",
   founded: "2024",
 
   url: "https://www.onitaapp.com",
@@ -50,11 +50,6 @@ export const siteConfig = {
 
   aiModels: ["Claude", "GPT", "Gemini", "Llama"],
 
-  stats: [
-    { value: "30,000+", label: "people & teams on Onita" },
-    { value: "12", label: "tools in one workspace" },
-    { value: "2x", label: "more done" },
-  ],
 } as const;
 
 export type SiteConfig = typeof siteConfig;

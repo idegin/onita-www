@@ -13,7 +13,7 @@ import { siteConfig } from "@/lib/site-config";
 import { jsonLd, breadcrumbSchema } from "@/lib/structured-data";
 
 export const metadata: Metadata = {
-  title: "Products — Every Tool Your Team Needs, in One Workspace",
+  title: "Products — One Workspace, Every Tool Your Business Runs On",
   description:
     "Spreadsheet, AI Agents, Docs, Slides, Form Builder, Dashboards, Flow, Email, Calendar, AI Meeting Notetaker, Bookings, and Approvals — every tool your team needs, plus AI that can use all of them for you.",
   alternates: { canonical: "/products" },
@@ -86,7 +86,7 @@ export default function ProductsIndexPage() {
             The Onita platform
           </span>
           <h1 className="mt-6 max-w-3xl font-display text-4xl font-extrabold leading-[1.05] tracking-tight text-white sm:text-5xl lg:text-6xl">
-            One workspace, <span className="text-gradient-ai">every tool</span> your business runs on
+            One workspace, <span className="text-white">every tool</span> your business runs on
           </h1>
           <p className="mt-6 max-w-2xl text-lg leading-8 text-white/70">
             Replace a stack of disconnected apps with AI-powered products that share the same data —

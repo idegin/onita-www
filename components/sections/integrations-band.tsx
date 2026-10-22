@@ -14,8 +14,8 @@ export function IntegrationsBand() {
             id="integrations-heading"
             align="left"
             eyebrow="Integrations"
-            title="One AI brain, running all your tools."
-            description="Onita works across the apps your business already runs on — sending replies, updates, tasks, posts, and payments out to email, docs, calendars, meetings, messaging, social, and more in real time."
+            title="Connects to the tools your team already uses."
+            description="Connect supported email, file, calendar, meeting, messaging and payment tools so information stays closer to the work it belongs to. Available connections depend on your setup."
           />
 
           <ul className="sr-only">

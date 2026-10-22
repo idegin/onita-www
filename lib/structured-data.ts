@@ -3,27 +3,26 @@ import { siteConfig } from "@/lib/site-config";
 const abs = (path: string) => `${siteConfig.url}${path}`;
 
 const onitaKnowsAbout = [
-  "AI work management",
-  "AI project management",
-  "Task tracking",
-  "Human resources and hiring",
-  "Lead generation and cold outreach",
-  "Sales and marketing",
+  "AI business operations",
+  "Sales follow-ups",
+  "Client operations",
+  "Invoice collections",
+  "Professional service businesses",
   "Business process automation",
   "AI agents for business",
   "Managed AI workforce",
 ];
 
 const onitaFeatureList = [
-  "AI project management & task tracking",
+  "Sales follow-up workflows",
+  "Client operations and task coordination",
+  "Invoice and payment records",
   "Docs, spreadsheets, slides & forms",
   "Dashboards & reporting",
   "Email, calendar & scheduling",
   "AI meeting notetaker",
   "AI workflow automation",
-  "AI teammates for HR & hiring",
-  "AI teammates for lead generation & cold outreach",
-  "AI teammates for sales & marketing",
+  "AI teammates with configured access and responsibilities",
   "Integrations with Gmail, Outlook, Google Workspace, Zoho, WhatsApp, Zoom, Microsoft Teams, Paystack & Flutterwave",
 ];
 
@@ -87,13 +86,13 @@ export const softwareApplicationSchema = {
   featureList: onitaFeatureList,
   audience: {
     "@type": "BusinessAudience",
-    name: "Individuals, teams, and businesses of all sizes",
+    name: "Growing businesses and teams of all sizes",
   },
   offers: {
     "@type": "Offer",
     availability: "https://schema.org/InStock",
     url: abs(siteConfig.demoUrl),
-    description: "Book a demo and we set up and run your AI work management platform for you.",
+    description: "Book a demo to see Onita configured around your business operations.",
   },
   publisher: { "@id": `${siteConfig.url}/#organization` },
 };

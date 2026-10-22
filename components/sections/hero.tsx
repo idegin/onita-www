@@ -1,8 +1,7 @@
 import Link from "next/link";
-import { SparkleIcon, CalendarCheckIcon, ChatCircleTextIcon } from "@phosphor-icons/react/dist/ssr";
+import { CalendarCheckIcon, ChatCircleTextIcon, SparkleIcon } from "@phosphor-icons/react/dist/ssr";
 import { siteConfig } from "@/lib/site-config";
 import { RotatingShot } from "@/components/ui/rotating-shot";
-import { productTools } from "@/components/ui/product-tools";
 
 const PRODUCT_SHOTS = [
   "/screenshots/half-1.png",
@@ -66,21 +65,26 @@ export function Hero() {
 
       <div className="relative mx-auto grid max-w-content items-center gap-12 px-4 sm:px-6 lg:grid-cols-2 lg:px-10">
         <div className="max-w-xl">
+          <p
+            className="animate-fade-up inline-flex items-center gap-2 rounded-pill border border-white/20 bg-white/[0.06] px-3.5 py-1.5 text-xs font-semibold uppercase tracking-wider text-white/75 backdrop-blur"
+            style={{ animationDelay: "0.06s" }}
+          >
+            <SparkleIcon size={13} weight="fill" className="text-brand-300" aria-hidden="true" />
+            AI Productivity Platform
+          </p>
+
           <h1
-            className="animate-fade-up mt-6 font-display text-4xl font-extrabold leading-[1.05] tracking-tight text-white sm:text-5xl lg:text-6xl"
+            className="animate-fade-up mt-5 font-display text-4xl font-extrabold leading-[1.05] tracking-tight text-white sm:text-5xl lg:text-6xl"
             style={{ animationDelay: "0.12s" }}
           >
-            Hire AI teammates that{" "}
-            <span className="text-gradient-ai">actually do the work</span>
+            Your team just got bigger.
           </h1>
 
           <p
             className="animate-fade-up mt-6 max-w-lg text-lg leading-8 text-white/70"
             style={{ animationDelay: "0.2s" }}
           >
-            Onita is the all-in-one workspace — spreadsheets, docs, email, calendar and more — with AI
-            teammates that chase leads, sort your inbox, take meeting notes, and follow up for you. You
-            stay in control; they do the busywork. Book a demo and we set it all up for you.
+            Onita builds growing businesses a set of AI teammates — trained on how you work, wired into your tools, and run for you. Get more done without hiring more.
           </p>
 
           <div
@@ -98,32 +102,10 @@ export function Hero() {
               href={siteConfig.salesUrl}
               className="inline-flex items-center justify-center gap-2 rounded-button border border-white/25 px-6 py-3.5 text-base font-semibold text-white transition-colors hover:bg-white/10"
             >
-              <ChatCircleTextIcon size={20} weight="fill" />
+              <ChatCircleTextIcon size={18} weight="fill" />
               Talk to sales
             </Link>
           </div>
-
-          {/* <div
-            className="animate-fade-up mt-10 flex flex-col gap-3.5"
-            style={{ animationDelay: "0.36s" }}
-          >
-            <p className="text-xs font-semibold uppercase tracking-wider text-white/55">
-              Everything your team needs, in one workspace.
-            </p>
-            <ul className="flex flex-wrap gap-2">
-              {productTools.map((tool) => (
-                <li
-                  key={tool.name}
-                  className="group inline-flex items-center gap-2 rounded-pill border border-white/12 bg-white/[0.06] py-1.5 pl-2 pr-3.5 text-sm font-medium text-white/80 backdrop-blur transition-colors hover:border-white/25 hover:bg-white/10 hover:text-white"
-                >
-                  <span className="flex h-7 w-7 items-center justify-center rounded-full bg-white/10 text-brand-200 transition-colors group-hover:bg-white/20 group-hover:text-white">
-                    <tool.Icon className="h-[18px] w-[18px]" aria-hidden="true" />
-                  </span>
-                  {tool.name}
-                </li>
-              ))}
-            </ul>
-          </div> */}
         </div>
 
         <div className="lg:h-full">

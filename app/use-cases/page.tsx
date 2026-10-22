@@ -87,7 +87,7 @@ export default function UseCasesIndexPage() {
             Use cases by team, company &amp; job
           </span>
           <h1 className="mt-6 max-w-3xl font-display text-4xl font-extrabold leading-[1.05] tracking-tight text-white sm:text-5xl lg:text-6xl">
-            What people use <span className="text-gradient-ai">Onita</span> for
+            What people use <span className="text-white">Onita</span> for
           </h1>
           <p className="mt-6 max-w-2xl text-lg leading-8 text-white/70">
             From project management and task tracking to HR and hiring, lead generation and cold
@@ -116,7 +116,7 @@ export default function UseCasesIndexPage() {
             </span>
           </div>
 
-          <ul className="mt-8 grid gap-5 sm:grid-cols-2 lg:grid-cols-2">
+          <ul className="mt-8 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
             {useCases
               .filter((s) => s.group === group)
               .map((s) => {
