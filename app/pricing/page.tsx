@@ -315,7 +315,7 @@ export default function PricingPage() {
             Start your free trial in minutes.
           </h2>
           <p className="mt-4 text-lg leading-8 text-white/75">
-            Pick a plan, pay securely via Paystack, and your workspace is ready — with 2,000 free AI credits to get you started. Need a custom setup? Book a demo instead.
+            Pick a plan, pay securely via Paystack, and your workspace is ready within minutes — with free AI credits included for your trial. Need a custom setup? Book a demo instead.
           </p>
           <div className="mt-8 flex flex-col justify-center gap-3 sm:flex-row sm:items-center">
             <Link
