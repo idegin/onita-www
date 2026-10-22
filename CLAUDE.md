@@ -13,20 +13,21 @@ AI Era."** Core message: **"Get an unfair advantage by using AI to double your p
 Positioning is always an **AI productivity platform** — a suite of AI-powered products (AI Project
 Manager, AI Task Manager, AI Calendar, AI Meeting Assistant, AI Chat, AI Meeting Notetaker, AI
 Dashboards, AI Docs Assistant, AI Workflows, plus AI Slides and AI Forms) and AI assistants that
-handle the busywork. It is still sold as a **done-for-you / managed** service: Onita is not
-self-serve — prospects **book a demo** and our team **sets up and runs** it for them.
-Every page drives one conversion goal: **Book a Demo** (secondary / enterprise: **Talk to Sales**).
-There is **no self-serve free signup or login** on the marketing site — do not add "Start Free",
-"Log in", "Sign up", "free trial", or `app.onitaapp.com` signup/login CTAs anywhere.
+handle the busywork. It is available both as a **self-serve subscription** (customer pays via Paystack
+checkout, workspace is auto-provisioned) and as a **done-for-you / managed** service for larger clients.
+Primary conversion goals: **Start Free Trial** (Starter/Growth self-serve) and **Book a Demo** (Scale/enterprise).
+Secondary: **Talk to Sales**. Do not add "Log in" or "Sign up" CTAs — the self-serve flow lives at
+`app.onitaapp.com/auth/sign-up` and is only linked from the pricing page CTA.
 Product pages live under `/products/*`; industry & team pages live under `/use-cases/*`.
 Full architecture and copy direction live in `PLAN.md`; the complete visual language lives in `DESIGN.md`.
 
 # SaaS Application
-The actual Onita SaaS lives at **`/home/emeka/web/projects/agentic-workforce`** (monorepo: `apps/backend` + `apps/frontend`). When writing copy or features about plans, limits, or features — always verify against the real tier definitions in `packages/lib/src/tiers.ts`. Current tiers:
-- **Starter** — up to 5 members, 10 GB storage, 1 workspace
-- **Growth** — up to 20 members, 50 GB storage, up to 3 workspaces
-- **Scale** — unlimited members, 250 GB storage, unlimited workspaces, white label, custom subdomain
+The actual Onita SaaS lives at **`/home/emeka/web/projects/agentic-workforce`** (monorepo: `apps/backend` + `apps/frontend`). When writing copy or features about plans, limits, or features — always verify against the real tier definitions in `packages/lib/src/tiers.ts`. Current tiers and prices:
+- **Starter** — $7/seat/mo · up to 5 members, 10 GB, 1 workspace · 5,000 AI credits/mo · 2,000 trial credits
+- **Growth** — $12/seat/mo · up to 20 members, 50 GB, 3 workspaces · 20,000 AI credits/mo · 5,000 trial credits
+- **Scale** — $20/seat/mo · unlimited members, 250 GB, unlimited workspaces, white-label · 50,000 AI credits/mo · 10,000 trial credits
 No SSO, no SAML, no audit-log exports, no "private instance" feature — do not advertise these.
+Self-serve signup lives at `app.onitaapp.com/auth/sign-up` (backed by `POST /api/self-serve/initiate`). Annual billing discount is available on request.
 
 # Tech Stack
 - **Next.js 16.2** (App Router, `app/`), **React 19**, **TypeScript**, **Tailwind CSS v4**.

@@ -11,6 +11,7 @@ import {
   RocketLaunchIcon,
   UsersThreeIcon,
   BuildingsIcon,
+  CpuIcon,
 } from "@phosphor-icons/react/dist/ssr";
 import { Section } from "@/components/ui/section";
 import { SectionHeading } from "@/components/ui/section-heading";
@@ -37,6 +38,10 @@ const plans = [
     Icon: RocketLaunchIcon,
     audience: "Individuals & small teams",
     description: "Everything a small team needs to automate daily operations and follow-ups.",
+    price: "$7",
+    priceNote: "per seat / month",
+    credits: "5,000 AI credits included / month",
+    cta: { label: "Start free trial", href: "https://app.onitaapp.com/auth/sign-up", primary: false },
     features: [
       "Up to 5 team members",
       "10 GB storage",
@@ -53,6 +58,10 @@ const plans = [
     Icon: UsersThreeIcon,
     audience: "Growing businesses",
     description: "More members, more storage, and advanced workflows for teams scaling up.",
+    price: "$12",
+    priceNote: "per seat / month",
+    credits: "20,000 AI credits included / month",
+    cta: { label: "Start free trial", href: "https://app.onitaapp.com/auth/sign-up?tier=growth", primary: true },
     features: [
       "Up to 20 team members",
       "50 GB storage",
@@ -70,6 +79,10 @@ const plans = [
     Icon: BuildingsIcon,
     audience: "Established organisations",
     description: "Unlimited scale with white-label and custom subdomain for your brand.",
+    price: "$20",
+    priceNote: "per seat / month",
+    credits: "50,000 AI credits included / month",
+    cta: { label: "Book a demo", href: "/book-demo", primary: false },
     features: [
       "Unlimited team members",
       "250 GB storage",
@@ -86,15 +99,19 @@ const plans = [
 const faqs = [
   {
     q: "How much does Onita cost?",
-    a: "Pricing is tailored to your team size, the workflows we configure, and the products you use. Book a demo and we will scope the right plan — with a clear number before you commit to anything.",
+    a: "Plans start at $7 per seat per month (Starter). Growth is $12 per seat per month and Scale is $20 per seat per month. All plans are billed in NGN via Paystack at the current rate. You can start a 14-day free trial on Starter or Growth directly — no demo needed.",
   },
   {
     q: "Is there a free trial?",
-    a: "There is no self-serve free trial, but the demo gives you a full view of Onita running on your real use cases. Most teams go live within two weeks of deciding to proceed.",
+    a: "Yes. Starter and Growth plans include a 14-day free trial. Your first month's payment is collected at signup and your card is stored for automatic renewal — but you will not be charged for the trial period. Scale plans are scoped during a demo call.",
+  },
+  {
+    q: "What are AI credits?",
+    a: "AI credits power all AI features — agents, notetaker, AI writer, AI dashboards, and more. Every plan includes a monthly allotment (5,000 for Starter, 20,000 for Growth, 50,000 for Scale). When you need more, you can top up directly from your workspace settings.",
   },
   {
     q: "Do you offer monthly and annual billing?",
-    a: "Yes. Annual billing comes with a discount. We will discuss billing options during your demo once we have scoped the right plan for your business.",
+    a: "Yes. Monthly billing is the default. Annual billing comes with a discount — contact us or book a demo to switch to annual.",
   },
   {
     q: "What is included in the setup?",
@@ -102,7 +119,7 @@ const faqs = [
   },
   {
     q: "Can I change my plan later?",
-    a: "Yes. As your team grows or your workflows expand, we can move you to a higher plan, add more members, or connect more tools. Pricing is flexible and we revisit it with you.",
+    a: "Yes. As your team grows or your workflows expand, we can move you to a higher plan, add more members, or connect more tools. Contact support or book a demo to upgrade.",
   },
   {
     q: "What is white-label on the Scale plan?",
@@ -226,9 +243,15 @@ export default function PricingPage() {
                   <p className={`mt-0.5 text-sm font-semibold ${a.text}`}>{plan.audience}</p>
                   <p className="mt-4 text-sm leading-6 text-muted-foreground">{plan.description}</p>
 
-                  <div className="mt-6 rounded-card border border-border bg-surface-muted px-5 py-4 text-center">
-                    <p className="font-display text-sm font-semibold text-ink-800">Custom pricing</p>
-                    <p className="mt-1 text-xs text-muted-foreground">Scoped to your team during the demo</p>
+                  <div className="mt-6 rounded-card border border-border bg-surface-muted px-5 py-4">
+                    <div className="flex items-baseline gap-1">
+                      <span className="font-display text-3xl font-extrabold text-ink-800">{plan.price}</span>
+                      <span className="text-sm text-muted-foreground">{plan.priceNote}</span>
+                    </div>
+                    <div className={`mt-2 flex items-center gap-1.5 text-xs font-semibold ${a.text}`}>
+                      <CpuIcon size={13} weight="fill" aria-hidden="true" />
+                      {plan.credits}
+                    </div>
                   </div>
 
                   <ul className="mt-6 flex-1 space-y-3">
@@ -243,15 +266,15 @@ export default function PricingPage() {
                   </ul>
 
                   <Link
-                    href={siteConfig.demoUrl}
+                    href={plan.cta.href}
                     className={`mt-8 inline-flex items-center justify-center gap-2 rounded-button px-5 py-3 text-sm font-semibold transition-all hover:-translate-y-0.5 ${
-                      plan.featured
+                      plan.cta.primary
                         ? "bg-info-500 text-white shadow-soft hover:bg-info-600 hover:shadow-hover"
                         : "border border-border bg-surface text-ink-800 hover:border-brand-200 hover:text-brand-600"
                     }`}
                   >
                     <CalendarCheckIcon size={17} weight="fill" aria-hidden="true" />
-                    Book a demo
+                    {plan.cta.label}
                   </Link>
                 </article>
               </li>
@@ -295,25 +318,24 @@ export default function PricingPage() {
       <Section tone="gradient" ariaLabel="Get started with Onita">
         <div className="mx-auto max-w-2xl text-center">
           <h2 className="font-display text-3xl font-bold tracking-tight text-white sm:text-4xl">
-            Get your custom quote in a 30-minute demo.
+            Start your free trial in minutes.
           </h2>
           <p className="mt-4 text-lg leading-8 text-white/75">
-            We will show Onita on your real use cases, scope the right plan for your team, and give you a clear number — no guesswork, no surprise bills.
+            Pick a plan, pay securely via Paystack, and your workspace is ready — with 2,000 free AI credits to get you started. Need a custom setup? Book a demo instead.
           </p>
           <div className="mt-8 flex flex-col justify-center gap-3 sm:flex-row sm:items-center">
             <Link
-              href={siteConfig.demoUrl}
+              href="https://app.onitaapp.com/auth/sign-up"
               className="inline-flex items-center justify-center gap-2 rounded-button bg-white px-6 py-3.5 text-base font-semibold text-ink-800 shadow-soft transition-all hover:-translate-y-0.5 hover:shadow-hover"
+            >
+              Start free trial
+            </Link>
+            <Link
+              href={siteConfig.demoUrl}
+              className="inline-flex items-center justify-center gap-2 rounded-button border border-white/30 px-6 py-3.5 text-base font-semibold text-white transition-colors hover:bg-white/10"
             >
               <CalendarCheckIcon size={20} weight="fill" aria-hidden="true" />
               Book a demo
-            </Link>
-            <Link
-              href={siteConfig.salesUrl}
-              className="inline-flex items-center justify-center gap-2 rounded-button border border-white/30 px-6 py-3.5 text-base font-semibold text-white transition-colors hover:bg-white/10"
-            >
-              <ChatCircleTextIcon size={20} weight="fill" aria-hidden="true" />
-              Talk to sales
             </Link>
           </div>
         </div>
