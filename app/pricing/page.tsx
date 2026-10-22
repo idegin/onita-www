@@ -38,18 +38,17 @@ const plans = [
     Icon: RocketLaunchIcon,
     audience: "Individuals & small teams",
     description: "Everything a small team needs to automate daily operations and follow-ups.",
-    price: "$7",
+    price: "₦11,200",
     priceNote: "per seat / month",
-    credits: "5,000 AI credits included / month",
+    credits: "5,000 AI credits / month",
     cta: { label: "Start free trial", href: "https://app.onitaapp.com/auth/sign-up", primary: false },
     features: [
       "Up to 5 team members",
       "10 GB storage",
       "1 workspace",
-      "All core products: Docs, Spreadsheet, Calendar, Notetaker, Forms",
-      "Gmail & Outlook integration",
+      "Docs, Spreadsheet, Calendar, Notetaker & Forms",
+      "AI agents, automations & workflows",
       "Managed onboarding & setup",
-      "Email support",
     ],
     accent: "brand",
   },
@@ -57,19 +56,17 @@ const plans = [
     name: "Growth",
     Icon: UsersThreeIcon,
     audience: "Growing businesses",
-    description: "More members, more storage, and advanced workflows for teams scaling up.",
-    price: "$12",
+    description: "More members, more storage, and powerful AI workflows for teams scaling up.",
+    price: "₦19,200",
     priceNote: "per seat / month",
-    credits: "20,000 AI credits included / month",
+    credits: "20,000 AI credits / month",
     cta: { label: "Start free trial", href: "https://app.onitaapp.com/auth/sign-up?tier=growth", primary: true },
     features: [
       "Up to 20 team members",
       "50 GB storage",
       "Up to 3 workspaces",
-      "All Starter features",
-      "WhatsApp, Zoom & Meet integrations",
       "AI Dashboards, Flows & Approvals",
-      "Priority support",
+      "Everything in Starter",
     ],
     accent: "info",
     featured: true,
@@ -78,19 +75,18 @@ const plans = [
     name: "Scale",
     Icon: BuildingsIcon,
     audience: "Established organisations",
-    description: "Unlimited scale with white-label and custom subdomain for your brand.",
-    price: "$20",
+    description: "Unlimited scale with white-label and your own subdomain.",
+    price: "₦32,000",
     priceNote: "per seat / month",
-    credits: "50,000 AI credits included / month",
+    credits: "50,000 AI credits / month",
     cta: { label: "Book a demo", href: "/book-demo", primary: false },
     features: [
       "Unlimited team members",
       "250 GB storage",
       "Unlimited workspaces",
-      "All Growth features",
       "White-label (your branding)",
       "Custom subdomain",
-      "Dedicated account manager",
+      "Everything in Growth",
     ],
     accent: "accent",
   },
@@ -99,7 +95,7 @@ const plans = [
 const faqs = [
   {
     q: "How much does Onita cost?",
-    a: "Plans start at $7 per seat per month (Starter). Growth is $12 per seat per month and Scale is $20 per seat per month. All plans are billed in NGN via Paystack at the current rate. You can start a 14-day free trial on Starter or Growth directly — no demo needed.",
+    a: "Plans start at ₦11,200 per seat per month (Starter). Growth is ₦19,200 per seat per month and Scale is ₦32,000 per seat per month. All plans are billed in NGN via Paystack. You can start a 14-day free trial on Starter or Growth directly — no demo needed.",
   },
   {
     q: "Is there a free trial?",
@@ -202,7 +198,7 @@ export default function PricingPage() {
             Simple pricing, built around your business.
           </h1>
           <p className="mt-6 max-w-2xl text-lg leading-8 text-white/70">
-            Every Onita plan is tailored to your team and the workflows we configure together. There are no hidden fees — just a clear scope agreed before you commit to anything.
+            Start a 14-day free trial on Starter or Growth — no commitment needed. Every plan includes AI credits, managed setup, and the full product suite. Scale is for organisations that need unlimited seats and their own branding.
           </p>
         </div>
       </section>
@@ -220,12 +216,6 @@ export default function PricingPage() {
                       : "border-border"
                   }`}
                 >
-                  {plan.featured && (
-                    <span
-                      aria-hidden="true"
-                      className="absolute inset-x-0 top-0 h-1 rounded-t-card-lg bg-info-500"
-                    />
-                  )}
                   <span
                     className={`inline-flex h-12 w-12 items-center justify-center rounded-2xl ${a.softBg} ${a.text}`}
                   >
@@ -282,7 +272,11 @@ export default function PricingPage() {
           })}
         </ul>
 
-        <div className="mt-10 flex items-start gap-4 rounded-card border border-brand-100 bg-brand-50 p-6">
+        <p className="mt-6 text-center text-xs text-muted-foreground">
+          Prices shown in NGN. Billed securely via Paystack at the prevailing exchange rate. Annual billing available on request.
+        </p>
+
+        <div className="mt-6 flex items-start gap-4 rounded-card border border-brand-100 bg-brand-50 p-6">
           <ShieldCheckIcon size={22} weight="fill" aria-hidden="true" className="mt-0.5 shrink-0 text-brand-600" />
           <p className="text-sm leading-6 text-ink-800">
             <strong className="font-semibold">All plans include managed setup.</strong> Our team designs your workspace, connects your tools, and configures your workflows — at no extra cost. You go live ready to work, not ready to build.
