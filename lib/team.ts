@@ -54,7 +54,7 @@ export const teamMembers: TeamMember[] = [
     bio: [
       "Ifeora founded Onita to close the gap between what small teams are asked to deliver and the number of people they can actually hire. He watched capable teams drown in repetitive work spread across ten disconnected tools — and became convinced the answer wasn't another app, but a suite of AI products that could carry the busywork and let people do the work only people can do.",
       "As CEO he sets the product direction, keeps the company honest about being a fully managed service rather than a self-serve tool, and works closely with early customers to configure the AI products around how each business actually operates.",
-      "Before Onita he spent years building software and shipping products across web and applied AI, developing the conviction that the most valuable technology is the kind that feels effortless to the people using it.",
+      "Ifeora is Founder & CEO of iDegin Technologies (idegin.com), the parent company of Onita AI. Before founding iDegin he spent four years at Sheruta NG, an early-stage startup where he helped build and ship the product before leaving in 2023 to start his own company. That experience — watching a lean team try to operate across too many disconnected tools — became the founding insight behind Onita.",
     ],
     focus: [
       {
@@ -79,9 +79,9 @@ export const teamMembers: TeamMember[] = [
       },
     ],
     highlights: [
-      // { value: "2026", label: "founded Onita" },
-      // { value: "AI-first", label: "workforce platform" },
-      // { value: "Done-for-you", label: "managed delivery" },
+      { value: "2024", label: "founded Onita" },
+      { value: "4 years", label: "at Sheruta NG" },
+      { value: "iDegin", label: "parent company" },
     ],
     socials: [
       {
@@ -93,6 +93,11 @@ export const teamMembers: TeamMember[] = [
         label: "LinkedIn",
         href: "https://ng.linkedin.com/in/ifeora-emeka",
         handle: "ifeora-emeka",
+      },
+      {
+        label: "Instagram",
+        href: "https://www.instagram.com/ifeora_emeka/",
+        handle: "ifeora_emeka",
       },
     ],
   },

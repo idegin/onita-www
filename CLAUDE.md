@@ -21,6 +21,13 @@ There is **no self-serve free signup or login** on the marketing site — do not
 Product pages live under `/products/*`; industry & team pages live under `/use-cases/*`.
 Full architecture and copy direction live in `PLAN.md`; the complete visual language lives in `DESIGN.md`.
 
+# SaaS Application
+The actual Onita SaaS lives at **`/home/emeka/web/projects/agentic-workforce`** (monorepo: `apps/backend` + `apps/frontend`). When writing copy or features about plans, limits, or features — always verify against the real tier definitions in `packages/lib/src/tiers.ts`. Current tiers:
+- **Starter** — up to 5 members, 10 GB storage, 1 workspace
+- **Growth** — up to 20 members, 50 GB storage, up to 3 workspaces
+- **Scale** — unlimited members, 250 GB storage, unlimited workspaces, white label, custom subdomain
+No SSO, no SAML, no audit-log exports, no "private instance" feature — do not advertise these.
+
 # Tech Stack
 - **Next.js 16.2** (App Router, `app/`), **React 19**, **TypeScript**, **Tailwind CSS v4**.
 - Tailwind v4 configures the theme in CSS via `@theme` in `app/globals.css` (no `tailwind.config.js`).

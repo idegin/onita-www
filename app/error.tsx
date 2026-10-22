@@ -47,7 +47,7 @@ export default function Error({
           id="error-heading"
           className="mt-8 font-display text-4xl font-extrabold leading-tight tracking-tight text-white sm:text-5xl"
         >
-          Something went <span className="text-gradient-ai">wrong</span>
+          Something went <span className="text-white">wrong</span>
         </h1>
         <p className="mx-auto mt-5 max-w-md text-lg leading-8 text-white/70">
           An unexpected error interrupted this page. It&apos;s usually temporary — try

@@ -79,7 +79,7 @@ export default function ContactSalesPage() {
             Talk to sales
           </span>
           <h1 className="mt-6 max-w-2xl font-display text-4xl font-extrabold leading-[1.05] tracking-tight text-white sm:text-5xl">
-            Let&apos;s scope the right <span className="text-gradient-ai">AI productivity platform</span> for your
+            Let&apos;s scope the right <span className="text-white">AI productivity platform</span> for your
             business
           </h1>
           <p className="mt-6 max-w-2xl text-lg leading-8 text-white/70">

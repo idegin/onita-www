@@ -33,50 +33,51 @@ export const metadata: Metadata = {
 
 const plans = [
   {
-    name: "Essentials",
+    name: "Starter",
     Icon: RocketLaunchIcon,
     audience: "Individuals & small teams",
     description: "Everything a small team needs to automate daily operations and follow-ups.",
     features: [
-      "Up to 3 AI teammates",
-      "Core products: Docs, Spreadsheet, Calendar, Notetaker",
+      "Up to 5 team members",
+      "10 GB storage",
+      "1 workspace",
+      "All core products: Docs, Spreadsheet, Calendar, Notetaker, Forms",
       "Gmail & Outlook integration",
-      "Sales follow-up workflow",
       "Managed onboarding & setup",
       "Email support",
     ],
     accent: "brand",
   },
   {
-    name: "Business",
+    name: "Growth",
     Icon: UsersThreeIcon,
     audience: "Growing businesses",
-    description: "Advanced workflows and integrations for teams that need more throughput.",
+    description: "More members, more storage, and advanced workflows for teams scaling up.",
     features: [
-      "Up to 10 AI teammates",
-      "All Essentials features",
+      "Up to 20 team members",
+      "50 GB storage",
+      "Up to 3 workspaces",
+      "All Starter features",
       "WhatsApp, Zoom & Meet integrations",
-      "Client operations & invoice workflows",
-      "Flow automation & approvals",
-      "AI Dashboards & reporting",
+      "AI Dashboards, Flows & Approvals",
       "Priority support",
     ],
     accent: "info",
     featured: true,
   },
   {
-    name: "Enterprise",
+    name: "Scale",
     Icon: BuildingsIcon,
-    audience: "Larger organisations",
-    description: "Dedicated instance, custom integrations, and a dedicated success team.",
+    audience: "Established organisations",
+    description: "Unlimited scale with white-label and custom subdomain for your brand.",
     features: [
-      "Unlimited AI teammates",
-      "All Business features",
-      "Onita Private (your own instance)",
-      "Custom integrations & API access",
-      "SSO & advanced permissions",
-      "Audit logs & compliance exports",
-      "Dedicated success manager",
+      "Unlimited team members",
+      "250 GB storage",
+      "Unlimited workspaces",
+      "All Growth features",
+      "White-label (your branding)",
+      "Custom subdomain",
+      "Dedicated account manager",
     ],
     accent: "accent",
   },
@@ -97,15 +98,15 @@ const faqs = [
   },
   {
     q: "What is included in the setup?",
-    a: "Everything. Our team designs the workspace, connects your tools, configures your AI teammates, and onboards your people — at no extra cost. Setup is part of every plan.",
+    a: "Everything. Our team designs the workspace, connects your tools, configures the workflows, and onboards your people — at no extra cost. Setup is part of every plan.",
   },
   {
     q: "Can I change my plan later?",
-    a: "Yes. As your team grows or your workflows expand, we can adjust the plan, add AI teammates, or connect more tools. Pricing is flexible and we revisit it with you.",
+    a: "Yes. As your team grows or your workflows expand, we can move you to a higher plan, add more members, or connect more tools. Pricing is flexible and we revisit it with you.",
   },
   {
-    q: "What is Onita Private?",
-    a: "Onita Private is a dedicated deployment in your own cloud environment where your data never leaves your infrastructure. It is available on the Enterprise plan and includes a full setup managed by our team.",
+    q: "What is white-label on the Scale plan?",
+    a: "On the Scale plan your workspace reflects your own brand — custom subdomain and your logo — instead of the Onita brand. It is managed and run for you by our team, just like every other plan.",
   },
 ];
 
@@ -261,7 +262,7 @@ export default function PricingPage() {
         <div className="mt-10 flex items-start gap-4 rounded-card border border-brand-100 bg-brand-50 p-6">
           <ShieldCheckIcon size={22} weight="fill" aria-hidden="true" className="mt-0.5 shrink-0 text-brand-600" />
           <p className="text-sm leading-6 text-ink-800">
-            <strong className="font-semibold">All plans include managed setup.</strong> Our team designs your workspace, connects your tools, and configures your AI teammates — at no extra cost. You go live ready to work, not ready to build.
+            <strong className="font-semibold">All plans include managed setup.</strong> Our team designs your workspace, connects your tools, and configures your workflows — at no extra cost. You go live ready to work, not ready to build.
           </p>
         </div>
       </Section>

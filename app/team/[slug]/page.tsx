@@ -10,6 +10,7 @@ import {
   ChatCircleTextIcon,
   LinkedinLogoIcon,
   XLogoIcon,
+  InstagramLogoIcon,
   SparkleIcon,
 } from "@phosphor-icons/react/dist/ssr";
 import type { Icon } from "@phosphor-icons/react";
@@ -25,6 +26,7 @@ type Params = { params: Promise<{ slug: string }> };
 const socialIcons: Record<string, Icon> = {
   X: XLogoIcon,
   LinkedIn: LinkedinLogoIcon,
+  Instagram: InstagramLogoIcon,
 };
 
 export function generateStaticParams() {

@@ -70,7 +70,7 @@ export const useCases: Solution[] = [
     ogIcon: "TrendUp",
     metaTitle: "Onita for Sales — AI Productivity Platform",
     metaDescription:
-      "Onita is the #1 rated productivity platform for sales teams. Put an AI teammate on lead-finding and follow-ups so reps sell more and no deal goes cold.",
+      "Onita is an AI business operations platform for sales teams. Organize leads and prepare follow-ups so reps spend more time selling.",
     eyebrow: "Sales",
     headline: "Fill the pipeline and chase every follow-up ",
     headlineEmphasis: "so reps just sell",
@@ -134,7 +134,7 @@ export const useCases: Solution[] = [
     ogIcon: "Kanban",
     metaTitle: "Onita for Project Management — AI Productivity Platform",
     metaDescription:
-      "Onita is the #1 rated productivity platform for project teams. Plan work as a board, timeline, or calendar and let AI keep it moving so nothing slips.",
+      "Onita is an AI business operations platform for project teams. Plan work as a board, timeline, or calendar and use AI to help keep it moving.",
     eyebrow: "Project Management",
     headline: "Plan work your way and let AI ",
     headlineEmphasis: "keep it moving",
@@ -198,7 +198,7 @@ export const useCases: Solution[] = [
     ogIcon: "Gear",
     metaTitle: "Onita for Operations — AI Productivity Platform",
     metaDescription:
-      "Onita is the #1 rated productivity platform for operations teams. Turn repeat work into workflows that run themselves and standardize every SOP.",
+      "Onita is an AI business operations platform for operations teams. Turn repeat work into configured workflows and standardize core processes.",
     eyebrow: "Operations",
     headline: "Turn repeat work into workflows ",
     headlineEmphasis: "that run themselves",
@@ -262,7 +262,7 @@ export const useCases: Solution[] = [
     ogIcon: "Megaphone",
     metaTitle: "Onita for Marketing — AI Productivity Platform",
     metaDescription:
-      "Onita is the #1 rated productivity platform for marketing teams. Plan campaigns, draft content, and manage channels in one place — ship more with the same team.",
+      "Onita is an AI business operations platform for marketing teams. Plan campaigns, prepare content and coordinate channels in one place.",
     eyebrow: "Marketing",
     headline: "Plan campaigns, draft content, run every channel ",
     headlineEmphasis: "in one place",
@@ -326,7 +326,7 @@ export const useCases: Solution[] = [
     ogIcon: "UsersThree",
     metaTitle: "Onita for Recruiting — AI Productivity Platform",
     metaDescription:
-      "Onita is the #1 rated productivity platform for recruiting teams. Track candidates, schedule interviews, and follow up automatically — hire without the busywork.",
+      "Onita is an AI business operations platform for recruiting teams. Track candidates, coordinate interviews and prepare follow-ups.",
     eyebrow: "Recruiting",
     headline: "Track candidates and schedule interviews ",
     headlineEmphasis: "without the busywork",
@@ -390,7 +390,7 @@ export const useCases: Solution[] = [
     ogIcon: "ChatCircleText",
     metaTitle: "Onita for Communication — AI Productivity Platform",
     metaDescription:
-      "Onita is the #1 rated productivity platform for team communication. Keep email, meetings, and updates in one place — sorted and summarized by AI so nothing slips.",
+      "Onita is an AI business operations platform for team communication. Keep email, meetings and updates closer to the work they support.",
     eyebrow: "Communication",
     headline: "Email, meetings, and updates in one place ",
     headlineEmphasis: "sorted by AI",
@@ -454,7 +454,7 @@ export const useCases: Solution[] = [
     ogIcon: "ShieldCheck",
     metaTitle: "Onita for Enterprise — AI Productivity Platform",
     metaDescription:
-      "Onita is the #1 rated productivity platform for enterprise. Power and control at scale — many teams, tight permissions, a full audit trail, and AI that respects every rule.",
+      "Onita is an AI business operations platform for larger teams, with configured permissions, approval steps and activity trails.",
     eyebrow: "Enterprise",
     headline: "Power and control at scale ",
     headlineEmphasis: "with AI that respects every rule",
@@ -518,7 +518,7 @@ export const useCases: Solution[] = [
     ogIcon: "RocketLaunch",
     metaTitle: "Onita for Startups — AI Productivity Platform",
     metaDescription:
-      "Onita is the #1 rated productivity platform for startups. Move like a bigger team — get the output of a full department without the headcount.",
+      "Onita is an AI business operations platform for startups that want to reduce repetitive coordination as they grow.",
     eyebrow: "Startup",
     headline: "Move like a bigger team ",
     headlineEmphasis: "without the headcount",
@@ -582,7 +582,7 @@ export const useCases: Solution[] = [
     ogIcon: "Stack",
     metaTitle: "Onita for Small Business — AI Productivity Platform",
     metaDescription:
-      "Onita is the #1 rated productivity platform for small businesses. Your whole back office handled — sales, invoices, follow-ups, and customer care in one affordable tool.",
+      "Onita is an AI business operations platform for small businesses, bringing sales, invoices, follow-ups and customer work into one workspace.",
     eyebrow: "Small Business",
     headline: "Your whole back office handled ",
     headlineEmphasis: "in one affordable tool",
@@ -646,7 +646,7 @@ export const useCases: Solution[] = [
     ogIcon: "HandHeart",
     metaTitle: "Onita for Non-profits — AI Productivity Platform",
     metaDescription:
-      "Onita is the #1 rated productivity platform for non-profits. Do more with less — stretch a small team further with AI teammates that never clock out.",
+      "Onita is an AI business operations platform for non-profits that want to reduce repetitive administration and coordination.",
     eyebrow: "Non-profit",
     headline: "Do more with less ",
     headlineEmphasis: "with AI teammates that never clock out",
@@ -710,7 +710,7 @@ export const useCases: Solution[] = [
     ogIcon: "Sparkle",
     metaTitle: "Onita for Social Media & Content — AI Productivity Platform",
     metaDescription:
-      "Onita is the #1 rated productivity platform for content teams. Plan, draft, and manage content — and let AI even run your YouTube channel.",
+      "Onita is an AI business operations platform for content teams. Plan, prepare and manage content in one connected workspace.",
     eyebrow: "Social Media & Content",
     headline: "Plan, draft, and manage content ",
     headlineEmphasis: "and even run your channel",
@@ -774,7 +774,7 @@ export const useCases: Solution[] = [
     ogIcon: "CalendarCheck",
     metaTitle: "Onita for Follow-ups — AI Productivity Platform",
     metaDescription:
-      "Onita is the #1 rated productivity platform for follow-ups. Put an AI teammate on every unanswered email, quote, and invoice — recover the money you're leaving on the table.",
+      "Onita is an AI business operations platform for follow-ups across unanswered emails, quotes and invoices.",
     eyebrow: "Follow-ups",
     headline: "Chase every unanswered email, quote, and invoice ",
     headlineEmphasis: "automatically",
@@ -838,7 +838,7 @@ export const useCases: Solution[] = [
     ogIcon: "Stack",
     metaTitle: "Onita for Inventory Management — AI Productivity Platform",
     metaDescription:
-      "Onita is the #1 rated productivity platform for inventory. Track stock in a smart sheet that warns you before you run out.",
+      "Onita is an AI business operations platform for inventory tracking, records and reorder reminders.",
     eyebrow: "Inventory Management",
     headline: "Track your stock in a smart sheet ",
     headlineEmphasis: "that warns you before you run out",
@@ -902,7 +902,7 @@ export const useCases: Solution[] = [
     ogIcon: "Headset",
     metaTitle: "Onita for Customer Success — AI Productivity Platform",
     metaDescription:
-      "Onita is the #1 rated productivity platform for customer success. Answer faster, follow up on time, and never drop a ticket — keep customers happy automatically.",
+      "Onita is an AI business operations platform for customer success teams coordinating responses, follow-ups and service records.",
     eyebrow: "Customer Success",
     headline: "Answer faster and never drop a ticket ",
     headlineEmphasis: "so customers stay happy",
@@ -966,7 +966,7 @@ export const useCases: Solution[] = [
     ogIcon: "ChartLineUp",
     metaTitle: "Onita for Resource Planning — AI Productivity Platform",
     metaDescription:
-      "Onita is the #1 rated productivity platform for resource planning. Balance people, projects, and deadlines in one live view so nobody's overloaded and nothing slips.",
+      "Onita is an AI business operations platform for resource planning across people, projects and deadlines.",
     eyebrow: "Resource Planning",
     headline: "Balance people, projects, and deadlines ",
     headlineEmphasis: "in one live view",

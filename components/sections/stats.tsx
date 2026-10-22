@@ -23,7 +23,7 @@ export function Stats() {
           invert
           eyebrow="By the numbers"
           title="Teams get more done with Onita."
-          description="Real momentum from teams that put AI teammates to work."
+          description="Real momentum from teams that run their work on Onita."
         />
 
         <dl className="mt-14 grid grid-cols-2 gap-x-6 gap-y-12 lg:grid-cols-4">

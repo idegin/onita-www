@@ -74,7 +74,7 @@ export default function IntegrationsPage() {
             Integrations
           </span>
           <h1 className="mt-6 max-w-3xl font-display text-4xl font-extrabold leading-[1.05] tracking-tight text-white sm:text-5xl lg:text-6xl">
-            Connect Onita to <span className="text-gradient-ai">the tools you use</span>
+            Connect Onita to <span className="text-white">the tools you use</span>
           </h1>
           <p className="mt-6 max-w-2xl text-lg leading-8 text-white/70">
             Onita passes data between your favorite tools and your AI products — so your projects,

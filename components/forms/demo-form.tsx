@@ -7,6 +7,8 @@ import { Field, TextInput, TextArea, SelectInput } from "@/components/forms/fiel
 export function DemoForm() {
   const base = useId();
   const [submitted, setSubmitted] = useState(false);
+  const [submitting, setSubmitting] = useState(false);
+  const [error, setError] = useState("");
   const f = (name: string) => `${base}-${name}`;
 
   if (submitted) {
@@ -29,10 +31,26 @@ export function DemoForm() {
 
   return (
     <form
-      noValidate
-      onSubmit={(e) => {
+      onSubmit={async (e) => {
         e.preventDefault();
-        setSubmitted(true);
+        setSubmitting(true);
+        setError("");
+        const form = e.currentTarget;
+        const payload = Object.fromEntries(new FormData(form));
+        try {
+          const response = await fetch("/api/demo-request", {
+            method: "POST",
+            headers: { "content-type": "application/json" },
+            body: JSON.stringify(payload),
+          });
+          const result = (await response.json()) as { message?: string };
+          if (!response.ok) throw new Error(result.message || "We could not send your request.");
+          setSubmitted(true);
+        } catch (submissionError) {
+          setError(submissionError instanceof Error ? submissionError.message : "We could not send your request.");
+        } finally {
+          setSubmitting(false);
+        }
       }}
       className="rounded-card-lg border border-border bg-surface p-6 shadow-soft sm:p-8"
     >
@@ -64,10 +82,10 @@ export function DemoForm() {
             <option value="" disabled>
               Select one…
             </option>
-            <option>Startup</option>
-            <option>Small business</option>
-            <option>Growing SME</option>
-            <option>Enterprise</option>
+            <option>Agency or consultancy</option>
+            <option>Professional services</option>
+            <option>Real estate</option>
+            <option>Education or training</option>
             <option>Other</option>
           </SelectInput>
         </Field>
@@ -82,25 +100,7 @@ export function DemoForm() {
             <option>200+</option>
           </SelectInput>
         </Field>
-        <Field
-          id={f("hosting")}
-          label="How would you like to run Onita?"
-          hint=""
-        >
-          <SelectInput
-            id={f("hosting")}
-            name="hosting"
-            aria-describedby={`${f("hosting")}-hint`}
-            defaultValue=""
-          >
-            <option value="" disabled>
-              Select one…
-            </option>
-            <option value="cloud">Onita Cloud — hosted and run by Onita</option>
-            <option value="private">Onita Private — dedicated instance, I own my data</option>
-            <option value="unsure">Not sure yet — help me decide</option>
-          </SelectInput>
-        </Field>
+        <div className="hidden" aria-hidden="true"><TextInput id={f("website")} name="website" tabIndex={-1} autoComplete="off" /></div>
         <Field
           id={f("goal")}
           label="What would you like Onita to do for you?"
@@ -116,12 +116,14 @@ export function DemoForm() {
         </Field>
       </div>
 
+      {error && <p role="alert" className="mt-6 rounded-input border border-danger-500/25 bg-danger-50 px-4 py-3 text-sm text-danger-700">{error}</p>}
       <button
         type="submit"
+        disabled={submitting}
         className="mt-7 inline-flex w-full items-center justify-center gap-2 rounded-button bg-brand-500 px-6 py-3.5 font-display text-base font-semibold text-white shadow-soft transition-all hover:-translate-y-0.5 hover:bg-brand-600 hover:shadow-hover sm:w-auto"
       >
         <CalendarCheckIcon size={20} weight="fill" aria-hidden="true" />
-        Book my demo
+        {submitting ? "Sending request…" : "Book my demo"}
       </button>
       <p className="mt-4 text-xs leading-5 text-muted-foreground">
         By submitting, you agree to be contacted about Onita. We&apos;ll never share your details.

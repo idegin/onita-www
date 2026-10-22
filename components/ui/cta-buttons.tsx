@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { CalendarCheckIcon, ChatCircleTextIcon } from "@phosphor-icons/react/dist/ssr";
+import { ArrowDownIcon, CalendarCheckIcon } from "@phosphor-icons/react/dist/ssr";
 import { siteConfig } from "@/lib/site-config";
 
 type CtaButtonsProps = {
@@ -27,11 +27,11 @@ export function CtaButtons({ invert = false, align = "start", className = "" }: 
         Book a demo
       </Link>
       <Link
-        href={siteConfig.salesUrl}
+        href="/#how-it-works"
         className={`inline-flex items-center justify-center gap-2 rounded-button border px-6 py-3.5 text-base font-semibold transition-colors ${secondary}`}
       >
-        <ChatCircleTextIcon size={20} weight="fill" />
-        Talk to sales
+        See how it works
+        <ArrowDownIcon size={18} weight="bold" />
       </Link>
     </div>
   );

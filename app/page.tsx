@@ -1,5 +1,5 @@
 import { Hero } from "@/components/sections/hero";
-import { BusinessProblems, BusinessOutcomes, HowOnitaWorks, OnitaPlatform, Industries, WhyOnita } from "@/components/sections/home-operations";
+import { BusinessProblems, BusinessOutcomes, HowOnitaWorks, OnitaPlatform, Industries, WhyOnita, HomeProducts } from "@/components/sections/home-operations";
 import { IntegrationsBand } from "@/components/sections/integrations-band";
 import { AiWorkforce } from "@/components/sections/ai-workforce";
 import { Stats } from "@/components/sections/stats";
@@ -25,6 +25,7 @@ export default function Home() {
       <HowOnitaWorks />
       <Stats />
       <OnitaPlatform />
+      <HomeProducts />
       <IntegrationsBand />
       <AiWorkforce />
       <Industries />

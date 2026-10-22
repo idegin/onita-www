@@ -84,7 +84,7 @@ export function Hero() {
             className="animate-fade-up mt-6 max-w-lg text-lg leading-8 text-white/70"
             style={{ animationDelay: "0.2s" }}
           >
-            Onita builds growing businesses a set of AI teammates — trained on how you work, wired into your tools, and run for you. Get more done without hiring more.
+            Onita gives growing businesses a complete AI-powered workspace — docs, calendar, dashboards, automations and AI — trained on how you work and run for you. Get more done without hiring more.
           </p>
 
           <div
@@ -106,6 +106,13 @@ export function Hero() {
               Talk to sales
             </Link>
           </div>
+
+          <p
+            className="animate-fade-up mt-8 text-sm text-white/45"
+            style={{ animationDelay: "0.36s" }}
+          >
+            Trusted by individuals, teams, and businesses of all sizes
+          </p>
         </div>
 
         <div className="lg:h-full">

@@ -92,7 +92,7 @@ export default function UseCasesIndexPage() {
           <p className="mt-6 max-w-2xl text-lg leading-8 text-white/70">
             From project management and task tracking to HR and hiring, lead generation and cold
             outreach, and sales and marketing — whatever your team, company size, or job to be done,
-            Onita gives you AI teammates that carry the busywork so you get twice as much done.
+            Onita gives your team AI-powered tools that carry the busywork — so you get twice as much done.
           </p>
         </div>
       </section>

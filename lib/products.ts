@@ -629,15 +629,15 @@ export const products: Product[] = [
     shots: [S.e, S.c],
     metaTitle: "Approvals — The Human-in-the-Loop Safety Net for AI",
     metaDescription:
-      "Onita's Approvals are the safety net for AI at work: anything it can't undo — send, spend, publish, delete — waits for your one-tap yes. Edit before it sends, undo anything, full audit trail.",
+      "Onita Approvals add a human review step to sensitive AI-assisted work. Review, edit, approve or reject an action and keep a clear activity trail.",
     eyebrow: "Approvals",
     headline: "AI you can trust,",
     headlineEmphasis: "because you're in control",
     subhead:
-      "Let your AI move fast on the safe stuff, and keep the final say on the rest. Anything it can't undo — a send, a payment, a publish, a delete — waits for your one-tap yes. Edit it before it goes, undo anything, and see every step.",
+      "Let routine preparation move quickly while your team keeps the final say on sensitive actions. Review, edit, approve or reject work and see each recorded step.",
     definitionTitle: "What are Onita Approvals?",
     definition:
-      "Approvals are Onita's human-in-the-loop safety net for AI at work. Your agents handle the safe, reversible work on their own, but anything that can't be taken back — sending an email, spending money, publishing, deleting — pauses for your one-tap approval. You can edit the draft before it sends, undo anything after the fact, and review a full trail of who did what. It's how you get the speed of AI without ever losing control.",
+      "Approvals are Onita's human review layer for AI-assisted work. Configure which actions pause for approval, edit a prepared action before it proceeds and review the activity trail afterward. Reversible changes can be rolled back where the connected tool supports it.",
     highlights: ["One-tap yes on risky actions", "Edit before it sends", "Undo anything, full trail"],
     features: [
       { title: "Nothing risky without you", desc: "Sends, payments, publishes, and deletes all wait for your one-tap approval first.", Icon: ShieldCheckIcon },

@@ -31,23 +31,26 @@ export function CookieConsent() {
   const openedByUser = useRef(false);
 
   useEffect(() => {
-    const stored = readDecision();
-    setDecision(stored);
-    if (!stored) setOpen(true);
+    const id = requestAnimationFrame(() => {
+      const stored = readDecision();
+      setDecision(stored);
+      if (!stored) setOpen(true);
+    });
 
     const onManage = () => {
       openedByUser.current = true;
+      setEntered(false);
       setOpen(true);
     };
     window.addEventListener("onita:manage-cookies", onManage);
-    return () => window.removeEventListener("onita:manage-cookies", onManage);
+    return () => {
+      cancelAnimationFrame(id);
+      window.removeEventListener("onita:manage-cookies", onManage);
+    };
   }, []);
 
   useEffect(() => {
-    if (!open) {
-      setEntered(false);
-      return;
-    }
+    if (!open) return;
     const id = requestAnimationFrame(() => setEntered(true));
     if (openedByUser.current) headingRef.current?.focus();
     return () => cancelAnimationFrame(id);
@@ -56,13 +59,17 @@ export function CookieConsent() {
   const choose = useCallback((value: Decision) => {
     writeDecision(value);
     setDecision(value);
+    setEntered(false);
     setOpen(false);
     openedByUser.current = false;
   }, []);
 
   const onKeyDown = useCallback(
     (event: React.KeyboardEvent) => {
-      if (event.key === "Escape" && decision) setOpen(false);
+      if (event.key === "Escape" && decision) {
+        setEntered(false);
+        setOpen(false);
+      }
     },
     [decision]
   );

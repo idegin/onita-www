@@ -139,7 +139,7 @@ export default async function SolutionPage({ params }: Params) {
 
             <h1 className="mt-6 font-display text-4xl font-extrabold leading-[1.05] tracking-tight text-white sm:text-5xl lg:text-[3.4rem]">
               {solution.headline}{" "}
-              <span className="text-gradient-ai">{solution.headlineEmphasis}</span>
+              <span className="text-white">{solution.headlineEmphasis}</span>
             </h1>
             <p className="mt-6 max-w-lg text-lg leading-8 text-white/70">{solution.subhead}</p>
 

@@ -51,9 +51,17 @@ export function GET() {
     ]),
     "",
     section("Why Onita", [
-      "- Built with Nigerian businesses in mind: local operating realities, communication habits and payment tools shape the setup.",
+      "- Done-for-you managed service: Onita's team designs, configures, and runs the platform for each customer — no technical setup required.",
       "- Managed onboarding: Onita's team helps configure the first workflows around how the business operates.",
       "- Human control: access and approval requirements are configured around each workflow.",
+      "- Built for all sizes: individuals, small teams, and enterprise operations teams all use Onita.",
+    ]),
+    "",
+    section("About the founder", [
+      "- Ifeora Emeka is the Founder and CEO of Onita AI and of iDegin Technologies (idegin.com), the parent company.",
+      "- He spent four years at Sheruta NG, an early-stage Nigerian startup, before leaving in 2023 to found iDegin Technologies.",
+      "- He founded Onita AI in 2024 to give growing businesses and teams of all sizes an AI-powered workspace — set up and run for them.",
+      "- Social profiles: https://x.com/ifeora_emeka · https://ng.linkedin.com/in/ifeora-emeka · https://www.instagram.com/ifeora_emeka/",
     ]),
     "",
     section(

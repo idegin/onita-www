@@ -20,13 +20,13 @@ const pillars: Pillar[] = [
     Icon: HandTapIcon,
   },
   {
-    title: "Undo anything",
-    desc: "See exactly what your AI did, who did what and when — and roll back a mistake in a single tap.",
+    title: "See a clear activity trail",
+    desc: "Review what an AI teammate prepared, who approved it and when each step happened. Reversible changes can be rolled back.",
     Icon: ArrowCounterClockwiseIcon,
   },
   {
-    title: "It can't be tricked",
-    desc: "A dodgy email can't fool your AI into leaking your data or sending money. We built it to see through that.",
+    title: "Access stays scoped",
+    desc: "Configure which information and tools each AI teammate may use, then require review for sensitive actions.",
     Icon: ShieldCheckIcon,
   },
 ];
@@ -41,7 +41,7 @@ export function FullControl() {
             align="left"
             eyebrow="Full control"
             title="Powerful AI. Full control."
-            description="Onita never goes rogue. Anything that can't be undone waits for your approval — so you get the speed of AI with none of the risk."
+            description="Set access boundaries and place approval steps around sensitive work, so your team can review important actions before they happen."
           />
 
           <ul className="mt-10 flex flex-col gap-6">

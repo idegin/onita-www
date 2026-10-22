@@ -180,9 +180,11 @@ export function UseCasesShowcase() {
                 imageLeft ? "lg:order-1" : ""
               }`}
             >
-              <img
+              <Image
                 src={uc.image}
                 alt={uc.alt}
+                fill
+                sizes="(max-width: 1024px) 100vw, 50vw"
                 className="h-full w-full object-contain object-center"
               />
             </div>

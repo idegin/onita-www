@@ -8,6 +8,7 @@ import {
   ChatCircleTextIcon,
   LinkedinLogoIcon,
   XLogoIcon,
+  InstagramLogoIcon,
 } from "@phosphor-icons/react/dist/ssr";
 import type { Icon } from "@phosphor-icons/react";
 import { Section } from "@/components/ui/section";
@@ -34,6 +35,7 @@ export const metadata: Metadata = {
 const socialIcons: Record<string, Icon> = {
   X: XLogoIcon,
   LinkedIn: LinkedinLogoIcon,
+  Instagram: InstagramLogoIcon,
 };
 
 export default function TeamIndexPage() {
@@ -99,7 +101,7 @@ export default function TeamIndexPage() {
             The team
           </span>
           <h1 className="mt-6 max-w-3xl font-display text-4xl font-extrabold leading-[1.05] tracking-tight text-white sm:text-5xl lg:text-6xl">
-            The people building your <span className="text-gradient-ai">AI productivity platform</span>
+            The people building your <span className="text-white">AI productivity platform</span>
           </h1>
           <p className="mt-6 max-w-2xl text-lg leading-8 text-white/70">
             Onita is a fully managed platform, which means real people stand behind every workspace we

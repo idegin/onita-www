@@ -11,6 +11,7 @@ import {
 import { Section } from "@/components/ui/section";
 import { SectionHeading } from "@/components/ui/section-heading";
 import { siteConfig } from "@/lib/site-config";
+import { products } from "@/lib/products";
 
 const problems = [
   { Icon: ClockCountdownIcon, title: "Follow-ups keep falling through", body: "A prospect asks for a quote. Someone means to reply. A week passes and the opportunity goes quiet." },
@@ -92,7 +93,7 @@ export function BusinessOutcomes() {
 
 const steps = [
   { n: "01", Icon: HeadsetIcon, title: "Show us what takes up your time", body: "Tell us how your business works, the tools you use and where important work gets stuck." },
-  { n: "02", Icon: WrenchIcon, title: "We set Onita up around you", body: "We organize the workspace, connect supported tools and configure your first AI teammates." },
+  { n: "02", Icon: WrenchIcon, title: "We set Onita up around you", body: "We organize the workspace, connect your tools, and configure the AI products around how your team works." },
   { n: "03", Icon: HandTapIcon, title: "Your team stays in control", body: "Routine work moves forward. Actions that need judgment stop for review and approval." },
 ];
 
@@ -103,7 +104,7 @@ export function HowOnitaWorks() {
       <ol className="relative mt-14 grid gap-4 lg:grid-cols-3">
         {steps.map(({ n, Icon, title, body }) => <li key={title} className="relative rounded-card border border-white/10 bg-white/[0.045] p-7"><div className="flex items-center justify-between"><span className="flex h-12 w-12 items-center justify-center rounded-2xl bg-white/10 text-brand-200"><Icon size={24} weight="fill" /></span><span className="font-mono text-xs font-semibold text-white/35">{n} / 03</span></div><h3 className="mt-8 text-xl font-bold text-white">{title}</h3><p className="mt-3 text-sm leading-6 text-white/65">{body}</p></li>)}
       </ol>
-      <div className="mt-8 flex flex-col items-center justify-between gap-5 rounded-card border border-success-500/20 bg-success-500/[0.08] px-6 py-5 sm:flex-row"><p className="flex items-start gap-3 text-sm leading-6 text-white/75"><ShieldCheckIcon size={21} weight="fill" className="mt-0.5 shrink-0 text-success-500" /><span><strong className="text-white">Approval is part of the workflow.</strong> Define what AI teammates may access, which tasks they can prepare and where a person must decide.</span></p><Link href={siteConfig.demoUrl} className="shrink-0 rounded-button bg-white px-5 py-3 text-sm font-bold text-ink-900">Plan your first workflow</Link></div>
+      <div className="mt-8 flex flex-col items-center justify-between gap-5 rounded-card border border-success-500/20 bg-success-500/[0.08] px-6 py-5 sm:flex-row"><p className="flex items-start gap-3 text-sm leading-6 text-white/75"><ShieldCheckIcon size={21} weight="fill" className="mt-0.5 shrink-0 text-success-500" /><span><strong className="text-white">Approval is part of the workflow.</strong> Define what the AI may access, which tasks it can prepare, and where a person must decide.</span></p><Link href={siteConfig.demoUrl} className="shrink-0 rounded-button bg-white px-5 py-3 text-sm font-bold text-ink-900">Plan your first workflow</Link></div>
     </Section>
   );
 }
@@ -119,7 +120,7 @@ export function OnitaPlatform() {
   return (
     <Section id="platform" tone="light" labelledBy="platform-heading">
       <div className="grid items-center gap-12 lg:grid-cols-[0.9fr_1.1fr] lg:gap-16">
-        <div><SectionHeading id="platform-heading" align="left" eyebrow="One connected workspace" title="Your work in one place. AI teammates that help move it forward." description="Onita connects the records, communication and repeatable work behind your business so your team can see the whole picture." /><ul className="mt-9 grid gap-5 sm:grid-cols-2">{platformItems.map(({ Icon, title, body }) => <li key={title} className="flex gap-3"><span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-brand-50 text-brand-600"><Icon size={20} weight="fill" /></span><div><h3 className="text-sm font-bold text-ink-900">{title}</h3><p className="mt-1 text-sm leading-6 text-muted-foreground">{body}</p></div></li>)}</ul><Link href="/products" className="mt-8 inline-flex items-center gap-1.5 rounded-button border border-border px-5 py-3 text-sm font-bold text-ink-900 hover:border-brand-200 hover:text-brand-600">Explore the platform<ArrowRightIcon size={15} weight="bold" /></Link></div>
+        <div><SectionHeading id="platform-heading" align="left" eyebrow="One connected workspace" title="Your work in one place. AI that keeps it moving forward." description="Onita connects the records, communication and repeatable work behind your business so your team can see the whole picture." /><ul className="mt-9 grid gap-5 sm:grid-cols-2">{platformItems.map(({ Icon, title, body }) => <li key={title} className="flex gap-3"><span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-brand-50 text-brand-600"><Icon size={20} weight="fill" /></span><div><h3 className="text-sm font-bold text-ink-900">{title}</h3><p className="mt-1 text-sm leading-6 text-muted-foreground">{body}</p></div></li>)}</ul><Link href="/products" className="mt-8 inline-flex items-center gap-1.5 rounded-button border border-border px-5 py-3 text-sm font-bold text-ink-900 hover:border-brand-200 hover:text-brand-600">Explore the platform<ArrowRightIcon size={15} weight="bold" /></Link></div>
         <div className="relative"><div aria-hidden="true" className="absolute -inset-5 rounded-[2.5rem] bg-brand-100/70 blur-2xl" /><Image src="/screenshots/half-1.png" alt="Onita dashboard showing business records and live reports in one workspace" width={1329} height={959} sizes="(max-width: 1024px) 100vw, 55vw" className="relative rounded-card-lg border border-border shadow-hover" /></div>
       </div>
     </Section>
@@ -138,11 +139,55 @@ export function Industries() {
 }
 
 const whyReasons = [
-  { Icon: WrenchIcon, title: "Configured around your business", body: "Tell us how your business works, and our team builds the workspace, connections, and AI teammates around your actual workflows — not the other way round." },
+  { Icon: WrenchIcon, title: "Configured around your business", body: "Tell us how your business works, and our team builds the workspace, connections, and AI products around your actual workflows — not the other way round." },
   { Icon: CalendarCheckIcon, title: "Managed from day one", body: "Our team handles setup, onboarding, and tuning so your people get up and running without any technical work on your side." },
   { Icon: ShieldCheckIcon, title: "People stay in control", body: "Your team keeps final judgment on relationships, decisions, and actions that matter. AI handles the preparation and follow-through." },
 ];
 
 export function WhyOnita() {
   return <Section id="why-onita" tone="muted" labelledBy="fit-heading"><div className="grid gap-12 lg:grid-cols-[0.75fr_1.25fr] lg:items-end"><SectionHeading id="fit-heading" align="left" eyebrow="Why Onita" title="Made for the way growing businesses actually work." description="Useful automation is not a blank canvas. It starts with your processes, your people and support you can reach." /><ul className="grid gap-4 sm:grid-cols-3">{whyReasons.map(({ Icon, title, body }) => <li key={title} className="rounded-card border border-border bg-surface p-6"><Icon size={24} weight="fill" className="text-accent-600" /><h3 className="mt-5 text-base font-bold text-ink-900">{title}</h3><p className="mt-2 text-sm leading-6 text-muted-foreground">{body}</p></li>)}</ul></div></Section>;
+}
+
+export function HomeProducts() {
+  return (
+    <Section id="products" tone="light" labelledBy="products-heading">
+      <SectionHeading
+        id="products-heading"
+        eyebrow="The platform"
+        title="Every tool your team needs, powered by AI."
+        description="One connected workspace — spreadsheets, docs, calendar, automations and AI — set up and run for your business."
+      />
+      <ul className="mt-12 grid gap-3 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+        {products.map((product) => (
+          <li key={product.slug}>
+            <Link
+              href={`/products/${product.slug}`}
+              className="group flex h-full items-start gap-4 rounded-card border border-border bg-surface p-5 shadow-soft transition-all hover:-translate-y-0.5 hover:border-brand-200 hover:shadow-hover"
+            >
+              <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-brand-50 text-brand-600 transition-colors group-hover:bg-brand-100">
+                <product.Icon size={20} weight="fill" aria-hidden="true" />
+              </span>
+              <div className="min-w-0">
+                <h3 className="text-sm font-bold text-ink-900 transition-colors group-hover:text-brand-600">
+                  {product.name}
+                </h3>
+                <p className="mt-1 text-xs leading-5 text-muted-foreground line-clamp-2">
+                  {product.subhead}
+                </p>
+              </div>
+            </Link>
+          </li>
+        ))}
+      </ul>
+      <div className="mt-8 text-center">
+        <Link
+          href="/products"
+          className="inline-flex items-center gap-2 rounded-button border border-border px-5 py-3 text-sm font-bold text-ink-900 transition-colors hover:border-brand-200 hover:text-brand-600"
+        >
+          See all products
+          <ArrowRightIcon size={15} weight="bold" aria-hidden="true" />
+        </Link>
+      </div>
+    </Section>
+  );
 }

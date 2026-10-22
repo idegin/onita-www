@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect } from "react";
+import Link from "next/link";
 import "./globals.css";
 
 export default function GlobalError({
@@ -33,7 +34,7 @@ export default function GlobalError({
 
           <div className="relative w-full max-w-xl">
             <h1 className="font-display text-4xl font-extrabold leading-tight tracking-tight sm:text-5xl">
-              Something went <span className="text-gradient-ai">wrong</span>
+              Something went <span className="text-white">wrong</span>
             </h1>
             <p className="mx-auto mt-5 max-w-md text-lg leading-8 text-white/70">
               We hit an unexpected error while loading Onita. Please try again — it&apos;s
@@ -52,12 +53,12 @@ export default function GlobalError({
               >
                 Try again
               </button>
-              <a
+              <Link
                 href="/"
                 className="inline-flex items-center justify-center gap-2 rounded-button border border-white/25 px-6 py-3.5 text-base font-semibold text-white transition-colors hover:bg-white/10"
               >
                 Back to home
-              </a>
+              </Link>
             </div>
           </div>
         </main>

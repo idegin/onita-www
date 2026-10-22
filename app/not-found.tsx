@@ -64,7 +64,7 @@ export default function NotFound() {
 
         <p
           aria-hidden="true"
-          className="mt-8 font-display text-[6rem] font-extrabold leading-none tracking-tight text-gradient-ai sm:text-[9rem]"
+          className="mt-8 font-display text-[6rem] font-extrabold leading-none tracking-tight text-brand-300 sm:text-[9rem]"
         >
           404
         </p>

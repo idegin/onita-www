@@ -15,14 +15,14 @@ import { jsonLd, breadcrumbSchema } from "@/lib/structured-data";
 export const metadata: Metadata = {
   title: "Book a Demo — See Onita AI on Your Real Work",
   description:
-    "Book a demo of Onita, the AI Productivity Platform for individuals and teams of all sizes. We set up and run your AI products for you — no setup required.",
+    "Book a demo of Onita AI and see how growing Nigerian businesses can automate follow-ups, client operations and collections.",
   alternates: { canonical: "/book-demo" },
   openGraph: {
     type: "website",
     url: `${siteConfig.url}/book-demo`,
     title: "Book a Demo of Onita — The AI Productivity Platform",
     description:
-      "See Onita running on your real use cases. We set up and run your AI productivity platform for you.",
+      "See Onita applied to the daily operations and follow-ups that take up your team's time.",
   },
 };
 
@@ -48,7 +48,7 @@ const assurances = [
   "No setup work on your side — we build it for you",
   "Run on Onita Cloud, or a private instance where you own your data",
   "Typically live within a couple of weeks",
-  "SOC 2 Type II, encryption, and human approval on sensitive actions",
+  "Configured access and human approval for sensitive actions",
 ];
 
 export default function BookDemoPage() {
@@ -102,7 +102,7 @@ export default function BookDemoPage() {
             </span>
 
             <h1 className="mt-6 font-display text-4xl font-extrabold leading-[1.05] tracking-tight text-white sm:text-5xl">
-              See your AI productivity platform on <span className="text-gradient-ai">your real work</span>
+              See your AI productivity platform on <span className="text-white">your real work</span>
             </h1>
             <p className="mt-6 text-lg leading-8 text-white/70">
               This isn&apos;t a generic product tour. Tell us how your business works and we&apos;ll show

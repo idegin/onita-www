@@ -1,5 +1,4 @@
 import { CtaButtons } from "@/components/ui/cta-buttons";
-import { siteConfig } from "@/lib/site-config";
 
 export function FinalCta() {
   return (
@@ -16,14 +15,14 @@ export function FinalCta() {
           id="final-cta-heading"
           className="font-display text-3xl font-extrabold leading-tight tracking-tight sm:text-4xl lg:text-5xl"
         >
-          Your team, plus a team of AI workers.
+          You&apos;ve got a business to grow. Let Onita handle more of the busywork.
         </h2>
         <p className="mt-5 text-lg text-white/75">
-          Tell us how you work and we&rsquo;ll set up your AI teammates for you. Stop juggling tools,
-          stop doing the busywork. {siteConfig.slogan}
+          Fewer forgotten follow-ups. Less repetitive administration. More time for customers,
+          your team and the work that moves the business forward.
         </p>
         <CtaButtons invert align="center" className="mt-9" />
-        <p className="mt-5 text-sm text-white/55">Book a demo · We set it up and host it for you</p>
+        <p className="mt-5 text-sm text-white/55">No technical experience needed · We&apos;ll show you how it fits</p>
       </div>
     </section>
   );
