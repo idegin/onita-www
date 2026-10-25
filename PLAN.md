@@ -31,9 +31,9 @@ Secondary CTA / For Enterprise
 
 > **Talk to Sales**
 
-There is **no self-serve free signup or login** on the marketing site — no "Start Free", "Log in",
-"Sign up", or "free trial". Prospects book a demo and our team designs, builds, hosts, and runs
-their AI workforce for them. Never compete with more than these two CTAs.
+Onita Cloud is self-serve: **Start free trial** (header, pricing, Onita Cloud card) goes to the app's sign-up,
+and **Log in** (header, mobile menu, footer) goes to the app's login. Larger clients still book a demo and our
+team designs, builds, hosts, and runs their AI workforce for them. Primary CTAs: Start free trial, Book a demo.
 
 ---
 

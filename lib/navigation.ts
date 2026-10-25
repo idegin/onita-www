@@ -1,3 +1,5 @@
+import { siteConfig } from "@/lib/site-config";
+
 export type NavLink = { label: string; href: string; description?: string };
 export type NavColumn = { title: string; items: NavLink[] };
 export type NavGroup = { label: string; href: string; items?: NavLink[]; columns?: NavColumn[] };
@@ -100,6 +102,8 @@ export const footerNav: { title: string; links: NavLink[] }[] = [
       { label: "Pricing", href: "/pricing" },
       { label: "Book a demo", href: "/book-demo" },
       { label: "Contact", href: "/contact-sales" },
+      { label: "Log in", href: siteConfig.loginUrl },
+      { label: "Start free trial", href: siteConfig.signUpUrl },
       { label: "Partner portal", href: "/reseller" },
     ],
   },

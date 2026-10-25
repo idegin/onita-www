@@ -1,4 +1,6 @@
-export const ONITA_API_URL = process.env.ONITA_API_URL || "http://localhost:8080/api";
+export const ONITA_API_URL =
+  process.env.ONITA_API_URL ||
+  (process.env.NODE_ENV === "production" ? "https://app.onitaapp.com/api" : "http://localhost:8080/api");
 
 export const RESELLER_SERVICE_SECRET = process.env.RESELLER_SERVICE_SECRET || "";
 

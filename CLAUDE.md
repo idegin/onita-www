@@ -16,8 +16,8 @@ Dashboards, AI Docs Assistant, AI Workflows, plus AI Slides and AI Forms) and AI
 handle the busywork. It is available both as a **self-serve subscription** (customer pays via Paystack
 checkout, workspace is auto-provisioned) and as a **done-for-you / managed** service for larger clients.
 Primary conversion goals: **Start Free Trial** (Starter/Growth self-serve) and **Book a Demo** (Scale/enterprise).
-Secondary: **Talk to Sales**. Do not add "Log in" or "Sign up" CTAs — the self-serve flow lives at
-`app.onitaapp.com/auth/sign-up` and is only linked from the pricing page CTA.
+Secondary: **Talk to Sales**. "Log in" (app root) and "Start free trial" (`app.onitaapp.com/auth/sign-up`) CTAs live in the header,
+mobile menu, footer, pricing page and the Onita Cloud card. Use `siteConfig.loginUrl` / `siteConfig.signUpUrl`.
 Product pages live under `/products/*`; industry & team pages live under `/use-cases/*`.
 Full architecture and copy direction live in `PLAN.md`; the complete visual language lives in `DESIGN.md`.
 

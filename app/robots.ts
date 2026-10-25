@@ -1,7 +1,7 @@
 import type { MetadataRoute } from "next";
 import { siteConfig } from "@/lib/site-config";
 
-const hidden = ["/portal", "/portal/"];
+const hidden = ["/reseller", "/reseller/"];
 
 const aiCrawlers = [
   "GPTBot",

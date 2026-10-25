@@ -173,21 +173,31 @@ export function SiteHeader() {
         </nav>
 
         <div className="hidden items-center gap-2 lg:flex">
-          <Link
-            href={siteConfig.salesUrl}
+          <a
+            href={siteConfig.loginUrl}
             className={`rounded-button px-3.5 py-2 text-sm font-semibold transition-colors ${
               solid ? "text-gray-700 hover:text-ink-800" : "text-white/85 hover:text-white"
             }`}
           >
-            Talk to sales
-          </Link>
+            Log in
+          </a>
           <Link
             href={siteConfig.demoUrl}
-            className="inline-flex items-center gap-1.5 rounded-button bg-brand-500 px-4 py-2 text-sm font-semibold text-white shadow-soft transition-all hover:bg-brand-600 hover:shadow-hover"
+            className={`inline-flex items-center gap-1.5 rounded-button border px-4 py-2 text-sm font-semibold transition-colors ${
+              solid
+                ? "border-border text-ink-800 hover:bg-gray-50"
+                : "border-white/30 text-white hover:bg-white/10"
+            }`}
           >
             <CalendarCheckIcon size={15} weight="fill" />
             Book a demo
           </Link>
+          <a
+            href={siteConfig.signUpUrl}
+            className="inline-flex items-center gap-1.5 rounded-button bg-brand-500 px-4 py-2 text-sm font-semibold text-white shadow-soft transition-all hover:bg-brand-600 hover:shadow-hover"
+          >
+            Start free trial
+          </a>
         </div>
 
         <button
@@ -267,10 +277,22 @@ export function SiteHeader() {
           </nav>
 
           <div className="mt-6 flex flex-col gap-3">
+            <a
+              href={siteConfig.signUpUrl}
+              className="inline-flex items-center justify-center rounded-button bg-brand-500 px-4 py-3.5 text-base font-semibold text-white shadow-soft"
+            >
+              Start free trial
+            </a>
+            <a
+              href={siteConfig.loginUrl}
+              className="inline-flex items-center justify-center rounded-button border border-border px-4 py-3.5 text-base font-semibold text-ink-800"
+            >
+              Log in
+            </a>
             <Link
               href={siteConfig.demoUrl}
               onClick={() => setMobileOpen(false)}
-              className="inline-flex items-center justify-center gap-1.5 rounded-button bg-brand-500 px-4 py-3.5 text-base font-semibold text-white shadow-soft"
+              className="inline-flex items-center justify-center gap-1.5 rounded-button border border-border px-4 py-3.5 text-base font-semibold text-ink-800"
             >
               <CalendarCheckIcon size={17} weight="fill" />
               Book a demo

@@ -22,6 +22,7 @@ type Option = {
   desc: string;
   points: string[];
   cta: { label: string; href: string; Icon: Icon };
+  note?: { text: string; label: string; href: string };
   tone: Tone;
 };
 
@@ -39,7 +40,8 @@ const options: Option[] = [
       "Enterprise-grade encryption and security built in",
       "Scales instantly as your team and workload grow",
     ],
-    cta: { label: "Book a demo", href: siteConfig.demoUrl, Icon: ArrowRightIcon },
+    cta: { label: "Start free trial", href: siteConfig.signUpUrl, Icon: ArrowRightIcon },
+    note: { text: "Already have an account?", label: "Log in", href: siteConfig.loginUrl },
     tone: "brand",
   },
   {
@@ -130,6 +132,14 @@ export function GetOnita() {
                     {opt.cta.label}
                     <opt.cta.Icon size={18} weight="bold" aria-hidden="true" />
                   </Link>
+                  {opt.note ? (
+                    <p className="mt-4 text-sm text-white/80">
+                      {opt.note.text}{" "}
+                      <a href={opt.note.href} className="font-semibold text-white underline underline-offset-4">
+                        {opt.note.label}
+                      </a>
+                    </p>
+                  ) : null}
                 </div>
               </div>
             </article>

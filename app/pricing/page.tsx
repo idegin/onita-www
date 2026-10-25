@@ -4,7 +4,6 @@ import {
   CaretRightIcon,
   CheckIcon,
   CalendarCheckIcon,
-  ChatCircleTextIcon,
   SparkleIcon,
   PlusIcon,
   ShieldCheckIcon,
@@ -17,6 +16,9 @@ import { Section } from "@/components/ui/section";
 import { SectionHeading } from "@/components/ui/section-heading";
 import { siteConfig } from "@/lib/site-config";
 import { jsonLd, breadcrumbSchema, faqPageSchema } from "@/lib/structured-data";
+import { getLivePlans, formatNaira, formatUsd, type LivePlan, type TierId } from "@/lib/pricing";
+
+export const revalidate = 600;
 
 export const metadata: Metadata = {
   title: "Pricing — Onita AI Productivity Platform",
@@ -32,19 +34,17 @@ export const metadata: Metadata = {
   },
 };
 
-const plans = [
+const planDefs = [
   {
     name: "Starter",
     Icon: RocketLaunchIcon,
     audience: "Individuals & small teams",
     description: "Everything a small team needs to automate daily operations and follow-ups.",
-    price: "₦11,200",
-    priceNote: "per seat / month",
-    credits: "5,000 AI credits / month",
-    cta: { label: "Start free trial", href: "https://app.onitaapp.com/auth/sign-up", primary: false },
+    tier: "starter" as TierId,
+    cta: { label: "Start free trial", href: siteConfig.signUpUrl, primary: false },
     features: [
       "Up to 5 team members",
-      "10 GB storage",
+      "{storage} GB storage",
       "1 workspace",
       "Docs, Spreadsheet, Calendar, Notetaker & Forms",
       "AI agents, automations & workflows",
@@ -57,13 +57,11 @@ const plans = [
     Icon: UsersThreeIcon,
     audience: "Growing businesses",
     description: "More members, more storage, and powerful AI workflows for teams scaling up.",
-    price: "₦19,200",
-    priceNote: "per seat / month",
-    credits: "20,000 AI credits / month",
-    cta: { label: "Start free trial", href: "https://app.onitaapp.com/auth/sign-up?tier=growth", primary: true },
+    tier: "growth" as TierId,
+    cta: { label: "Start free trial", href: `${siteConfig.signUpUrl}?tier=growth`, primary: true },
     features: [
       "Up to 20 team members",
-      "50 GB storage",
+      "{storage} GB storage",
       "Up to 3 workspaces",
       "AI Dashboards, Flows & Approvals",
       "Everything in Starter",
@@ -76,13 +74,11 @@ const plans = [
     Icon: BuildingsIcon,
     audience: "Established organisations",
     description: "Unlimited scale with white-label and your own subdomain.",
-    price: "₦32,000",
-    priceNote: "per seat / month",
-    credits: "50,000 AI credits / month",
+    tier: "scale" as TierId,
     cta: { label: "Book a demo", href: "/book-demo", primary: false },
     features: [
       "Unlimited team members",
-      "250 GB storage",
+      "{storage} GB storage",
       "Unlimited workspaces",
       "White-label (your branding)",
       "Custom subdomain",
@@ -92,19 +88,45 @@ const plans = [
   },
 ];
 
-const faqs = [
-  {
-    q: "How much does Onita cost?",
-    a: "Plans start at ₦11,200 per seat per month (Starter). Growth is ₦19,200 per seat per month and Scale is ₦32,000 per seat per month. All plans are billed in NGN via Paystack. You can start a 14-day free trial on Starter or Growth directly — no demo needed.",
-  },
-  {
-    q: "Is there a free trial?",
-    a: "Yes. Starter and Growth plans include a 14-day free trial. Your first month's payment is collected at signup and your card is stored for automatic renewal — but you will not be charged for the trial period. Scale plans are scoped during a demo call.",
-  },
-  {
-    q: "What are AI credits?",
-    a: "AI credits power all AI features — agents, notetaker, AI writer, AI dashboards, and more. Every plan includes a monthly allotment (5,000 for Starter, 20,000 for Growth, 50,000 for Scale). When you need more, you can top up directly from your workspace settings.",
-  },
+const FALLBACK_USD_CENTS: Record<TierId, number> = { starter: 700, growth: 1200, scale: 2000 };
+const FALLBACK_CREDITS: Record<TierId, number> = { starter: 5000, growth: 20000, scale: 50000 };
+const FALLBACK_STORAGE: Record<TierId, number> = { starter: 10, growth: 50, scale: 250 };
+
+function priceLabel(tier: TierId, live: Record<TierId, LivePlan> | null): string {
+  return live ? formatNaira(live[tier].seatPriceNgn) : formatUsd(FALLBACK_USD_CENTS[tier]);
+}
+
+function buildPlans(live: Record<TierId, LivePlan> | null) {
+  return planDefs.map((def) => {
+    const storage = live ? live[def.tier].storageGb : FALLBACK_STORAGE[def.tier];
+    const credits = live ? live[def.tier].monthlyCredits : FALLBACK_CREDITS[def.tier];
+    return {
+      ...def,
+      price: priceLabel(def.tier, live),
+      priceNote: "per seat / month",
+      credits: `${credits.toLocaleString("en-NG")} AI credits / month`,
+      features: def.features.map((f) => f.replace("{storage}", String(storage))),
+    };
+  });
+}
+
+function buildFaqs(live: Record<TierId, LivePlan> | null) {
+  const trialDays = live?.starter.trialDays ?? 14;
+  const credits = (t: TierId) => (live ? live[t].monthlyCredits : FALLBACK_CREDITS[t]).toLocaleString("en-NG");
+  const billing = live ? "All plans are billed in NGN via Paystack." : "Prices are in US dollars and are billed in Naira via Paystack at checkout.";
+  return [
+    {
+      q: "How much does Onita cost?",
+      a: `Plans start at ${priceLabel("starter", live)} per seat per month (Starter). Growth is ${priceLabel("growth", live)} per seat per month and Scale is ${priceLabel("scale", live)} per seat per month. ${billing} You can start a ${trialDays}-day free trial on Starter or Growth directly — no demo needed.`,
+    },
+    {
+      q: "Is there a free trial?",
+      a: `Yes. Starter and Growth plans include a ${trialDays}-day free trial. At signup you pay for one seat to open your workspace, and that payment is taken off your first invoice, so you are never charged twice. Billing for your team starts when the trial ends. Scale plans are scoped during a demo call.`,
+    },
+    {
+      q: "What are AI credits?",
+      a: `AI credits power all AI features — agents, notetaker, AI writer, AI dashboards, and more. Every plan includes a monthly allotment (${credits("starter")} for Starter, ${credits("growth")} for Growth, ${credits("scale")} for Scale). When you need more, you can top up directly from your workspace settings.`,
+    },
   {
     q: "Do you offer monthly and annual billing?",
     a: "Yes. Monthly billing is the default. Annual billing comes with a discount — contact us or book a demo to switch to annual.",
@@ -121,7 +143,8 @@ const faqs = [
     q: "What is white-label on the Scale plan?",
     a: "On the Scale plan your workspace reflects your own brand — custom subdomain and your logo — instead of the Onita brand. It is managed and run for you by our team, just like every other plan.",
   },
-];
+  ];
+}
 
 const accentMap: Record<string, { bg: string; text: string; softBg: string; border: string; ring: string }> = {
   brand: {
@@ -147,7 +170,10 @@ const accentMap: Record<string, { bg: string; text: string; softBg: string; bord
   },
 };
 
-export default function PricingPage() {
+export default async function PricingPage() {
+  const live = await getLivePlans();
+  const plans = buildPlans(live);
+  const faqs = buildFaqs(live);
   return (
     <>
       <script
@@ -273,7 +299,9 @@ export default function PricingPage() {
         </ul>
 
         <p className="mt-6 text-center text-xs text-muted-foreground">
-          Prices shown in NGN. Billed securely via Paystack at the prevailing exchange rate. Annual billing available on request.
+          {live
+            ? "Prices shown in NGN and updated monthly with the exchange rate. Billed securely via Paystack. Annual billing available on request."
+            : "Prices shown in US dollars and billed in Naira via Paystack at checkout. Annual billing available on request."}
         </p>
 
         <div className="mt-6 flex items-start gap-4 rounded-card border border-brand-100 bg-brand-50 p-6">
@@ -319,7 +347,7 @@ export default function PricingPage() {
           </p>
           <div className="mt-8 flex flex-col justify-center gap-3 sm:flex-row sm:items-center">
             <Link
-              href="https://app.onitaapp.com/auth/sign-up"
+              href={siteConfig.signUpUrl}
               className="inline-flex items-center justify-center gap-2 rounded-button bg-white px-6 py-3.5 text-base font-semibold text-ink-800 shadow-soft transition-all hover:-translate-y-0.5 hover:shadow-hover"
             >
               Start free trial

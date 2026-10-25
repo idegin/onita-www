@@ -12,6 +12,8 @@ export const siteConfig = {
 
   url: "https://www.onitaapp.com",
   appUrl: "https://app.onitaapp.com",
+  loginUrl: "https://app.onitaapp.com",
+  signUpUrl: "https://app.onitaapp.com/auth/sign-up",
   demoUrl: "/book-demo",
   salesUrl: "/contact-sales",
 
