@@ -1,6 +1,6 @@
 import { ONITA_API_URL } from "@/lib/reseller/config";
 
-export type TierId = "starter" | "growth" | "scale";
+export type TierId = "growth" | "scale";
 
 export interface LivePlan {
   tier: TierId;
@@ -11,7 +11,7 @@ export interface LivePlan {
   trialDays: number;
 }
 
-const TIERS: TierId[] = ["starter", "growth", "scale"];
+const TIERS: TierId[] = ["growth", "scale"];
 
 function isPlan(p: unknown): p is LivePlan {
   if (!p || typeof p !== "object") return false;

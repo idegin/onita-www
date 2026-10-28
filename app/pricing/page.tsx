@@ -7,7 +7,7 @@ import {
   SparkleIcon,
   PlusIcon,
   ShieldCheckIcon,
-  RocketLaunchIcon,
+  StarIcon,
   UsersThreeIcon,
   BuildingsIcon,
   CpuIcon,
@@ -36,19 +36,18 @@ export const metadata: Metadata = {
 
 const planDefs = [
   {
-    name: "Starter",
-    Icon: RocketLaunchIcon,
-    audience: "Individuals & small teams",
-    description: "Everything a small team needs to automate daily operations and follow-ups.",
-    tier: "starter" as TierId,
-    cta: { label: "Start free trial", href: siteConfig.signUpUrl, primary: false },
+    name: "Free",
+    Icon: StarIcon,
+    audience: "Try the platform",
+    description: "Full access to every feature — no credit card needed. Buy credits when you're ready to go further.",
+    tier: null,
+    cta: { label: "Start for free", href: siteConfig.signUpUrl, primary: false },
     features: [
-      "Up to 5 team members",
-      "{storage} GB storage",
+      "Up to 3 team members",
+      "5 GB storage",
       "1 workspace",
-      "Docs, Spreadsheet, Calendar, Notetaker & Forms",
-      "AI agents, automations & workflows",
-      "Managed onboarding & setup",
+      "Agents, automations, docs, calendar & more",
+      "1,000 starter credits on signup — buy more any time",
     ],
     accent: "brand",
   },
@@ -56,15 +55,16 @@ const planDefs = [
     name: "Growth",
     Icon: UsersThreeIcon,
     audience: "Growing businesses",
-    description: "More members, more storage, and powerful AI workflows for teams scaling up.",
+    description: "More seats, more storage, and a monthly credit allotment so AI keeps running without top-ups.",
     tier: "growth" as TierId,
     cta: { label: "Start free trial", href: `${siteConfig.signUpUrl}?tier=growth`, primary: true },
     features: [
       "Up to 20 team members",
       "{storage} GB storage",
       "Up to 3 workspaces",
-      "AI Dashboards, Flows & Approvals",
-      "Everything in Starter",
+      "{credits} AI credits / month",
+      "Managed onboarding & setup",
+      "Everything in Free",
     ],
     accent: "info",
     featured: true,
@@ -73,13 +73,14 @@ const planDefs = [
     name: "Scale",
     Icon: BuildingsIcon,
     audience: "Established organisations",
-    description: "Unlimited scale with white-label and your own subdomain.",
+    description: "Unlimited seats and workspaces, plus white-label and your own subdomain.",
     tier: "scale" as TierId,
     cta: { label: "Book a demo", href: "/book-demo", primary: false },
     features: [
       "Unlimited team members",
       "{storage} GB storage",
       "Unlimited workspaces",
+      "{credits} AI credits / month",
       "White-label (your branding)",
       "Custom subdomain",
       "Everything in Growth",
@@ -88,9 +89,9 @@ const planDefs = [
   },
 ];
 
-const FALLBACK_USD_CENTS: Record<TierId, number> = { starter: 700, growth: 1200, scale: 2000 };
-const FALLBACK_CREDITS: Record<TierId, number> = { starter: 5000, growth: 20000, scale: 50000 };
-const FALLBACK_STORAGE: Record<TierId, number> = { starter: 10, growth: 50, scale: 250 };
+const FALLBACK_USD_CENTS: Record<TierId, number> = { growth: 1200, scale: 2000 };
+const FALLBACK_CREDITS: Record<TierId, number> = { growth: 20000, scale: 50000 };
+const FALLBACK_STORAGE: Record<TierId, number> = { growth: 50, scale: 250 };
 
 function priceLabel(tier: TierId, live: Record<TierId, LivePlan> | null): string {
   return live ? formatNaira(live[tier].seatPriceNgn) : formatUsd(FALLBACK_USD_CENTS[tier]);
@@ -98,51 +99,67 @@ function priceLabel(tier: TierId, live: Record<TierId, LivePlan> | null): string
 
 function buildPlans(live: Record<TierId, LivePlan> | null) {
   return planDefs.map((def) => {
+    if (!def.tier) {
+      return {
+        ...def,
+        price: "Free",
+        priceNote: "forever",
+        credits: null,
+        features: def.features,
+      };
+    }
     const storage = live ? live[def.tier].storageGb : FALLBACK_STORAGE[def.tier];
     const credits = live ? live[def.tier].monthlyCredits : FALLBACK_CREDITS[def.tier];
+    const creditsLabel = `${credits.toLocaleString("en-NG")} AI credits / month`;
     return {
       ...def,
       price: priceLabel(def.tier, live),
       priceNote: "per seat / month",
-      credits: `${credits.toLocaleString("en-NG")} AI credits / month`,
-      features: def.features.map((f) => f.replace("{storage}", String(storage))),
+      credits: creditsLabel,
+      features: def.features
+        .map((f) => f.replace("{storage}", String(storage)))
+        .map((f) => f.replace("{credits}", credits.toLocaleString("en-NG"))),
     };
   });
 }
 
 function buildFaqs(live: Record<TierId, LivePlan> | null) {
-  const trialDays = live?.starter.trialDays ?? 14;
+  const trialDays = live?.growth.trialDays ?? 14;
   const credits = (t: TierId) => (live ? live[t].monthlyCredits : FALLBACK_CREDITS[t]).toLocaleString("en-NG");
-  const billing = live ? "All plans are billed in NGN via Paystack." : "Prices are in US dollars and are billed in Naira via Paystack at checkout.";
+  const billing = live ? "All paid plans are billed in NGN via Paystack." : "Prices are in US dollars and are billed in Naira via Paystack at checkout.";
   return [
     {
-      q: "How much does Onita cost?",
-      a: `Plans start at ${priceLabel("starter", live)} per seat per month (Starter). Growth is ${priceLabel("growth", live)} per seat per month and Scale is ${priceLabel("scale", live)} per seat per month. ${billing} You can start a ${trialDays}-day free trial on Starter or Growth directly — no demo needed.`,
+      q: "Is there a free plan?",
+      a: "Yes. The Free plan gives you full access to Onita — agents, automations, databases, calendar, notetaker, and more — with up to 3 team members, 5 GB of storage, and 1,000 starter credits to kick things off. You can buy more credits any time from your workspace settings.",
     },
     {
-      q: "Is there a free trial?",
-      a: `Yes. Starter and Growth plans include a ${trialDays}-day free trial. At signup you pay for one seat to open your workspace, and that payment is taken off your first invoice, so you are never charged twice. Billing for your team starts when the trial ends. Scale plans are scoped during a demo call.`,
+      q: "How much does Onita cost?",
+      a: `Growth is ${priceLabel("growth", live)} per seat per month and Scale is ${priceLabel("scale", live)} per seat per month. ${billing} You can start a ${trialDays}-day free trial on Growth directly — no demo needed.`,
+    },
+    {
+      q: "Is there a free trial on paid plans?",
+      a: `Yes. Growth includes a ${trialDays}-day free trial. At signup you pay for one seat to open your workspace, and that payment is taken off your first invoice, so you are never charged twice. Billing for your team starts when the trial ends. Scale plans are scoped during a demo call.`,
     },
     {
       q: "What are AI credits?",
-      a: `AI credits power all AI features — agents, notetaker, AI writer, AI dashboards, and more. Every plan includes a monthly allotment (${credits("starter")} for Starter, ${credits("growth")} for Growth, ${credits("scale")} for Scale). When you need more, you can top up directly from your workspace settings.`,
+      a: `AI credits power all AI features — agents, notetaker, AI writer, dashboards, and more. Free workspaces start with 1,000 credits and can top up any time. Growth includes ${credits("growth")} credits per month; Scale includes ${credits("scale")} credits per month. You can always top up from your workspace settings.`,
     },
-  {
-    q: "Do you offer monthly and annual billing?",
-    a: "Yes. Monthly billing is the default. Annual billing comes with a discount — contact us or book a demo to switch to annual.",
-  },
-  {
-    q: "What is included in the setup?",
-    a: "Everything. Our team designs the workspace, connects your tools, configures the workflows, and onboards your people — at no extra cost. Setup is part of every plan.",
-  },
-  {
-    q: "Can I change my plan later?",
-    a: "Yes. As your team grows or your workflows expand, we can move you to a higher plan, add more members, or connect more tools. Contact support or book a demo to upgrade.",
-  },
-  {
-    q: "What is white-label on the Scale plan?",
-    a: "On the Scale plan your workspace reflects your own brand — custom subdomain and your logo — instead of the Onita brand. It is managed and run for you by our team, just like every other plan.",
-  },
+    {
+      q: "Do you offer monthly and annual billing?",
+      a: "Yes. Monthly billing is the default. Annual billing comes with a discount — contact us or book a demo to switch to annual.",
+    },
+    {
+      q: "What is included in the setup?",
+      a: "Everything. Our team designs the workspace, connects your tools, configures the workflows, and onboards your people — at no extra cost. Setup is part of every paid plan.",
+    },
+    {
+      q: "Can I change my plan later?",
+      a: "Yes. As your team grows or your workflows expand, we can move you to a higher plan, add more members, or connect more tools. Contact support or book a demo to upgrade.",
+    },
+    {
+      q: "What is white-label on the Scale plan?",
+      a: "On the Scale plan your workspace reflects your own brand — custom subdomain and your logo — instead of the Onita brand. It is managed and run for you by our team, just like every other plan.",
+    },
   ];
 }
 
@@ -224,7 +241,7 @@ export default async function PricingPage() {
             Simple pricing, built around your business.
           </h1>
           <p className="mt-6 max-w-2xl text-lg leading-8 text-white/70">
-            Start a 14-day free trial on Starter or Growth — no commitment needed. Every plan includes AI credits, managed setup, and the full product suite. Scale is for organisations that need unlimited seats and their own branding.
+            Start for free — no credit card needed. Upgrade to Growth for a monthly credit allotment and more seats, or Scale for unlimited seats and your own branding.
           </p>
         </div>
       </section>
@@ -264,10 +281,12 @@ export default async function PricingPage() {
                       <span className="font-display text-3xl font-extrabold text-ink-800">{plan.price}</span>
                       <span className="text-sm text-muted-foreground">{plan.priceNote}</span>
                     </div>
-                    <div className={`mt-2 flex items-center gap-1.5 text-xs font-semibold ${a.text}`}>
-                      <CpuIcon size={13} weight="fill" aria-hidden="true" />
-                      {plan.credits}
-                    </div>
+                    {plan.credits && (
+                      <div className={`mt-2 flex items-center gap-1.5 text-xs font-semibold ${a.text}`}>
+                        <CpuIcon size={13} weight="fill" aria-hidden="true" />
+                        {plan.credits}
+                      </div>
+                    )}
                   </div>
 
                   <ul className="mt-6 flex-1 space-y-3">
@@ -307,7 +326,7 @@ export default async function PricingPage() {
         <div className="mt-6 flex items-start gap-4 rounded-card border border-brand-100 bg-brand-50 p-6">
           <ShieldCheckIcon size={22} weight="fill" aria-hidden="true" className="mt-0.5 shrink-0 text-brand-600" />
           <p className="text-sm leading-6 text-ink-800">
-            <strong className="font-semibold">All plans include managed setup.</strong> Our team designs your workspace, connects your tools, and configures your workflows — at no extra cost. You go live ready to work, not ready to build.
+            <strong className="font-semibold">All paid plans include managed setup.</strong> Our team designs your workspace, connects your tools, and configures your workflows — at no extra cost. You go live ready to work, not ready to build.
           </p>
         </div>
       </Section>
@@ -340,17 +359,17 @@ export default async function PricingPage() {
       <Section tone="gradient" ariaLabel="Get started with Onita">
         <div className="mx-auto max-w-2xl text-center">
           <h2 className="font-display text-3xl font-bold tracking-tight text-white sm:text-4xl">
-            Start your free trial in minutes.
+            Try Onita free — no credit card needed.
           </h2>
           <p className="mt-4 text-lg leading-8 text-white/75">
-            Pick a plan, pay securely via Paystack, and your workspace is ready within minutes — with free AI credits included for your trial. Need a custom setup? Book a demo instead.
+            Sign up in minutes and start with 1,000 free AI credits. Upgrade to Growth for a 14-day trial and a monthly credit allotment. Need a custom setup? Book a demo instead.
           </p>
           <div className="mt-8 flex flex-col justify-center gap-3 sm:flex-row sm:items-center">
             <Link
               href={siteConfig.signUpUrl}
               className="inline-flex items-center justify-center gap-2 rounded-button bg-white px-6 py-3.5 text-base font-semibold text-ink-800 shadow-soft transition-all hover:-translate-y-0.5 hover:shadow-hover"
             >
-              Start free trial
+              Start for free
             </Link>
             <Link
               href={siteConfig.demoUrl}
