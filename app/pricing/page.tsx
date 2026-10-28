@@ -149,8 +149,8 @@ function buildFaqs(live: Record<TierId, LivePlan> | null) {
       a: "Yes. Monthly billing is the default. Annual billing comes with a discount — contact us or book a demo to switch to annual.",
     },
     {
-      q: "What is included in the setup?",
-      a: "Everything. Our team designs the workspace, connects your tools, configures the workflows, and onboards your people — at no extra cost. Setup is part of every paid plan.",
+      q: "How do I get started?",
+      a: "Sign up with your email, pick a workspace name, and you're in — no demo or setup call required. Everything is ready to use: agents, automations, databases, calendar, and more. If you need help getting started, our support team is here.",
     },
     {
       q: "Can I change my plan later?",
@@ -308,7 +308,9 @@ export default async function PricingPage() {
                         : "border border-border bg-surface text-ink-800 hover:border-brand-200 hover:text-brand-600"
                     }`}
                   >
-                    <CalendarCheckIcon size={17} weight="fill" aria-hidden="true" />
+                    {plan.name === "Scale" && (
+                      <CalendarCheckIcon size={17} weight="fill" aria-hidden="true" />
+                    )}
                     {plan.cta.label}
                   </Link>
                 </article>
@@ -326,7 +328,7 @@ export default async function PricingPage() {
         <div className="mt-6 flex items-start gap-4 rounded-card border border-brand-100 bg-brand-50 p-6">
           <ShieldCheckIcon size={22} weight="fill" aria-hidden="true" className="mt-0.5 shrink-0 text-brand-600" />
           <p className="text-sm leading-6 text-ink-800">
-            <strong className="font-semibold">All paid plans include managed setup.</strong> Our team designs your workspace, connects your tools, and configures your workflows — at no extra cost. You go live ready to work, not ready to build.
+            <strong className="font-semibold">Sign up in minutes — no setup call required.</strong> Create your account, pick a workspace name, and you're in. Your agents, automations, databases, and calendar are ready to use from day one.
           </p>
         </div>
       </Section>
