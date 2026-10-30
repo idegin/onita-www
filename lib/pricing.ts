@@ -43,4 +43,10 @@ export async function getLivePlans(): Promise<Record<TierId, LivePlan> | null> {
 }
 
 export const formatNaira = (n: number) => `₦${n.toLocaleString("en-NG")}`;
-export const formatUsd = (cents: number) => `$${(cents / 100).toLocaleString("en-US", { maximumFractionDigits: 2 })}`;
+
+/**
+ * Fallback NGN seat prices shown when the live API is unreachable.
+ * Derived from the conservative cold-start FX floor (₦1,600/$) + 8% buffer,
+ * rounded up to the nearest ₦500 — matches the formula the backend uses.
+ */
+export const FALLBACK_NGN: Record<TierId, number> = { growth: 21_000, scale: 35_000 };

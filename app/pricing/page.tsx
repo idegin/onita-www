@@ -16,7 +16,7 @@ import { Section } from "@/components/ui/section";
 import { SectionHeading } from "@/components/ui/section-heading";
 import { siteConfig } from "@/lib/site-config";
 import { jsonLd, breadcrumbSchema, faqPageSchema } from "@/lib/structured-data";
-import { getLivePlans, formatNaira, formatUsd, type LivePlan, type TierId } from "@/lib/pricing";
+import { getLivePlans, formatNaira, FALLBACK_NGN, type LivePlan, type TierId } from "@/lib/pricing";
 
 export const revalidate = 600;
 
@@ -63,7 +63,6 @@ const planDefs = [
       "{storage} GB storage",
       "Up to 3 workspaces",
       "{credits} AI credits / month",
-      "Managed onboarding & setup",
       "Everything in Free",
     ],
     accent: "info",
@@ -89,12 +88,11 @@ const planDefs = [
   },
 ];
 
-const FALLBACK_USD_CENTS: Record<TierId, number> = { growth: 1200, scale: 2000 };
 const FALLBACK_CREDITS: Record<TierId, number> = { growth: 20000, scale: 50000 };
 const FALLBACK_STORAGE: Record<TierId, number> = { growth: 50, scale: 250 };
 
 function priceLabel(tier: TierId, live: Record<TierId, LivePlan> | null): string {
-  return live ? formatNaira(live[tier].seatPriceNgn) : formatUsd(FALLBACK_USD_CENTS[tier]);
+  return formatNaira(live ? live[tier].seatPriceNgn : FALLBACK_NGN[tier]);
 }
 
 function buildPlans(live: Record<TierId, LivePlan> | null) {
@@ -126,7 +124,7 @@ function buildPlans(live: Record<TierId, LivePlan> | null) {
 function buildFaqs(live: Record<TierId, LivePlan> | null) {
   const trialDays = live?.growth.trialDays ?? 14;
   const credits = (t: TierId) => (live ? live[t].monthlyCredits : FALLBACK_CREDITS[t]).toLocaleString("en-NG");
-  const billing = live ? "All paid plans are billed in NGN via Paystack." : "Prices are in US dollars and are billed in Naira via Paystack at checkout.";
+  const billing = "All paid plans are billed in NGN via Paystack.";
   return [
     {
       q: "Is there a free plan?",
@@ -320,9 +318,7 @@ export default async function PricingPage() {
         </ul>
 
         <p className="mt-6 text-center text-xs text-muted-foreground">
-          {live
-            ? "Prices shown in NGN and updated monthly with the exchange rate. Billed securely via Paystack. Annual billing available on request."
-            : "Prices shown in US dollars and billed in Naira via Paystack at checkout. Annual billing available on request."}
+          {"Prices shown in NGN and updated monthly with the exchange rate. Billed securely via Paystack. Annual billing available on request."}
         </p>
 
         <div className="mt-6 flex items-start gap-4 rounded-card border border-brand-100 bg-brand-50 p-6">
